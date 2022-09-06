@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vigen-Repository", "Vigen-Repository\Vigen-Repository.csproj", "{C49BE18F-D79F-4033-BAAD-88249F26A1C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C49BE18F-D79F-4033-BAAD-88249F26A1C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C49BE18F-D79F-4033-BAAD-88249F26A1C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C49BE18F-D79F-4033-BAAD-88249F26A1C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C49BE18F-D79F-4033-BAAD-88249F26A1C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A88AB394-8163-4328-808E-F3E18945257C}
+	EndGlobalSection
+EndGlobal
