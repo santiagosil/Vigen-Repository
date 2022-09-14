@@ -1,0 +1,13 @@
+.imagenUbi{
+    width: 20px;
+    height: 20px;
+    /*position: relative;*/
+    background-position: bottom;
+    display:block;
+    margin:auto;
+}
+.imagenMpa{
+    position: relative;
+    display:block;
+    margin:auto;
+}

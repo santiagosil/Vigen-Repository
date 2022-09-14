@@ -16,4 +16,5 @@ export class AppComponent {
   changeLang(lang: string){
     this.translate.use(lang);
   }
+  //export TranslateService translate;
 }

@@ -1,12 +1,26 @@
 <header>
   <nav>
     <app-nav></app-nav>
+    
     <select class="form-select" #langSelect (change)="changeLang(langSelect.value)">
       <option selected value="es">Español</option>
       <option value="en">English</option>
-      
     </select>
   </nav>
+  
+
 </header>
+
+<section>
+  <app-side></app-side>
+  <app-panel-user></app-panel-user>
+  <app-edit-user></app-edit-user>
+  <app-record-org></app-record-org>
+  <app-record-user></app-record-user>
+</section>
+
+
+  
+
 
 <router-outlet></router-outlet>
