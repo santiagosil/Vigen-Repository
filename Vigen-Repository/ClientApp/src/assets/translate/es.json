@@ -1,5 +1,16 @@
 {
     "NAV":{
-        "HOME":"Inicio"
+        "HOME":"Inicio",
+        "ABOUT":"Acerca de",
+        "HELP":"Ayuda"
+
+    },
+    "EDIT-USER":{
+        "USERNAME":"Usuario",
+        "EMAIL":"Correo",
+        "PASSWORD":"Contraseña"
+    },
+    "HOME-USER":{
+        "TITULO-1":"BIENVENIDO"
     }
 }

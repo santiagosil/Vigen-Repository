@@ -8,6 +8,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { NavComponent } from './nav/nav.component';
+import { SideComponent } from './side/side.component';
+import { PanelUserComponent } from './panel-user/panel-user.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { RecordOrgComponent } from './record-org/record-org.component';
+import { RecordUserComponent } from './record-user/record-user.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/translate/','.json')
@@ -16,7 +21,12 @@ export function HttpLoaderFactory(http: HttpClient){
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    SideComponent,
+    PanelUserComponent,
+    EditUserComponent,
+    RecordOrgComponent,
+    RecordUserComponent
   ],
   imports: [
     BrowserModule,

@@ -18,7 +18,9 @@ export class NavComponent implements OnInit {
       this.user=res;
     });
   }
+  
   ngOnInit(): void {
   }
 
 }
+
