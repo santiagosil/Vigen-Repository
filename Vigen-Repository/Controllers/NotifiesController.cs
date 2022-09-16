@@ -13,9 +13,9 @@ namespace Vigen_Repository.Controllers
     [ApiController]
     public class NotifiesController : ControllerBase
     {
-        private readonly vigenContext _context;
+        private readonly vigendbContext _context;
 
-        public NotifiesController(vigenContext context)
+        public NotifiesController(vigendbContext context)
         {
             _context = context;
         }

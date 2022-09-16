@@ -13,9 +13,9 @@ namespace Vigen_Repository.Controllers
     [ApiController]
     public class OganizationsController : ControllerBase
     {
-        private readonly vigenContext _context;
+        private readonly vigendbContext _context;
 
-        public OganizationsController(vigenContext context)
+        public OganizationsController(vigendbContext context)
         {
             _context = context;
         }

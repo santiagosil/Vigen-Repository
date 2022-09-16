@@ -1,4 +1,4 @@
-create table users(
+create table user(
 	identification varchar(50) primary key,
 	name varchar(100) not null,
 	email varchar(100) not null,
@@ -29,7 +29,7 @@ create table notify(
 	Foreign Key(identification) References users(identification)
 );
 
-INSERT INTO users (
+INSERT INTO user (
 	identification,
 	name,
 	email,

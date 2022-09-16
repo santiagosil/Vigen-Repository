@@ -13,9 +13,9 @@ namespace Vigen_Repository.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly vigenContext _context;
+        private readonly vigendbContext _context;
 
-        public UsersController(vigenContext context)
+        public UsersController(vigendbContext context)
         {
             _context = context;
         }

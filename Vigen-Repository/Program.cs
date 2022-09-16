@@ -6,8 +6,8 @@ string corsConfiguration = "_corsConfiguration";
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<vigenContext>(options=>
-options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
+builder.Services.AddDbContext<vigendbContext>(/*options=>
+options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection"))*/);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
