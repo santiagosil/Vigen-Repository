@@ -20,6 +20,15 @@ create table oganization(
 	tel varchar(15) not null
 );
 
+create table notify(
+	id int not null identity(1,1),
+	title varchar(100) not null,
+	place varchar(150) not null,
+	identification varchar(50) not null,
+	distance int,
+	Foreign Key(identification) References users(identification)
+);
+
 INSERT INTO users (
 	identification,
 	name,
@@ -45,4 +54,8 @@ INSERT INTO users (
 );
 
 
-Scaffold-DbContext "Server=DESKTOP-R6PNL58\SQLEXPRESS;Database=tvigendb; Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f
+Insert Into notify(title,place,identification,distance) VALUES('Alerta','Funza','123456789','20');
+
+
+
+Scaffold-DbContext "Server=localhost\SQLEXPRESS;Database=tvigendb; Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f
