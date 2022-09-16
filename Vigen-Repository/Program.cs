@@ -1,12 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using Vigen_Repository.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 string corsConfiguration = "_corsConfiguration";
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddDbContext<vigenContext>(options=>
+options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<Vigen_Repository.Models.tvigendbContext>();
+
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: corsConfiguration,

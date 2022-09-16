@@ -5,17 +5,18 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Vigen_Repository.Models
 {
-    public partial class tvigendbContext : DbContext
+    public partial class vigenContext : DbContext
     {
-        public tvigendbContext()
+        public vigenContext()
         {
         }
 
-        public tvigendbContext(DbContextOptions<tvigendbContext> options)
+        public vigenContext(DbContextOptions<vigenContext> options)
             : base(options)
         {
         }
 
+        public virtual DbSet<Notify> Notifies { get; set; } = null!;
         public virtual DbSet<Oganization> Oganizations { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
 
@@ -23,17 +24,46 @@ namespace Vigen_Repository.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-R6PNL58\\SQLEXPRESS;Database=tvigendb; Trusted_Connection=True;");
+                //optionsBuilder.UseSqlServer("Server=JEISSON\\SQLEXPRESS;Database=vigen;Trusted_Connection=True;");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Notify>(entity =>
+            {
+                entity.ToTable("notify");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Distance).HasColumnName("distance");
+
+                entity.Property(e => e.Identification)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("identification");
+
+                entity.Property(e => e.Place)
+                    .HasMaxLength(150)
+                    .IsUnicode(false)
+                    .HasColumnName("place");
+
+                entity.Property(e => e.Title)
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("title");
+
+                entity.HasOne(d => d.IdentificationNavigation)
+                    .WithMany(p => p.Notifies)
+                    .HasForeignKey(d => d.Identification)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__notify__identifi__1367E606");
+            });
+
             modelBuilder.Entity<Oganization>(entity =>
             {
                 entity.HasKey(e => e.Nit)
-                    .HasName("PK__oganizat__DF97D0E5B29BAF99");
+                    .HasName("PK__oganizat__DF97D0E5DF8D3885");
 
                 entity.ToTable("oganization");
 
@@ -68,7 +98,7 @@ namespace Vigen_Repository.Models
             modelBuilder.Entity<User>(entity =>
             {
                 entity.HasKey(e => e.Identification)
-                    .HasName("PK__users__AAA7C1F42AE07E2C");
+                    .HasName("PK__users__AAA7C1F45DBAF9D3");
 
                 entity.ToTable("users");
 
