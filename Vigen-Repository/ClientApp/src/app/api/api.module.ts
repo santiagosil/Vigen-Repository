@@ -4,8 +4,9 @@ import { NgModule, ModuleWithProviders, SkipSelf, Optional } from '@angular/core
 import { HttpClient } from '@angular/common/http';
 import { ApiConfiguration, ApiConfigurationParams } from './api-configuration';
 
-import { NotifyService } from './services/notify.service';
-import { UserService } from './services/user.service';
+import { NotifiesService } from './services/notifies.service';
+import { OganizationsService } from './services/oganizations.service';
+import { UsersService } from './services/users.service';
 
 /**
  * Module that provides all services and configuration.
@@ -15,8 +16,9 @@ import { UserService } from './services/user.service';
   exports: [],
   declarations: [],
   providers: [
-    NotifyService,
-    UserService,
+    NotifiesService,
+    OganizationsService,
+    UsersService,
     ApiConfiguration
   ],
 })

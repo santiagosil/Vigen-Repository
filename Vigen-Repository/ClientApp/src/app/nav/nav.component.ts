@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../api/services';
+import { UsersService } from '../api/services';
 import { User } from '../api/models';
 import { empty } from 'rxjs';
 
@@ -12,9 +12,9 @@ export class NavComponent implements OnInit {
 
   public user: User;
 
-  constructor(private api: UserService) {
+  constructor(private api: UsersService) {
     this.user={};
-    this.api.apiUserGet$Json({id:0}).subscribe(res=>{
+    this.api.apiUsersIdGet$Json({id:'123456789'}).subscribe(res=>{
       this.user=res;
     });
   }
