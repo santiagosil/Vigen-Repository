@@ -1,6 +1,7 @@
 {
     "NAV":{
         "HOME":"Home",
+<<<<<<< HEAD
         "INGRESAR":"Sign in"
 
     },
@@ -20,6 +21,19 @@
         "NUEVOPROYECTO":"New project",
         "OPCIONES":"Settings",
         "SALIR": "Sign out"
+=======
+        "ABOUT":"About",
+        "HELP":"Help"
+        
+    },
+    "EDIT-USER":{
+        "USERNAME":"Username",
+        "EMAIL":"Email",
+        "PASSWORD":"Password"
+    },
+    "HOME-USER":{
+        "TITULO-1":"WELCOME"
+>>>>>>> af99e8c37138d5541dd65c1118670016bf2b304a
     }
 }
 

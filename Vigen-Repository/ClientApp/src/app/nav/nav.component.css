@@ -2,3 +2,15 @@
     width: 100%;
     height: 300px;
 }
+<<<<<<< HEAD
+=======
+.banner-image{
+    background-image: url('../../assets/images/Inicio.jpg');
+    background-size: cover;
+}
+.bgcolor.scrolled{
+    background-color:blueviolet;
+}
+
+
+>>>>>>> af99e8c37138d5541dd65c1118670016bf2b304a

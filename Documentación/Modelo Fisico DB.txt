@@ -1,0 +1,61 @@
+create table user(
+	identification varchar(50) primary key,
+	name varchar(100) not null,
+	email varchar(100) not null,
+	birthdate date not null,
+	country_code varchar(4) not null,
+	phone varchar(15) not null,
+	occupation varchar(100) not null,
+	postal_code varchar(50) not null,
+	marital_status varchar(100) not null,
+	ubication varchar(200) not null
+);
+
+create table oganization(
+	nit varchar(50) primary key,
+	name varchar(100) not null,
+	ubication varchar(200) not null,
+	range int not null,
+	phone varchar(15) not null,
+	tel varchar(15) not null
+);
+
+create table notify(
+	id int not null identity(1,1),
+	title varchar(100) not null,
+	place varchar(150) not null,
+	identification varchar(50) not null,
+	distance int,
+	Foreign Key(identification) References users(identification)
+);
+
+INSERT INTO user (
+	identification,
+	name,
+	email,
+	birthdate,
+	country_code,
+	phone,
+	occupation,
+	postal_code,
+	marital_status,
+	ubication
+) VALUES(
+	'123456789',
+	'Johan Silva',
+	'jsilva@outlook.com',
+	'2001-08-13',
+	'+57',
+	'30024586521',
+	'Student', 
+	'4568521', 
+	'Single', 
+	'4.814728643996052, -74.35717137616184'
+);
+
+
+Insert Into notify(title,place,identification,distance) VALUES('Alerta','Funza','123456789','20');
+
+
+
+Scaffold-DbContext "Server=localhost\SQLEXPRESS;Database=tvigendb; Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f

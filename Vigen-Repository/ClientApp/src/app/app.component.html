@@ -1,14 +1,36 @@
 <header>
   <nav>
     <app-nav></app-nav>
+    
     <select class="form-select" #langSelect (change)="changeLang(langSelect.value)">
       <option selected value="es">Español</option>
       <option value="en">English</option>
+<<<<<<< HEAD
 
+=======
+>>>>>>> af99e8c37138d5541dd65c1118670016bf2b304a
     </select>
   </nav>
+  
+
 </header>
+<<<<<<< HEAD
 <section>
   <app-panel-estadistica></app-panel-estadistica>
 </section>
+=======
+
+<section>
+  <app-side></app-side>
+  <app-panel-user></app-panel-user>
+  <app-edit-user></app-edit-user>
+  <app-record-org></app-record-org>
+  <app-record-user></app-record-user>
+</section>
+
+
+  
+
+
+>>>>>>> af99e8c37138d5541dd65c1118670016bf2b304a
 <router-outlet></router-outlet>
