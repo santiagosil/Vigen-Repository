@@ -1,0 +1,41 @@
+
+#contenedor{
+    margin: 10px 200px;
+}
+
+
+.image1 {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+    margin: 5px;
+    margin-top: 10px;
+    border: 4px solid purple;
+}
+.image2 {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+    margin: 5px;
+    margin-top: 10px;
+    border: 4px solid purple;
+}
+.image3 {
+    width: 95%;
+    border-radius: 0;
+    position: relative;
+    margin: 15px;
+    border: 4px solid purple;
+}
+.parrafo{
+    margin: 50px 200px;
+    
+}
+p{
+    font-size: 20px;
+}
+h3{
+    font-size: 40px;
+}
+
+

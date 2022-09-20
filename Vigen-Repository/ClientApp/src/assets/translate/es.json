@@ -1,5 +1,22 @@
 {
     "NAV":{
         "HOME":"Inicio"
+    },
+    "HOME":{
+        "PARAUSUARIOS" : "Para usuarios",
+        "PARRAFOUSUARIO": "Si eres un usuario ingresa aqui: ",
+        "PARAENTIDADES" : "Para entidades",
+        "BOTONREGISTRAR": "Registrarse",
+        "BOTONINGRESAR": "Ingresar",
+        "PARRAFOENTIDADES": "Si eres una entidad ingresa aqui: "
+    },
+    "PANEL":{
+        "INICIO": "Inicio",
+        "ESTADISTICAS":"Estadísticas",
+        "SOBRENOSOTROS": "Sobre nosotros",
+        "PERFIL": "Perfil",
+        "NUEVOPROYECTO":"Nuevo proyecto",
+        "OPCIONES":"Opciones",
+        "SALIR": "Salir"
     }
 }

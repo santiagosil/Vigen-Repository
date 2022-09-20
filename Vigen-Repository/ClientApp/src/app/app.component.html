@@ -4,9 +4,11 @@
     <select class="form-select" #langSelect (change)="changeLang(langSelect.value)">
       <option selected value="es">Español</option>
       <option value="en">English</option>
-      
+
     </select>
   </nav>
 </header>
-
+<section>
+  <app-panel-estadistica></app-panel-estadistica>
+</section>
 <router-outlet></router-outlet>

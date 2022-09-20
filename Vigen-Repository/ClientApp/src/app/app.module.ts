@@ -8,15 +8,19 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './home/home.component';
+import { PanelEstadisticaComponent } from './panel-estadistica/panel-estadistica.component';
 
-export function HttpLoaderFactory(http: HttpClient){
-  return new TranslateHttpLoader(http, './assets/translate/','.json')
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/translate/', '.json')
 }
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent,
+    PanelEstadisticaComponent
   ],
   imports: [
     BrowserModule,
