@@ -1,6 +1,5 @@
 {
     "NAV":{
-<<<<<<< HEAD
         "HOME":"Inicio"
     },
     "HOME":{
@@ -13,13 +12,12 @@
     },
     "PANEL":{
         "INICIO": "Inicio",
-        "ESTADISTICAS":"EstadÃ­sticas",
+        "ESTADISTICAS":"Estadísticas",
         "SOBRENOSOTROS": "Sobre nosotros",
         "PERFIL": "Perfil",
         "NUEVOPROYECTO":"Nuevo proyecto",
         "OPCIONES":"Opciones",
         "SALIR": "Salir"
-=======
         "HOME":"Inicio",
         "ABOUT":"Acerca de",
         "HELP":"Ayuda"
@@ -28,10 +26,9 @@
     "EDIT-USER":{
         "USERNAME":"Usuario",
         "EMAIL":"Correo",
-        "PASSWORD":"ContraseÃ±a"
+        "PASSWORD":"Contraseña"
     },
     "HOME-USER":{
         "TITULO-1":"BIENVENIDO"
->>>>>>> af99e8c37138d5541dd65c1118670016bf2b304a
     }
 }
