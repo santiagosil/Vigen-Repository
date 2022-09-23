@@ -1,6 +1,25 @@
 {
     "NAV":{
         "HOME":"Home",
+        "INGRESAR":"Sign in"
+
+    },
+    "HOME":{
+        "PARAUSUARIOS" : "For Users",
+        "PARRAFOUSUARIO": "If you are a user enter here: ",
+        "PARAENTIDADES" : "For Entities",
+        "BOTONREGISTRAR": "Sign up",
+        "BOTONINGRESAR": "Sign in ",
+        "PARRAFOENTIDADES": "If you are a entity enter here: "
+    },
+    "PANEL":{
+        "INICIO": "Home",
+        "ESTADISTICAS":"Statistics",
+        "SOBRENOSOTROS": "About",
+        "PERFIL": "profile",
+        "NUEVOPROYECTO":"New project",
+        "OPCIONES":"Settings",
+        "SALIR": "Sign out"
         "ABOUT":"About",
         "HELP":"Help"
         
