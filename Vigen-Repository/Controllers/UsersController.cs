@@ -22,23 +22,16 @@ namespace Vigen_Repository.Controllers
 
         // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        public async Task<ActionResult> GetUsers()
         {
-          if (_context.Users == null)
-          {
-              return NotFound();
-          }
-            return await _context.Users.ToListAsync();
+            var listUsers= await _context.Users.ToListAsync();
+            return Ok(listUsers);
         }
 
         // GET: api/Users/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(string id)
+        public async Task<ActionResult> GetUser(string id)
         {
-          if (_context.Users == null)
-          {
-              return NotFound();
-          }
             var user = await _context.Users.FindAsync(id);
 
             if (user == null)
@@ -46,7 +39,7 @@ namespace Vigen_Repository.Controllers
                 return NotFound();
             }
 
-            return user;
+            return Ok(user);
         }
 
         // PUT: api/Users/5

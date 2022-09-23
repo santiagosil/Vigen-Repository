@@ -22,23 +22,24 @@ namespace Vigen_Repository.Controllers
 
         // GET: api/Oganizations
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Oganization>>> GetOganizations()
+        public async Task<ActionResult> GetOganizations()
         {
-          if (_context.Oganizations == null)
-          {
-              return NotFound();
-          }
-            return await _context.Oganizations.ToListAsync();
+            if (_context.Oganizations == null)
+            {
+                return NotFound();
+            }
+            var list = await _context.Oganizations.ToListAsync();
+            return Ok(list);
         }
 
         // GET: api/Oganizations/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Oganization>> GetOganization(string id)
+        public async Task<ActionResult> GetOganization(string id)
         {
-          if (_context.Oganizations == null)
-          {
-              return NotFound();
-          }
+            if (_context.Oganizations == null)
+            {
+                return NotFound();
+            }
             var oganization = await _context.Oganizations.FindAsync(id);
 
             if (oganization == null)
@@ -46,7 +47,7 @@ namespace Vigen_Repository.Controllers
                 return NotFound();
             }
 
-            return oganization;
+            return Ok(oganization);
         }
 
         // PUT: api/Oganizations/5
@@ -83,12 +84,12 @@ namespace Vigen_Repository.Controllers
         // POST: api/Oganizations
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Oganization>> PostOganization(Oganization oganization)
+        public async Task<ActionResult> PostOganization(Oganization oganization)
         {
-          if (_context.Oganizations == null)
-          {
-              return Problem("Entity set 'vigenContext.Oganizations'  is null.");
-          }
+            if (_context.Oganizations == null)
+            {
+                return Problem("Entity set 'vigenContext.Oganizations'  is null.");
+            }
             _context.Oganizations.Add(oganization);
             try
             {
