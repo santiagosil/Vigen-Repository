@@ -15,10 +15,13 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
 {
+
     options.AddPolicy(name: corsConfiguration,
         builder =>
         {
-            builder.WithOrigins("http://localhost:4200");
+            builder.AllowAnyOrigin();
+            builder.AllowAnyHeader();
+            builder.AllowAnyMethod();
         });
 });
 var app = builder.Build();

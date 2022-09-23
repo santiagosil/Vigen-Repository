@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../api/services';
+import { User } from '../api/models';
+
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { empty } from 'rxjs';
+import { HttpContext } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-record-user',
@@ -7,9 +16,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecordUserComponent implements OnInit {
 
-  constructor() { }
+  public usuario: User = {
+    identification: "",
+    name: "",
+    email: "",
+    birthdate: "",
+    countryCode: "",
+    phone: "",
+    occupation: "",
+    postalCode: "",
+    maritalStatus: "",
+    ubication: ""
+  };
 
-  ngOnInit(): void {
+
+  constructor(private api: UsersService) {
+
   }
 
+  ngOnInit(): void {
+
+  }
+  public send() {
+    if (this.usuario.email === "" || this.usuario.name === "" || this.usuario.identification === ""
+    || this.usuario.birthdate === "" ||  this.usuario.phone === ""
+    || this.usuario.occupation === "" || this.usuario.maritalStatus === "") 
+    {
+      console.log("Faltan algunos campos obligatorios por llenar");
+      return;
+    }else{
+      this.api.apiUsersPost$Json({ body: this.usuario })
+        .subscribe(res => {
+          console.log(res);
+        });
+    }
+  }
 }

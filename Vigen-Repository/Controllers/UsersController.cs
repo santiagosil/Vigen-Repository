@@ -11,6 +11,7 @@ namespace Vigen_Repository.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    
     public class UsersController : ControllerBase
     {
         private readonly vigendbContext _context;
