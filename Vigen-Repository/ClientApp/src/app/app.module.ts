@@ -14,6 +14,8 @@ import { PanelUserComponent } from './panel-user/panel-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { RecordOrgComponent } from './record-org/record-org.component';
 import { RecordUserComponent } from './record-user/record-user.component';
+import { HomeComponent } from './home/home.component';
+import { StatisticsDashboardComponent } from './statistics-dashboard/statistics-dashboard.component';
 
 
 
@@ -30,7 +32,9 @@ export function HttpLoaderFactory(http: HttpClient){
     PanelUserComponent,
     EditUserComponent,
     RecordOrgComponent,
-    RecordUserComponent, 
+    RecordUserComponent,
+    HomeComponent,
+    StatisticsDashboardComponent, 
   ],
   imports: [
     BrowserModule,

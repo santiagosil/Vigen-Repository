@@ -3,21 +3,19 @@
         "HOME":"Inicio"
     },
     "HOME":{
-        "PARAUSUARIOS" : "Para usuarios",
-        "PARRAFOUSUARIO": "Si eres un usuario ingresa aqui: ",
+        "PARAVICTIMAS" : "Para victimas",
         "PARAENTIDADES" : "Para entidades",
         "BOTONREGISTRAR": "Registrarse",
-        "BOTONINGRESAR": "Ingresar",
-        "PARRAFOENTIDADES": "Si eres una entidad ingresa aqui: "
+        "BOTONINGRESAR": "Ingresar"
     },
     "PANEL":{
         "INICIO": "Inicio",
-        "ESTADISTICAS":"Estadísticas",
+        "ESTADISTICAS":"Estadï¿½sticas",
         "SOBRENOSOTROS": "Sobre nosotros",
         "PERFIL": "Perfil",
         "NUEVOPROYECTO":"Nuevo proyecto",
         "OPCIONES":"Opciones",
-        "SALIR": "Salir"
+        "SALIR": "Salir",
         "HOME":"Inicio",
         "ABOUT":"Acerca de",
         "HELP":"Ayuda"
@@ -26,7 +24,7 @@
     "EDIT-USER":{
         "USERNAME":"Usuario",
         "EMAIL":"Correo",
-        "PASSWORD":"Contraseña"
+        "PASSWORD":"Contraseï¿½a"
     },
     "HOME-USER":{
         "TITULO-1":"BIENVENIDO"
