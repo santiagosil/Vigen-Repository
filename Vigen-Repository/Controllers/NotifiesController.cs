@@ -22,18 +22,19 @@ namespace Vigen_Repository.Controllers
 
         // GET: api/Notifies
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Notify>>> GetNotifies()
+        public async Task<ActionResult> GetNotifies()
         {
           if (_context.Notifies == null)
           {
               return NotFound();
           }
-            return await _context.Notifies.ToListAsync();
+          var listNotifies= await _context.Notifies.ToListAsync();
+            return Ok(listNotifies);
         }
 
         // GET: api/Notifies/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Notify>> GetNotify(int id)
+        public async Task<ActionResult> GetNotify(int id)
         {
           if (_context.Notifies == null)
           {
@@ -46,7 +47,7 @@ namespace Vigen_Repository.Controllers
                 return NotFound();
             }
 
-            return notify;
+            return Ok(notify);
         }
 
         // PUT: api/Notifies/5
@@ -83,16 +84,12 @@ namespace Vigen_Repository.Controllers
         // POST: api/Notifies
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Notify>> PostNotify(Notify notify)
+        public async Task<Notify> PostNotify(Notify notify)
         {
-          if (_context.Notifies == null)
-          {
-              return Problem("Entity set 'vigenContext.Notifies'  is null.");
-          }
             _context.Notifies.Add(notify);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetNotify", new { id = notify.Id }, notify);
+            return _context.Notifies.Find(notify);
         }
 
         // DELETE: api/Notifies/5

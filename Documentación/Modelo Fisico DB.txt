@@ -1,4 +1,4 @@
-create table user(
+create table users(
 	identification varchar(50) primary key,
 	name varchar(100) not null,
 	email varchar(100) not null,
@@ -11,7 +11,7 @@ create table user(
 	ubication varchar(200) not null
 );
 
-create table oganization(
+create table organization(
 	nit varchar(50) primary key,
 	name varchar(100) not null,
 	ubication varchar(200) not null,
@@ -29,7 +29,7 @@ create table notify(
 	Foreign Key(identification) References users(identification)
 );
 
-INSERT INTO user (
+INSERT INTO users (
 	identification,
 	name,
 	email,
