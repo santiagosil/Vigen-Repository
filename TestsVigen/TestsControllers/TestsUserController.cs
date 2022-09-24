@@ -59,14 +59,13 @@ namespace TestsVigen.TestsControllers
         }
 
         [Fact]
-        public async Task TestInsertUser()
+        public async Task TestCRUDUser()
         {
-            //Preparacion
+            await TestInsertUser();
+            await TestGetUserById();
+            await TestUpdateUser();
+            await TestDeleteUser();
 
-            //Prueba
-            await _controller.PostUser(testUser);
-            //Verificacion
-            Assert.True(_context.Users.Find(testUser.Identification) != null);
         }
 
         [Fact]
@@ -79,36 +78,37 @@ namespace TestsVigen.TestsControllers
             Assert.IsType<OkObjectResult>(testCase);
         }
 
-        [Fact]
         public async Task TestGetUserById()
         {
             //Preparacion
             //Prueba
-            await Task.WhenAll(TestInsertUser());
             var testCase= await _controller.GetUser(testUser.Identification);
             //Verificacion
             var user= Assert.IsType<OkObjectResult>(testCase);
         }
 
-        [Fact]
+        public async Task TestInsertUser()
+        {
+            //Prueba
+            await _controller.PostUser(testUser);
+            //Verificacion
+            Assert.True(_context.Users.Find(testUser.Identification) != null);
+        }
         public async Task TestUpdateUser()
         {
             //Preparacion
             testUser.Name = "Name Update";
             //Prueba
-            await Task.WhenAll(TestInsertUser());
             await _controller.PutUser(testUser.Identification, testUser);
             //Verificacion
             var user=_context.Users.Find(testUser.Identification);
             Assert.True(user?.Name == testUser.Name);
         }
 
-        [Fact]
         public async Task TestDeleteUser()
         {
             //Preparacion
             //Prueba
-            await Task.WhenAll(TestUpdateUser());
             await _controller.DeleteUser(testUser.Identification);
             //Verificacion
             var user = await _controller.GetUser(testUser.Identification);

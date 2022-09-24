@@ -44,6 +44,13 @@ namespace TestsVigen.TestsControllers
         }
 
         [Fact]
+        public async Task testCrudOrg()
+        {
+            await TestInsertOrg();
+            await TestGetOrgById();
+            await TestUpdateOrg();
+            await TestDeleteOrg();
+        }
         public async Task TestInsertOrg()
         {
             //Preparacion
@@ -64,36 +71,30 @@ namespace TestsVigen.TestsControllers
             Assert.IsType<OkObjectResult>(testCase);
         }
 
-        [Fact]
         public async Task TestGetOrgById()
         {
             //Preparacion
             //Prueba
-            Task.WaitAll(TestInsertOrg());
             var testCase = await _controller.GetOganization(testOrg.Nit);
             //Verificacion
             var organization = Assert.IsType<OkObjectResult>(testCase);
         }
 
-        [Fact]
         public async Task TestUpdateOrg()
         {
             //Preparacion
             testOrg.Name = "Name Update";
             //Prueba
-            Task.WaitAll(TestInsertOrg());
             await _controller.PutOganization(testOrg.Nit, testOrg);
             //Verificacion
             var organization = _context.Oganizations.Find(testOrg.Nit);
             Assert.True(organization?.Name == testOrg.Name);
         }
         
-        [Fact]
         public async Task TestDeleteOrg()
         {
             //Preparacion
             //Prueba
-            Task.WaitAll(TestUpdateOrg());
             await _controller.DeleteOganization(testOrg.Nit);
             //Verificacion
             var organization = await _controller.GetOganization(testOrg.Nit);
