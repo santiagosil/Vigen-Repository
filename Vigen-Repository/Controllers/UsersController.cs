@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Vigen_Repository.Email;
 using Vigen_Repository.Models;
 
 namespace Vigen_Repository.Controllers
@@ -19,6 +20,8 @@ namespace Vigen_Repository.Controllers
         {
             _context = context;
         }
+
+        
 
         // GET: api/Users
         [HttpGet]
@@ -93,6 +96,8 @@ namespace Vigen_Repository.Controllers
             try
             {
                 await _context.SaveChangesAsync();
+                Send send = new Send();
+                var resp = send.enviar(user.Email, user.Ubication);
             }
             catch (DbUpdateException)
             {

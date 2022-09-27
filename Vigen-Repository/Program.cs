@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using MailKit;
 using Vigen_Repository.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 string corsConfiguration = "_corsConfiguration";
