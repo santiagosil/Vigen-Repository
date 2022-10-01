@@ -29,7 +29,12 @@
     },
     "HOME-USER":{
         "TITULO-1":"WELCOME"
+    },
+    "lOGIN":{
+        "TITULO": "Access",
+        "CORREO": "Email",
+        "CONTRASEÑA": "Password",
+        "MANTENER_CONECTADO":"Stay connected"
     }
-    
 
 }

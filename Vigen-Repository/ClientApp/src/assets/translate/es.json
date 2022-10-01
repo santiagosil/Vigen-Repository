@@ -24,9 +24,15 @@
     "EDIT-USER":{
         "USERNAME":"Usuario",
         "EMAIL":"Correo",
-        "PASSWORD":"Contrase�a"
+        "PASSWORD":"Contraseña"
     },
     "HOME-USER":{
         "TITULO-1":"BIENVENIDO"
+    },
+    "lOGIN":{
+        "TITULO": "Acceder",
+        "CORREO": "Correo",
+        "CONTRASEÑA": "Contraseña",
+        "MANTENER_CONECTADO":"Mantenerme conectado"
     }
 }
