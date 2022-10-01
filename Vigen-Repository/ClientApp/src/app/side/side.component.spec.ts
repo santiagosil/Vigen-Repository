@@ -17,7 +17,7 @@ describe('SideComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Debe existir side.component', () => {
     expect(component).toBeTruthy();
   });
 });

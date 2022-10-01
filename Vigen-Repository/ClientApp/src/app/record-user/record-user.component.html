@@ -1,8 +1,10 @@
+<!--<p><b>Form:{{isCheck | json}}</b></p>
+<p><b>Form:{{form.invalid | json}}</b></p>-->
 <div class="container">
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <form>  
+                <form [formGroup]="form" (submit) ="sendLogin()" class="form">  
                     <h1>Registro</h1>
                     <br>
                     <p style="color:red;">Campos Obligarorios *</p>
@@ -11,56 +13,56 @@
                         <label>Nombre*</label>
                         <br>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                            <input formControlName="nomUser" type="text" class="form-control" placeholder="">
                         </div>
                     </div>
                     <br>
                     <div class="form-group row">
                         <label>Correo*</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="">
+                            <input formControlName="correoUser" type="email" class="form-control"  placeholder="">
                         </div>
                     </div>
                     <br>
                     <div class="form-group row">
                         <label>Fecha de nacimiento*</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                            <input formControlName="fechaNa" type="text" class="form-control"  placeholder="">
                         </div>
                     </div>
                     <br>
                     <div class="form-group row">
                         <label>Telefono*</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                            <input formControlName="telUser" type="text" class="form-control"  placeholder="">
                         </div>
                     </div>
                     <br>
                     <div class="form-group row">
                         <label>Ocupacion*</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                            <input formControlName="ocupaUser" type="text" class="form-control"  placeholder="">
                         </div>
                     </div>
                     <br>
                     <div class="form-group row">
                         <label>Codigo Postal</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                            <input formControlName="postUser" type="text" class="form-control"  placeholder="">
                         </div>
                     </div>
                     <br>
                     <div class="form-group row">
                         <label>Estado Civil*</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                            <input  formControlName="ecivlUser" type="text" class="form-control"  placeholder="">
                         </div>
                     </div>
                     <br>
                     <div class="form-group row">
                         <label>Identificacion*</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                            <input formControlName="idUser" type="text" class="form-control"  placeholder="">
                         </div>
                     </div>
                     <br>

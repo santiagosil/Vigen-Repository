@@ -13,6 +13,8 @@ import { PanelUserComponent } from './panel-user/panel-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { RecordOrgComponent } from './record-org/record-org.component';
 import { RecordUserComponent } from './record-user/record-user.component';
+import { MapComponent } from './map/map.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/translate/','.json')
@@ -26,7 +28,8 @@ export function HttpLoaderFactory(http: HttpClient){
     PanelUserComponent,
     EditUserComponent,
     RecordOrgComponent,
-    RecordUserComponent
+    RecordUserComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,9 @@ export function HttpLoaderFactory(http: HttpClient){
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    FormsModule,    
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

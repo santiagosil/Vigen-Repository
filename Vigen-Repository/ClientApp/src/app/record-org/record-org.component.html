@@ -1,37 +1,39 @@
-
+<!--<h1>{{title}}</h1>
+<p><b>Form:{{isCheck | json}}</b></p>
+<p><b>Form:{{form.invalid | json}}</b></p>-->
 <div class="container">
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <form>  
+                <form [formGroup]="form" (submit) ="sendLogin()" class="form">  
                     <h1>Registro</h1>
                     <br>
                     <div class="form-group row">
                         <label>Nombre de la organizacion</label>
                         <br>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                            <input formControlName="nomOrg" type="text" class="form-control"  placeholder="">
                         </div>
                     </div>
                     <br>
                     <div class="form-group row">
                         <label>NIT</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                            <input formControlName="nitOrg" type="text" class="form-control" placeholder="">
                         </div>
                     </div>
                     <br>
                     <div class="form-group row">
                         <label>Ubicacion</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                            <input formControlName="ubiOrg" type="text" class="form-control" placeholder="">
                         </div>
                     </div>
                     <br>
                     <div class="form-group row">
                         <label>Telefono</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                            <input formControlName="telOrg" type="text" class="form-control" placeholder="">
                         </div>
                     </div>
                     <br>
