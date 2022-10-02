@@ -22,7 +22,7 @@ export class RecordOrgComponent implements OnInit {
   listData: Data[] = [];
   form: FormGroup = new FormGroup({});
   isCheck: any;
-  constructor(private fb : FormBuilder) { }
+  /*constructor(private fb : FormBuilder) { }*/
 
   public organization: Organization = {
     name: "",
@@ -33,12 +33,12 @@ export class RecordOrgComponent implements OnInit {
   constructor(private api:OrganizationService) { }
 
   ngOnInit(): void {
-    this.form = this.fb.group({
+    /*this.form = this.fb.group({
       nomOrg: ['', [Validators.required]],
       nitOrg: ['', [Validators.required]],
       ubiOrg: ['', [Validators.required]],
       telOrg: ['', [Validators.required]],
-    })
+    })*/
   }
   sendLogin():void{
     this.isCheck = { user:1 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Swal from 'sweetalert2';
+//import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+/*
   showModal() {
     Swal.fire({
       position: 'top-end',
@@ -23,4 +23,5 @@ export class LoginComponent implements OnInit {
       timer: 1500
     })
   }
+  */
 }
