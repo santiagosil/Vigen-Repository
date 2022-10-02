@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { PanelUserComponent } from './panel-user/panel-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { RecordOrgComponent } from './record-org/record-org.component';
 import { RecordUserComponent } from './record-user/record-user.component';
+import { TokenComponent } from './token/token.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/translate/','.json')
@@ -26,12 +28,14 @@ export function HttpLoaderFactory(http: HttpClient){
     PanelUserComponent,
     EditUserComponent,
     RecordOrgComponent,
-    RecordUserComponent
+    RecordUserComponent,
+    TokenComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

@@ -1,4 +1,4 @@
-import { Component, OnInit, ɵAPP_ID_RANDOM_PROVIDER } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { UsersService } from '../api/services';
 import { User } from '../api/models';
 
@@ -31,7 +31,7 @@ export class RecordUserComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  }
+
   public send() {
     if (this.usuario.email === "" || this.usuario.name === "" || this.usuario.identification === ""
     || this.usuario.birthdate === "" ||  this.usuario.phone === ""
@@ -40,7 +40,8 @@ export class RecordUserComponent implements OnInit {
       console.log("Faltan algunos campos obligatorios por llenar");
       return;
     }else{
-      var random:number;
+      console.log(this.usuario);
+     var random:number;
       random = Math.round(Math.random() * (10000 - 1) + 1);
       this.usuario.ubication = random+"";
       this.api.apiUsersPost$Json({ body: this.usuario })

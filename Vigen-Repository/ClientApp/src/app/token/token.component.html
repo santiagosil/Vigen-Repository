@@ -1,0 +1,39 @@
+<br>
+<br>
+<div class="row">
+    <div class="col-4">
+    </div>
+    <div class="col-4">
+        <form>
+            <h1>Verificación</h1>
+            <div class="form-group row">
+                <label>Numero de Identifiación</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" placeholder="" [(ngModel)]="token.ide"
+                        [ngModelOptions]="{ standalone: true }">
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label>Codigo enviado a su correo</label>
+                <br>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" placeholder="" [(ngModel)]="token.codigo"
+                        [ngModelOptions]="{ standalone: true }">
+                </div>
+            </div>
+            <br>
+            <div class="col-sm-10">
+                <button (click)="send()" class="btn btn-primary">Verificar</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-4">
+    </div>
+</div>
+<div class="container">
+  <br>
+  <hr>
+</div>
+<br>
+<br>

@@ -10,14 +10,14 @@
                         <label>Nombre de la organizacion</label>
                         <br>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                            <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="organizacion.name" [ngModelOptions]="{ standalone: true }" placeholder="">
                         </div>
                     </div>
                     <br>
                     <div class="form-group row">
                         <label>NIT</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                            <input type="text" class="form-control" id="inlineFormInputGroup"  placeholder="">
                         </div>
                     </div>
                     <br>
@@ -31,7 +31,7 @@
                     <div class="form-group row">
                         <label>Telefono</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                            <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="organizacion.tel" [ngModelOptions]="{ standalone: true }" placeholder="">
                         </div>
                     </div>
                     <br>
@@ -53,7 +53,7 @@
                     <img src="../../assets/images/maps.jpg" class="figure-img img-fluid rounded " alt="...">
                 </div>
                 <br>
-                <h5>{{organization.name}}</h5>
+                <h5>{{organizacion.name}}</h5>
                 <br>
                 <div class="row">
                     <div class="col-2">
@@ -83,7 +83,7 @@
                     </div>
                     <div class="col-10">
                         <br>
-                        <p style="font-size: 13px">{{organization.tel}}</p>
+                        <p style="font-size: 13px">{{organizacion.tel}}</p>
                     </div>
                 </div>
             </div>
