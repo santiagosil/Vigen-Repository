@@ -6,11 +6,14 @@ namespace Vigen_Repository.Models
     public partial class Notify
     {
         public int Id { get; set; }
+        public string UserId { get; set; } = null!;
         public string Title { get; set; } = null!;
-        public string Place { get; set; } = null!;
-        public string Identification { get; set; } = null!;
-        public int? Distance { get; set; }
+        public string StateId { get; set; } = null!;
+        public string Description { get; set; } = null!;
+        public string OrganizationTypeId { get; set; } = null!;
 
-        public virtual User IdentificationNavigation { get; set; } = null!;
+        public virtual OrganizationType OrganizationType { get; set; } = null!;
+        public virtual State State { get; set; } = null!;
+        public virtual User User { get; set; } = null!;
     }
 }

@@ -1,3 +1,8 @@
-export { NotifiesService } from './services/notifies.service';
-export { OganizationsService } from './services/oganizations.service';
-export { UsersService } from './services/users.service';
+export { NotifyService } from './services/notify.service';
+export { OrganizationService } from './services/organization.service';
+export { OrganizationTypeService } from './services/organization-type.service';
+export { SiteService } from './services/site.service';
+export { StateService } from './services/state.service';
+export { UserService } from './services/user.service';
+export { ViolenceTypeService } from './services/violence-type.service';
+export { ViolenceTypeOrganizationService } from './services/violence-type-organization.service';

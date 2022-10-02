@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { OganizationsService, UsersService } from '../api/services';
-import { Oganization, User } from '../api/models';
+import { OrganizationService, UserService } from '../api/services';
+import { Organization, User } from '../api/models';
 
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; 
@@ -15,27 +15,24 @@ import { HttpContext } from '@angular/common/http';
 })
 export class RecordOrgComponent implements OnInit {
 
-  public organization: Oganization = {
+  public organization: Organization = {
     name: "",
     nit: "",
-    phone: "",
-    range: 0,
-    tel: "",
-    ubication: ""
+    tel: ""
   };
 
-  constructor(private api:OganizationsService) { }
+  constructor(private api:OrganizationService) { }
 
   ngOnInit(): void {
   }
   public send(){
     if (this.organization.name === "" || this.organization.nit === ""
-    || this.organization.tel === "" || this.organization.ubication === "") 
+    || this.organization.tel === "") 
     {
       console.log("Faltan algunos campos obligatorios por llenar");
       return;
     }else{
-    this.api.apiOganizationsPost$Json({body: this.organization})
+    this.api.apiOrganizationPost$Json({body: this.organization})
    .subscribe(res=>{
       console.log(res);
      });

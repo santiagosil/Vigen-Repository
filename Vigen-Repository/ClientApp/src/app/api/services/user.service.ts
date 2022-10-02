@@ -14,7 +14,7 @@ import { User } from '../models/user';
 @Injectable({
   providedIn: 'root',
 })
-export class UsersService extends BaseService {
+export class UserService extends BaseService {
   constructor(
     config: ApiConfiguration,
     http: HttpClient
@@ -23,22 +23,22 @@ export class UsersService extends BaseService {
   }
 
   /**
-   * Path part for operation apiUsersGet
+   * Path part for operation apiUserGet
    */
-  static readonly ApiUsersGetPath = '/api/Users';
+  static readonly ApiUserGetPath = '/api/User';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiUsersGet$Plain()` instead.
+   * To access only the response body, use `apiUserGet$Plain()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiUsersGet$Plain$Response(params?: {
+  apiUserGet$Plain$Response(params?: {
     context?: HttpContext
   }
 ): Observable<StrictHttpResponse<Array<User>>> {
 
-    const rb = new RequestBuilder(this.rootUrl, UsersService.ApiUsersGetPath, 'get');
+    const rb = new RequestBuilder(this.rootUrl, UserService.ApiUserGetPath, 'get');
     if (params) {
     }
 
@@ -56,32 +56,32 @@ export class UsersService extends BaseService {
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiUsersGet$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiUserGet$Plain$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiUsersGet$Plain(params?: {
+  apiUserGet$Plain(params?: {
     context?: HttpContext
   }
 ): Observable<Array<User>> {
 
-    return this.apiUsersGet$Plain$Response(params).pipe(
+    return this.apiUserGet$Plain$Response(params).pipe(
       map((r: StrictHttpResponse<Array<User>>) => r.body as Array<User>)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiUsersGet$Json()` instead.
+   * To access only the response body, use `apiUserGet$Json()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiUsersGet$Json$Response(params?: {
+  apiUserGet$Json$Response(params?: {
     context?: HttpContext
   }
 ): Observable<StrictHttpResponse<Array<User>>> {
 
-    const rb = new RequestBuilder(this.rootUrl, UsersService.ApiUsersGetPath, 'get');
+    const rb = new RequestBuilder(this.rootUrl, UserService.ApiUserGetPath, 'get');
     if (params) {
     }
 
@@ -99,38 +99,38 @@ export class UsersService extends BaseService {
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiUsersGet$Json$Response()` instead.
+   * To access the full response (for headers, for example), `apiUserGet$Json$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiUsersGet$Json(params?: {
+  apiUserGet$Json(params?: {
     context?: HttpContext
   }
 ): Observable<Array<User>> {
 
-    return this.apiUsersGet$Json$Response(params).pipe(
+    return this.apiUserGet$Json$Response(params).pipe(
       map((r: StrictHttpResponse<Array<User>>) => r.body as Array<User>)
     );
   }
 
   /**
-   * Path part for operation apiUsersPost
+   * Path part for operation apiUserPost
    */
-  static readonly ApiUsersPostPath = '/api/Users';
+  static readonly ApiUserPostPath = '/api/User';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiUsersPost$Plain()` instead.
+   * To access only the response body, use `apiUserPost$Plain()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  apiUsersPost$Plain$Response(params?: {
+  apiUserPost$Plain$Response(params?: {
     context?: HttpContext
     body?: User
   }
 ): Observable<StrictHttpResponse<User>> {
 
-    const rb = new RequestBuilder(this.rootUrl, UsersService.ApiUsersPostPath, 'post');
+    const rb = new RequestBuilder(this.rootUrl, UserService.ApiUserPostPath, 'post');
     if (params) {
       rb.body(params.body, 'application/*+json');
     }
@@ -149,34 +149,34 @@ export class UsersService extends BaseService {
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiUsersPost$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiUserPost$Plain$Response()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  apiUsersPost$Plain(params?: {
+  apiUserPost$Plain(params?: {
     context?: HttpContext
     body?: User
   }
 ): Observable<User> {
 
-    return this.apiUsersPost$Plain$Response(params).pipe(
+    return this.apiUserPost$Plain$Response(params).pipe(
       map((r: StrictHttpResponse<User>) => r.body as User)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiUsersPost$Json()` instead.
+   * To access only the response body, use `apiUserPost$Json()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  apiUsersPost$Json$Response(params?: {
+  apiUserPost$Json$Response(params?: {
     context?: HttpContext
     body?: User
   }
 ): Observable<StrictHttpResponse<User>> {
 
-    const rb = new RequestBuilder(this.rootUrl, UsersService.ApiUsersPostPath, 'post');
+    const rb = new RequestBuilder(this.rootUrl, UserService.ApiUserPostPath, 'post');
     if (params) {
       rb.body(params.body, 'application/*+json');
     }
@@ -195,39 +195,39 @@ export class UsersService extends BaseService {
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiUsersPost$Json$Response()` instead.
+   * To access the full response (for headers, for example), `apiUserPost$Json$Response()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  apiUsersPost$Json(params?: {
+  apiUserPost$Json(params?: {
     context?: HttpContext
     body?: User
   }
 ): Observable<User> {
 
-    return this.apiUsersPost$Json$Response(params).pipe(
+    return this.apiUserPost$Json$Response(params).pipe(
       map((r: StrictHttpResponse<User>) => r.body as User)
     );
   }
 
   /**
-   * Path part for operation apiUsersIdGet
+   * Path part for operation apiUserIdGet
    */
-  static readonly ApiUsersIdGetPath = '/api/Users/{id}';
+  static readonly ApiUserIdGetPath = '/api/User/{id}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiUsersIdGet$Plain()` instead.
+   * To access only the response body, use `apiUserIdGet$Plain()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiUsersIdGet$Plain$Response(params: {
+  apiUserIdGet$Plain$Response(params: {
     id: string;
     context?: HttpContext
   }
 ): Observable<StrictHttpResponse<User>> {
 
-    const rb = new RequestBuilder(this.rootUrl, UsersService.ApiUsersIdGetPath, 'get');
+    const rb = new RequestBuilder(this.rootUrl, UserService.ApiUserIdGetPath, 'get');
     if (params) {
       rb.path('id', params.id, {});
     }
@@ -246,34 +246,34 @@ export class UsersService extends BaseService {
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiUsersIdGet$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiUserIdGet$Plain$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiUsersIdGet$Plain(params: {
+  apiUserIdGet$Plain(params: {
     id: string;
     context?: HttpContext
   }
 ): Observable<User> {
 
-    return this.apiUsersIdGet$Plain$Response(params).pipe(
+    return this.apiUserIdGet$Plain$Response(params).pipe(
       map((r: StrictHttpResponse<User>) => r.body as User)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiUsersIdGet$Json()` instead.
+   * To access only the response body, use `apiUserIdGet$Json()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiUsersIdGet$Json$Response(params: {
+  apiUserIdGet$Json$Response(params: {
     id: string;
     context?: HttpContext
   }
 ): Observable<StrictHttpResponse<User>> {
 
-    const rb = new RequestBuilder(this.rootUrl, UsersService.ApiUsersIdGetPath, 'get');
+    const rb = new RequestBuilder(this.rootUrl, UserService.ApiUserIdGetPath, 'get');
     if (params) {
       rb.path('id', params.id, {});
     }
@@ -292,40 +292,40 @@ export class UsersService extends BaseService {
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiUsersIdGet$Json$Response()` instead.
+   * To access the full response (for headers, for example), `apiUserIdGet$Json$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiUsersIdGet$Json(params: {
+  apiUserIdGet$Json(params: {
     id: string;
     context?: HttpContext
   }
 ): Observable<User> {
 
-    return this.apiUsersIdGet$Json$Response(params).pipe(
+    return this.apiUserIdGet$Json$Response(params).pipe(
       map((r: StrictHttpResponse<User>) => r.body as User)
     );
   }
 
   /**
-   * Path part for operation apiUsersIdPut
+   * Path part for operation apiUserIdPut
    */
-  static readonly ApiUsersIdPutPath = '/api/Users/{id}';
+  static readonly ApiUserIdPutPath = '/api/User/{id}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiUsersIdPut()` instead.
+   * To access only the response body, use `apiUserIdPut$Plain()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  apiUsersIdPut$Response(params: {
+  apiUserIdPut$Plain$Response(params: {
     id: string;
     context?: HttpContext
     body?: User
   }
-): Observable<StrictHttpResponse<void>> {
+): Observable<StrictHttpResponse<User>> {
 
-    const rb = new RequestBuilder(this.rootUrl, UsersService.ApiUsersIdPutPath, 'put');
+    const rb = new RequestBuilder(this.rootUrl, UserService.ApiUserIdPutPath, 'put');
     if (params) {
       rb.path('id', params.id, {});
       rb.body(params.body, 'application/*+json');
@@ -333,82 +333,177 @@ export class UsersService extends BaseService {
 
     return this.http.request(rb.build({
       responseType: 'text',
-      accept: '*/*',
+      accept: 'text/plain',
       context: params?.context
     })).pipe(
       filter((r: any) => r instanceof HttpResponse),
       map((r: HttpResponse<any>) => {
-        return (r as HttpResponse<any>).clone({ body: undefined }) as StrictHttpResponse<void>;
+        return r as StrictHttpResponse<User>;
       })
     );
   }
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiUsersIdPut$Response()` instead.
+   * To access the full response (for headers, for example), `apiUserIdPut$Plain$Response()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  apiUsersIdPut(params: {
+  apiUserIdPut$Plain(params: {
     id: string;
     context?: HttpContext
     body?: User
   }
-): Observable<void> {
+): Observable<User> {
 
-    return this.apiUsersIdPut$Response(params).pipe(
-      map((r: StrictHttpResponse<void>) => r.body as void)
+    return this.apiUserIdPut$Plain$Response(params).pipe(
+      map((r: StrictHttpResponse<User>) => r.body as User)
     );
   }
 
   /**
-   * Path part for operation apiUsersIdDelete
+   * This method provides access to the full `HttpResponse`, allowing access to response headers.
+   * To access only the response body, use `apiUserIdPut$Json()` instead.
+   *
+   * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  static readonly ApiUsersIdDeletePath = '/api/Users/{id}';
+  apiUserIdPut$Json$Response(params: {
+    id: string;
+    context?: HttpContext
+    body?: User
+  }
+): Observable<StrictHttpResponse<User>> {
+
+    const rb = new RequestBuilder(this.rootUrl, UserService.ApiUserIdPutPath, 'put');
+    if (params) {
+      rb.path('id', params.id, {});
+      rb.body(params.body, 'application/*+json');
+    }
+
+    return this.http.request(rb.build({
+      responseType: 'json',
+      accept: 'text/json',
+      context: params?.context
+    })).pipe(
+      filter((r: any) => r instanceof HttpResponse),
+      map((r: HttpResponse<any>) => {
+        return r as StrictHttpResponse<User>;
+      })
+    );
+  }
+
+  /**
+   * This method provides access to only to the response body.
+   * To access the full response (for headers, for example), `apiUserIdPut$Json$Response()` instead.
+   *
+   * This method sends `application/*+json` and handles request body of type `application/*+json`.
+   */
+  apiUserIdPut$Json(params: {
+    id: string;
+    context?: HttpContext
+    body?: User
+  }
+): Observable<User> {
+
+    return this.apiUserIdPut$Json$Response(params).pipe(
+      map((r: StrictHttpResponse<User>) => r.body as User)
+    );
+  }
+
+  /**
+   * Path part for operation apiUserIdDelete
+   */
+  static readonly ApiUserIdDeletePath = '/api/User/{id}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiUsersIdDelete()` instead.
+   * To access only the response body, use `apiUserIdDelete$Plain()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiUsersIdDelete$Response(params: {
+  apiUserIdDelete$Plain$Response(params: {
     id: string;
     context?: HttpContext
   }
-): Observable<StrictHttpResponse<void>> {
+): Observable<StrictHttpResponse<User>> {
 
-    const rb = new RequestBuilder(this.rootUrl, UsersService.ApiUsersIdDeletePath, 'delete');
+    const rb = new RequestBuilder(this.rootUrl, UserService.ApiUserIdDeletePath, 'delete');
     if (params) {
       rb.path('id', params.id, {});
     }
 
     return this.http.request(rb.build({
       responseType: 'text',
-      accept: '*/*',
+      accept: 'text/plain',
       context: params?.context
     })).pipe(
       filter((r: any) => r instanceof HttpResponse),
       map((r: HttpResponse<any>) => {
-        return (r as HttpResponse<any>).clone({ body: undefined }) as StrictHttpResponse<void>;
+        return r as StrictHttpResponse<User>;
       })
     );
   }
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiUsersIdDelete$Response()` instead.
+   * To access the full response (for headers, for example), `apiUserIdDelete$Plain$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiUsersIdDelete(params: {
+  apiUserIdDelete$Plain(params: {
     id: string;
     context?: HttpContext
   }
-): Observable<void> {
+): Observable<User> {
 
-    return this.apiUsersIdDelete$Response(params).pipe(
-      map((r: StrictHttpResponse<void>) => r.body as void)
+    return this.apiUserIdDelete$Plain$Response(params).pipe(
+      map((r: StrictHttpResponse<User>) => r.body as User)
+    );
+  }
+
+  /**
+   * This method provides access to the full `HttpResponse`, allowing access to response headers.
+   * To access only the response body, use `apiUserIdDelete$Json()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  apiUserIdDelete$Json$Response(params: {
+    id: string;
+    context?: HttpContext
+  }
+): Observable<StrictHttpResponse<User>> {
+
+    const rb = new RequestBuilder(this.rootUrl, UserService.ApiUserIdDeletePath, 'delete');
+    if (params) {
+      rb.path('id', params.id, {});
+    }
+
+    return this.http.request(rb.build({
+      responseType: 'json',
+      accept: 'text/json',
+      context: params?.context
+    })).pipe(
+      filter((r: any) => r instanceof HttpResponse),
+      map((r: HttpResponse<any>) => {
+        return r as StrictHttpResponse<User>;
+      })
+    );
+  }
+
+  /**
+   * This method provides access to only to the response body.
+   * To access the full response (for headers, for example), `apiUserIdDelete$Json$Response()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  apiUserIdDelete$Json(params: {
+    id: string;
+    context?: HttpContext
+  }
+): Observable<User> {
+
+    return this.apiUserIdDelete$Json$Response(params).pipe(
+      map((r: StrictHttpResponse<User>) => r.body as User)
     );
   }
 

@@ -4,9 +4,14 @@ import { NgModule, ModuleWithProviders, SkipSelf, Optional } from '@angular/core
 import { HttpClient } from '@angular/common/http';
 import { ApiConfiguration, ApiConfigurationParams } from './api-configuration';
 
-import { NotifiesService } from './services/notifies.service';
-import { OganizationsService } from './services/oganizations.service';
-import { UsersService } from './services/users.service';
+import { NotifyService } from './services/notify.service';
+import { OrganizationService } from './services/organization.service';
+import { OrganizationTypeService } from './services/organization-type.service';
+import { SiteService } from './services/site.service';
+import { StateService } from './services/state.service';
+import { UserService } from './services/user.service';
+import { ViolenceTypeService } from './services/violence-type.service';
+import { ViolenceTypeOrganizationService } from './services/violence-type-organization.service';
 
 /**
  * Module that provides all services and configuration.
@@ -16,9 +21,14 @@ import { UsersService } from './services/users.service';
   exports: [],
   declarations: [],
   providers: [
-    NotifiesService,
-    OganizationsService,
-    UsersService,
+    NotifyService,
+    OrganizationService,
+    OrganizationTypeService,
+    SiteService,
+    StateService,
+    UserService,
+    ViolenceTypeService,
+    ViolenceTypeOrganizationService,
     ApiConfiguration
   ],
 })
