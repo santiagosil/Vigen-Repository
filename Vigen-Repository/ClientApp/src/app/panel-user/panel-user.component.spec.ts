@@ -17,7 +17,7 @@ describe('PanelUserComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Debe existir Panel-User.component ', () => {
     expect(component).toBeTruthy();
   });
 });

@@ -10,13 +10,11 @@ describe('NavComponent', () => {
       declarations: [ NavComponent ]
     })
     .compileComponents();
-
-    fixture = TestBed.createComponent(NavComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Debe existir record-org.component', () => {
+    const fixture = TestBed.createComponent(NavComponent);
+    const component = fixture.componentInstance
     expect(component).toBeTruthy();
   });
 });

@@ -1,7 +1,10 @@
+<!--<p><b>Form:{{isCheck | json}}</b></p>
+<p><b>Form:{{form.invalid | json}}</b></p>-->
 <div class="container">
     <div class="container">
         <div class="row">
             <div class="col-6">
+                <!--form [formGroup]="form" (submit) ="sendLogin()" class="form"-->  
                 <form (ngSubmit)="send()"  #f="ngForm">  
                     <h1>Registro</h1>
                     <br>
@@ -11,6 +14,7 @@
                         <label>Nombre*</label>
                         <br>
                         <div class="col-sm-10">
+                            <!--input formControlName="nomUser" type="text" class="form-control" placeholder=""-->
                             <input type="text" class="form-control"   [(ngModel)]="usuario.name" [ngModelOptions]="{standalone: true}"   placeholder="" >
                         </div>
                     </div>
@@ -18,6 +22,7 @@
                     <div class="form-group row">
                         <label>Correo*</label>
                         <div class="col-sm-10">
+                            <!--input formControlName="correoUser" type="email" class="form-control"  placeholder=""-->
                             <input type="email" class="form-control" id="inputEmail3" [(ngModel)]="usuario.email" [ngModelOptions]="{standalone: true}"  placeholder="" >
                         </div>
                     </div>
@@ -25,6 +30,7 @@
                     <div class="form-group row">
                         <label>Fecha de nacimiento*</label>
                         <div class="col-sm-10">
+                            <!--input formControlName="fechaNa" type="text" class="form-control"  placeholder=""-->
                             <input type="date" class="form-control" id="inlineFormInputGroup" [(ngModel)]="usuario.birthdate" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
@@ -32,6 +38,7 @@
                     <div class="form-group row">
                         <label>Telefono*</label>
                         <div class="col-sm-10">
+                            <!--input formControlName="telUser" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="usuario.phone" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
@@ -39,6 +46,7 @@
                     <div class="form-group row">
                         <label>Ocupacion*</label>
                         <div class="col-sm-10">
+                            <!--input formControlName="ocupaUser" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="usuario.occupation" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
@@ -46,6 +54,7 @@
                     <div class="form-group row">
                         <label>Codigo Postal</label>
                         <div class="col-sm-10">
+                            <!--input formControlName="postUser" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="usuario.postalCode" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
@@ -53,6 +62,7 @@
                     <div class="form-group row">
                         <label>Estado Civil*</label>
                         <div class="col-sm-10">
+                            <!--input  formControlName="ecivlUser" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="usuario.maritalStatus" [ngModelOptions]="{standalone: true}" placeholder="" >
                         </div>
                     </div>
@@ -60,6 +70,7 @@
                     <div class="form-group row">
                         <label>Identificacion*</label>
                         <div class="col-sm-10">
+                            <!--input formControlName="idUser" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="usuario.identification" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
