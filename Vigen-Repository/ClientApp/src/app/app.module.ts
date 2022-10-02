@@ -16,6 +16,7 @@ import { RecordOrgComponent } from './record-org/record-org.component';
 import { RecordUserComponent } from './record-user/record-user.component';
 import { HomeComponent } from './home/home.component';
 import { StatisticsDashboardComponent } from './statistics-dashboard/statistics-dashboard.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -34,7 +35,8 @@ export function HttpLoaderFactory(http: HttpClient){
     RecordOrgComponent,
     RecordUserComponent,
     HomeComponent,
-    StatisticsDashboardComponent, 
+    StatisticsDashboardComponent,
+    LoginComponent, 
   ],
   imports: [
     BrowserModule,
