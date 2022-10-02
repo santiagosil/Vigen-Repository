@@ -14,7 +14,7 @@ import { Notify } from '../models/notify';
 @Injectable({
   providedIn: 'root',
 })
-export class NotifiesService extends BaseService {
+export class NotifyService extends BaseService {
   constructor(
     config: ApiConfiguration,
     http: HttpClient
@@ -23,22 +23,22 @@ export class NotifiesService extends BaseService {
   }
 
   /**
-   * Path part for operation apiNotifiesGet
+   * Path part for operation apiNotifyGet
    */
-  static readonly ApiNotifiesGetPath = '/api/Notifies';
+  static readonly ApiNotifyGetPath = '/api/Notify';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiNotifiesGet$Plain()` instead.
+   * To access only the response body, use `apiNotifyGet$Plain()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiNotifiesGet$Plain$Response(params?: {
+  apiNotifyGet$Plain$Response(params?: {
     context?: HttpContext
   }
 ): Observable<StrictHttpResponse<Array<Notify>>> {
 
-    const rb = new RequestBuilder(this.rootUrl, NotifiesService.ApiNotifiesGetPath, 'get');
+    const rb = new RequestBuilder(this.rootUrl, NotifyService.ApiNotifyGetPath, 'get');
     if (params) {
     }
 
@@ -56,32 +56,32 @@ export class NotifiesService extends BaseService {
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiNotifiesGet$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiNotifyGet$Plain$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiNotifiesGet$Plain(params?: {
+  apiNotifyGet$Plain(params?: {
     context?: HttpContext
   }
 ): Observable<Array<Notify>> {
 
-    return this.apiNotifiesGet$Plain$Response(params).pipe(
+    return this.apiNotifyGet$Plain$Response(params).pipe(
       map((r: StrictHttpResponse<Array<Notify>>) => r.body as Array<Notify>)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiNotifiesGet$Json()` instead.
+   * To access only the response body, use `apiNotifyGet$Json()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiNotifiesGet$Json$Response(params?: {
+  apiNotifyGet$Json$Response(params?: {
     context?: HttpContext
   }
 ): Observable<StrictHttpResponse<Array<Notify>>> {
 
-    const rb = new RequestBuilder(this.rootUrl, NotifiesService.ApiNotifiesGetPath, 'get');
+    const rb = new RequestBuilder(this.rootUrl, NotifyService.ApiNotifyGetPath, 'get');
     if (params) {
     }
 
@@ -99,38 +99,38 @@ export class NotifiesService extends BaseService {
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiNotifiesGet$Json$Response()` instead.
+   * To access the full response (for headers, for example), `apiNotifyGet$Json$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiNotifiesGet$Json(params?: {
+  apiNotifyGet$Json(params?: {
     context?: HttpContext
   }
 ): Observable<Array<Notify>> {
 
-    return this.apiNotifiesGet$Json$Response(params).pipe(
+    return this.apiNotifyGet$Json$Response(params).pipe(
       map((r: StrictHttpResponse<Array<Notify>>) => r.body as Array<Notify>)
     );
   }
 
   /**
-   * Path part for operation apiNotifiesPost
+   * Path part for operation apiNotifyPost
    */
-  static readonly ApiNotifiesPostPath = '/api/Notifies';
+  static readonly ApiNotifyPostPath = '/api/Notify';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiNotifiesPost$Plain()` instead.
+   * To access only the response body, use `apiNotifyPost$Plain()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  apiNotifiesPost$Plain$Response(params?: {
+  apiNotifyPost$Plain$Response(params?: {
     context?: HttpContext
     body?: Notify
   }
 ): Observable<StrictHttpResponse<Notify>> {
 
-    const rb = new RequestBuilder(this.rootUrl, NotifiesService.ApiNotifiesPostPath, 'post');
+    const rb = new RequestBuilder(this.rootUrl, NotifyService.ApiNotifyPostPath, 'post');
     if (params) {
       rb.body(params.body, 'application/*+json');
     }
@@ -149,34 +149,34 @@ export class NotifiesService extends BaseService {
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiNotifiesPost$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiNotifyPost$Plain$Response()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  apiNotifiesPost$Plain(params?: {
+  apiNotifyPost$Plain(params?: {
     context?: HttpContext
     body?: Notify
   }
 ): Observable<Notify> {
 
-    return this.apiNotifiesPost$Plain$Response(params).pipe(
+    return this.apiNotifyPost$Plain$Response(params).pipe(
       map((r: StrictHttpResponse<Notify>) => r.body as Notify)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiNotifiesPost$Json()` instead.
+   * To access only the response body, use `apiNotifyPost$Json()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  apiNotifiesPost$Json$Response(params?: {
+  apiNotifyPost$Json$Response(params?: {
     context?: HttpContext
     body?: Notify
   }
 ): Observable<StrictHttpResponse<Notify>> {
 
-    const rb = new RequestBuilder(this.rootUrl, NotifiesService.ApiNotifiesPostPath, 'post');
+    const rb = new RequestBuilder(this.rootUrl, NotifyService.ApiNotifyPostPath, 'post');
     if (params) {
       rb.body(params.body, 'application/*+json');
     }
@@ -195,39 +195,39 @@ export class NotifiesService extends BaseService {
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiNotifiesPost$Json$Response()` instead.
+   * To access the full response (for headers, for example), `apiNotifyPost$Json$Response()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  apiNotifiesPost$Json(params?: {
+  apiNotifyPost$Json(params?: {
     context?: HttpContext
     body?: Notify
   }
 ): Observable<Notify> {
 
-    return this.apiNotifiesPost$Json$Response(params).pipe(
+    return this.apiNotifyPost$Json$Response(params).pipe(
       map((r: StrictHttpResponse<Notify>) => r.body as Notify)
     );
   }
 
   /**
-   * Path part for operation apiNotifiesIdGet
+   * Path part for operation apiNotifyIdGet
    */
-  static readonly ApiNotifiesIdGetPath = '/api/Notifies/{id}';
+  static readonly ApiNotifyIdGetPath = '/api/Notify/{id}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiNotifiesIdGet$Plain()` instead.
+   * To access only the response body, use `apiNotifyIdGet$Plain()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiNotifiesIdGet$Plain$Response(params: {
-    id: number;
+  apiNotifyIdGet$Plain$Response(params: {
+    id: string;
     context?: HttpContext
   }
 ): Observable<StrictHttpResponse<Notify>> {
 
-    const rb = new RequestBuilder(this.rootUrl, NotifiesService.ApiNotifiesIdGetPath, 'get');
+    const rb = new RequestBuilder(this.rootUrl, NotifyService.ApiNotifyIdGetPath, 'get');
     if (params) {
       rb.path('id', params.id, {});
     }
@@ -246,34 +246,34 @@ export class NotifiesService extends BaseService {
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiNotifiesIdGet$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiNotifyIdGet$Plain$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiNotifiesIdGet$Plain(params: {
-    id: number;
+  apiNotifyIdGet$Plain(params: {
+    id: string;
     context?: HttpContext
   }
 ): Observable<Notify> {
 
-    return this.apiNotifiesIdGet$Plain$Response(params).pipe(
+    return this.apiNotifyIdGet$Plain$Response(params).pipe(
       map((r: StrictHttpResponse<Notify>) => r.body as Notify)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiNotifiesIdGet$Json()` instead.
+   * To access only the response body, use `apiNotifyIdGet$Json()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiNotifiesIdGet$Json$Response(params: {
-    id: number;
+  apiNotifyIdGet$Json$Response(params: {
+    id: string;
     context?: HttpContext
   }
 ): Observable<StrictHttpResponse<Notify>> {
 
-    const rb = new RequestBuilder(this.rootUrl, NotifiesService.ApiNotifiesIdGetPath, 'get');
+    const rb = new RequestBuilder(this.rootUrl, NotifyService.ApiNotifyIdGetPath, 'get');
     if (params) {
       rb.path('id', params.id, {});
     }
@@ -292,40 +292,40 @@ export class NotifiesService extends BaseService {
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiNotifiesIdGet$Json$Response()` instead.
+   * To access the full response (for headers, for example), `apiNotifyIdGet$Json$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiNotifiesIdGet$Json(params: {
-    id: number;
+  apiNotifyIdGet$Json(params: {
+    id: string;
     context?: HttpContext
   }
 ): Observable<Notify> {
 
-    return this.apiNotifiesIdGet$Json$Response(params).pipe(
+    return this.apiNotifyIdGet$Json$Response(params).pipe(
       map((r: StrictHttpResponse<Notify>) => r.body as Notify)
     );
   }
 
   /**
-   * Path part for operation apiNotifiesIdPut
+   * Path part for operation apiNotifyIdPut
    */
-  static readonly ApiNotifiesIdPutPath = '/api/Notifies/{id}';
+  static readonly ApiNotifyIdPutPath = '/api/Notify/{id}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiNotifiesIdPut()` instead.
+   * To access only the response body, use `apiNotifyIdPut$Plain()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  apiNotifiesIdPut$Response(params: {
-    id: number;
+  apiNotifyIdPut$Plain$Response(params: {
+    id: string;
     context?: HttpContext
     body?: Notify
   }
-): Observable<StrictHttpResponse<void>> {
+): Observable<StrictHttpResponse<Notify>> {
 
-    const rb = new RequestBuilder(this.rootUrl, NotifiesService.ApiNotifiesIdPutPath, 'put');
+    const rb = new RequestBuilder(this.rootUrl, NotifyService.ApiNotifyIdPutPath, 'put');
     if (params) {
       rb.path('id', params.id, {});
       rb.body(params.body, 'application/*+json');
@@ -333,82 +333,177 @@ export class NotifiesService extends BaseService {
 
     return this.http.request(rb.build({
       responseType: 'text',
-      accept: '*/*',
+      accept: 'text/plain',
       context: params?.context
     })).pipe(
       filter((r: any) => r instanceof HttpResponse),
       map((r: HttpResponse<any>) => {
-        return (r as HttpResponse<any>).clone({ body: undefined }) as StrictHttpResponse<void>;
+        return r as StrictHttpResponse<Notify>;
       })
     );
   }
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiNotifiesIdPut$Response()` instead.
+   * To access the full response (for headers, for example), `apiNotifyIdPut$Plain$Response()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  apiNotifiesIdPut(params: {
-    id: number;
+  apiNotifyIdPut$Plain(params: {
+    id: string;
     context?: HttpContext
     body?: Notify
   }
-): Observable<void> {
+): Observable<Notify> {
 
-    return this.apiNotifiesIdPut$Response(params).pipe(
-      map((r: StrictHttpResponse<void>) => r.body as void)
+    return this.apiNotifyIdPut$Plain$Response(params).pipe(
+      map((r: StrictHttpResponse<Notify>) => r.body as Notify)
     );
   }
 
   /**
-   * Path part for operation apiNotifiesIdDelete
+   * This method provides access to the full `HttpResponse`, allowing access to response headers.
+   * To access only the response body, use `apiNotifyIdPut$Json()` instead.
+   *
+   * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  static readonly ApiNotifiesIdDeletePath = '/api/Notifies/{id}';
+  apiNotifyIdPut$Json$Response(params: {
+    id: string;
+    context?: HttpContext
+    body?: Notify
+  }
+): Observable<StrictHttpResponse<Notify>> {
+
+    const rb = new RequestBuilder(this.rootUrl, NotifyService.ApiNotifyIdPutPath, 'put');
+    if (params) {
+      rb.path('id', params.id, {});
+      rb.body(params.body, 'application/*+json');
+    }
+
+    return this.http.request(rb.build({
+      responseType: 'json',
+      accept: 'text/json',
+      context: params?.context
+    })).pipe(
+      filter((r: any) => r instanceof HttpResponse),
+      map((r: HttpResponse<any>) => {
+        return r as StrictHttpResponse<Notify>;
+      })
+    );
+  }
+
+  /**
+   * This method provides access to only to the response body.
+   * To access the full response (for headers, for example), `apiNotifyIdPut$Json$Response()` instead.
+   *
+   * This method sends `application/*+json` and handles request body of type `application/*+json`.
+   */
+  apiNotifyIdPut$Json(params: {
+    id: string;
+    context?: HttpContext
+    body?: Notify
+  }
+): Observable<Notify> {
+
+    return this.apiNotifyIdPut$Json$Response(params).pipe(
+      map((r: StrictHttpResponse<Notify>) => r.body as Notify)
+    );
+  }
+
+  /**
+   * Path part for operation apiNotifyIdDelete
+   */
+  static readonly ApiNotifyIdDeletePath = '/api/Notify/{id}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `apiNotifiesIdDelete()` instead.
+   * To access only the response body, use `apiNotifyIdDelete$Plain()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiNotifiesIdDelete$Response(params: {
-    id: number;
+  apiNotifyIdDelete$Plain$Response(params: {
+    id: string;
     context?: HttpContext
   }
-): Observable<StrictHttpResponse<void>> {
+): Observable<StrictHttpResponse<Notify>> {
 
-    const rb = new RequestBuilder(this.rootUrl, NotifiesService.ApiNotifiesIdDeletePath, 'delete');
+    const rb = new RequestBuilder(this.rootUrl, NotifyService.ApiNotifyIdDeletePath, 'delete');
     if (params) {
       rb.path('id', params.id, {});
     }
 
     return this.http.request(rb.build({
       responseType: 'text',
-      accept: '*/*',
+      accept: 'text/plain',
       context: params?.context
     })).pipe(
       filter((r: any) => r instanceof HttpResponse),
       map((r: HttpResponse<any>) => {
-        return (r as HttpResponse<any>).clone({ body: undefined }) as StrictHttpResponse<void>;
+        return r as StrictHttpResponse<Notify>;
       })
     );
   }
 
   /**
    * This method provides access to only to the response body.
-   * To access the full response (for headers, for example), `apiNotifiesIdDelete$Response()` instead.
+   * To access the full response (for headers, for example), `apiNotifyIdDelete$Plain$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  apiNotifiesIdDelete(params: {
-    id: number;
+  apiNotifyIdDelete$Plain(params: {
+    id: string;
     context?: HttpContext
   }
-): Observable<void> {
+): Observable<Notify> {
 
-    return this.apiNotifiesIdDelete$Response(params).pipe(
-      map((r: StrictHttpResponse<void>) => r.body as void)
+    return this.apiNotifyIdDelete$Plain$Response(params).pipe(
+      map((r: StrictHttpResponse<Notify>) => r.body as Notify)
+    );
+  }
+
+  /**
+   * This method provides access to the full `HttpResponse`, allowing access to response headers.
+   * To access only the response body, use `apiNotifyIdDelete$Json()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  apiNotifyIdDelete$Json$Response(params: {
+    id: string;
+    context?: HttpContext
+  }
+): Observable<StrictHttpResponse<Notify>> {
+
+    const rb = new RequestBuilder(this.rootUrl, NotifyService.ApiNotifyIdDeletePath, 'delete');
+    if (params) {
+      rb.path('id', params.id, {});
+    }
+
+    return this.http.request(rb.build({
+      responseType: 'json',
+      accept: 'text/json',
+      context: params?.context
+    })).pipe(
+      filter((r: any) => r instanceof HttpResponse),
+      map((r: HttpResponse<any>) => {
+        return r as StrictHttpResponse<Notify>;
+      })
+    );
+  }
+
+  /**
+   * This method provides access to only to the response body.
+   * To access the full response (for headers, for example), `apiNotifyIdDelete$Json$Response()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  apiNotifyIdDelete$Json(params: {
+    id: string;
+    context?: HttpContext
+  }
+): Observable<Notify> {
+
+    return this.apiNotifyIdDelete$Json$Response(params).pipe(
+      map((r: StrictHttpResponse<Notify>) => r.body as Notify)
     );
   }
 
