@@ -1,0 +1,1 @@
+ng-openapi-gen --input swagger/swagger.json --output src/app/api

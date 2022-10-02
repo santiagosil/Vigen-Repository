@@ -2,6 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Data } from '@angular/router';
 import {latlong} from '../map/map.component';
+import { OrganizationService, UserService } from '../api/services';
+import { Organization, User } from '../api/models';
+
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpContext } from '@angular/common/http';
 
 @Component({
   selector: 'app-record-org',
@@ -17,6 +24,14 @@ export class RecordOrgComponent implements OnInit {
   isCheck: any;
   constructor(private fb : FormBuilder) { }
 
+  public organization: Organization = {
+    name: "",
+    nit: "",
+    tel: ""
+  };
+
+  constructor(private api:OrganizationService) { }
+
   ngOnInit(): void {
     this.form = this.fb.group({
       nomOrg: ['', [Validators.required]],
@@ -28,5 +43,18 @@ export class RecordOrgComponent implements OnInit {
   sendLogin():void{
     this.isCheck = { user:1 }
     console.error(latlong);
+  }
+  public send(){
+    if (this.organization.name === "" || this.organization.nit === ""
+    || this.organization.tel === "") 
+    {
+      console.log("Faltan algunos campos obligatorios por llenar");
+      return;
+    }else{
+    this.api.apiOrganizationPost$Json({body: this.organization})
+   .subscribe(res=>{
+      console.log(res);
+     });
+    }
   }
 }

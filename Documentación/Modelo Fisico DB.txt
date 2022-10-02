@@ -1,0 +1,111 @@
+create table users(
+	identification varchar(50) primary key,
+	password varchar(150) not null,
+	name varchar(100) not null,
+	email varchar(100) not null,
+	birthdate date not null,
+	country_code varchar(4) not null,
+	phone varchar(15) not null,
+	occupation varchar(100) not null,
+	postal_code varchar(50) not null,
+	marital_status varchar(100) not null,
+	ubication varchar(200) not null,
+	code varchar(4) not null,
+	verification bit not null
+);
+
+create table violence_type(
+	id int identity(1,1) primary key,
+	name varchar(100) not null,
+	description varchar(200) not null
+);
+
+create table organization(
+	nit varchar(50) primary key,
+	name varchar(100) not null,
+	tel varchar(15) not null
+);
+
+create table site(
+	nit varchar(50),
+	id varchar(2), //la organizacion ingresa el id de su sede
+	ubication varchar(150) not null,
+	range int not null,
+	country_code varchar(4) not null,
+	phone varchar(15) not null,
+	tel varchar(15) not null,
+	primary key (nit, id),
+	Foreign Key(nit) References organization(nit),
+);
+
+create table violence_types_organization(
+	nit varchar(50),
+	id_violence int,
+	primary key(nit, id_violence)
+);
+
+create table organization_type(
+	id varchar(2) primary key,
+	name varchar(100) not null,
+	description varchar(200) not null
+);
+
+create table state(
+	id varchar(2) primary key,
+	name varchar(100) not null,
+	description varchar(200) not null
+);
+
+create table notify(
+	id int identity(1,1) primary key,
+	user_id varchar(50) not null,
+	title varchar(100) not null,
+	state_id varchar(2) not null,
+	description varchar(200) not null,
+	organization_type_id varchar(2) not null,
+	Foreign Key(user_id) References users(identification),
+	Foreign Key(state_id) References state(id),
+	Foreign Key(organization_type_id) References organization_type(id),
+);
+
+INSERT INTO users (
+	identification,
+	password,
+	name,
+	email,
+	birthdate,
+	country_code,
+	phone,
+	occupation,
+	postal_code,
+	marital_status,
+	ubication,
+	code,
+	verification
+) VALUES(
+	'123456789',
+	'Pass1234',
+	'Johan Silva',
+	'jsilva@outlook.com',
+	'2001-08-13',
+	'+57',
+	'30024586521',
+	'Student', 
+	'4568521', 
+	'Single', 
+	'4.814728643996052, -74.35717137616184',
+	'9514',
+	'0'
+);
+
+insert into organization_type(id,name,description) VALUES('1','Police','Police Entity government');
+
+insert into state(id,name,description) VALUES ('0','Active','this alert is active');
+
+insert into state(id,name,description) VALUES ('1','serviced','this alert is serviced');
+
+Insert Into notify(user_id,title,state_id,description,organization_type_id) VALUES('123456789','Alerta','0','I Need Help','1');
+
+
+
+Scaffold-DbContext "Server=localhost\SQLEXPRESS;Database=vigendb; Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f

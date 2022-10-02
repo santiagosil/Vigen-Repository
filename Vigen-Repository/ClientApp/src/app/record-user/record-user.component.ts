@@ -1,6 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Data } from '@angular/router';
+import { UserService } from '../api/services';
+import { User } from '../api/models';
+
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpContext } from '@angular/common/http';
+
+
 @Component({
   selector: 'app-record-user',
   templateUrl: './record-user.component.html',
@@ -14,8 +23,7 @@ export class RecordUserComponent implements OnInit {
   form: FormGroup = new FormGroup({});
   isCheck: any;
 
-
-  constructor(private fb: FormBuilder) { }
+  /*constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -31,5 +39,41 @@ export class RecordUserComponent implements OnInit {
   }
   sendLogin(): void {
     this.isCheck = { user: 2 }
+  }*/
+
+  public usuario: User = {
+    identification: "",
+    name: "",
+    email: "",
+    birthdate: "",
+    countryCode: "",
+    phone: "",
+    occupation: "",
+    postalCode: "",
+    maritalStatus: "",
+    ubication: ""
+  };
+
+
+  constructor(private api: UserService) {
+
+  }
+
+  ngOnInit(): void {
+
+  }
+  public send() {
+    if (this.usuario.email === "" || this.usuario.name === "" || this.usuario.identification === ""
+    || this.usuario.birthdate === "" ||  this.usuario.phone === ""
+    || this.usuario.occupation === "" || this.usuario.maritalStatus === "") 
+    {
+      console.log("Faltan algunos campos obligatorios por llenar");
+      return;
+    }else{
+      this.api.apiUserPost$Json({ body: this.usuario })
+        .subscribe(res => {
+          console.log(res);
+        });
+    }
   }
 }

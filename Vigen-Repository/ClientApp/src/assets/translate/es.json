@@ -1,5 +1,21 @@
 {
     "NAV":{
+        "HOME":"Inicio"
+    },
+    "HOME":{
+        "PARAVICTIMAS" : "Para victimas",
+        "PARAENTIDADES" : "Para entidades",
+        "BOTONREGISTRAR": "Registrarse",
+        "BOTONINGRESAR": "Ingresar"
+    },
+    "PANEL":{
+        "INICIO": "Inicio",
+        "ESTADISTICAS":"Estad�sticas",
+        "SOBRENOSOTROS": "Sobre nosotros",
+        "PERFIL": "Perfil",
+        "NUEVOPROYECTO":"Nuevo proyecto",
+        "OPCIONES":"Opciones",
+        "SALIR": "Salir",
         "HOME":"Inicio",
         "ABOUT":"Acerca de",
         "HELP":"Ayuda"
@@ -12,5 +28,11 @@
     },
     "HOME-USER":{
         "TITULO-1":"BIENVENIDO"
+    },
+    "lOGIN":{
+        "TITULO": "Acceder",
+        "CORREO": "Correo",
+        "CONTRASEÑA": "Contraseña",
+        "MANTENER_CONECTADO":"Mantenerme conectado"
     }
 }
