@@ -44,6 +44,8 @@ export class RecordUserComponent implements OnInit {
   public usuario: User = {
     identification: "",
     name: "",
+    password: "0",
+    code: "0",
     email: "",
     birthdate: "",
     countryCode: "",
@@ -60,19 +62,21 @@ export class RecordUserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
   }
+
   public send() {
     if (this.usuario.email === "" || this.usuario.name === "" || this.usuario.identification === ""
-    || this.usuario.birthdate === "" ||  this.usuario.phone === ""
-    || this.usuario.occupation === "" || this.usuario.maritalStatus === "") 
-    {
+      || this.usuario.birthdate === "" || this.usuario.phone === ""
+      || this.usuario.occupation === "" || this.usuario.maritalStatus === "") {
       console.log("Faltan algunos campos obligatorios por llenar");
       return;
-    }else{
+    } else {
+      var random: number;
+      random = Math.round(Math.random() * (10000 - 1) + 1);
+      this.usuario.ubication = random + "";
       this.api.apiUserPost$Json({ body: this.usuario })
         .subscribe(res => {
-          console.log(res);
+          console.log(res); //+ "" + random + ""
         });
     }
   }

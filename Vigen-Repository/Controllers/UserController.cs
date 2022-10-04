@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Vigen_Repository.Models;
 using Microsoft.EntityFrameworkCore;
+using Vigen_Repository.Email;
 
 namespace Vigen_Repository.Controllers
 {
@@ -37,11 +38,14 @@ namespace Vigen_Repository.Controllers
             {
                 await _context.Users.AddAsync(user);
                 await _context.SaveChangesAsync();
-                return Ok(user);
-            }catch (Exception ex)
+                Send send = new Send();
+                var res = send.enviar(user.Email, user.Code);
+            }
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
+            return Ok("succesfull");
         }
 
         [HttpPut("{id}")]
