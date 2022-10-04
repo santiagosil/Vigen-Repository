@@ -18,6 +18,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { StatisticsDashboardComponent } from './statistics-dashboard/statistics-dashboard.component';
 import { LoginComponent } from './login/login.component';
+import { RouterModule } from '@angular/router';
+import { SingUpComponent } from './sign-up/sing-up.component';
+
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/translate/','.json')
@@ -35,7 +38,8 @@ export function HttpLoaderFactory(http: HttpClient){
     MapComponent,
     HomeComponent,
     StatisticsDashboardComponent,
-    LoginComponent
+    LoginComponent,
+    SingUpComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,8 @@ export function HttpLoaderFactory(http: HttpClient){
       }
     }),
     FormsModule,    
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
