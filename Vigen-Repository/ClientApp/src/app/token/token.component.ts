@@ -1,5 +1,6 @@
 import { TokenType } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { User } from '../api/models';
 import { UserService } from '../api/services';
 
 @Component({
@@ -8,6 +9,7 @@ import { UserService } from '../api/services';
   styleUrls: ['./token.component.css']
 })
 export class TokenComponent implements OnInit {
+
   token = {
     ide: "",
     codigo: ""
@@ -22,10 +24,19 @@ export class TokenComponent implements OnInit {
           .subscribe((res) => {
             console.log(res);
             if (res.code === this.token.codigo) {
-              console.log("Admitido");
+              res.verification = true;
+              this.actualizar(id,res);
             }else{
               console.log("No adminitido");
             }
+          });
+   }
+   actualizar(identificador:string, cuerpo:User){
+    var id = identificador;
+    var body = cuerpo;
+    this.api.apiUserIdPut$Json({id, body})
+          .subscribe((actu)=> {
+                console.log(actu);
           });
    }
 }
