@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +14,9 @@ export class LoginComponent implements OnInit {
   }
 
 
- /* showModal() {
+
+  showModal() {
+
     Swal.fire({
       position: 'top-end',
       icon: 'success',
@@ -22,6 +24,5 @@ export class LoginComponent implements OnInit {
       showConfirmButton: false,
       timer: 1500
     })
-  }*/
-  
+  }
 }
