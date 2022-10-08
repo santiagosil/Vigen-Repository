@@ -25,6 +25,7 @@
     "bootstrap": "^5.2.1",
     "jquery": "^3.6.1",
     "leaflet": "^1.8.0",
+    "ng-openapi-gen": "^0.23.0",
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.4.37",
     "tslib": "^2.3.0",

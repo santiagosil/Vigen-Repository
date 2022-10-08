@@ -14,7 +14,9 @@ export class LoginComponent implements OnInit {
   }
 
 
+
   showModal() {
+
     Swal.fire({
       position: 'top-end',
       icon: 'success',
@@ -23,5 +25,4 @@ export class LoginComponent implements OnInit {
       timer: 1500
     })
   }
-  
 }

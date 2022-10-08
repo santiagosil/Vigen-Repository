@@ -1,8 +1,7 @@
-
 <!--p *ngIf="user">{{user.name}}</p>-->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-primary bgcolor p-md-3">
+  <nav class="navbar fixed-top navbar-expand-lg bgcolor p-md-3">
     <div class="container-fluid">
-      <a class="navbar-brand text-primary ms-5" href="#"> Vigen</a>
+      <a class="navbar-brand text-white ms-5" href="#"> Vigen</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -10,28 +9,30 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-primary" aria-current="page" href="#">{{"NAV.HOME" | translate}}</a>
+            <a class="nav-link active text-white" aria-current="page" href="/">{{"NAV.HOME" | translate}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" href="#">{{"NAV.ABOUT" | translate}}</a>
+            <a class="nav-link text-white" href="/">{{"NAV.ABOUT" | translate}}</a>
+            
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" href="#">{{"NAV.HELP" | translate}}</a>
+            <a class="nav-link text-white" href="/">{{"NAV.HELP" | translate}}</a>
           </li>
         </ul>
-        <button class="btn btn-primary m-2" type="submit">Login</button>
-        <button class="btn btn-dark me-5" type="submit">Sign-up</button>
+        <button class="btn btn-primary m-2" type="submit" routerLink="/login">Login</button>
+        <button class="btn btn-dark me-5" type="submit" routerLink="/signUp">Sign-up</button>
   
       </div>
     </div>
   </nav>
 
+ <!-- <img src="../../assets/images/Mujer.jpg" class="img-fluid" width="100%" height="30%" alt="Responsive image">-->
   
-  <<div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+ <!-- <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
     <div class="content text-center">
       <h1 class="text-white"></h1>
     </div>
-  </div>>
+  </div>>-->
 <!--
 <div class="container">
   <h1>DEVELOP ACROSS ALL PLATFORMS
