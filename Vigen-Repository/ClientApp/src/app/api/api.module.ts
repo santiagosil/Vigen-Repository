@@ -12,6 +12,7 @@ import { StateService } from './services/state.service';
 import { UserService } from './services/user.service';
 import { ViolenceTypeService } from './services/violence-type.service';
 import { ViolenceTypeOrganizationService } from './services/violence-type-organization.service';
+import { ReportesComponent } from './services/reportes/reportes.component';
 
 /**
  * Module that provides all services and configuration.
@@ -19,7 +20,9 @@ import { ViolenceTypeOrganizationService } from './services/violence-type-organi
 @NgModule({
   imports: [],
   exports: [],
-  declarations: [],
+  declarations: [
+    ReportesComponent
+  ],
   providers: [
     NotifyService,
     OrganizationService,

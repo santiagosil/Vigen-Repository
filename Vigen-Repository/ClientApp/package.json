@@ -24,6 +24,8 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.1",
     "jquery": "^3.6.1",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.25",
     "leaflet": "^1.8.0",
     "ng-openapi-gen": "^0.23.0",
     "rxjs": "~7.5.0",
