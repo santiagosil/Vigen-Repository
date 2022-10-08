@@ -1,22 +1,25 @@
 <header>
   <nav>
     <app-nav></app-nav>
-    
+
+ </nav>
+  
+
+</header>
+<section> 
+  <div>
+    <router-outlet></router-outlet>
     <div class="container">
       <select class="form-select" #langSelect (change)="changeLang(langSelect.value)">
         <option selected value="es">Español</option>
         <option value="en">English</option>
       </select>
     </div>
-  </nav>
+  </div>
   
-
-</header>
-<section> 
-  <app-login></app-login>
+  <!--<app-login></app-login>
   <app-home></app-home>
   <app-statistics-dashboard></app-statistics-dashboard>
-  
   <app-side></app-side>
   <app-panel-user></app-panel-user>
   <app-edit-user></app-edit-user>
@@ -25,4 +28,3 @@
   <app-map></app-map>
   <app-token></app-token>
 </section>
-<router-outlet></router-outlet>

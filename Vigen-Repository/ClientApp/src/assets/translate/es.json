@@ -1,6 +1,9 @@
 {
     "NAV":{
-        "HOME":"Inicio"
+        "HOME":"Inicio",
+        "ABOUT":"Acerca de",
+        "HELP":"Ayuda"
+
     },
     "HOME":{
         "PARAVICTIMAS" : "Para victimas",
@@ -25,9 +28,6 @@
         "USERNAME":"Usuario",
         "EMAIL":"Correo",
         "PASSWORD":"Contraseña"
-    },
-    "HOME-USER":{
-        "TITULO-1":"BIENVENIDO"
     },
     "lOGIN":{
         "TITULO": "Acceder",

@@ -1,7 +1,8 @@
 {
     "NAV":{
         "HOME":"Home",
-        "INGRESAR":"Sign in"
+        "ABOUT":"About",
+        "HELP":"Help"
 
     },
     "HOME":{
@@ -26,9 +27,6 @@
         "USERNAME":"Username",
         "EMAIL":"Email",
         "PASSWORD":"Password"
-    },
-    "HOME-USER":{
-        "TITULO-1":"WELCOME"
     },
     "lOGIN":{
         "TITULO": "Access",

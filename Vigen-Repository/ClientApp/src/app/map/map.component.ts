@@ -10,8 +10,6 @@ export let latlong =new LatLng(0,0);
 })
 export class MapComponent implements OnInit {
 
-  
-
   constructor() { }
 
   ngOnInit(): void {

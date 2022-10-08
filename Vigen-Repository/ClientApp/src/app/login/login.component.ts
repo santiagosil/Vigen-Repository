@@ -13,8 +13,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-/*
-  showModal() {
+
+ /* showModal() {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
@@ -22,6 +22,6 @@ export class LoginComponent implements OnInit {
       showConfirmButton: false,
       timer: 1500
     })
-  }
-  */
+  }*/
+  
 }
