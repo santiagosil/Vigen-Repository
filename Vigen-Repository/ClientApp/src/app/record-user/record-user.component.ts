@@ -72,8 +72,8 @@ export class RecordUserComponent implements OnInit {
       return;
     } else {
       var random: number;
-      random = Math.round(Math.random() * (10000 - 1) + 1);
-      this.usuario.ubication = random + "";
+      random = Math.round(Math.random() * (10000 - 1000) + 1);
+      this.usuario.code = random + "";
       this.api.apiUserPost$Json({ body: this.usuario })
         .subscribe(res => {
           console.log(res); //+ "" + random + ""
