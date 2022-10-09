@@ -22,10 +22,10 @@ namespace Vigen_Repository.Controllers
             return Ok(organization);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Organization>> getOrganization(string id)
+        [HttpGet("{nit}")]
+        public async Task<ActionResult<Organization>> getOrganization(string nit)
         {
-            Organization? organization = await _context.Organizations.FindAsync(id);
+            Organization? organization = await _context.Organizations.FindAsync(nit);
             if (organization == null) return NotFound();
             return Ok(organization);
         }
@@ -62,12 +62,12 @@ namespace Vigen_Repository.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Organization>> DeleteOrganization(string id)
+        [HttpDelete("{nit}")]
+        public async Task<ActionResult<Organization>> DeleteOrganization(string nit)
         {
             try
             {
-                Organization? organization = await _context.Organizations.FindAsync(id);
+                Organization? organization = await _context.Organizations.FindAsync(nit);
                 if(organization == null) return NotFound();
                 _context.Organizations.Remove(organization);
                 await _context.SaveChangesAsync();

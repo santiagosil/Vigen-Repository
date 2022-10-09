@@ -4,30 +4,29 @@ using System;
 using Xunit;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace TestsVigen.TestsControllers
 {
     public class TestNotifyController
     {
         private readonly vigendbContext _context;
-        private readonly NotifiesController _controller;
+        private readonly NotifyController _controller;
         private Notify testNotify;
         public TestNotifyController()
         {
             _context = new vigendbContext();
-            _controller = new NotifiesController(_context);
+            _controller = new NotifyController(_context);
 
             testNotify = new Notify()
             {
-                Id = 1,
                 Title = Guid.NewGuid()
                 .ToString()
                 .Substring(0, 10),
-                Place = Guid.NewGuid()
-                .ToString()
-                .Substring(0, 10),
-                Identification = "123456789",
-                Distance = new Random().Next(0, 100)
+                StateId = new Random().Next(0, 1).ToString(),
+                Description = Guid.NewGuid().ToString().Substring(0, 30),
+                OrganizationTypeId = "1",
+                UserId = "123456789"
             };
         }
 
@@ -35,19 +34,19 @@ namespace TestsVigen.TestsControllers
         public async Task testCrudNotify()
         {
             await TestInsertNotify();
-            //await TestGetOrgById();
-            //await TestUpdateOrg();
-            //await TestDeleteOrg();
+            await TestGetNotifyById();
+            await TestUpdateNotify();
+            await TestDeleteNotify();
         }
         public async Task TestInsertNotify()
         {
             //Preparacion
 
             //Prueba
-            var notify = await _controller.PostNotify(testNotify);
-            testNotify.Id = notify.Id;
+            await _controller.postNotify(testNotify);
+            var result = await _context.Notifies.FindAsync(testNotify.Id);
             //Verificacion
-            Assert.True(_context.Notifies.Find(testNotify.Id) != null);
+            Assert.Equal(testNotify, result);
         }
 
         [Fact]
@@ -55,18 +54,18 @@ namespace TestsVigen.TestsControllers
         {
             //Preparacion
             //Prueba
-            var testCase = await _controller.GetNotifies();
+            var testCase = await _controller.getNotifies();
             //Verificacion
-            Assert.IsType<OkObjectResult>(testCase);
+            Assert.IsType<OkObjectResult>(testCase.Result);
         }
 
         public async Task TestGetNotifyById()
         {
             //Preparacion
             //Prueba
-            var testCase = await _controller.GetNotify(testNotify.Id);
+            var testCase = await _controller.getNotify(testNotify.Id.ToString());
             //Verificacion
-            var notify = Assert.IsType<OkObjectResult>(testCase);
+            var notify = Assert.IsType<OkObjectResult>(testCase.Result);
         }
 
         public async Task TestUpdateNotify()
@@ -74,20 +73,20 @@ namespace TestsVigen.TestsControllers
             //Preparacion
             testNotify.Title = "Title Update";
             //Prueba
-            await _controller.PutNotify(testNotify.Id, testNotify);
+            await _controller.UpdateNotify(testNotify.Id.ToString(), testNotify);
             //Verificacion
-            var notify = _context.Notifies.Find(testNotify.Id);
-            Assert.True(notify.Title == testNotify.Title);
+            var notify = await _context.Notifies.FindAsync(testNotify.Id);
+            Assert.Equal(testNotify.Title, notify?.Title);
         }
 
         public async Task TestDeleteNotify()
         {
             //Preparacion
             //Prueba
-            await _controller.DeleteNotify(testNotify.Id);
+            await _controller.DeleteNotify(testNotify.Id.ToString());
             //Verificacion
-            var organization = await _controller.GetNotify(testNotify.Id);
-            Assert.IsType<NotFoundResult>(organization);
+            var organization = await _controller.getNotify(testNotify.Id.ToString());
+            Assert.IsType<NotFoundResult>(organization.Result);
         }
     }
 }

@@ -1,19 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Vigen_Repository.Models
 {
+    [Table("state")]
     public partial class State
     {
-        public State()
-        {
-            Notifies = new HashSet<Notify>();
-        }
-
+        [Key]
+        [Column("id")]
         public string Id { get; set; } = null!;
-        public string Name { get; set; } = null!;
-        public string Description { get; set; } = null!;
 
-        public virtual ICollection<Notify> Notifies { get; set; }
+        [Column("name")]
+        public string Name { get; set; } = null!;
+
+        [Column("description")]
+        public string Description { get; set; } = null!;
     }
 }
