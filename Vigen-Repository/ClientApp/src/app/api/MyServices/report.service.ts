@@ -21,8 +21,7 @@ export class ReportsService {
     for(var x in results){
       bodyContenct.push(Object.values(results[x]));
     }
-    console.log(bodyContenct);
-
+    
     const doc = new jsPDF({
       orientation: "portrait",
       unit: "px",
