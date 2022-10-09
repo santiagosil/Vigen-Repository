@@ -15,7 +15,7 @@ export class ReportesComponent implements OnInit {
  
   constructor( private report: ReporteService, private reports:ReportsService) { }
   ejecutar(){
-    this.report.apiReporteReportePruebaGet$Json().subscribe(res => {
+    this.report.apiReportePruebaGet$Json().subscribe(res => {
       this.reports.imprimir("primero",res);
     })
   }

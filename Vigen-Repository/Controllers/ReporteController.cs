@@ -16,41 +16,40 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<Object>> reportePrueba()
+        public async Task<ActionResult<Object>> Prueba()
         {
             var reporte = await (from x in _context.Users
                            join y in _context.Notifies on x.Identification equals y.UserId
-                           select new { x.Identification, x.Name, x.Birthdate, y.StateId, y.Description }).ToArrayAsync();
+                           select new { x.Identification, x.Name, x.Birthdate, y.StateId, y.Description }).ToListAsync();
             return Ok(reporte);
         }
 
         [HttpGet]
-        public async Task<ActionResult<Object>> reporteUsuarios()
+        public async Task<ActionResult<Object>> Usuarios()
         {
             var reporte = await (from x in _context.Users
-                                 select new { x.Identification, x.Name, x.Birthdate, x.Email, x.Occupation,x.MaritalStatus, x.Ubication}).ToArrayAsync();
+                                 select new { x.Identification, x.Name, x.Birthdate, x.Email, x.Occupation,x.MaritalStatus, x.Ubication}).ToListAsync();
             return Ok(reporte);
         }
 
         [HttpGet]
-        public async Task<ActionResult<Object>> reporteOrganization()
+        public async Task<ActionResult<Object>> Organization()
         {
             var reporte = await (from x in _context.Organizations
                                  join y in _context.Sites on x.Nit equals y.Nit
-                                 select new { x.Nit, x.Name, x.Tel, y.Range, y.Ubication}).ToArrayAsync();
+                                 select new { x.Nit, x.Name, x.Tel, y.Range, y.Ubication}).ToListAsync();
             return Ok(reporte);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Object>> reporteNotifiesServiced(string id)
+        public async Task<ActionResult<Object>> NotifiesServiced(string id)
         {
             var reporte = await (from x in _context.Notifies
                                  join y in _context.States on x.StateId equals y.Id
                                  join z in _context.Users on x.UserId equals z.Identification
                                  where x.StateId == id                                  
-                                 select new { z.Identification, z.Name, z.Ubication,z.CountryCode, z.Phone, x.Description}).ToArrayAsync();
+                                 select new { z.Identification, z.Name, z.Ubication,z.CountryCode, z.Phone, x.Description}).ToListAsync();
             return Ok(reporte);
         }
-
     }
 }

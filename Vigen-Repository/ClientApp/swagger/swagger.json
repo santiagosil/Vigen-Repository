@@ -658,43 +658,94 @@
         }
       }
     },
-    "/api/Reporte/reportePrueba": {
+    "/api/Reporte/Prueba": {
       "get": {
         "tags": [
           "Reporte"
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
+                }
+              }
+            }
           }
         }
       }
     },
-    "/api/Reporte/reporteUsuarios": {
+    "/api/Reporte/Usuarios": {
       "get": {
         "tags": [
           "Reporte"
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
+                }
+              }
+            }
           }
         }
       }
     },
-    "/api/Reporte/reporteOrganization": {
+    "/api/Reporte/Organization": {
       "get": {
         "tags": [
           "Reporte"
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
+                }
+              }
+            }
           }
         }
       }
     },
-    "/api/Reporte/reporteNotifiesServiced/{id}": {
+    "/api/Reporte/NotifiesServiced/{id}": {
       "get": {
         "tags": [
           "Reporte"
@@ -711,7 +762,24 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
+                }
+              }
+            }
           }
         }
       }
@@ -1835,6 +1903,27 @@
   },
   "components": {
     "schemas": {
+      "JsonResult": {
+        "type": "object",
+        "properties": {
+          "contentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "serializerSettings": {
+            "nullable": true
+          },
+          "statusCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "value": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Notify": {
         "type": "object",
         "properties": {
