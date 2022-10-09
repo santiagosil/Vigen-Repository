@@ -16,7 +16,7 @@ namespace Vigen_Repository.Controllers
             _context = context;
         }
         [HttpGet]
-        public async Task<ActionResult> getUsers()
+        public async Task<ActionResult<List<User>>> getUsers()
         {
             List<User> users = await _context.Users.ToListAsync();
             if (users.Count == 0) return NoContent();
@@ -24,7 +24,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult> getUser(string id)
+        public async Task<ActionResult<User>> getUser(string id)
         {
             User? user = await _context.Users.FindAsync(id);
             if(user == null) return NotFound();
@@ -32,7 +32,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> postUser(User user)
+        public async Task<ActionResult<User>> postUser(User user)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateUser(string id, User user)
+        public async Task<ActionResult<User>> UpdateUser(string id, User user)
         {
             if(id!=user.Identification) return BadRequest("El id no concide");
             try
@@ -65,7 +65,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteUser(string id)
+        public async Task<ActionResult<User>> DeleteUser(string id)
         {
             try
             {

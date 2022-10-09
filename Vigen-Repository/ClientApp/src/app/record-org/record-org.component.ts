@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Data } from '@angular/router';
 import {latlong} from '../map/map.component';
-import { OrganizationService, UserService } from '../api/services';
+import { OrganizationService } from '../api/services';
 import { Organization, User } from '../api/models';
 
 import { NgModule } from '@angular/core';

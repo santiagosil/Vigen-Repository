@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "https://localhost:7259"
+      "url": "https://localhost:44385"
     }
   ],
   "paths": {
@@ -651,6 +651,35 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/OrganizationType"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Reporte/reportePrueba": {
+      "get": {
+        "tags": [
+          "Reporte"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonResult"
                 }
               }
             }
@@ -1777,6 +1806,27 @@
   },
   "components": {
     "schemas": {
+      "JsonResult": {
+        "type": "object",
+        "properties": {
+          "contentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "serializerSettings": {
+            "nullable": true
+          },
+          "statusCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "value": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Notify": {
         "type": "object",
         "properties": {

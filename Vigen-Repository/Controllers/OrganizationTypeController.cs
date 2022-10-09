@@ -15,7 +15,7 @@ namespace Vigen_Repository.Controllers
             _context = context;
         }
         [HttpGet]
-        public async Task<ActionResult> getOrgTypes()
+        public async Task<ActionResult<List<OrganizationType>>> getOrgTypes()
         {
             List<OrganizationType> orgTypes = await _context.OrganizationTypes.ToListAsync();
             if (orgTypes.Count == 0) return NoContent();
@@ -23,7 +23,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult> getOrgType(string id)
+        public async Task<ActionResult<OrganizationType>> getOrgType(string id)
         {
             OrganizationType? orgType = await _context.OrganizationTypes.FindAsync(id);
             if (orgType == null) return NotFound();
@@ -31,7 +31,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> postOrgType(OrganizationType orgType)
+        public async Task<ActionResult<OrganizationType>> postOrgType(OrganizationType orgType)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateOrgType(string id, OrganizationType orgType)
+        public async Task<ActionResult<OrganizationType>> UpdateOrgType(string id, OrganizationType orgType)
         {
             if (id != orgType.Id) return BadRequest("El id no concide");
             try
@@ -63,7 +63,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteOrgType(string id)
+        public async Task<ActionResult<OrganizationType>> DeleteOrgType(string id)
         {
             try
             {

@@ -1,3 +1,4 @@
+export { JsonResult } from './models/json-result';
 export { Notify } from './models/notify';
 export { Organization } from './models/organization';
 export { OrganizationType } from './models/organization-type';

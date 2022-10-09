@@ -10,12 +10,11 @@ import { User } from '../api/models';
 export class NavComponent implements OnInit {
 
   public user: User;
-
+//eliminar este llamado de no ser necesario
   constructor(private api: UserService) {
     this.user={};
     this.api.apiUserIdGet$Json({id:'123456789'}).subscribe(res=>{
       this.user=res;
-      console.log(res);
     });
   }
   

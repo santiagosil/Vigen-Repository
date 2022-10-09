@@ -15,7 +15,7 @@ namespace Vigen_Repository.Controllers
             _context = context;
         }
         [HttpGet]
-        public async Task<ActionResult> getOrganizations()
+        public async Task<ActionResult<List<Organization>>> getOrganizations()
         {
             List<Organization> organization = await _context.Organizations.ToListAsync();
             if (organization.Count == 0) return NoContent();
@@ -23,7 +23,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult> getOrganization(string id)
+        public async Task<ActionResult<Organization>> getOrganization(string id)
         {
             Organization? organization = await _context.Organizations.FindAsync(id);
             if (organization == null) return NotFound();
@@ -31,7 +31,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> postOrganization(Organization organization)
+        public async Task<ActionResult<Organization>> postOrganization(Organization organization)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateOrganization(string id, Organization organization)
+        public async Task<ActionResult<Organization>> UpdateOrganization(string id, Organization organization)
         {
             if (id != organization.Nit) return BadRequest("El Nit no concide");
             try
@@ -63,7 +63,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteOrganization(string id)
+        public async Task<ActionResult<Organization>> DeleteOrganization(string id)
         {
             try
             {

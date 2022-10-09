@@ -15,7 +15,7 @@ namespace Vigen_Repository.Controllers
             _context = context;
         }
         [HttpGet]
-        public async Task<ActionResult> getNotifies()
+        public async Task<ActionResult<List<Notify>>> getNotifies()
         {
             List<Notify> notifies = await _context.Notifies.ToListAsync();
             if (notifies.Count == 0) return NoContent();
@@ -23,7 +23,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult> getNotify(string id)
+        public async Task<ActionResult<Notify>> getNotify(string id)
         {
             Notify? notify = await _context.Notifies.FindAsync(id);
             if (notify == null) return NotFound();
@@ -31,7 +31,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> postUser(Notify notify)
+        public async Task<ActionResult<Notify>> postUser(Notify notify)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateNotify(string id, Notify notify)
+        public async Task<ActionResult<Notify>> UpdateNotify(string id, Notify notify)
         {
             int idInt;
             try { idInt = int.Parse(id); }
@@ -67,7 +67,7 @@ namespace Vigen_Repository.Controllers
             }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteNotify(string id)
+        public async Task<ActionResult<Notify>> DeleteNotify(string id)
         {
             try
             {

@@ -3,7 +3,8 @@ import { jsPDFOptions } from 'jspdf';
 import {jsPDF} from  'jspdf';
 import { User } from '../api/models';
 import autoTable from 'jspdf-autotable';
-import {ReportsService} from '../api/services/reports.service';
+import {ReporteService} from '../api/services/reporte.service';
+import {ReportsService} from '../api/MyServices/report.service'
 
 @Component({
   selector: 'app-reportes',
@@ -12,11 +13,11 @@ import {ReportsService} from '../api/services/reports.service';
 })
 export class ReportesComponent implements OnInit {
  
-  constructor( private report: ReportsService) { }
+  constructor( private report: ReporteService, private reports:ReportsService) { }
   ejecutar(){
-    var encabezado = ["id","Nombre"];
-    var cuerpo = ["1","jeisson"];
-    this.report.imprimir(encabezado,cuerpo,"primero",true);
+    this.report.apiReporteReportePruebaGet$Json().subscribe(res => {
+      this.reports.imprimir("primero",res);
+    })
   }
   ngOnInit(): void {
   }
