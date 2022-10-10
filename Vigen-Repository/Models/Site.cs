@@ -8,11 +8,12 @@ namespace Vigen_Repository.Models
     [Table("site")]
     public partial class Site
     {
+        [Key]
+        [Column("id")]
+        public int? Id { get; set; }
+
         [Column("nit")]
         public string Nit { get; set; } = null!;
-
-        [Column("id")]
-        public string Id { get; set; }
 
         [Column("ubication")]
         public string Ubication { get; set; } = null!;

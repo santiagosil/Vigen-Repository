@@ -62,7 +62,7 @@ namespace TestsVigen.TestsControllers
             //Prueba
             var testCase = await _controller.getOrganization(testOrg.Nit);
             //Verificacion
-            var notify = Assert.IsType<OkObjectResult>(testCase.Result);
+            Assert.IsType<OkObjectResult>(testCase.Result);
         }
 
         public async Task TestUpdateOrg()

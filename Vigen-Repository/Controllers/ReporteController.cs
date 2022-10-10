@@ -44,10 +44,13 @@ namespace Vigen_Repository.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Object>> NotifiesServiced(string id)
         {
+            int idAux;
+            try { idAux = int.Parse(id); }
+            catch { idAux = -1; }
             var reporte = await (from x in _context.Notifies
                                  join y in _context.States on x.StateId equals y.Id
                                  join z in _context.Users on x.UserId equals z.Identification
-                                 where x.StateId == id                                  
+                                 where x.StateId == idAux                                
                                  select new { z.Identification, z.Name, z.Ubication,z.CountryCode, z.Phone, x.Description}).ToListAsync();
             return Ok(reporte);
         }

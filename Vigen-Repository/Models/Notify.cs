@@ -10,7 +10,7 @@ namespace Vigen_Repository.Models
     {
         [Key]
         [Column("id")]
-        public int Id { get; set; }
+        public int? Id { get; set; } = null!;
 
         [Column("user_id")]
         public string UserId { get; set; } = null!;
@@ -19,12 +19,12 @@ namespace Vigen_Repository.Models
         public string Title { get; set; } = null!;
 
         [Column("state_id")]
-        public string StateId { get; set; } = null!;
+        public int StateId { get; set; }
 
         [Column("description")]
         public string Description { get; set; } = null!;
 
         [Column("organization_type_id")]
-        public string OrganizationTypeId { get; set; } = null!;
+        public int OrganizationTypeId { get; set; }
     }
 }

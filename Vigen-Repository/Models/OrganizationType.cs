@@ -10,7 +10,7 @@ namespace Vigen_Repository.Models
     {
         [Key]
         [Column("id")]
-        public string Id { get; set; } = null!;
+        public int? Id { get; set; } = null!;
 
         [Column("name")]
         public string Name { get; set; } = null!;

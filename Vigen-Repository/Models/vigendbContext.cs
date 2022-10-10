@@ -36,10 +36,6 @@ namespace Vigen_Repository.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Site>(x =>
-            {
-                x.HasKey(y=>new { y.Id, y.Nit });
-            });
 
             modelBuilder.Entity<ViolenceTypesOrganization>(x =>
             {

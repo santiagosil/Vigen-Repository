@@ -45,10 +45,10 @@ namespace Vigen_Repository.Controllers
             }
         }
 
-        [HttpPut("{id}")]
-        public async Task<ActionResult<Organization>> UpdateOrganization(string id, Organization organization)
+        [HttpPut("{nit}")]
+        public async Task<ActionResult<Organization>> UpdateOrganization(string nit, Organization organization)
         {
-            if (id != organization.Nit) return BadRequest("El Nit no concide");
+            if (nit != organization.Nit) return BadRequest("El Nit no concide");
             try
             {
                 _context.Entry(organization).State = EntityState.Modified;

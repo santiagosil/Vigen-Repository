@@ -18,11 +18,18 @@ namespace TestsVigen.TestsControllers
             _controller = new UserController(_context);
 
             testUser = new User() {
-                Identification= Guid.NewGuid()
+                Identification = Guid.NewGuid()
                 .ToString()
-                .Substring(0,10),
+                .Substring(0, 10),
+                Password = Guid.NewGuid()
+                .ToString()
+                .Substring(0, 10),
+                Code = Guid.NewGuid()
+                .ToString()
+                .Substring(0, 4),
+                Verification = false,
 
-                Name= Guid.NewGuid()
+                Name = Guid.NewGuid()
                 .ToString()
                 .Substring(0, 30),
 
@@ -92,7 +99,7 @@ namespace TestsVigen.TestsControllers
             //Prueba
             var testCase = await _controller.getUser(testUser.Identification);
             //Verificacion
-            var notify = Assert.IsType<OkObjectResult>(testCase.Result);
+            Assert.IsType<OkObjectResult>(testCase.Result);
         }
 
         public async Task TestUpdateUser()

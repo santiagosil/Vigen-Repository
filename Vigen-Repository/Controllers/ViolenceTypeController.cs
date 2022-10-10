@@ -25,7 +25,11 @@ namespace Vigen_Repository.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ViolenceType>> getVioType(string id)
         {
-            ViolenceType? vioType = await _context.ViolenceTypes.FindAsync(id);
+            int idAux;
+            try{ idAux=int.Parse(id); }
+            catch { idAux = -1; }
+
+            ViolenceType? vioType = await _context.ViolenceTypes.FindAsync(idAux);
             if (vioType == null) return NotFound();
             return Ok(vioType);
         }
@@ -71,7 +75,7 @@ namespace Vigen_Repository.Controllers
         {
             try
             {
-                ViolenceType? vioType = await _context.ViolenceTypes.FindAsync(id);
+                ViolenceType? vioType = await _context.ViolenceTypes.FindAsync(int.Parse(id));
                 if (vioType == null) return NotFound();
                 _context.ViolenceTypes.Remove(vioType);
                 await _context.SaveChangesAsync();

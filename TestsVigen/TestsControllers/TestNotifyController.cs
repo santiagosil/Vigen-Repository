@@ -23,9 +23,9 @@ namespace TestsVigen.TestsControllers
                 Title = Guid.NewGuid()
                 .ToString()
                 .Substring(0, 10),
-                StateId = new Random().Next(0, 1).ToString(),
+                StateId = new Random().Next(1, 2),
                 Description = Guid.NewGuid().ToString().Substring(0, 30),
-                OrganizationTypeId = "1",
+                OrganizationTypeId = 1,
                 UserId = "123456789"
             };
         }
@@ -46,7 +46,7 @@ namespace TestsVigen.TestsControllers
             await _controller.postNotify(testNotify);
             var result = await _context.Notifies.FindAsync(testNotify.Id);
             //Verificacion
-            Assert.Equal(testNotify, result);
+            Assert.Equal(testNotify,result);
         }
 
         [Fact]
@@ -65,7 +65,7 @@ namespace TestsVigen.TestsControllers
             //Prueba
             var testCase = await _controller.getNotify(testNotify.Id.ToString());
             //Verificacion
-            var notify = Assert.IsType<OkObjectResult>(testCase.Result);
+            Assert.IsType<OkObjectResult>(testCase.Result);
         }
 
         public async Task TestUpdateNotify()
@@ -85,8 +85,8 @@ namespace TestsVigen.TestsControllers
             //Prueba
             await _controller.DeleteNotify(testNotify.Id.ToString());
             //Verificacion
-            var organization = await _controller.getNotify(testNotify.Id.ToString());
-            Assert.IsType<NotFoundResult>(organization.Result);
+            var notify = await _controller.getNotify(testNotify.Id.ToString());
+            Assert.IsType<NotFoundResult>(notify.Result);
         }
     }
 }
