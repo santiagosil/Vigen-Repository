@@ -9,14 +9,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="/">{{"NAV.HOME" | translate}}</a>
+            <a class="nav-link active text-white" aria-current="page" (click)="toHome()"  routerLink="/home" routerLinkActivate="activate">{{"NAV.HOME" | translate}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="/">{{"NAV.ABOUT" | translate}}</a>
+            <a class="nav-link text-white" (click)="toAbout()" routerLinkActivate="activate">{{"NAV.ABOUT" | translate}}</a>
             
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="/">{{"NAV.HELP" | translate}}</a>
+            <a class="nav-link text-white" (click)="toHelp()" routerLinkActivate="activate">{{"NAV.HELP" | translate}}</a>
           </li>
         </ul>
         <button class="btn btn-primary m-2" type="submit" routerLink="/login">Login</button>

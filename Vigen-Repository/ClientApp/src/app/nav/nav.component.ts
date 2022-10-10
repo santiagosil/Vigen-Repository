@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../api/services';
 import { User } from '../api/models';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-nav',
@@ -20,6 +21,15 @@ export class NavComponent implements OnInit {
   }
   
   ngOnInit(): void {
+  }
+  toHome(){
+    document.getElementById("up")?.scrollIntoView({behavior:"smooth"});
+  }
+  toAbout(){
+    document.getElementById("about")?.scrollIntoView({behavior:"smooth"});
+  }
+  toHelp(){
+    document.getElementById("help")?.scrollIntoView({behavior:"smooth"});
   }
 
 }
