@@ -23,7 +23,7 @@ export class ReportsService {
     }
     
     const doc = new jsPDF({
-      orientation: "portrait",
+      orientation: "landscape",
       unit: "px",
       format: 'letter'
     });
