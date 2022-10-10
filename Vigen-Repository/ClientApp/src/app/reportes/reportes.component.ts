@@ -16,7 +16,17 @@ export class ReportesComponent implements OnInit {
   constructor( private report: ReporteService, private reports:ReportsService) { }
   ejecutar(){
     this.report.apiReportePruebaGet$Json().subscribe(res => {
-      this.reports.imprimir("primero",res);
+      this.reports.imprimir("Reporte de Prueba",res);
+    })
+  }
+  ejecutarU(){
+    this.report.apiReporteUsuariosGet$Json().subscribe(res => {
+      this.reports.imprimir("Reporte de Usuarios",res);
+    })
+  }
+  ejecutarO(){
+    this.report.apiReporteOrganizationGet$Json().subscribe(res => {
+      this.reports.imprimir("Reporte de Organizaciones",res);
     })
   }
   ngOnInit(): void {

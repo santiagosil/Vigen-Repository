@@ -1,4 +1,10 @@
-<form (ngSubmit)="ejecutar()">
-    <button type="submit" >Obtener reporte</button>
-</form>
-    
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Reportes
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" (click)="ejecutar()">Reporte Prueba</a></li>
+      <li><a class="dropdown-item" (click)="ejecutarU()">Reporte Usuario</a></li>
+      <li><a class="dropdown-item" (click)="ejecutarO()">Reporte Organización</a></li>
+    </ul>
+  </div>
