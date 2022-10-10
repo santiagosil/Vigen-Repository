@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
-body{
+/*body{
     font-family: 'Raleway', sans-serif;
+}*/
+body::-webkit-scrollbar{
+    width: 7px;
+    background-color: #e0d5f1;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #593196;
+    border-radius: 5px;
 }
