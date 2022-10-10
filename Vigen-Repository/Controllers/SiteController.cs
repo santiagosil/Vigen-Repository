@@ -15,7 +15,7 @@ namespace Vigen_Repository.Controllers
             _context = context;
         }
         [HttpGet("{nit}")]
-        public async Task<ActionResult> getSites(string nit)
+        public async Task<ActionResult<List<Site>>> getSites(string nit)
         {
             List<Site> sites = _context.Sites.Where(x => x.Nit == nit).ToList();
             if (sites.Count == 0) return NoContent();
@@ -23,7 +23,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpGet("{nit}/{id}")]
-        public async Task<ActionResult> getSite(string nit,string id)
+        public async Task<ActionResult<Site>> getSite(string nit,string id)
         {
             Site? site = await _context.Sites.FindAsync(nit,id);
             if (site == null) return NotFound();
@@ -31,7 +31,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> postSite(Site site)
+        public async Task<ActionResult<Site>> postSite(Site site)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPut("{nit}/{id}")]
-        public async Task<ActionResult> UpdateSite(string nit, string id, Site site)
+        public async Task<ActionResult<Site>> UpdateSite(string nit, string id, Site site)
         {
             if (nit!=site.Nit && id != site.Id) return BadRequest("El Nit no concide");
             try
@@ -63,7 +63,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpDelete("{nit}/{id}")]
-        public async Task<ActionResult> DeleteSite(string nit, string id)
+        public async Task<ActionResult<Site>> DeleteSite(string nit, string id)
         {
             try
             {

@@ -7,6 +7,7 @@ import { ApiConfiguration, ApiConfigurationParams } from './api-configuration';
 import { NotifyService } from './services/notify.service';
 import { OrganizationService } from './services/organization.service';
 import { OrganizationTypeService } from './services/organization-type.service';
+import { ReporteService } from './services/reporte.service';
 import { SiteService } from './services/site.service';
 import { StateService } from './services/state.service';
 import { UserService } from './services/user.service';
@@ -24,6 +25,7 @@ import { ViolenceTypeOrganizationService } from './services/violence-type-organi
     NotifyService,
     OrganizationService,
     OrganizationTypeService,
+    ReporteService,
     SiteService,
     StateService,
     UserService,

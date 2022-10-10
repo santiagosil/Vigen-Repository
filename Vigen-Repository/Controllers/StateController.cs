@@ -15,14 +15,14 @@ namespace Vigen_Repository.Controllers
             _context = context;
         }
         [HttpGet]
-        public async Task<ActionResult> getStates()
+        public async Task<ActionResult<List<State>>> getStates()
         {
             List<State> states = await _context.States.ToListAsync();
             return Ok(states);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult> getState(string id)
+        public async Task<ActionResult<State>> getState(string id)
         {
             State? state = await _context.States.FindAsync(id);
             if (state == null) return NotFound();
@@ -30,7 +30,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> postState(State state)
+        public async Task<ActionResult<State>> postState(State state)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateStates(string id, State state)
+        public async Task<ActionResult<State>> UpdateStates(string id, State state)
         {
             if (id != state.Id) return BadRequest("El id no existe");
             try
@@ -62,7 +62,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteSite(string id)
+        public async Task<ActionResult<State>> DeleteSite(string id)
         {
             try
             {

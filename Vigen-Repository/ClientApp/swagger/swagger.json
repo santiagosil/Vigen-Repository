@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "https://localhost:7259"
+      "url": "https://localhost:44385"
     }
   ],
   "paths": {
@@ -654,6 +654,64 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Reporte/Prueba": {
+      "get": {
+        "tags": [
+          "Reporte"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Reporte/Usuarios": {
+      "get": {
+        "tags": [
+          "Reporte"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Reporte/Organization": {
+      "get": {
+        "tags": [
+          "Reporte"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Reporte/NotifiesServiced/{id}": {
+      "get": {
+        "tags": [
+          "Reporte"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }

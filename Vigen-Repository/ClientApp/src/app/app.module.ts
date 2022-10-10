@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { SingUpComponent } from './sign-up/sing-up.component';
 import { TokenComponent } from './token/token.component';
+import { ReportesComponent } from './reportes/reportes.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/translate/','.json')
@@ -40,7 +41,8 @@ export function HttpLoaderFactory(http: HttpClient){
     StatisticsDashboardComponent,
     LoginComponent,
     SingUpComponent,
-    TokenComponent
+    TokenComponent,
+    ReportesComponent
   ],
   imports: [
     BrowserModule,

@@ -15,7 +15,7 @@ namespace Vigen_Repository.Controllers
             _context = context;
         }
         [HttpGet]
-        public async Task<ActionResult> getVioTypes()
+        public async Task<ActionResult<List<ViolenceType>>> getVioTypes()
         {
             List<ViolenceType> vioTypes = await _context.ViolenceTypes.ToListAsync();
             if (vioTypes.Count == 0) return NoContent();
@@ -23,7 +23,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult> getVioType(string id)
+        public async Task<ActionResult<ViolenceType>> getVioType(string id)
         {
             ViolenceType? vioType = await _context.ViolenceTypes.FindAsync(id);
             if (vioType == null) return NotFound();
@@ -31,7 +31,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> postVioType(ViolenceType vioType)
+        public async Task<ActionResult<ViolenceType>> postVioType(ViolenceType vioType)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateVioType(string id, ViolenceType vioType)
+        public async Task<ActionResult<ViolenceType>> UpdateVioType(string id, ViolenceType vioType)
         {
             int idInt;
             try { idInt = int.Parse(id); }
@@ -67,7 +67,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteVioType(string id)
+        public async Task<ActionResult<ViolenceType>> DeleteVioType(string id)
         {
             try
             {
