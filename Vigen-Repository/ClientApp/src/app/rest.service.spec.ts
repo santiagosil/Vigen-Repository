@@ -1,4 +1,4 @@
-/*import { TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
 import { RestService } from './rest.service';
 
@@ -14,4 +14,3 @@ describe('RestService', () => {
     expect(service).toBeTruthy();
   });
 });
-*/
