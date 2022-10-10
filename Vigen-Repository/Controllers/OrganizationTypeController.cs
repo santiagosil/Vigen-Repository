@@ -25,7 +25,10 @@ namespace Vigen_Repository.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<OrganizationType>> getOrgType(string id)
         {
-            OrganizationType? orgType = await _context.OrganizationTypes.FindAsync(id);
+            int auxId;
+            try { auxId = int.Parse(id); }
+            catch { auxId=-1;}
+            OrganizationType? orgType = await _context.OrganizationTypes.FindAsync(auxId);
             if (orgType == null) return NotFound();
             return Ok(orgType);
         }
@@ -48,7 +51,7 @@ namespace Vigen_Repository.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<OrganizationType>> UpdateOrgType(string id, OrganizationType orgType)
         {
-            if (id != orgType.Id) return BadRequest("El id no concide");
+            if (id != orgType.Id.ToString()) return BadRequest("El id no concide");
             try
             {
                 _context.Entry(orgType).State = EntityState.Modified;
@@ -67,7 +70,7 @@ namespace Vigen_Repository.Controllers
         {
             try
             {
-                OrganizationType? orgType = await _context.OrganizationTypes.FindAsync(id);
+                OrganizationType? orgType = await _context.OrganizationTypes.FindAsync(int.Parse(id));
                 if (orgType == null) return NotFound();
                 _context.OrganizationTypes.Remove(orgType);
                 await _context.SaveChangesAsync();

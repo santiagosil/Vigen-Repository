@@ -10,36 +10,20 @@ namespace TestsVigen.TestsControllers
     public class TestOrganizationController
     {
         private readonly vigendbContext _context;
-        private readonly OganizationsController _controller;
-        private Oganization testOrg;
+        private readonly OrganizationController _controller;
+        private Organization testOrg;
         public TestOrganizationController()
         {
             _context = new vigendbContext();
-            _controller = new OganizationsController(_context);
+            _controller = new OrganizationController(_context);
 
-            testOrg = new Oganization()
+            testOrg = new Organization()
             {
                 Nit = Guid.NewGuid()
                 .ToString()
                 .Substring(0, 10),
-
-                Name=Guid.NewGuid()
-                .ToString()
-                .Substring(0, 15),
-
-                Tel = Guid.NewGuid()
-                .ToString()
-                .Substring(0, 15),
-
-                Range = new Random().Next(0,100),
-
-                Ubication = Guid.NewGuid()
-                .ToString()
-                .Substring(0, 30),
-
-                Phone = Guid.NewGuid()
-                .ToString()
-                .Substring(0, 15),
+                Name = Guid.NewGuid().ToString().Substring(0, 30),
+                Tel = Guid.NewGuid().ToString().Substring(0, 10)
             };
         }
 
@@ -56,9 +40,10 @@ namespace TestsVigen.TestsControllers
             //Preparacion
 
             //Prueba
-            await _controller.PostOganization(testOrg);
+            await _controller.postOrganization(testOrg);
+            var result = await _context.Organizations.FindAsync(testOrg.Nit);
             //Verificacion
-            Assert.True(_context.Oganizations.Find(testOrg.Nit) != null);
+            Assert.Equal(testOrg, result);
         }
 
         [Fact]
@@ -66,18 +51,18 @@ namespace TestsVigen.TestsControllers
         {
             //Preparacion
             //Prueba
-            var testCase = await _controller.GetOganizations();
+            var testCase = await _controller.getOrganizations();
             //Verificacion
-            Assert.IsType<OkObjectResult>(testCase);
+            Assert.IsType<OkObjectResult>(testCase.Result);
         }
 
         public async Task TestGetOrgById()
         {
             //Preparacion
             //Prueba
-            var testCase = await _controller.GetOganization(testOrg.Nit);
+            var testCase = await _controller.getOrganization(testOrg.Nit);
             //Verificacion
-            var organization = Assert.IsType<OkObjectResult>(testCase);
+            Assert.IsType<OkObjectResult>(testCase.Result);
         }
 
         public async Task TestUpdateOrg()
@@ -85,20 +70,20 @@ namespace TestsVigen.TestsControllers
             //Preparacion
             testOrg.Name = "Name Update";
             //Prueba
-            await _controller.PutOganization(testOrg.Nit, testOrg);
+            await _controller.UpdateOrganization(testOrg.Nit.ToString(), testOrg);
             //Verificacion
-            var organization = _context.Oganizations.Find(testOrg.Nit);
-            Assert.True(organization?.Name == testOrg.Name);
+            var organization = await _context.Organizations.FindAsync(testOrg.Nit);
+            Assert.Equal(testOrg.Name, organization?.Name);
         }
-        
+
         public async Task TestDeleteOrg()
         {
             //Preparacion
             //Prueba
-            await _controller.DeleteOganization(testOrg.Nit);
+            await _controller.DeleteOrganization(testOrg.Nit);
             //Verificacion
-            var organization = await _controller.GetOganization(testOrg.Nit);
-            Assert.IsType<NotFoundResult>(organization);
+            var organization = await _controller.getOrganization(testOrg.Nit);
+            Assert.IsType<NotFoundResult>(organization.Result);
         }
     }
 }

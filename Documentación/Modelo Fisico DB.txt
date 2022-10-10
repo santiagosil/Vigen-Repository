@@ -22,19 +22,19 @@ create table violence_type(
 
 create table organization(
 	nit varchar(50) primary key,
+	--organizationType
 	name varchar(100) not null,
 	tel varchar(15) not null
 );
 
 create table site(
+	id int identity(1,1) primary key, 
 	nit varchar(50),
-	id varchar(2), //la organizacion ingresa el id de su sede
 	ubication varchar(150) not null,
 	range int not null,
 	country_code varchar(4) not null,
 	phone varchar(15) not null,
 	tel varchar(15) not null,
-	primary key (nit, id),
 	Foreign Key(nit) References organization(nit),
 );
 
@@ -45,13 +45,13 @@ create table violence_types_organization(
 );
 
 create table organization_type(
-	id varchar(2) primary key,
+	id int identity(1,1) primary key,
 	name varchar(100) not null,
 	description varchar(200) not null
 );
 
 create table state(
-	id varchar(2) primary key,
+	id int identity(1,1) primary key,
 	name varchar(100) not null,
 	description varchar(200) not null
 );
@@ -60,9 +60,9 @@ create table notify(
 	id int identity(1,1) primary key,
 	user_id varchar(50) not null,
 	title varchar(100) not null,
-	state_id varchar(2) not null,
+	state_id int not null,
 	description varchar(200) not null,
-	organization_type_id varchar(2) not null,
+	organization_type_id int not null,
 	Foreign Key(user_id) References users(identification),
 	Foreign Key(state_id) References state(id),
 	Foreign Key(organization_type_id) References organization_type(id),
@@ -98,14 +98,21 @@ INSERT INTO users (
 	'0'
 );
 
-insert into organization_type(id,name,description) VALUES('1','Police','Police Entity government');
+insert into organization_type(name,description) VALUES('Police','Police Entity government');
 
-insert into state(id,name,description) VALUES ('0','Active','this alert is active');
+insert into state(name,description) VALUES ('Active','this alert is active');
 
-insert into state(id,name,description) VALUES ('1','serviced','this alert is serviced');
+insert into state(name,description) VALUES ('serviced','this alert is serviced');
 
-Insert Into notify(user_id,title,state_id,description,organization_type_id) VALUES('123456789','Alerta','0','I Need Help','1');
+Insert Into notify(user_id,title,state_id,description,organization_type_id) VALUES('123456789','Alerta',1,'I Need Help',1);
 
+INSERT INTO organization(nit,name,tel) VALUES ('8032546897','Policia Nacional','7532158');
+
+INSERT INTO site(nit,ubication,range,country_code,phone,tel) VALUES (
+	'8032546897','15.4562, -52.45845',20,'+57','2651205','502121'
+);
+
+INSERT INTO violence_type(name,description) VALUES ('Violencia de Genero','dirigida a las mujeres por el mero hecho de serlo, es decir, por considerar que el sexo femenino es inferior');
 
 
 Scaffold-DbContext "Server=localhost\SQLEXPRESS;Database=vigendb; Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f

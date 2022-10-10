@@ -25,13 +25,16 @@ namespace Vigen_Repository.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Notify>> getNotify(string id)
         {
-            Notify? notify = await _context.Notifies.FindAsync(id);
+            int idAux;
+            try { idAux = int.Parse(id); }
+            catch { idAux = -1; }
+            Notify? notify = await _context.Notifies.FindAsync(idAux);
             if (notify == null) return NotFound();
             return Ok(notify);
         }
 
         [HttpPost]
-        public async Task<ActionResult<Notify>> postUser(Notify notify)
+        public async Task<ActionResult<Notify>> postNotify(Notify notify)
         {
             try
             {
@@ -71,7 +74,7 @@ namespace Vigen_Repository.Controllers
         {
             try
             {
-                Notify? notify = await _context.Notifies.FindAsync(id);
+                Notify? notify = await _context.Notifies.FindAsync(int.Parse(id));
                 if (notify == null) return NotFound();
                 _context.Notifies.Remove(notify);
                 await _context.SaveChangesAsync();
