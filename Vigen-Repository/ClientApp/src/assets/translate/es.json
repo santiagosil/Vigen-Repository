@@ -34,5 +34,21 @@
         "CORREO": "Correo",
         "CONTRASEÑA": "Contraseña",
         "MANTENER_CONECTADO":"Mantenerme conectado"
+    },
+    "REPORTS":{
+        "IDENTIFICATION": "Identificacion",
+        "NAME":"Nombre",
+        "BIRTHDATE":"Fecha de Nacimiento",
+        "STATEID":"ID del Estado",
+        "DESCRIPTION":"Descripción",
+        "EMAIL":"Correo",
+        "OCCUPATION":"Ocupación",
+        "MARITALSTATUS":"Estado Civil",
+        "UBICATION": "Ubicación",
+        "NIT": "NIT",
+        "TEL":"Teléfono",
+        "RANGE":"Rango",
+        "COUNTRYCODE":"Codigo del País",
+        "PHONE":"Celular"
     }
 }
