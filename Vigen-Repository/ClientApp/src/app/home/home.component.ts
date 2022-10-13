@@ -9,7 +9,7 @@ import { Component, HostListener, Inject, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   showBotton= false;
-  private scrollHeight = 500;
+  private scrollHeight = 200;
 
   constructor(@Inject (DOCUMENT) private document: Document) { 
 

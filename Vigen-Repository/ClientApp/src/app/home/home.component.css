@@ -58,6 +58,13 @@ p{
     background-color: #e0d5f1;
 
 }
+.sobreponer{
+    position: absolute;
+    top: 550px;
+    left: 100px;
+}
+
+
 /*button{
     font-size: 1.5rem;
     font-weight: bold;
