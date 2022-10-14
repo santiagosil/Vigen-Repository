@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../api/services';
 import { User } from '../api/models';
 import { HomeComponent } from '../home/home.component';
+import {InverseService} from '../api/MyServices/inverse.service'
 
 @Component({
   selector: 'app-nav',
@@ -17,6 +18,7 @@ export class NavComponent implements OnInit {
     this.api.apiUserIdGet$Json({id:'123456789'}).subscribe(res=>{
       this.user=res;
     });
+
   }
   
   ngOnInit(): void {
