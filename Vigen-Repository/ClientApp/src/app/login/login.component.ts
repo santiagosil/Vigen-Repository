@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { User } from '../api/models';
+import { UserService } from '../api/services';
 
 @Component({
   selector: 'app-login',
@@ -8,21 +11,31 @@ import Swal from 'sweetalert2';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
-
+  public usuario: User = {
+    identification: "",
+    password: "0"
+  };
+  public conf = {
+    confirmacion: false
+  }
+  constructor(private api: UserService, private router: Router) {
+  }
   ngOnInit(): void {
   }
 
-
-
-  showModal() {
-
-    Swal.fire({
-      position: 'top-end',
-      icon: 'success',
-      title: 'Se ha enviado un codigo a tu correo',
-      showConfirmButton: false,
-      timer: 1500
-    })
+  public get() {
+    if (this.usuario.password === "" || this.usuario.identification === "") {
+      console.log("Faltan algunos campos obligatorios por llenar");
+    }else {
+      this.api.apiUserIdGet$Json({id:this.usuario.identification+""})
+        .subscribe(res => {
+          if(res.identification == this.usuario.identification && res.password == this.usuario.password){
+           this.router.navigate(['/pUser']);
+          }else{
+            console.log("no");
+          }
+        });
+    }
   }
 }
+

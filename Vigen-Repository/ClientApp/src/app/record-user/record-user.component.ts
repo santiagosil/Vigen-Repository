@@ -25,24 +25,6 @@ export class RecordUserComponent implements OnInit {
   form: FormGroup = new FormGroup({});
   isCheck: any;
 
-  /*constructor(private fb: FormBuilder) { }
-
-  ngOnInit(): void {
-    this.form = this.fb.group({
-      nomUser: ['', [Validators.required]],
-      correoUser: ['', [Validators.required]],
-      fechaNa: ['', [Validators.required]],
-      telUser: ['', [Validators.required]],
-      ocupaUser: ['', [Validators.required]],
-      postUser: ['', [Validators.required]],
-      ecivlUser: ['', [Validators.required]],
-      idUser: ['', [Validators.required]],
-    })
-  }
-  sendLogin(): void {
-    this.isCheck = { user: 2 }
-  }*/
-
   public usuario: User = {
     identification: "",
     name: "",
@@ -60,34 +42,26 @@ export class RecordUserComponent implements OnInit {
 
 
   constructor(private api: UserService, private rever : InverseService) {
+   
+  }
+   
+  ngOnInit() {
+    setTimeout(() => {
+      this.data()
+     }, 1000);
   }
 
-
-  ngOnInit(): void {
-    this.showbienveni();
+  data(){
+    this.usuario.ubication = this.rever.dir.direct;
   }
-  showbienveni() {
-    Swal.fire({
-      title: 'Bienvenido, hacemos uso de GPS para obtener su ubicacion.'+" "+
-      '¿Permite que esta pagina acceda a su ubicación?',
-      showDenyButton: true,
-      showCancelButton: true,
-      confirmButtonText: 'YES',
-      denyButtonText: `NO`,
-    }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
-      if (result.isConfirmed) {
-        this.usuario.ubication = this.rever.dir.direct;
-      }
-    })
-  }
+  
   showbien() {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
       title: 'Se ha enviado un codigo a su correo',
       showConfirmButton: false,
-      timer: 1500
+      timer: 2000
     })
   }
   showModal() {
@@ -104,11 +78,10 @@ export class RecordUserComponent implements OnInit {
       || this.usuario.birthdate === "" || this.usuario.phone === ""
       || this.usuario.occupation === "" || this.usuario.maritalStatus === "") {
       this.showModal();
-      console.log(this.rever.dir.direct)
       return;
     } else {
       var random: number;
-      random = Math.round(Math.random() * (10000 - 1000) + 1);
+      random = Math.round(Math.random() * (9000) + 1000);
       this.usuario.code = random + "";
       this.api.apiUserPost$Json({ body: this.usuario })
         .subscribe(res => {
