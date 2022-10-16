@@ -68,6 +68,30 @@ create table notify(
 	Foreign Key(organization_type_id) References organization_type(id),
 );
 
+create table poll(
+	id int identity(1,1) primary key,
+	date datetime not null,
+	genero int not null, /*0=Hombre, 1=Mujer, 2=No Binario*/
+	orientacion_sexual int not null, /*0=Hetero, 1=Homosexual, 2=Bisexual, 3=Pansexual*/
+	edad int not null,
+	municipio int not null, /*0=Bogota, 1=Facatativa, 2=Madrid, 3=Mosquera, 4=Funza, 5=Otro*/
+	sector int not null, /*0=Urbano, 1=Rural*/
+	nivel_educativo int not null, /*0=Basica primaria, 1=Basica Secundaria, 2=Media, 3=(Tecnica, Tecnologica), 4=Pregrado, 5=Postgrado */
+	estado_civil int not null, /*0=Soltero, 1=Casado, 2=Viudo,3=Union Libre*/
+	etnia int not null, /*0=Ninguno,1=Comunidades Negras-Afrocolombianas, 2=Pueblos Indígenas,3=Pueblo Rrom o Gitano,4=Raizales y Palenqueras- NARP, 5=Otro*/
+	ingresos int not null, /*0=No, 1=Si*/
+	ocupacion int not null, /*0=Desempleado, 1=Estudiante, 2=Empleado/a particular (Sector privado), 3=Empleado/a del Gobierno (Sector público)
+							  4=Empleado/a doméstico/a,5=Empleador/a, 6=Trabajador/a por cuenta propia (Independiente), 7=Trabajador/a familiar sin remuneración*/
+	p1 int not null, /* ¿Ha observado a esa persona golpear o patear la pared o algún otro mueble? 0=No, 1=Si*/
+	p2 int not null, /*¿Le han amenazado con golpearle? */
+	p3 int not null, /*¿Se ha sentido presionado a tener relaciones sexuales? */
+	p4 int not null, /*¿Le han destruido algunas de sus pertenencias? */
+	p5 int not null, /*¿Le han sacudido, zarandeado, jaloneado o empujado? */
+	p6 int not null, /*¿Se ha sentido agredido física o psicológicamente? */
+	p7 int not null /*¿Ha sufrido o sido testigo de algún tipo de violencia? ¿Cuál? 0=Ninguna, 1=Violencia Infantil, 2=Violencia intrafamiliar,
+						3=Violencia Adulto Mayor, 4=Violencia de Género*/
+);
+
 INSERT INTO users (
 	identification,
 	password,
@@ -114,5 +138,59 @@ INSERT INTO site(nit,ubication,range,country_code,phone,tel) VALUES (
 
 INSERT INTO violence_type(name,description) VALUES ('Violencia de Genero','dirigida a las mujeres por el mero hecho de serlo, es decir, por considerar que el sexo femenino es inferior');
 
+INSERT INTO poll(date, genero, orientacion_sexual, edad, municipio, sector, nivel_educativo, estado_civil, etnia, ingresos, ocupacion , p1, p2, p3, p4, p5, p6, p7) 
+VALUES
+('10/3/2022 8:51:11',1,0,21,0,0,4,0,5,0,1,0,1,0,0,1,1,4),
+('10/3/2022 9:32:17',0,0,21,0,0,4,0,0,0,1,0,1,0,0,0,0,2),
+('10/4/2022 16:53:50',0,0,26,5,0,5,0,0,1,2,1,1,0,0,0,1,2),
+('10/4/2022 16:54:58',1,0,20,1,0,4,0,0,1,1,0,0,1,0,1,1,2),
+('10/4/2022 16:56:16',1,2,19,2,0,3,0,0,0,1,0,0,1,0,0,0,2),
+('10/4/2022 16:56:41',1,0,23,4,0,3,0,0,1,6,0,0,0,0,0,0,4),
+('10/4/2022 16:57:31',1,0,24,5,0,3,0,0,1,6,1,0,1,0,0,0,0),
+('10/4/2022 16:57:38',0,0,20,2,0,4,0,0,0,1,0,0,0,0,0,0,0),
+('10/4/2022 16:58:01',0,0,21,3,1,4,0,0,1,2,1,0,0,0,0,1,0),
+('10/4/2022 16:59:05',1,2,20,0,0,3,0,0,0,0,0,0,0,0,1,0,2),
+('10/4/2022 17:02:53',1,0,24,2,0,4,0,0,1,2,0,0,0,0,0,0,0),
+('10/4/2022 17:03:53',0,1,21,1,1,4,0,0,0,1,0,0,0,0,0,0,0),
+('10/4/2022 17:05:20',0,0,20,3,0,3,0,0,0,0,0,0,0,0,0,0,0),
+('10/4/2022 17:09:43',1,0,20,1,0,4,0,0,0,1,0,0,0,0,0,0,0),
+('10/4/2022 17:11:11',1,0,21,0,0,4,0,0,0,1,0,0,0,0,0,1,2),
+('10/4/2022 17:12:18',1,2,19,2,0,1,3,0,0,1,1,0,0,1,0,1,2),
+('10/4/2022 17:15:05',1,2,19,2,0,2,0,0,1,2,1,1,1,1,1,1,2),
+('10/4/2022 17:15:50',0,0,21,1,0,4,0,0,0,1,0,0,0,0,1,0,0),
+('10/4/2022 17:22:32',0,0,19,5,0,3,0,0,1,2,1,1,0,0,1,1,4),
+('10/4/2022 17:35:40',1,2,21,0,1,1,0,0,0,1,1,1,1,1,1,1,2),
+('10/4/2022 17:37:48',0,0,20,1,0,4,0,0,1,1,0,0,0,0,0,0,0),
+('10/4/2022 17:51:49',1,0,19,2,0,3,3,0,1,2,0,0,0,0,0,0,0),
+('10/4/2022 17:52:26',1,0,26,1,0,4,3,0,0,1,1,0,1,0,0,1,2),
+('10/4/2022 18:11:02',1,0,22,1,0,4,2,2,1,1,0,0,0,0,0,1,0),
+('10/4/2022 18:12:34',0,0,20,2,0,4,3,0,1,1,0,0,0,0,0,0,0),
+('10/4/2022 18:28:06',0,3,21,0,0,1,0,0,0,1,1,0,0,0,0,0,2),
+('10/4/2022 19:07:48',0,0,20,0,0,2,0,0,1,2,0,0,0,0,0,0,2),
+('10/4/2022 19:08:10',1,0,22,3,0,3,0,0,0,1,0,0,0,0,0,0,4),
+('10/4/2022 19:08:22',1,0,21,2,0,4,0,0,1,1,1,1,1,1,1,1,4),
+('10/4/2022 19:15:30',1,0,26,2,0,4,3,0,1,3,0,0,0,0,0,0,0),
+('10/4/2022 19:37:17',1,0,20,2,0,3,0,0,1,2,0,0,0,0,0,0,4),
+('10/4/2022 19:44:26',1,2,27,3,0,4,3,0,1,1,0,0,0,0,0,1,2),
+('10/4/2022 20:06:15',0,0,20,2,0,4,0,0,1,1,0,0,0,0,1,1,2),
+('10/4/2022 20:10:05',1,0,27,1,1,4,0,0,1,1,0,0,0,0,0,0,3),
+('10/4/2022 20:42:30',0,0,23,1,0,3,0,0,1,6,0,0,0,0,0,0,0),
+('10/4/2022 21:00:15',0,0,25,1,0,4,0,0,1,1,1,1,0,0,1,1,1),
+('10/4/2022 21:04:21',0,0,20,2,0,4,0,0,0,1,0,0,0,0,0,0,1),
+('10/4/2022 21:07:01',1,0,30,3,0,2,0,0,1,5,0,0,1,0,0,1,4),
+('10/4/2022 21:10:01',1,0,25,3,0,3,0,0,1,2,0,0,0,0,0,1,4),
+('10/4/2022 21:11:05',0,0,28,3,1,2,0,0,1,6,0,0,0,0,0,0,1),
+('10/4/2022 21:32:20',0,0,24,1,0,1,0,0,1,1,1,1,0,1,1,1,4),
+('10/4/2022 22:11:17',1,0,21,5,0,3,0,0,0,1,1,0,0,0,0,0,2),
+('10/4/2022 22:26:21',1,0,25,2,0,5,0,0,1,2,0,0,0,0,0,1,4),
+('10/4/2022 22:27:49',0,0,21,2,0,2,0,0,0,1,0,0,0,0,0,0,0),
+('10/4/2022 23:39:21',2,3,19,5,0,2,0,0,0,0,0,1,0,0,0,1,4),
+('10/4/2022 23:39:22',0,0,17,5,0,1,0,0,0,1,0,1,1,0,0,0,3),
+('10/5/2022 10:18:56',1,2,21,3,0,3,0,0,1,5,0,0,0,0,0,1,0),
+('10/5/2022 15:10:57',1,0,21,0,0,4,0,0,0,6,1,1,0,1,1,1,2),
+('10/5/2022 18:03:27',1,0,21,3,0,4,0,0,1,2,0,0,0,1,1,1,0),
+('10/6/2022 21:04:27',0,0,16,1,0,1,0,0,0,1,1,1,0,0,0,0,0),
+('10/6/2022 21:21:20',1,2,16,1,0,2,3,0,0,1,1,0,0,0,0,0,2),
+('10/6/2022 21:24:24',1,0,17,1,0,1,0,0,0,1,1,1,1,0,0,0,1)
 
 Scaffold-DbContext "Server=localhost\SQLEXPRESS;Database=vigendb; Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f

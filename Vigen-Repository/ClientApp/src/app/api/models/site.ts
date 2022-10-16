@@ -5,7 +5,6 @@ export interface Site {
   countryCode?: null | string;
   id?: null | string;
   nit?: null | string;
-  nitNavigation?: Organization;
   phone?: null | string;
   range?: number;
   tel?: null | string;

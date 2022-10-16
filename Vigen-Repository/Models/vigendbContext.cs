@@ -24,6 +24,7 @@ namespace Vigen_Repository.Models
         public virtual DbSet<User> Users { get; set; } = null!;
         public virtual DbSet<ViolenceType> ViolenceTypes { get; set; } = null!;
         public virtual DbSet<ViolenceTypesOrganization> ViolenceTypesOrganizations { get; set; } = null!;
+        public virtual DbSet<Poll> Polls { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -39,7 +40,12 @@ namespace Vigen_Repository.Models
 
             modelBuilder.Entity<ViolenceTypesOrganization>(x =>
             {
-                x.HasKey(y => new { y.IdViolence, y.Nit });
+                x.HasKey(y => new { y.OrganizationTypeId, y.IdViolence });
+            });
+
+            modelBuilder.Entity<Site>(x =>
+            {
+                x.HasKey(y => new { y.Id, y.Nit });
             });
 
             OnModelCreatingPartial(modelBuilder);

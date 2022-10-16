@@ -12,11 +12,20 @@ namespace Vigen_Repository.Models
         [Column("nit")]
         public string Nit { get; set; } = null!;
 
+        [Column("password")]
+        public string Password { get; set; }
+
         [Column("name")]
         public string Name { get; set; } = null!;
 
         [Column("tel")]
         public string Tel { get; set; } = null!;
+
+        [Column("phone")]
+        public string Phone { get; set; }
+
+        [Column("organization_type_id")]
+        public int OrganizationTypeID { get; set; }
 
     }
 }

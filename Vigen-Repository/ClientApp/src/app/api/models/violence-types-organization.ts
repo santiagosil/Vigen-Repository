@@ -2,5 +2,5 @@
 /* eslint-disable */
 export interface ViolenceTypesOrganization {
   idViolence?: number;
-  nit?: null | string;
+  organizationTypeId?: null | string;
 }
