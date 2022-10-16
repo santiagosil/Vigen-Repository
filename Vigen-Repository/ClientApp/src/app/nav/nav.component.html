@@ -1,5 +1,5 @@
 <!--p *ngIf="user">{{user.name}}</p>-->
-  <nav class="navbar fixed-top navbar-expand-lg bgcolor p-md-3">
+  <nav class="navbar fixed-top navbar-expand-lg bg-primary p-md-3">
     <div class="container-fluid">
       <a class="navbar-brand text-white ms-5" href="#"> Vigen</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -12,11 +12,11 @@
             <a class="nav-link active text-white" aria-current="page" (click)="toHome()"  routerLink="/home" routerLinkActivate="activate">{{"NAV.HOME" | translate}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" (click)="toAbout()" routerLinkActivate="activate">{{"NAV.ABOUT" | translate}}</a>
+            <a class="nav-link active text-white" (click)="toAbout()" routerLink="" routerLinkActivate="activate">{{"NAV.ABOUT" | translate}}</a>
             
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" (click)="toHelp()" routerLinkActivate="activate">{{"NAV.HELP" | translate}}</a>
+            <a class="nav-link active text-white" (click)="toHelp()" routerLink="" routerLinkActivate="activate">{{"NAV.HELP" | translate}}</a>
           </li>
         </ul>
         <button class="btn btn-primary m-2" type="submit" routerLink="/login">Login</button>

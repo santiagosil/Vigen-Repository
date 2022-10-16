@@ -20,19 +20,33 @@
         "OPCIONES":"Settings",
         "SALIR": "Sign out",
         "ABOUT":"About",
-        "HELP":"Help"
-        
+        "HELP":"Help"  
     },
     "EDIT-USER":{
         "USERNAME":"Username",
         "EMAIL":"Email",
         "PASSWORD":"Password"
     },
-    "lOGIN":{
-        "TITULO": "Access",
-        "CORREO": "Email",
-        "CONTRASEÑA": "Password",
-        "MANTENER_CONECTADO":"Stay connected"
-    }
+    "LOGIN":{
+        "TITULO":"Login Account",
+        "CORREO":"Email",
+        "CONTRASEÑA":"Password",
+        "RECUERDAME":"Remember me"
+    },
+    "REC":{
+        "REGISTRO":"Register",
+        "CAMPOS":"Required fields *",
+        "NAME":"Name",
+        "EMAIL":"Email",
+        "FECHA":"Date of Birth",
+        "TEL":"Phone",
+        "OCCUPATION":"Occupation",
+        "COD":"Postal Code",
+        "CIVIL":"Marital Status",
+        "ID":"Identification",
+        "PRIVACIDAD":"Privacy Agreement",
+        "ENVIAR":"Submit"
 
+    }
+    
 }

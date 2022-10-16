@@ -20,6 +20,7 @@ import { StatisticsDashboardComponent } from './statistics-dashboard/statistics-
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { SingUpComponent } from './sign-up/sing-up.component';
+import { MapOrganizacionComponent } from './map-organizacion/map-organizacion.component';
 
 
 export function HttpLoaderFactory(http: HttpClient){
@@ -39,7 +40,8 @@ export function HttpLoaderFactory(http: HttpClient){
     HomeComponent,
     StatisticsDashboardComponent,
     LoginComponent,
-    SingUpComponent
+    SingUpComponent,
+    MapOrganizacionComponent
   ],
   imports: [
     BrowserModule,

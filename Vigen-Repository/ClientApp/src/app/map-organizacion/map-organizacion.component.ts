@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { circle, latLng, LatLng, map, Map, marker, tileLayer } from 'leaflet';
+import { circle, circleMarker, latLng, LatLng, map, Map, marker, tileLayer } from 'leaflet';
 
 export let latlong =new LatLng(0,0);
 
 @Component({
-  selector: 'app-map',
-  templateUrl: './map.component.html',
-  styleUrls: ['./map.component.css']
+  selector: 'app-map-organizacion',
+  templateUrl: './map-organizacion.component.html',
+  styleUrls: ['./map-organizacion.component.css']
 })
-export class MapComponent implements OnInit {
+export class MapOrganizacionComponent implements OnInit {
 
   constructor() { }
 
@@ -27,36 +27,44 @@ export class MapComponent implements OnInit {
     accuracy: number, latlng: LatLng
   }) => {
     const markerItem = marker(e.latlng).addTo(map);
-   
+    const circulo = circle(e.latlng,{
+      radius: e.accuracy,
+      color: 'red'
+    }).addTo(map);
     map.fitBounds([
       [markerItem.getLatLng().lat, markerItem.getLatLng().lng]
     ])
-    /*----------Se elimina cada vez que cambia de ubicacion------*/
-    map.on('click',()=>map.removeLayer(markerItem));
+    markerItem.on('click',()=>map.removeLayer(markerItem));
+    markerItem.on('click',()=>map.removeLayer(circulo));
   });
   map.on('locationerror', (e : {message: string} ) => console.error(e.message));
   map.locate();
 
   /* ----agregar marcadores con click---- */
   
-  map.on('click', (e : {
+  map.on('dblclick', (e : {
     latlng: LatLng
   }) => {
     const markerItem = marker(e.latlng).addTo(map);
+    const circulo = circle(e.latlng,{
+      radius: 16,
+      color: 'red',
+      
+    }).addTo(map);
     map.fitBounds([
       [markerItem.getLatLng().lat, markerItem.getLatLng().lng]
     ])
     latlong=new LatLng(e.latlng.lat,e.latlng.lng);
     console.log('click', e.latlng.lat, e.latlng.lng)
 
-    /*----------Se elimina cada vez que cambia de ubicacion------*/
-    map.on('click',()=>map.removeLayer(markerItem));
+    markerItem.on('click',()=>map.removeLayer(markerItem));
+    markerItem.on('click',()=>map.removeLayer(circulo));
   });
-
+  
+ 
   
 
 
   }
- 
- 
+
 }

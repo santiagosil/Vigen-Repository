@@ -11,6 +11,7 @@
         "BOTONREGISTRAR": "Registrarse",
         "BOTONINGRESAR": "Ingresar"
     },
+    
     "PANEL":{
         "INICIO": "Inicio",
         "ESTADISTICAS":"Estad�sticas",
@@ -29,10 +30,25 @@
         "EMAIL":"Correo",
         "PASSWORD":"Contraseña"
     },
-    "lOGIN":{
-        "TITULO": "Acceder",
-        "CORREO": "Correo",
-        "CONTRASEÑA": "Contraseña",
-        "MANTENER_CONECTADO":"Mantenerme conectado"
+    "LOGIN":{
+        "TITULO":"Inicia Sesión",
+        "CORREO":"Correo",
+        "CONTRASEÑA":"Contraseña",
+        "RECUERDAME":"Recordarme"
+    },
+    "REC":{
+        "REGISTRO":"Registro",
+        "CAMPOS":"Campos Requeridos *",
+        "NAME":"Nombre",
+        "EMAIL":"Correo",
+        "FECHA":"Fecha de Nacimiento",
+        "TEL":"Teléfono",
+        "OCCUPATION":"Ocupación",
+        "COD":"Código Postal",
+        "CIVIL":"Estado Civil",
+        "ID":"Identificación",
+        "PRIVACIDAD":"Acuerdo de Privacidad",
+        "ENVIAR":"Enviar"
     }
+    
 }
