@@ -21,7 +21,8 @@ export class ReportsService{
     var results=Object.values(cuerpo);
     var encabezado:string[]=[];
     Object.keys(results[0]).map((x)=>{
-      this.translate.get("REPORTS."+x.toUpperCase()).subscribe(res=>{
+      this.translate.get("REPORTS."+x.toUpperCase())
+      .subscribe(res=>{
         encabezado.push(res);
       });
     });

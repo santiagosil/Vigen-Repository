@@ -104,8 +104,7 @@
                     <img src="../../assets/images/maps.jpg" class="figure-img img-fluid rounded " alt="...">
                 </div>-->
                 <br>
-                <h5>{{usuario.name}}</h5>
-                <br>
+                <h5>{{usuario.name}}{{usuario.occupation}} {{usuario.maritalStatus}}</h5>
                 <div class="row">
                     <div class="col-2">
                         <div class="imagenUbi">
@@ -115,7 +114,7 @@
                     </div>
                     <div class="col-10">
                         <br>
-                        <p style="font-size: 13px">Ubicacion</p>
+                        <p style="font-size: 13px">{{usuario.ubication}}</p>
                     </div>
                     <div class="col-2">
                         <div class="imagenUbi">
@@ -136,6 +135,16 @@
                     <div class="col-10">
                         <br>
                         <p style="font-size: 13px">{{usuario.phone}}</p>
+                    </div>
+                    <div class="col-2">
+                        <div class="imagenUbi">
+                            <br>
+                            <img src="../../assets/images/tel.png" class="figure-img img-fluid rounded " alt="...">
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <br>
+                        <p style="font-size: 13px">{{usuario.identification}}</p>
                     </div>
                 </div>
             </div>
