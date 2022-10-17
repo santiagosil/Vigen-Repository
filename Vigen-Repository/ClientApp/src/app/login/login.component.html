@@ -1,26 +1,41 @@
-<div class="container">
-        <div class="row">
-            <div class="col-4">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<section>
+    <div class="container" style="position: relative;">
 
-            </div>
-            <div class="col-4">
-                <div class="text-center">
-                    <img src="../../assets/images/user.png" alt="usuario" width="48">
-                    <h2>{{"LOGIN.TITULO" | translate}}</h2>
-                </div>
+        <div class="col-6">
+            <h3 style="position: absolute; left: 670px; top: 180px;  z-index: 3;" class="text-white">WELCOME!</h3>
+            <p style="position: absolute; left: 600px; top: 220px;  z-index: 4;" class="text-white">Enter your details and start journey with us</p>
+            <img class="violeta" style=" z-index: 1;" src="../../assets/images/fondo-violeta.jpg" width="500" height="470">
+        </div>
+        <div class="row" >
+            <div class="col-6 shadow p-3 bg-white mb-5 rounded" style="position: absolute; left: 120px; top: 40px; width: 400px;height: 390px;  z-index: 2;">
                 <form action="" (ngSubmit)="get()">
-                    <div class="md-4">
-                        <label for="email" class="form-label">Identification</label>
-                        <input type="email" class="form-control" name="email" [(ngModel)]="usuario.identification" [ngModelOptions]="{standalone: true}">
+                    <br>
+                    <div class="text-center">
+                        <!--<img src="../../assets/images/user.png" alt="usuario" width="48">-->
+                        <h3>{{"LOGIN.TITULO" | translate}}</h3>
                     </div>
-                    <div class="md-4">
-                        <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" name="password" [(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}">
+                    <hr>
+                    <div >
+                        <label style="position: relative;  left: 60px">{{"LOGIN.CORREO" | translate}}</label>
+                        <input type="email" class="shadow form-control rounded " name="email" [(ngModel)]="usuario.identification" [ngModelOptions]="{standalone: true}" style="position: relative; width: 250px; left: 60px">
                     </div>
-                    <div class="md-4 form-check">
-                        <input type="checkbox" name="connected" class="form-check-input">
-                        <label for="connected" class="form-check-label">Mantener conectado</label>
+                    <br>
+                    <div >
+                        <label style="position: relative; left: 60px">{{"LOGIN.CONTRASEÑA" | translate}}</label>
+                        <input type="password" class="shadow form-control rounded " name="password" [(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}" style="position: relative; width: 250px;  left: 60px" >
                     </div>
+                    <br>
+                    <div >
+                        <input type="checkbox" name="connected" class="form-check-input"style="position: relative; left: 60px">
+                        <label style="position: relative; left: 65px">{{"LOGIN.RECUERDAME" | translate}}</label>
+                        </div>
+         
                     <div>
                         <input type="checkbox" name="org" class="form-check-input" [(ngModel)]="conf.org" [ngModelOptions]="{standalone: true}">
                         <label for="org">Organización</label>
@@ -28,10 +43,17 @@
                         <input type="checkbox" name="user" class="form-check-input" [(ngModel)]="conf.user" [ngModelOptions]="{standalone: true}">
                         <label for="user">Usuario</label>
                     </div>
+                    <br>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                        <!--button (click)="showModal()" type="submit" class="btn btn-primary">Iniciar sesión</button-->
+                        <button class="btn btn-primary" style="position: relative; width: 250px;  left: 60px">Iniciar sesión</button>
                     </div>
+                    
                 </form>
+
             </div>
         </div>
     </div>
+
+
+</section>

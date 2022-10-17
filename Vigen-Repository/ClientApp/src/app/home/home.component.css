@@ -63,8 +63,16 @@ p{
     top: 550px;
     left: 100px;
 }
-
-
+.centro{
+    position: relative;
+    left: 310px;
+}
+.active{
+    padding: 0,5rem;
+    background-color:#593196;
+    color: white;
+    text-decoration: none;
+}
 /*button{
     font-size: 1.5rem;
     font-weight: bold;

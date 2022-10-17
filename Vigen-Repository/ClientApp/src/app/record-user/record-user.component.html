@@ -3,18 +3,22 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+
 <div class="container">
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-6  shadow p-3  mb-5 rounded ">
                 <!--form [formGroup]="form" (submit) ="sendLogin()" class="form"-->  
                 <form (ngSubmit)="send()"  #f="ngForm">  
-                    <h1>Registro</h1>
+                    <h1>{{"REC.REGISTRO" | translate}}</h1>
                     <br>
-                    <p style="color:red;">Campos Obligarorios *</p>
+                    <p style="color:red;">{{"REC.CAMPOS" | translate}}</p>
                     <br>
                     <div class="form-group row">
-                        <label>Nombre*</label>
+                        <label>{{"REC.NAME" | translate}}<label style="color:red;">*</label></label>
+                        
                         <br>
                         <div class="col-sm-10">
                             <!--input formControlName="nomUser" type="text" class="form-control" placeholder=""-->
@@ -23,7 +27,7 @@
                     </div>
                     <br>
                     <div class="form-group row">
-                        <label>Correo*</label>
+                        <label>{{"REC.EMAIL" | translate}}<label style="color:red;">*</label></label>
                         <div class="col-sm-10">
                             <!--input formControlName="correoUser" type="email" class="form-control"  placeholder=""-->
                             <input type="email" class="form-control" id="inputEmail3" [(ngModel)]="usuario.email" [ngModelOptions]="{standalone: true}"  placeholder="" >
@@ -31,7 +35,7 @@
                     </div>
                     <br>
                     <div class="form-group row">
-                        <label>Fecha de nacimiento*</label>
+                        <label>{{"REC.FECHA" | translate}}<label style="color:red;">*</label></label>
                         <div class="col-sm-10">
                             <!--input formControlName="fechaNa" type="text" class="form-control"  placeholder=""-->
                             <input type="date" class="form-control" id="inlineFormInputGroup" [(ngModel)]="usuario.birthdate" [ngModelOptions]="{standalone: true}" placeholder="">
@@ -39,7 +43,7 @@
                     </div>
                     <br>
                     <div class="form-group row">
-                        <label>Telefono*</label>
+                        <label>{{"REC.TEL" | translate}}<label style="color:red;">*</label></label>
                         <div class="col-sm-10">
                             <!--input formControlName="telUser" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="usuario.phone" [ngModelOptions]="{standalone: true}" placeholder="">
@@ -47,7 +51,7 @@
                     </div>
                     <br>
                     <div class="form-group row">
-                        <label>Ocupacion*</label>
+                        <label>{{"REC.OCCUPATION" | translate}}<label style="color:red;">*</label></label>
                         <div class="col-sm-10">
                             <!--input formControlName="ocupaUser" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="usuario.occupation" [ngModelOptions]="{standalone: true}" placeholder="">
@@ -55,7 +59,7 @@
                     </div>
                     <br>
                     <div class="form-group row">
-                        <label>Codigo Postal</label>
+                        <label>{{"REC.COD" | translate}}</label>
                         <div class="col-sm-10">
                             <!--input formControlName="postUser" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="usuario.postalCode" [ngModelOptions]="{standalone: true}" placeholder="">
@@ -63,7 +67,7 @@
                     </div>
                     <br>
                     <div class="form-group row">
-                        <label>Estado Civil*</label>
+                        <label>{{"REC.CIVIL" | translate}}<label style="color:red;">*</label></label>
                         <div class="col-sm-10">
                             <!--input  formControlName="ecivlUser" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="usuario.maritalStatus" [ngModelOptions]="{standalone: true}" placeholder="" >
@@ -71,7 +75,7 @@
                     </div>
                     <br>
                     <div class="form-group row">
-                        <label>Identificacion*</label>
+                        <label>{{"REC.ID" | translate}}<label style="color:red;">*</label></label>
                         <div class="col-sm-10">
                             <!--input formControlName="idUser" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="usuario.identification" [ngModelOptions]="{standalone: true}" placeholder="">
@@ -84,21 +88,21 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label" for="flexCheckDefault">
-                                  Acuerdo de privacidad
+                                  {{"REC.PRIVACIDAD" | translate}}
                                 </label>
                               </div>
                         </div>
                         <div class="col-3">
                             <div class="form-group row">
                                 <div class="col-sm-10">
-                                    <button type="submit" class="btn btn-primary ms-4">Submit</button>
+                                    <button type="submit" class="btn btn-primary ms-4">{{"REC.ENVIAR" | translate}}</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="col-6">
+            <div class="col-6 shadow mb-5">
                 <app-map></app-map>
                 <!--<div class="imagenMpa">
                     <img src="../../assets/images/maps.jpg" class="figure-img img-fluid rounded " alt="...">

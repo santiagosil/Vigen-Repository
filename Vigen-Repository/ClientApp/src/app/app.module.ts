@@ -20,6 +20,9 @@ import { StatisticsDashboardComponent } from './statistics-dashboard/statistics-
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { SingUpComponent } from './sign-up/sing-up.component';
+import { MapOrganizacionComponent } from './map-organizacion/map-organizacion.component';
+import { FAQComponent } from './faq/faq.component';
+
 import { TokenComponent } from './token/token.component';
 import { ReportesComponent } from './reportes/reportes.component';
 import { NotifyComponent } from './notify/notify.component';
@@ -42,6 +45,8 @@ export function HttpLoaderFactory(http: HttpClient){
     StatisticsDashboardComponent,
     LoginComponent,
     SingUpComponent,
+    MapOrganizacionComponent,
+    FAQComponent,
     TokenComponent,
     ReportesComponent,
     NotifyComponent

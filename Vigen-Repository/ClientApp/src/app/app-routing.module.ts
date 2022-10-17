@@ -10,6 +10,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { PanelUserComponent } from './panel-user/panel-user.component';
 import { StatisticsDashboardComponent } from './statistics-dashboard/statistics-dashboard.component';
 import { SingUpComponent } from './sign-up/sing-up.component';
+import { FAQComponent } from './faq/faq.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'edUser',component: EditUserComponent},
   {path: 'pUser', component: PanelUserComponent},
   {path: 'statis',component: StatisticsDashboardComponent},
-  {path: 'signUp',component: SingUpComponent}
+  {path: 'signUp',component: SingUpComponent},
+  {path: 'faq',component:FAQComponent}
 ];
 
 @NgModule({

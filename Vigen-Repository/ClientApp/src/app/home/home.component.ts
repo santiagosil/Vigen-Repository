@@ -9,6 +9,10 @@ import { Component, HostListener, Inject, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   showBotton= false;
+  showPanel1=true;
+  showPanel2=false;
+  showPanel3=false;
+  showPanel4=false;
   private scrollHeight = 200;
 
   constructor(@Inject (DOCUMENT) private document: Document) { 
@@ -17,6 +21,32 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  view1():void{
+    this.showPanel1 = true;
+    this.showPanel2 = false;
+    this.showPanel3 = false;
+    this.showPanel4 = false;
+    
+  }
+  view2():void{
+    this.showPanel1 = false;
+    this.showPanel2 = true;
+    this.showPanel3 = false;
+    this.showPanel4 = false;
+  }
+  view3():void{
+    this.showPanel1 = false;
+    this.showPanel2 = false;
+    this.showPanel3 = true;
+    this.showPanel4 = false;
+  }
+  view4():void{
+    this.showPanel1 = false;
+    this.showPanel2 = false;
+    this.showPanel3 = false;
+    this.showPanel4 = true;
+  }
+
   @HostListener('window:scroll')
   onWindowScroll():void{
     const yOffSet = window.pageYOffset;
@@ -27,4 +57,5 @@ export class HomeComponent implements OnInit {
   onScrollTop():void{
     this.document.documentElement.scrollTop = 0;
   }
+  
 }
