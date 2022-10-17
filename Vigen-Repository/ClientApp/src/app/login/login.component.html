@@ -10,19 +10,26 @@
                 </div>
                 <form action="" (ngSubmit)="get()">
                     <div class="md-4">
-                        <label for="email" class="form-label">{{"LOGIN.email" | translate}}</label>
+                        <label for="email" class="form-label">Identification</label>
                         <input type="email" class="form-control" name="email" [(ngModel)]="usuario.identification" [ngModelOptions]="{standalone: true}">
                     </div>
                     <div class="md-4">
-                        <label for="password" class="form-label">{{"LOGIN.CONTRASEÑA" | translate}}</label>
+                        <label for="password" class="form-label">Contraseña</label>
                         <input type="password" class="form-control" name="password" [(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}">
                     </div>
                     <div class="md-4 form-check">
                         <input type="checkbox" name="connected" class="form-check-input">
-                        <label for="connected" class="form-check-label">{{"LOGIN.MANTENER_CONECTADO" | translate}}</label>
+                        <label for="connected" class="form-check-label">Mantener conectado</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="org" class="form-check-input" [(ngModel)]="conf.org" [ngModelOptions]="{standalone: true}">
+                        <label for="org">Organización</label>
+                        <br>
+                        <input type="checkbox" name="user" class="form-check-input" [(ngModel)]="conf.user" [ngModelOptions]="{standalone: true}">
+                        <label for="user">Usuario</label>
                     </div>
                     <div class="d-grid">
-                        <button (click)="get()" type="submit" class="btn btn-primary">Iniciar sesión</button>
+                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
                     </div>
                 </form>
             </div>

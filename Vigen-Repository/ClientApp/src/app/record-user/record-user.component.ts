@@ -37,9 +37,8 @@ export class RecordUserComponent implements OnInit {
     occupation: "",
     postalCode: "",
     maritalStatus: "",
-    ubication: ""
+    ubication: "",
   };
-
 
   constructor(private api: UserService, private rever : InverseService) {
    
@@ -70,7 +69,7 @@ export class RecordUserComponent implements OnInit {
       icon: 'error',
       title: 'Faltan algunos campos obligatorios por llenar',
       showConfirmButton: false,
-      timer: 1500
+      timer: 2000
     })
   }
   public send() {
