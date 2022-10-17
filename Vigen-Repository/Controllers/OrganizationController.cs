@@ -15,23 +15,23 @@ namespace Vigen_Repository.Controllers
             _context = context;
         }
         [HttpGet]
-        public async Task<ActionResult> getOrganizations()
+        public async Task<ActionResult<List<Organization>>> getOrganizations()
         {
             List<Organization> organization = await _context.Organizations.ToListAsync();
             if (organization.Count == 0) return NoContent();
             return Ok(organization);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult> getOrganization(string id)
+        [HttpGet("{nit}")]
+        public async Task<ActionResult<Organization>> getOrganization(string nit)
         {
-            Organization? organization = await _context.Organizations.FindAsync(id);
+            Organization? organization = await _context.Organizations.FindAsync(nit);
             if (organization == null) return NotFound();
             return Ok(organization);
         }
 
         [HttpPost]
-        public async Task<ActionResult> postOrganization(Organization organization)
+        public async Task<ActionResult<Organization>> postOrganization(Organization organization)
         {
             try
             {
@@ -45,10 +45,10 @@ namespace Vigen_Repository.Controllers
             }
         }
 
-        [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateOrganization(string id, Organization organization)
+        [HttpPut("{nit}")]
+        public async Task<ActionResult<Organization>> UpdateOrganization(string nit, Organization organization)
         {
-            if (id != organization.Nit) return BadRequest("El Nit no concide");
+            if (nit != organization.Nit) return BadRequest("El Nit no concide");
             try
             {
                 _context.Entry(organization).State = EntityState.Modified;
@@ -62,12 +62,12 @@ namespace Vigen_Repository.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteOrganization(string id)
+        [HttpDelete("{nit}")]
+        public async Task<ActionResult<Organization>> DeleteOrganization(string nit)
         {
             try
             {
-                Organization? organization = await _context.Organizations.FindAsync(id);
+                Organization? organization = await _context.Organizations.FindAsync(nit);
                 if(organization == null) return NotFound();
                 _context.Organizations.Remove(organization);
                 await _context.SaveChangesAsync();

@@ -10,19 +10,26 @@ namespace TestsVigen.TestsControllers
     public class TestsUserController
     {
         private readonly vigendbContext _context;
-        private readonly UsersController _controller;
+        private readonly UserController _controller;
         private User testUser;
         public TestsUserController()
         {
             _context = new vigendbContext();
-            _controller = new UsersController(_context);
+            _controller = new UserController(_context);
 
             testUser = new User() {
-                Identification= Guid.NewGuid()
+                Identification = Guid.NewGuid()
                 .ToString()
-                .Substring(0,10),
+                .Substring(0, 10),
+                Password = Guid.NewGuid()
+                .ToString()
+                .Substring(0, 10),
+                Code = Guid.NewGuid()
+                .ToString()
+                .Substring(0, 4),
+                Verification = false,
 
-                Name= Guid.NewGuid()
+                Name = Guid.NewGuid()
                 .ToString()
                 .Substring(0, 30),
 
@@ -57,52 +64,53 @@ namespace TestsVigen.TestsControllers
                 Birthdate = DateTime.Now,
             };
         }
-
         [Fact]
-        public async Task TestCRUDUser()
+        public async Task testCrudUser()
         {
             await TestInsertUser();
             await TestGetUserById();
             await TestUpdateUser();
             await TestDeleteUser();
+        }
+        public async Task TestInsertUser()
+        {
+            //Preparacion
 
+            //Prueba
+            await _controller.postUser(testUser);
+            var result = await _context.Users.FindAsync(testUser.Identification);
+            //Verificacion
+            Assert.Equal(testUser, result);
         }
 
         [Fact]
-        public async Task TestGetAllUsers()
+        public async Task TestGetAllUser()
         {
             //Preparacion
             //Prueba
-            var testCase = await _controller.GetUsers();
+            var testCase = await _controller.getUsers();
             //Verificacion
-            Assert.IsType<OkObjectResult>(testCase);
+            Assert.IsType<OkObjectResult>(testCase.Result);
         }
 
         public async Task TestGetUserById()
         {
             //Preparacion
             //Prueba
-            var testCase= await _controller.GetUser(testUser.Identification);
+            var testCase = await _controller.getUser(testUser.Identification);
             //Verificacion
-            var user= Assert.IsType<OkObjectResult>(testCase);
+            Assert.IsType<OkObjectResult>(testCase.Result);
         }
 
-        public async Task TestInsertUser()
-        {
-            //Prueba
-            await _controller.PostUser(testUser);
-            //Verificacion
-            Assert.True(_context.Users.Find(testUser.Identification) != null);
-        }
         public async Task TestUpdateUser()
         {
             //Preparacion
             testUser.Name = "Name Update";
             //Prueba
-            await _controller.PutUser(testUser.Identification, testUser);
+            await _controller.UpdateUser(testUser.Identification, testUser);
             //Verificacion
-            var user=_context.Users.Find(testUser.Identification);
-            Assert.True(user?.Name == testUser.Name);
+            var user = await _context.Users.FindAsync(testUser.Identification);
+            Assert.Equal(testUser.Name, user?.Name);
         }
 
         public async Task TestDeleteUser()
@@ -111,9 +119,8 @@ namespace TestsVigen.TestsControllers
             //Prueba
             await _controller.DeleteUser(testUser.Identification);
             //Verificacion
-            var user = await _controller.GetUser(testUser.Identification);
-            Assert.IsType<NotFoundResult>(user);
+            var user = await _controller.getUser(testUser.Identification);
+            Assert.IsType<NotFoundResult>(user.Result);
         }
-
     }
 }

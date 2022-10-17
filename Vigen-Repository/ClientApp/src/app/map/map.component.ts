@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { circle, latLng, LatLng, map, Map, marker, tileLayer } from 'leaflet';
+import { circle, latLng, LatLng, Map, marker, tileLayer } from 'leaflet';
+import {InverseService} from '../api/MyServices/inverse.service'
+import { RecordUserComponent } from '../record-user/record-user.component';
 
 export let latlong =new LatLng(0,0);
 
@@ -10,7 +13,7 @@ export let latlong =new LatLng(0,0);
 })
 export class MapComponent implements OnInit {
 
-  constructor() { }
+  constructor(private reverse: InverseService) { }
 
   ngOnInit(): void {
   }
@@ -29,10 +32,11 @@ export class MapComponent implements OnInit {
     const markerItem = marker(e.latlng).addTo(map);
    
     map.fitBounds([
-      [markerItem.getLatLng().lat, markerItem.getLatLng().lng]
+      [markerItem.getLatLng().lat, markerItem.getLatLng().lng] //gps
     ])
     /*----------Se elimina cada vez que cambia de ubicacion------*/
     map.on('click',()=>map.removeLayer(markerItem));
+    this.reverse.inverse(markerItem.getLatLng().lat+"", markerItem.getLatLng().lng+"")
   });
   map.on('locationerror', (e : {message: string} ) => console.error(e.message));
   map.locate();
@@ -51,6 +55,7 @@ export class MapComponent implements OnInit {
 
     /*----------Se elimina cada vez que cambia de ubicacion------*/
     map.on('click',()=>map.removeLayer(markerItem));
+    this.reverse.inverse(e.latlng.lat+"", e.latlng.lng+"");
   });
 
   

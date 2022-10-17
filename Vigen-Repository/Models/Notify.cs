@@ -1,19 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Vigen_Repository.Models
 {
+    [Table("notify")]
     public partial class Notify
     {
-        public int Id { get; set; }
-        public string UserId { get; set; } = null!;
-        public string Title { get; set; } = null!;
-        public string StateId { get; set; } = null!;
-        public string Description { get; set; } = null!;
-        public string OrganizationTypeId { get; set; } = null!;
+        [Key]
+        [Column("id")]
+        public int? Id { get; set; } = null!;
 
-        public virtual OrganizationType OrganizationType { get; set; } = null!;
-        public virtual State State { get; set; } = null!;
-        public virtual User User { get; set; } = null!;
+        [Column("user_id")]
+        public string UserId { get; set; } = null!;
+
+        [Column("title")]
+        public string Title { get; set; } = null!;
+
+        [Column("state_id")]
+        public int StateId { get; set; }
+
+        [Column("description")]
+        public string Description { get; set; } = null!;
+
+        [Column("organization_type_id")]
+        public int OrganizationTypeId { get; set; }
     }
 }

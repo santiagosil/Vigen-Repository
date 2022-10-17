@@ -23,6 +23,9 @@ import { SingUpComponent } from './sign-up/sing-up.component';
 import { MapOrganizacionComponent } from './map-organizacion/map-organizacion.component';
 import { FAQComponent } from './faq/faq.component';
 
+import { TokenComponent } from './token/token.component';
+import { ReportesComponent } from './reportes/reportes.component';
+import { NotifyComponent } from './notify/notify.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/translate/','.json')
@@ -43,7 +46,10 @@ export function HttpLoaderFactory(http: HttpClient){
     LoginComponent,
     SingUpComponent,
     MapOrganizacionComponent,
-    FAQComponent
+    FAQComponent,
+    TokenComponent,
+    ReportesComponent,
+    NotifyComponent
   ],
   imports: [
     BrowserModule,

@@ -15,7 +15,7 @@ namespace Vigen_Repository.Controllers
             _context = context;
         }
         [HttpGet]
-        public async Task<ActionResult> getVioTypesOrg()
+        public async Task<ActionResult<List<ViolenceTypesOrganization>>> getVioTypesOrg()
         {
             List<ViolenceTypesOrganization> vioTypesOrg = await _context.ViolenceTypesOrganizations.ToListAsync();
             if (vioTypesOrg.Count == 0) return NoContent();
@@ -23,7 +23,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult> getVioTypesOrg(string id)
+        public async Task<ActionResult<ViolenceTypesOrganization>> getVioTypesOrg(string id)
         {
             ViolenceTypesOrganization? vioTypesOrg = await _context.ViolenceTypesOrganizations.FindAsync(id);
             if (vioTypesOrg == null) return NotFound();
@@ -31,7 +31,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> postVioType(ViolenceTypesOrganization vioTypesOrg)
+        public async Task<ActionResult<ViolenceTypesOrganization>> postVioType(ViolenceTypesOrganization vioTypesOrg)
         {
             try
             {
@@ -45,14 +45,18 @@ namespace Vigen_Repository.Controllers
             }
         }
 
-        [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateVioTypeOrg(string id, ViolenceTypesOrganization vioTypeOrg)
+        [HttpPut("{orgType}/{id}")]
+        public async Task<ActionResult<ViolenceTypesOrganization>> UpdateVioTypeOrg(string orgType,string id, ViolenceTypesOrganization vioTypeOrg)
         {
             int idInt;
             try { idInt = int.Parse(id); }
             catch { idInt = -1; }
 
-            if (idInt != vioTypeOrg.IdViolence) return BadRequest("El id no concide");
+            int idIntOrg;
+            try { idIntOrg = int.Parse(orgType); }
+            catch { idIntOrg = -1; }
+
+            if (idIntOrg != vioTypeOrg.OrganizationTypeId && idInt != vioTypeOrg.OrganizationTypeId) return BadRequest("El id no concide");
             try
             {
                 _context.Entry(vioTypeOrg).State = EntityState.Modified;
@@ -67,7 +71,7 @@ namespace Vigen_Repository.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteVioTypeOrg(string id)
+        public async Task<ActionResult<ViolenceTypesOrganization>> DeleteVioTypeOrg(string id)
         {
             try
             {

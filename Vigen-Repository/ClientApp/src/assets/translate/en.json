@@ -47,6 +47,21 @@
         "PRIVACIDAD":"Privacy Agreement",
         "ENVIAR":"Submit"
 
+    },
+    "REPORTS":{
+        "IDENTIFICATION": "Identificacion",
+        "NAME":"Name",
+        "BIRTHDATE":"Birthdate",
+        "STATEID":"State ID",
+        "DESCRIPTION":"Description",
+        "EMAIL":"Email",
+        "OCCUPATION":"Occupation",
+        "MARITALSTATUS":"Marital Status",
+        "UBICATION": "Ubication",
+        "NIT": "NIT",
+        "TEL":"Tel",
+        "RANGE":"Range",
+        "COUNTRYCODE":"Country Code",
+        "PHONE":"Phone"
     }
-    
 }

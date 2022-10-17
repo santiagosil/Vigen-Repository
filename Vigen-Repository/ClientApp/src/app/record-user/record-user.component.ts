@@ -8,6 +8,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpContext } from '@angular/common/http';
+import { InverseService } from '../api/MyServices/inverse.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -23,27 +25,11 @@ export class RecordUserComponent implements OnInit {
   form: FormGroup = new FormGroup({});
   isCheck: any;
 
-  /*constructor(private fb: FormBuilder) { }
-
-  ngOnInit(): void {
-    this.form = this.fb.group({
-      nomUser: ['', [Validators.required]],
-      correoUser: ['', [Validators.required]],
-      fechaNa: ['', [Validators.required]],
-      telUser: ['', [Validators.required]],
-      ocupaUser: ['', [Validators.required]],
-      postUser: ['', [Validators.required]],
-      ecivlUser: ['', [Validators.required]],
-      idUser: ['', [Validators.required]],
-    })
-  }
-  sendLogin(): void {
-    this.isCheck = { user: 2 }
-  }*/
-
   public usuario: User = {
     identification: "",
     name: "",
+    password: "0",
+    code: "0",
     email: "",
     birthdate: "",
     countryCode: "",
@@ -51,28 +37,54 @@ export class RecordUserComponent implements OnInit {
     occupation: "",
     postalCode: "",
     maritalStatus: "",
-    ubication: ""
+    ubication: "",
   };
 
-
-  constructor(private api: UserService) {
-
+  constructor(private api: UserService, private rever : InverseService) {
+   
+  }
+   
+  ngOnInit() {
+    setTimeout(() => {
+      this.data()
+     }, 1000);
   }
 
-  ngOnInit(): void {
-
+  data(){
+    this.usuario.ubication = this.rever.dir.direct;
+  }
+  
+  showbien() {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Se ha enviado un codigo a su correo',
+      showConfirmButton: false,
+      timer: 2000
+    })
+  }
+  showModal() {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'error',
+      title: 'Faltan algunos campos obligatorios por llenar',
+      showConfirmButton: false,
+      timer: 2000
+    })
   }
   public send() {
     if (this.usuario.email === "" || this.usuario.name === "" || this.usuario.identification === ""
-    || this.usuario.birthdate === "" ||  this.usuario.phone === ""
-    || this.usuario.occupation === "" || this.usuario.maritalStatus === "") 
-    {
-      console.log("Faltan algunos campos obligatorios por llenar");
+      || this.usuario.birthdate === "" || this.usuario.phone === ""
+      || this.usuario.occupation === "" || this.usuario.maritalStatus === "") {
+      this.showModal();
       return;
-    }else{
+    } else {
+      var random: number;
+      random = Math.round(Math.random() * (9000) + 1000);
+      this.usuario.code = random + "";
       this.api.apiUserPost$Json({ body: this.usuario })
         .subscribe(res => {
-          console.log(res);
+          this.showbien();
         });
     }
   }
