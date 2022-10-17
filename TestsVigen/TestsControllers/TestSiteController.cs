@@ -22,8 +22,11 @@ namespace TestsVigen.TestsControllers
 
             testSite = new Site()
             {
-                
-                Nit="8032546897",
+                Id= Guid.NewGuid()
+                .ToString()
+                .Substring(0, 12),
+
+                Nit ="8032546897",
 
                 CountryCode= Guid.NewGuid()
                 .ToString()
@@ -58,7 +61,7 @@ namespace TestsVigen.TestsControllers
 
             //Prueba
             await _controller.postSite(testSite);
-            var result = await _context.Sites.FindAsync(testSite.Id);
+            var result = await _context.Sites.FindAsync(testSite.Id, testSite.Nit);
             //Verificacion
             Assert.Equal(testSite, result);
         }
@@ -77,7 +80,7 @@ namespace TestsVigen.TestsControllers
         {
             //Preparacion
             //Prueba
-            var testCase = await _controller.getSite(testSite.Id.ToString());
+            var testCase = await _controller.getSite(testSite.Nit, testSite.Id);
             //Verificacion
             Assert.IsType<OkObjectResult>(testCase.Result);
         }
@@ -89,7 +92,7 @@ namespace TestsVigen.TestsControllers
             //Prueba
             await _controller.UpdateSite(testSite.Nit,testSite.Id.ToString(), testSite);
             //Verificacion
-            var site = await _context.Sites.FindAsync(testSite.Id);
+            var site = await _context.Sites.FindAsync(testSite.Id, testSite.Nit);
             Assert.Equal(testSite.Ubication, site?.Ubication);
         }
 
@@ -97,9 +100,9 @@ namespace TestsVigen.TestsControllers
         {
             //Preparacion
             //Prueba
-            await _controller.DeleteSite(testSite.Id.ToString());
+            await _controller.DeleteSite(testSite.Nit, testSite.Id);
             //Verificacion
-            var site = await _controller.getSite(testSite.Id.ToString());
+            var site = await _controller.getSite(testSite.Nit, testSite.Id);
             Assert.IsType<NotFoundResult>(site.Result);
         }
     }

@@ -22,8 +22,11 @@ namespace TestsVigen.TestsControllers
                 Nit = Guid.NewGuid()
                 .ToString()
                 .Substring(0, 10),
+                password = Guid.NewGuid().ToString().Substring(0, 10),
                 Name = Guid.NewGuid().ToString().Substring(0, 30),
-                Tel = Guid.NewGuid().ToString().Substring(0, 10)
+                Tel = Guid.NewGuid().ToString().Substring(0, 10),
+                Phone = Guid.NewGuid().ToString().Substring(0, 10),
+                OrganizationTypeID = 1
             };
         }
 

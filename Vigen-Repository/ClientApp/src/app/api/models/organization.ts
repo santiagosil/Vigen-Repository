@@ -3,7 +3,9 @@
 import { Site } from './site';
 export interface Organization {
   name?: null | string;
+  password?: null | string;
   nit?: null | string;
-  sites?: null | Array<Site>;
+  phone?: null | string;
   tel?: null | string;
+  organizationTypeId?: null | string;
 }

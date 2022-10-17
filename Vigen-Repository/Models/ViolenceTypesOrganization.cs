@@ -7,10 +7,10 @@ namespace Vigen_Repository.Models
     [Table("violence_types_organization")]
     public partial class ViolenceTypesOrganization
     {
-        [Column("nit")]
-        public string Nit { get; set; } = null!;
+        [Column("organization_type_id")]
+        public int OrganizationTypeId { get; set; }
 
         [Column("id_violence")]
-        public int IdViolence { get; set; }
+        public string IdViolence { get; set; } = null!;
     }
 }
