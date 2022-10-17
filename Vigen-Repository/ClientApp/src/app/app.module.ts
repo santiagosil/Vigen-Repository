@@ -22,6 +22,7 @@ import { RouterModule } from '@angular/router';
 import { SingUpComponent } from './sign-up/sing-up.component';
 import { TokenComponent } from './token/token.component';
 import { ReportesComponent } from './reportes/reportes.component';
+import { NotifyComponent } from './notify/notify.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/translate/','.json')
@@ -42,7 +43,8 @@ export function HttpLoaderFactory(http: HttpClient){
     LoginComponent,
     SingUpComponent,
     TokenComponent,
-    ReportesComponent
+    ReportesComponent,
+    NotifyComponent
   ],
   imports: [
     BrowserModule,

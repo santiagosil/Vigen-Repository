@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using Vigen_Repository.Models;
 
@@ -10,9 +11,11 @@ namespace Vigen_Repository.Controllers
     public class NotifyController : ControllerBase
     {
         private readonly vigendbContext _context;
-        public NotifyController(vigendbContext context)
+        private readonly IHubContext<BroadCastHub, IHubClient> _hubContext;
+        public NotifyController(vigendbContext context, IHubContext<BroadCastHub, IHubClient> hubContext)
         {
             _context = context;
+            _hubContext = hubContext;
         }
         [HttpGet]
         public async Task<ActionResult<List<Notify>>> getNotifies()
@@ -40,6 +43,7 @@ namespace Vigen_Repository.Controllers
             {
                 await _context.Notifies.AddAsync(notify);
                 await _context.SaveChangesAsync();
+                await _hubContext.Clients.All.recibeNotify(notify);
                 return Ok(notify);
             }
             catch (Exception ex)
