@@ -5,6 +5,7 @@ using Xunit;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.SignalR;
 
 namespace TestsVigen.TestsControllers
 {
@@ -12,11 +13,12 @@ namespace TestsVigen.TestsControllers
     {
         private readonly vigendbContext _context;
         private readonly NotifyController _controller;
+        private readonly IHubContext<BroadCastHub,IHubClient> _hubContext;
         private Notify testNotify;
         public TestNotifyController()
         {
             _context = new vigendbContext();
-            _controller = new NotifyController(_context);
+            _controller = new NotifyController(_context,_hubContext);
 
             testNotify = new Notify()
             {

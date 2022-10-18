@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { circle, latLng, LatLng, map, Map, marker, tileLayer } from 'leaflet';
-import { circle, latLng, LatLng, Map, marker, tileLayer } from 'leaflet';
 import {InverseService} from '../api/MyServices/inverse.service'
 import { RecordUserComponent } from '../record-user/record-user.component';
 
