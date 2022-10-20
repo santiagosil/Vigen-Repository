@@ -2,36 +2,68 @@
     "NAV":{
         "HOME":"Home",
         "ABOUT":"About",
-        "HELP":"Help"
+        "HELP":"Help",
+        "LOGIN":"Login",
+        "SIGNUP":"Sign up"
 
     },
     "HOME":{
-        "PARAVICTIMAS" : "For victims",
-        "PARAENTIDADES" : "For Entities",
-        "BOTONREGISTRAR": "Sign up",
-        "BOTONINGRESAR": "Sign in "
-    },
-    "PANEL":{
-        "INICIO": "Home",
-        "ESTADISTICAS":"Statistics",
-        "SOBRENOSOTROS": "About",
-        "PERFIL": "profile",
-        "NUEVOPROYECTO":"New project",
+        "NOALAVIOLENCIADEGENERO":"No to gender violence",
+        "QUEES":"What is?",
+        "TIPOS":"Types of violence",
+        "DONDE":"Where to report?",
+        "PREGUNTASFRECUENTES":"frequent questions",
+        "VIOLNCIAESTODO":"Violence is any act, action, or omission that causes physical, sexual, psychological, verbal, or economic harm or suffering to a person; It can happen in public or in private. Violent situations occur every time a person imposes her power over another, violating her rights.",
+        "ESTASAGRESIONES":"This attacks are carried out against any person or group of people based on their sex or gender. Violence has a negative impact on their identity and social, physical, psychological or economic well-being. It is important to keep in mind that the different forms of violence can begin with very subtle manifestations that increase with the possibility of causing irreparable physical or emotional damage, and even death",
+        "SABERMAS":"know more",
+        "LAVIOLENCIA":"Violence can be present in any environment; whether at home or in public, the workplace, the street, public transport, school, etc. Given this, we all have the responsibility to break the silence and denounce. For this, it is important that you learn to differentiate the different types of violence that exist in order to identify them.",
+        "SICREES":"If you think you have been a victim of any form of gender or sexual violence, come to any of the Profamilia clinics nationwide to receive the necessary support and start with the comprehensive care route. With us you can find humanized care free of discrimination within the framework of Sexual Rights and Reproductive Rights. You can have peace of mind and the certainty that all the information will be treated within the reserve and confidentiality that the law requires and that Profamilia promotes and respects.",
+        "SIERES":"If you are a victim of any type of gender-based violence, you must ask your EPS for comprehensive and immediate care, free of charge. Any refusal to comply with this obligation, which is immersed in the health benefit plan, is a failure to exercise the right to health.",
+        "QUEESLAVIOLENCIA":"What is gender-based violence?",
+        "LAVIOLENCIABASADA":"Gender-based violence includes any act of physical, sexual, psychological and/or economic abuse against a person based on their sex, including acts of deprivation of liberty, both in the public and private spheres. Men and women are victims of gender-based violence due to the roles and characteristics attributed to them in different societies",
+        "ACERCADE":"About Our Team",
+        "NUESTRASPUERTAS":"Our doors open, always",
+        "ATENCIONINTEGRAL":"Comprehensive care for victims of gender-based violence and sexual violence",
+        "AYUDA":"Help",
+        "PRODUCTOS":"Products",
+        "LINKS":"Usefull links",
+        "VALORAR":"Pricing",
         "OPCIONES":"Settings",
-        "SALIR": "Sign out",
-        "ABOUT":"About",
-        "HELP":"Help"  
+        "PEDIDOS":"Orders",
+        "CONTACTO":"Contacts"
+
+
+    },
+    "PANEL-USER":{
+        "MENU": ",MENU",
+        "ACTUALIZARPERFIL":"Update profile",
+        "LINEASDEATENCION": "Service lines",
+        "PROFILE": "Profile",
+        "PROYECTONUEVO":"New project",
+        "SETTINGS":"Settings",
+        "SIGNOUT": "Sign out",
+        "ANTERIOR":"Previous",
+        "SIGUIENTE":"Next",
+        "PAIS":"Country",
+        "FECHA":"Date",
+        "EDITAR":"Edit"
+
     },
     "EDIT-USER":{
         "USERNAME":"Username",
         "EMAIL":"Email",
-        "PASSWORD":"Password"
+        "PASSWORD":"Password",
+        "BUTTON1": "YES",
+        "BUTTON2":"NO"
     },
     "LOGIN":{
         "TITULO":"Login Account",
         "CORREO":"Email",
         "CONTRASEÑA":"Password",
-        "RECUERDAME":"Remember me"
+        "RECUERDAME":"Remember me",
+        "ORGANIZACION":"Organization",
+        "USUARIO":"User",
+        "INICIARSESION":"log in"
     },
     "REC":{
         "REGISTRO":"Register",

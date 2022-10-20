@@ -1,6 +1,6 @@
 <section id="up" class="hero">
     <div class="container">
-        <h1>No a la violencia de género</h1>
+        <h1>{{"HOME.NOALAVIOLENCIADEGENERO" | translate}}</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias eius dolore libero quidem ratione at velit
             ad
             esse. Accusantium, illum corrupti quam aliquid ullam porro est temporibus! Nulla, culpa! Harum?</p>
@@ -21,70 +21,63 @@
 <br>
 <hr>
 <section class="sobreponer">
-    <div class="container" >
+    <div class="container">
         <div class="row">
             <div class="col-md-3 shadow p-3 mb-5 bg-white rounded" style="width: 16rem;  height: 8rem;">
-                    <div>
-                        <a (click)="view1()" routerLink=""  class="nav-link " >
-                            <svg *ngIf="showPanel1" class="active rounded" width="8" height="16">
-                                <use xlink:href="#grid" />
-                            </svg>
-                            ¿Qué es?
-                        </a>
-                        <a (click)="view2()" routerLink="" class="nav-link "  >
-                            <svg *ngIf="showPanel2" class="active rounded" width="8" height="16">
-                                <use xlink:href="#grid" />
-                            </svg>
-                            Tipos de violencia
-                        </a>
-                        <a (click)="view3()" routerLink=""  class="nav-link ">
-                            <svg *ngIf="showPanel3" class="active rounded" width="8" height="16">
-                                <use xlink:href="#grid" />
-                            </svg>
-                            ¿Dónde Denunciar?
-                        </a>
-                        <a (click)="view4()" routerLink="" class="nav-link ">
-                            <svg *ngIf="showPanel4" class="active rounded" width="8" height="16">
-                                <use xlink:href="#grid" />
-                            </svg>
-                            Preguntas Frecuentes
-                        </a>
-                    </div>
+                <div>
+                    <a (click)="view1()" routerLink="" class="nav-link ">
+                        <svg *ngIf="showPanel1" class="active rounded" width="8" height="16">
+                            <use xlink:href="#grid" />
+                        </svg>{{"HOME.QUEES" | translate}}
+
+                    </a>
+                    <a (click)="view2()" routerLink="" class="nav-link ">
+                        <svg *ngIf="showPanel2" class="active rounded" width="8" height="16">
+                            <use xlink:href="#grid" />
+                        </svg>{{"HOME.TIPOS" | translate}}
+
+                    </a>
+                    <a (click)="view3()" routerLink="" class="nav-link ">
+                        <svg *ngIf="showPanel3" class="active rounded" width="8" height="16">
+                            <use xlink:href="#grid" />
+                        </svg>{{"HOME.DONDE" | translate}}
+
+                    </a>
+                    <a (click)="view4()" routerLink="" class="nav-link ">
+                        <svg *ngIf="showPanel4" class="active rounded" width="8" height="16">
+                            <use xlink:href="#grid" />
+                        </svg>{{"HOME.PREGUNTASFRECUENTES" | translate}}
+                    </a>
+                </div>
             </div>
 
             <div *ngIf="showPanel1" class="col-md-8 offset-md-1 shadow p-3 mb-5 bg-white rounded">
-                <h1>¿Qué es?</h1>
+                <h1>{{"HOME.QUEES" | translate}}</h1>
                 <br>
-                <p>Violencia es todo acto, acción u omisión que produzca daño o sufrimiento físico, sexual, psicológico,
-                    verbal, o económico a una persona; puede ocurrir en público o en privado. Las situaciones violentas
-                    ocurren cada vez que una persona impone su poder sobre otra vulnerando sus derechos. </p>
-                <p>Estas agresiones son ejercidas contra cualquier persona o grupo de personas sobre la base de su sexo
-                    o género. Las violencias impactan de manera negativa en su identidad y bienestar social, físico,
-                    psicológico o económico. Es importante tener en cuenta que las diferentes formas de violencia pueden
-                    iniciar con manifestaciones muy sutiles que van aumentando con la posibilidad de producir daños
-                    físicos o emocionales irreparables, e incluso, la muerte.</p>
-                <a class="centro" routerLink="/faq">Saber más</a>
+                <p>{{"HOME.VIOLENCIAESTODO" | translate}}</p>
+                <p>{{"HOME.ESTASAGRESIONES" | translate}}</p>
+                <a class="centro" routerLink="/faq">{{"HOME.SABERMAS" | translate}}</a>
             </div>
             <div *ngIf="showPanel2" class="col-md-8 offset-md-1 shadow p-3 mb-5 bg-white rounded">
-                <h1>Tipos de violencias</h1>
+                <h1>{{"HOME.TIPOS" | translate}}</h1>
                 <br>
-                <h6>Tipos de violencia</h6>
-                <p>La violencia puede estar presente en cualquier ámbito; sea en el doméstico o en el público, el lugar de trabajo, la calle, el transporte público, el colegio, etc. Ante esto, todos tenemos la responsabilidad de romper el silencio y denunciar. Para ello es importante que aprendas a diferenciar los distintos tipos de violencia que existen para poder identificarlos.</p>
-                <a class="centro" routerLink="/faq">Saber más</a>
+                <h6>{{"HOME.TIPOS" | translate}}</h6>
+                <p>{{"HOME.LAVIOLENCIA" | translate}}</p>
+                <a class="centro" routerLink="/faq">{{"HOME.SABERMAS" | translate}}</a>
             </div>
-            <div *ngIf="showPanel3" class="tipos"class="col-md-8 offset-md-1 shadow p-3 mb-5 bg-white rounded">
-                <h1>¿Dónde denunciar?</h1>
+            <div *ngIf="showPanel3" class="tipos" class="col-md-8 offset-md-1 shadow p-3 mb-5 bg-white rounded">
+                <h1>{{"HOME.DONDE" | translate}}</h1>
                 <br>
-                <p>Si crees que has sido víctima de alguna forma de violencia de género o sexual, acércate a cualquiera de las clínicas Profamilia a nivel nacional para recibir el apoyo necesario e iniciar con la ruta de atención integral. Con nosotros podrás encontrar atención humanizada y libre de discriminación en el marco de los Derechos Sexuales y los Derechos Reproductivos. Puedes tener la tranquilidad y la certeza que toda la información será tratada dentro de la reserva y confidencialidad que la ley exige y que Profamilia promueve y respeta.</p>
-                <p>Si eres víctima de cualquier tipo de violencia basada en género debes solicitarle a tu EPS atención integral e inmediata,  de manera gratuita. Cualquier negativa a cumplir con esta obligación, que está inmersa en el plan de beneficios en salud, es una falta al ejercicio del derecho a la salud.</p>
-                <a class="centro" routerLink="/faq">Saber más</a>
+                <p>{{"HOME.SICREES" | translate}}</p>
+                <p>{{"HOME.SIERES" | translate}}</p>
+                <a class="centro" routerLink="/faq">{{"HOME.SABERMAS" | translate}}</a>
             </div>
             <div *ngIf="showPanel4" class="tipos" class="col-md-8 offset-md-1 shadow p-3 mb-5 bg-white rounded">
-                <h1>Preguntas Frecuentes</h1>
+                <h1>{{"HOME.PREGUNTASFRECUENTES" | translate}}</h1>
                 <br>
-                <h6>¿Qué es la violencia basada en género?</h6>
-                <p>La violencia basada en género incluye cualquier acto de maltrato físico, sexual, psicológico y/o económico contra una persona con motivo de su sexo, incluyendo actos de privación de la libertad, tanto en el ámbito público como privado. Hombres y mujeres son víctimas de violencia basada en género debido a los roles y características que se les atribuyen en las diferentes sociedades.</p>
-                <a class="centro" routerLink="/faq">Saber más</a>
+                <h6>{{"HOME.QUEESLAVIOLENCIA" | translate}}</h6>
+                <p>{{"HOME.LAVIOLENCIABASADA" | translate}}</p>
+                <a class="centro" routerLink="/faq">{{"HOME.SABERMAS" | translate}}Saber más</a>
             </div>
         </div>
     </div>
@@ -92,7 +85,7 @@
 
 <section id="about">
     <div class="container shadow p-3 mb-5 bg-white rounded">
-        <h2>Acerca de Nuestro Equipo</h2>
+        <h2>{{"HOME.ACERCADE" | translate}}</h2>
         <div class="row row-cols-auto justify-content-md-center">
             <div class="col">
                 <img src="../../assets/images/Figura_hombre2.jpg">
@@ -117,10 +110,10 @@
     <br>
     <div class="container shadow p-3 mb-5 rounded  text-center">
         <br>
-        <h1>Nuestras puertas abiertas, siempre</h1>
+        <h1>{{"HOME.NUESTRASPUERTAS" | translate}}</h1>
         <br>
-        <p>Atención integral a las víctimas de violencias basadas en género y violencia sexual</p>
-        <button class="btn btn-dark">Ayuda</button>
+        <p>{{"HOME.ATENCIONINTEGRAL" | translate}}</p>
+        <button class="btn btn-dark">{{"HOME.AYUDA" | translate}}</button>
 
     </div>
     <br>
@@ -129,7 +122,7 @@
 <button *ngIf="showBotton" (click)="onScrollTop()" class="buttonUp"><img src="../../assets/images/flecha2.jpg "
         width="35" height="35" class="center" class="rounded-circle"></button>
 
-        
+
 <footer class="text-center text-lg-start bg-dark text-white">
 
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -176,41 +169,41 @@
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Products
-                    </h6>
-                    <p>
-                        <a href="#!" class="text-reset">Angular</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">React</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Vue</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Laravel</a>
-                    </p>
+                        {{"HOME.PRODUCTOS" | translate}}</h6>
+                        <p>
+                            <a href="#!" class="text-reset">Angular</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">React</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Vue</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Laravel</a>
+                        </p>
                 </div>
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Useful links
+                        {{"HOME.LINKS" | translate}}
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Pricing</a>
+                        <a href="#!" class="text-reset">{{"HOME.VALORAR" | translate}}</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Settings</a>
+                        <a href="#!" class="text-reset">{{"HOME.OPCIONES" | translate}}</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Orders</a>
+                        <a href="#!" class="text-reset">{{"HOME.PEDIDOS" | translate}}</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Help</a>
+                        <a href="#!" class="text-reset">{{"HOME.CONTACTO" | translate}}</a>
                     </p>
                 </div>
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <h6 class="text-uppercase fw-bold mb-4">{{"HOME.22" | translate}}
+                    </h6>
                     <p><i class="fas fa-home me-3"></i> Colombia</p>
                     <p>
                         <i class="fas fa-envelope me-3"></i>

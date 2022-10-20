@@ -38,15 +38,15 @@
          
                     <div>
                         <input type="checkbox" name="org" class="form-check-input" [(ngModel)]="conf.org" [ngModelOptions]="{standalone: true}">
-                        <label for="org">Organización</label>
+                        <label for="org">{{"LOGIN.ORGANIZACION" | translate}}</label>
                         <br>
                         <input type="checkbox" name="user" class="form-check-input" [(ngModel)]="conf.user" [ngModelOptions]="{standalone: true}">
-                        <label for="user">Usuario</label>
+                        <label for="user">{{"LOGIN.USUARIO" | translate}}</label>
                     </div>
                     <br>
                     <div class="d-grid">
                         <!--button (click)="showModal()" type="submit" class="btn btn-primary">Iniciar sesión</button-->
-                        <button class="btn btn-primary" style="position: relative; width: 250px;  left: 60px">Iniciar sesión</button>
+                        <button class="btn btn-primary" style="position: relative; width: 250px;  left: 60px">{{"LOGIN.INICIARSESION" | translate}}</button>
                     </div>
                     
                 </form>
