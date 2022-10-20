@@ -34,7 +34,11 @@
         "TITULO":"Inicia Sesión",
         "CORREO":"Correo",
         "CONTRASEÑA":"Contraseña",
-        "RECUERDAME":"Recordarme"
+        "RECUERDAME":"Recordarme",
+        "IDENTIFICACIÓN": "Identificación",
+        "ORGANIZACIÓN": "Organización",
+        "USUARIO": "Usuario",
+        "SELECCIONE": "Seleccione"
     },
     "REC":{
         "REGISTRO":"Registro",
@@ -48,7 +52,9 @@
         "CIVIL":"Estado Civil",
         "ID":"Identificación",
         "PRIVACIDAD":"Acuerdo de Privacidad",
-        "ENVIAR":"Enviar"
+        "ENVIAR":"Enviar",
+        "NOMBRE DE LA ORGANIZACIÓN": "Nombre de la Organización",
+        "CONTRASEÑA": "Contraseña"
         },
     "lOGIN":{
         "TITULO": "Acceder",

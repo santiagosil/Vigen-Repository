@@ -27,7 +27,8 @@ export class RecordOrgComponent implements OnInit {
   public organization: Organization = {
     name: "",
     nit: "",
-    tel: ""
+    tel: "",
+    password: "",
   };
 
   constructor(private api:OrganizationService) { }
