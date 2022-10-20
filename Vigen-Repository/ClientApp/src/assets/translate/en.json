@@ -31,7 +31,11 @@
         "TITULO":"Login Account",
         "CORREO":"Email",
         "CONTRASEÑA":"Password",
-        "RECUERDAME":"Remember me"
+        "RECUERDAME":"Remember me",
+        "IDENTIFICACIÓN": "Identification",
+        "ORGANIZACIÓN": "Organization",
+        "USUARIO": "User",
+        "SELECCIONE": "Select"
     },
     "REC":{
         "REGISTRO":"Register",
@@ -45,7 +49,9 @@
         "CIVIL":"Marital Status",
         "ID":"Identification",
         "PRIVACIDAD":"Privacy Agreement",
-        "ENVIAR":"Submit"
+        "ENVIAR":"Submit",
+        "NOMBRE DE LA ORGANIZACIÓN": "Name of Organization",
+        "CONTRASEÑA": "Password"
 
     },
     "REPORTS":{
