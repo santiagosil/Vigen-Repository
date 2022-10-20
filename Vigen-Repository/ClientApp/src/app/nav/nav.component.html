@@ -1,30 +1,50 @@
 <!--p *ngIf="user">{{user.name}}</p>-->
-  <nav class="navbar fixed-top navbar-expand-lg bg-primary p-md-3">
-    <div class="container-fluid">
-      <a class="navbar-brand text-white ms-5" href="#"> Vigen</a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav nav nav-pills me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" (click)="toHome()"  routerLink="/home" routerLinkActivate="activate">{{"NAV.HOME" | translate}}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-white" (click)="toAbout()" routerLink="" routerLinkActivate="activate">{{"NAV.ABOUT" | translate}}</a>
-            
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-white" (click)="toHelp()" routerLink="" routerLinkActivate="activate">{{"NAV.HELP" | translate}}</a>
-          </li>
-        </ul>
-        <button class="btn btn-primary m-2" type="submit" routerLink="/login">Login</button>
-        <button class="btn btn-dark me-5" type="submit" routerLink="/signUp">Sign-up</button>
-  
-      </div>
-    </div>
-  </nav>
+<nav class="navbar fixed-top navbar-expand-lg bg-primary p-md-3">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white ms-5" (click)="toHome()" routerLink="/home" routerLinkActivate="activate">
+      Vigen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav nav nav-pills me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" (click)="toHome()" routerLink="/home"
+            routerLinkActivate="activate">{{"NAV.HOME" | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-white" (click)="toAbout()" routerLink=""
+            routerLinkActivate="activate">{{"NAV.ABOUT" | translate}}</a>
 
- <!-- <img src="../../assets/images/Mujer.jpg" class="img-fluid" width="100%" height="30%" alt="Responsive image">-->
-  
- <!-- <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-white" (click)="toHelp()" routerLink=""
+            routerLinkActivate="activate">{{"NAV.HELP" | translate}}</a>
+        </li>
+      </ul>
+
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+          <fa-icon style="color:white;" [icon]="faGlobeAmericas"></fa-icon>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark"   >
+          <li><a class="dropdown-item" href="#"  >
+              <img src="../../assets/images/usa.svg" style="height: 20px; width: 20px; margin-right: 8px;">English</a></li>
+          <li><a class="dropdown-item" href="#">
+              <img src="../../assets/images/spain.svg" style="height: 20px; width: 20px; margin-right: 8px;">Español</a></li>
+        </ul>
+      </div>
+      <button class="btn btn-primary m-2" type="submit" routerLink="/login">Login</button>
+      <button class="btn btn-dark me-5" type="submit" routerLink="/signUp">Sign-up</button>
+
+    </div>
+  </div>
+</nav>
+
+
+<!-- <img src="../../assets/images/Mujer.jpg" class="img-fluid" width="100%" height="30%" alt="Responsive image">-->
+
+<!-- <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
     <div class="content text-center">
       <h1 class="text-white"></h1>
     </div>

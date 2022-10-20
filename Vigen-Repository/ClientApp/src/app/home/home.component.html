@@ -7,24 +7,14 @@
 
     </div>
 </section>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <hr>
-<section class="sobreponer">
-    <div class="container" >
+
+<section>
+    <div class="container-sm mb-5" >
         <div class="row">
-            <div class="col-md-3 shadow p-3 mb-5 bg-white rounded" style="width: 16rem;  height: 8rem;">
-                    <div>
+            <div class="col-3  bg-white rounded " >
+                    
                         <a (click)="view1()" routerLink=""  class="nav-link " >
                             <svg *ngIf="showPanel1" class="active rounded" width="8" height="16">
                                 <use xlink:href="#grid" />
@@ -49,10 +39,11 @@
                             </svg>
                             Preguntas Frecuentes
                         </a>
-                    </div>
+                    
             </div>
 
-            <div *ngIf="showPanel1" class="col-md-8 offset-md-1 shadow p-3 mb-5 bg-white rounded">
+           <div class="col-9">
+            <div *ngIf="showPanel1" class="col-md shadow p-3 bg-white rounded me-5">
                 <h1>¿Qué es?</h1>
                 <br>
                 <p>Violencia es todo acto, acción u omisión que produzca daño o sufrimiento físico, sexual, psicológico,
@@ -65,27 +56,28 @@
                     físicos o emocionales irreparables, e incluso, la muerte.</p>
                 <a class="centro" routerLink="/faq">Saber más</a>
             </div>
-            <div *ngIf="showPanel2" class="col-md-8 offset-md-1 shadow p-3 mb-5 bg-white rounded">
+            <div *ngIf="showPanel2" class="col-md shadow p-3 bg-white rounded me-5">
                 <h1>Tipos de violencias</h1>
                 <br>
                 <h6>Tipos de violencia</h6>
                 <p>La violencia puede estar presente en cualquier ámbito; sea en el doméstico o en el público, el lugar de trabajo, la calle, el transporte público, el colegio, etc. Ante esto, todos tenemos la responsabilidad de romper el silencio y denunciar. Para ello es importante que aprendas a diferenciar los distintos tipos de violencia que existen para poder identificarlos.</p>
                 <a class="centro" routerLink="/faq">Saber más</a>
             </div>
-            <div *ngIf="showPanel3" class="tipos"class="col-md-8 offset-md-1 shadow p-3 mb-5 bg-white rounded">
+            <div *ngIf="showPanel3" class="col-md shadow p-3 bg-white rounded me-5">
                 <h1>¿Dónde denunciar?</h1>
                 <br>
                 <p>Si crees que has sido víctima de alguna forma de violencia de género o sexual, acércate a cualquiera de las clínicas Profamilia a nivel nacional para recibir el apoyo necesario e iniciar con la ruta de atención integral. Con nosotros podrás encontrar atención humanizada y libre de discriminación en el marco de los Derechos Sexuales y los Derechos Reproductivos. Puedes tener la tranquilidad y la certeza que toda la información será tratada dentro de la reserva y confidencialidad que la ley exige y que Profamilia promueve y respeta.</p>
                 <p>Si eres víctima de cualquier tipo de violencia basada en género debes solicitarle a tu EPS atención integral e inmediata,  de manera gratuita. Cualquier negativa a cumplir con esta obligación, que está inmersa en el plan de beneficios en salud, es una falta al ejercicio del derecho a la salud.</p>
                 <a class="centro" routerLink="/faq">Saber más</a>
             </div>
-            <div *ngIf="showPanel4" class="tipos" class="col-md-8 offset-md-1 shadow p-3 mb-5 bg-white rounded">
+            <div *ngIf="showPanel4" class="col-md shadow p-3 bg-white rounded me-5">
                 <h1>Preguntas Frecuentes</h1>
                 <br>
                 <h6>¿Qué es la violencia basada en género?</h6>
                 <p>La violencia basada en género incluye cualquier acto de maltrato físico, sexual, psicológico y/o económico contra una persona con motivo de su sexo, incluyendo actos de privación de la libertad, tanto en el ámbito público como privado. Hombres y mujeres son víctimas de violencia basada en género debido a los roles y características que se les atribuyen en las diferentes sociedades.</p>
                 <a class="centro" routerLink="/faq">Saber más</a>
             </div>
+           </div>
         </div>
     </div>
 </section>

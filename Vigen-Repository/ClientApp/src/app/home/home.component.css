@@ -5,7 +5,7 @@
     overflow: hidden;
     padding: 80px 0;
 }*/
-.hero{
+.hero {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,12 +13,13 @@
     flex-direction: column;
     height: 90vh;
     color: white;
-    background-image: linear-gradient(
-        0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../../assets/images/image3.jpg");
     background-size: cover;
     background-position: center;
-}/*
+}
+
+/*
 h2{
     color: blueviolet;
     font-size: 2.7rem;
@@ -30,7 +31,7 @@ h1{
 p{
     font-size: 1.25rem;
 }*/
-.buttonUp{
+.buttonUp {
     position: fixed;
     bottom: 20px;
     right: 30px;
@@ -43,36 +44,54 @@ p{
     height: 45px;
     display: flex;
     justify-content: center;
-    align-items: center;   
-    transition: all 0.5s ease-in-out; 
+    align-items: center;
+    transition: all 0.5s ease-in-out;
     border-radius: 50%;
 }
-.buttonUp:hover{
+
+.buttonUp:hover {
     background-color: darkslateblue;
     border: 1px solid white;
     font-size: 2rem;
 }
-.color{
+
+.color {
     /*background-color: #593196;*/
     /*background-color: #d999bf;*/
     background-color: #e0d5f1;
 
 }
-.sobreponer{
+
+.sobreponer {
+    display: flex;
+    flex-wrap: wrap;
     position: absolute;
     top: 550px;
     left: 100px;
+    min-width: 300px;
 }
-.centro{
-    position: relative;
-    left: 310px;
+
+@media screen and (max-width:800px) {
+    .sobreponer {
+        background-color: red;
+        width: 200px;
+    }
 }
-.active{
-    padding: 0,5rem;
-    background-color:#593196;
+
+.centro {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    padding: 0, 5rem;
+    background-color: #593196;
     color: white;
     text-decoration: none;
 }
+
 /*button{
     font-size: 1.5rem;
     font-weight: bold;
@@ -82,4 +101,3 @@ p{
     background-color: blueviolet;
     margin: 10px;
 }*/
-

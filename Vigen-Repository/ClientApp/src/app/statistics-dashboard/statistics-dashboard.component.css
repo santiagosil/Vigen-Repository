@@ -1,3 +1,14 @@
-p{
-    font-size: 1.25rem;
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 60vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+        url("../../assets/images/estadisticas.jpg");
+    background-size: cover;
+    background-position: center;
 }

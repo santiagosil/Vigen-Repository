@@ -54,11 +54,12 @@ export class MapOrganizacionComponent implements OnInit {
     map.fitBounds([
       [markerItem.getLatLng().lat, markerItem.getLatLng().lng]
     ])
-    latlong=new LatLng(e.latlng.lat,e.latlng.lng);
+    
     console.log('click', e.latlng.lat, e.latlng.lng)
 
     markerItem.on('click',()=>map.removeLayer(markerItem));
     markerItem.on('click',()=>map.removeLayer(circulo));
+    
   });
   
  
