@@ -1,8 +1,8 @@
 <section style="margin-top: 7rem;">
     <div class="container mt-5">
-        <div class="row" >
+        <div class="row">
             <div class="col-1"></div>
-            <div class="col-4 left shadow p-3 bg-white mb-5 rounded mt-5" style="position: relative; left: 2rem;" >
+            <div class="col-4 left shadow p-3 bg-white mb-5 rounded mt-5" style="position: relative; left: 2rem;">
                 <form action="" (ngSubmit)="get()">
                     <br>
                     <div class="text-center">
@@ -10,40 +10,46 @@
                         <h3>{{"LOGIN.TITULO" | translate}}</h3>
                     </div>
                     <hr>
-                    <div >
-                        <label >{{"LOGIN.CORREO" | translate}}</label>
-                        <input type="email" class="shadow form-control rounded " name="email" [(ngModel)]="usuario.identification" [ngModelOptions]="{standalone: true}">
-                    </div>
-                    <br>
-                    <div >
-                        <label >{{"LOGIN.CONTRASEÑA" | translate}}</label>
-                        <input type="password" class="shadow form-control rounded " name="password" [(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}">
-                    </div>
-                    <br>
-                    <div >
-                        <input type="checkbox" name="connected" class="form-check-input">
-                        <label >{{"LOGIN.RECUERDAME" | translate}}</label>
-                        </div>
-         
                     <div>
-                        <input type="checkbox" name="org" class="form-check-input" [(ngModel)]="conf.org" [ngModelOptions]="{standalone: true}">
+                        <label>{{"LOGIN.CORREO" | translate}}</label>
+                        <input type="email" class="shadow form-control rounded " name="email"
+                            [(ngModel)]="usuario.identification" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <br>
+                    <div>
+                        <label>{{"LOGIN.CONTRASEÑA" | translate}}</label>
+                        <input type="password" class="shadow form-control rounded " name="password"
+                            [(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="checkbox" name="connected" class="form-check-input">
+                        <label>{{"LOGIN.RECUERDAME" | translate}}</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="org" class="form-check-input" [(ngModel)]="conf.org"
+                            [ngModelOptions]="{standalone: true}">
                         <label for="org">Organización</label>
                         <br>
-                        <input type="checkbox" name="user" class="form-check-input" [(ngModel)]="conf.user" [ngModelOptions]="{standalone: true}">
+                        <input type="checkbox" name="user" class="form-check-input" [(ngModel)]="conf.user"
+                            [ngModelOptions]="{standalone: true}">
                         <label for="user">Usuario</label>
                     </div>
                     <br>
+
                     <div class="d-grid">
                         <!--button (click)="showModal()" type="submit" class="btn btn-primary">Iniciar sesión</button-->
-                        <button class="btn btn-primary">Iniciar sesión</button>
+                        <button class="btn btn-primary ">Iniciar sesión</button>
                     </div>
-                    
+                    <div class="mt-1"><a routerLink="/signUp">¿Aún no tienes una cuenta?</a></div>
+
                 </form>
 
             </div>
             <div class="col-6 image rounded">
                 <h3 class="text-white ">WELCOME!</h3>
-                <p class="text-white mt-1">Enter your details and start journey with us</p>       
+                <p class="text-white mt-1">Enter your details and start journey with us</p>
             </div>
         </div>
     </div>

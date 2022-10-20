@@ -6,8 +6,8 @@
 
     },
     "HOME":{
-        "PARAVICTIMAS" : "Para victimas",
-        "PARAENTIDADES" : "Para entidades",
+        "USUARIOCOMUN" : "Usuario Común",
+        "ORGANIZACIONES" : "Organizaciones",
         "BOTONREGISTRAR": "Registrarse",
         "BOTONINGRESAR": "Ingresar"
     },

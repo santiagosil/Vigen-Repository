@@ -6,8 +6,8 @@
 
     },
     "HOME":{
-        "PARAVICTIMAS" : "For victims",
-        "PARAENTIDADES" : "For Entities",
+        "USUARIOCOMUN" : "Common User",
+        "ORGANIZACIONES" : "Organizations",
         "BOTONREGISTRAR": "Sign up",
         "BOTONINGRESAR": "Sign in "
     },
