@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnChanges, OnInit, SimpleChange } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Data } from '@angular/router';
 import { UserService } from '../api/services';
 import { User } from '../api/models';
+
 
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -10,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpContext } from '@angular/common/http';
 import { InverseService } from '../api/MyServices/inverse.service';
 import Swal from 'sweetalert2';
+import { ReadVarExpr } from '@angular/compiler';
 
 
 @Component({
@@ -41,17 +43,19 @@ export class RecordUserComponent implements OnInit {
   };
 
   constructor(private api: UserService, private rever : InverseService) {
-   
+    
   }
    
   ngOnInit() {
     setTimeout(() => {
-      this.data()
-     }, 1000);
+    //location.reload();
+      this.data(this.rever.dir.direct)
+    }, 1000);
   }
 
-  data(){
-    this.usuario.ubication = this.rever.dir.direct;
+  data(ubicacion: string ){
+    this.usuario.ubication = ubicacion;
+    this.ngOnInit();
   }
   
   showbien() {
@@ -77,7 +81,6 @@ export class RecordUserComponent implements OnInit {
       || this.usuario.birthdate === "" || this.usuario.phone === ""
       || this.usuario.occupation === "" || this.usuario.maritalStatus === "") {
       this.showModal();
-      return;
     } else {
       var random: number;
       random = Math.round(Math.random() * (9000) + 1000);

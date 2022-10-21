@@ -13,13 +13,13 @@ export class LoginComponent implements OnInit {
 
   public usuario = {
     identification: "",
-    password: ""
+    password: "",
+    type: ""
   };
-  public conf = {
-    org: false,
-    user: false
+  typeUser(lang: string) {
+    this.usuario.type = lang;
   }
-  constructor(private api: UserService, private router: Router, private orga : OrganizationService) {
+  constructor(private api: UserService, private router: Router, private orga: OrganizationService) {
   }
   ngOnInit(): void {
   }
@@ -35,28 +35,27 @@ export class LoginComponent implements OnInit {
   public get() {
     if (this.usuario.password === "" || this.usuario.identification === "") {
       console.log("Faltan algunos campos obligatorios por llenar");
-    }else{
-      if(this.conf.user){
-        this.api.apiUserIdGet$Json({id:this.usuario.identification+""})
-        .subscribe(res => {
-          if(res.identification == this.usuario.identification && res.password == this.usuario.password ){
-           this.router.navigate(['/pUser']);
-          }else{
-            this.showModal();
-          }
-        });
+      console.log(this.usuario.type)
+    } else {
+      if (this.usuario.type == "user") {
+        this.api.apiUserIdGet$Json({ id: this.usuario.identification + "" })
+          .subscribe(res => {
+            if (res.password == this.usuario.password) {
+              this.router.navigate(['/pUser']);
+            } else {
+              this.showModal();
+            }
+          });
       }
-      if(this.conf.org){
-        if(this.conf.org){
-          this.orga.apiOrganizationIdGet$Json({id: this.usuario.identification+""})
-            .subscribe(res => {
-              if(res.nit == this.usuario.identification){
-               this.router.navigate(['/home']);
-              }else{
-                this.showModal();
-              }
-            });
-        }
+      if (this.usuario.type == "org") {
+        this.orga.apiOrganizationIdGet$Json({ id: this.usuario.identification + "" })
+          .subscribe(res => {
+            if (res.password == this.usuario.password) {
+              this.router.navigate(['/home']);
+            } else {
+              this.showModal();
+            }
+          });
       }
     }
   }

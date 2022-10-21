@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { circle, circleMarker, latLng, LatLng, map, Map, marker, tileLayer } from 'leaflet';
+import { InverseService } from '../api/MyServices/inverse.service';
 
 export let latlong =new LatLng(0,0);
 
@@ -10,7 +11,7 @@ export let latlong =new LatLng(0,0);
 })
 export class MapOrganizacionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private reverse: InverseService) { }
 
   ngOnInit(): void {
   }
@@ -23,7 +24,7 @@ export class MapOrganizacionComponent implements OnInit {
     
   /* ----Encontrar Ubicación por medio del GPS---- */
 
-  map.on('locationfound', (e : {
+  map.on('locationfound', async (e : {
     accuracy: number, latlng: LatLng
   }) => {
     const markerItem = marker(e.latlng).addTo(map);
@@ -36,13 +37,14 @@ export class MapOrganizacionComponent implements OnInit {
     ])
     markerItem.on('click',()=>map.removeLayer(markerItem));
     markerItem.on('click',()=>map.removeLayer(circulo));
+    var result = await this.reverse.inverse1(e.latlng.lat + "", e.latlng.lng + "");
   });
   map.on('locationerror', (e : {message: string} ) => console.error(e.message));
   map.locate();
 
   /* ----agregar marcadores con click---- */
   
-  map.on('dblclick', (e : {
+  map.on('dblclick', async (e : {
     latlng: LatLng
   }) => {
     const markerItem = marker(e.latlng).addTo(map);
@@ -54,12 +56,11 @@ export class MapOrganizacionComponent implements OnInit {
     map.fitBounds([
       [markerItem.getLatLng().lat, markerItem.getLatLng().lng]
     ])
-    
-    console.log('click', e.latlng.lat, e.latlng.lng)
 
-    markerItem.on('click',()=>map.removeLayer(markerItem));
-    markerItem.on('click',()=>map.removeLayer(circulo));
-    
+      markerItem.on('click', ()=>map.removeLayer(markerItem));
+      markerItem.on('click',()=>map.removeLayer(circulo));
+      markerItem.on('click', ()=> console.log("hello"))
+    var result = await this.reverse.inverse1(e.latlng.lat + "", e.latlng.lng + "");
   });
   
  
