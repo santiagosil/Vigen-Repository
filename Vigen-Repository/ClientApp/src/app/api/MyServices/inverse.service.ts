@@ -12,13 +12,13 @@ export class InverseService {
   constructor(private http : HttpClient) { 
   }
 
-  public dir = {
-    direct : ""
-  }
+
+    public direct:string[] = [];
+
 
   public async inverse(lat:string, long:string){
     var url:string;
-    var direc : string[];
+    var direc : string[]=[];
     var latitud : any;
     var longitud: any;
     latitud = lat;
@@ -27,10 +27,9 @@ export class InverseService {
     await this.http.get(url)
    .subscribe(data => {
     direc = Object.values(data);
-    this.dir.direct = direc[6];
-    console.log(this.dir.direct);
+    this.direct = direc;
     });
-    return this.dir.direct;
+    return;
    }
 
    public async inverse1(lat:string, long:string){
@@ -44,10 +43,10 @@ export class InverseService {
     await this.http.get(url)
    .subscribe(data => {
     direc = Object.values(data);
-    this.dir.direct = direc[6];
-    console.log(this.dir.direct);
+    this.direct = direc;
+    //console.log(this.dir.direct);
     });
-    return this.dir.direct;
+    return this.direct;
    }
    
 }

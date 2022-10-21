@@ -49,7 +49,7 @@ export class RecordUserComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
     //location.reload();
-      this.data(this.rever.dir.direct)
+      this.data(this.rever.direct[6]);
     }, 1000);
   }
 
