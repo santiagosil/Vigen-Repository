@@ -10,10 +10,10 @@
             <div class="col-6">
                 <!--form [formGroup]="form" (submit) ="sendLogin()" class="form"-->  
                 <form (ngSubmit)="send()">  
-                    <h1>Registro</h1>
+                    <h1>{{"REC.REGISTRO" | translate}}</h1>
                     <br>
                     <div class="form-group row">
-                        <label>Nombre de la organizacion</label>
+                        <label>{{"REC.NOMBRE DE LA ORGANIZACIÓN" | translate}}</label>
                         <br>
                         <div class="col-sm-10">
                             <!--input formControlName="nomOrg" type="text" class="form-control"  placeholder=""-->
@@ -30,10 +30,18 @@
                     </div>
                     <br>
                     <div class="form-group row">
-                        <label>Telefono</label>
+                        <label>{{"REC.TEL" | translate}}</label>
                         <div class="col-sm-10">
                             <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
                             <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="organization.tel" [ngModelOptions]="{standalone: true}" placeholder="">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label>{{"REC.CONTRASEÑA" | translate}}</label>
+                        <div class="col-sm-10">
+                            <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
+                            <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="organization.password" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
                     <br>
@@ -61,7 +69,7 @@
                 <div class="row">
                     <div class="col-2">
                         <div class="imagenUbi">
-                            <br>
+                            <p></p>
                             <img src="../../assets/images/ubi.png" class="figure-img img-fluid rounded " alt="...">
                         </div>
                     </div>
