@@ -4,28 +4,14 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias eius dolore libero quidem ratione at velit
             ad
             esse. Accusantium, illum corrupti quam aliquid ullam porro est temporibus! Nulla, culpa! Harum?</p>
-
     </div>
 </section>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<hr>
-<section class="sobreponer">
-    <div class="container">
+<section style="position: relative; bottom: 2rem;">
+    <div class="container-sm mb-5">
         <div class="row">
-            <div class="col-md-3 shadow p-3 mb-5 bg-white rounded" style="width: 16rem;  height: 8rem;">
-                <div>
-                    <a (click)="view1()" routerLink="" class="nav-link ">
+            <div class="col-3">
+                <div class="shadow  bg-white p-3 rounded>
+                    <a (click)="view1()" routerLink="" class="nav-link mt-2">
                         <svg *ngIf="showPanel1" class="active rounded" width="8" height="16">
                             <use xlink:href="#grid" />
                         </svg>{{"HOME.QUEES" | translate}}
@@ -41,68 +27,113 @@
                         <svg *ngIf="showPanel3" class="active rounded" width="8" height="16">
                             <use xlink:href="#grid" />
                         </svg>{{"HOME.DONDE" | translate}}
-
                     </a>
                     <a (click)="view4()" routerLink="" class="nav-link ">
                         <svg *ngIf="showPanel4" class="active rounded" width="8" height="16">
                             <use xlink:href="#grid" />
-                        </svg>{{"HOME.PREGUNTASFRECUENTES" | translate}}
+                        </svg>
+                       {{"HOME.PREGUNTASFRECUENTES" | translate}}
                     </a>
                 </div>
             </div>
 
-            <div *ngIf="showPanel1" class="col-md-8 offset-md-1 shadow p-3 mb-5 bg-white rounded">
-                <h1>{{"HOME.QUEES" | translate}}</h1>
-                <br>
-                <p>{{"HOME.VIOLENCIAESTODO" | translate}}</p>
-                <p>{{"HOME.ESTASAGRESIONES" | translate}}</p>
-                <a class="centro" routerLink="/faq">{{"HOME.SABERMAS" | translate}}</a>
-            </div>
-            <div *ngIf="showPanel2" class="col-md-8 offset-md-1 shadow p-3 mb-5 bg-white rounded">
-                <h1>{{"HOME.TIPOS" | translate}}</h1>
-                <br>
-                <h6>{{"HOME.TIPOS" | translate}}</h6>
-                <p>{{"HOME.LAVIOLENCIA" | translate}}</p>
-                <a class="centro" routerLink="/faq">{{"HOME.SABERMAS" | translate}}</a>
-            </div>
-            <div *ngIf="showPanel3" class="tipos" class="col-md-8 offset-md-1 shadow p-3 mb-5 bg-white rounded">
-                <h1>{{"HOME.DONDE" | translate}}</h1>
-                <br>
-                <p>{{"HOME.SICREES" | translate}}</p>
-                <p>{{"HOME.SIERES" | translate}}</p>
-                <a class="centro" routerLink="/faq">{{"HOME.SABERMAS" | translate}}</a>
-            </div>
-            <div *ngIf="showPanel4" class="tipos" class="col-md-8 offset-md-1 shadow p-3 mb-5 bg-white rounded">
-                <h1>{{"HOME.PREGUNTASFRECUENTES" | translate}}</h1>
-                <br>
-                <h6>{{"HOME.QUEESLAVIOLENCIA" | translate}}</h6>
-                <p>{{"HOME.LAVIOLENCIABASADA" | translate}}</p>
-                <a class="centro" routerLink="/faq">{{"HOME.SABERMAS" | translate}}Saber más</a>
+            <div class="col-9">
+                <div *ngIf="showPanel1" class="col-md shadow p-4 bg-white rounded me-5">
+                    <h1>{{"HOME.QUEES" | translate}}</h1>
+                    <br>
+                    <p>{{"HOME.VIOLENCIAESTODO" | translate}}</p>
+                    <p>{{"HOME.ESTASAGRESIONES" | translate}}</p>
+                    <div class="text-center">
+                        <button class="btn btn-dark" routerLink="/faq">{{"HOME.SABERMAS" | translate}}</button>
+                    </div>
+                </div>
+                <div *ngIf="showPanel2" class="col-md shadow p-4 bg-white rounded me-5">
+                    <h1>{{"HOME.TIPOS" | translate}}</h1>
+                    <br>
+                    <h6>{{"HOME.TIPOS" | translate}}</h6>
+                    <p>{{"HOME.LAVIOLENCIA" | translate}}</p>
+                    <div class="text-center">
+                        <button class="btn btn-dark" routerLink="/faq">{{"HOME.SABERMAS" | translate}}</button>
+                    </div>
+                </div>
+                <div *ngIf="showPanel3" class="col-md shadow p-4 bg-white rounded me-5">
+                    <h1>{{"HOME.DONDE" | translate}}</h1>
+                    <br>
+                    <p>{{"HOME.SICREES" | translate}}</p>
+                    <p>{{"HOME.SIERES" | translate}}</p>
+                    <div class="text-center">
+                        <button class="btn btn-dark" routerLink="/faq">{{"HOME.SABERMAS" | translate}}</button>
+                    </div>
+                </div>
+                <div *ngIf="showPanel4" class="col-md shadow p-4 bg-white rounded me-5">
+                    <h1>{{"HOME.PREGUNTASFRECUENTES" | translate}}</h1>
+                    <br>
+                    <h6>{{"HOME.QUEESLAVIOLENCIA" | translate}}</h6>
+                    <p>{{"HOME.LAVIOLENCIABASADA" | translate}}</p>
+                    <div class="text-center">
+                        <button class="btn btn-dark" routerLink="/faq">{{"HOME.SABERMAS" | translate}}</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <section id="about">
-    <div class="container shadow p-3 mb-5 bg-white rounded">
+    <div class="container shadow p-4 mb-5 bg-white rounded">
         <h2>{{"HOME.ACERCADE" | translate}}</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aperiam officiis at molestiae repellat
+            ullam. Ipsa dolorum suscipit similique veritatis at sit, fugit, modi error, optio dolores pariatur aperiam
+            nesciunt.</p>
         <div class="row row-cols-auto justify-content-md-center">
-            <div class="col">
-                <img src="../../assets/images/Figura_hombre2.jpg">
+            <div class="col-md col-sm-6">
+                <div class="card shadow rounded">
+                    <img src="../../assets/images/Figura_hombre2.jpg">
+                    <div class="card-text mt-4 ">
+                        <h3 class="mt-2">Johan Silva</h3>
+                        <h5>Developer</h5>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <img src="../../assets/images/Figura_hombre2.jpg">
+            <div class="col-md col-sm-6">
+                <div class="card shadow rounded">
+                    <img src="../../assets/images/Figura_hombre2.jpg">
+                    <div class="card-text">
+                        <h3>Jeisson Infante</h3>
+                        <h5>Developer</h5>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <img src="../../assets/images/Figura_hombre2.jpg">
+            <div class="col-md col-sm-6">
+                <div class="card shadow rounded">
+                    <img src="../../assets/images/Figura_hombre2.jpg">
+                    <div class="card-text">
+                        <h3>Sebastian Cardozo</h3>
+                        <h5>Developer</h5>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <img src="../../assets/images/Figura_hombre2.jpg">
+            <div class="col-md col-sm-6">
+                <div class="card shadow rounded">
+                    <img src="../../assets/images/sebas23.png">
+                    <div class="card-text">
+                        <h3>Sebastian Palacio</h3>
+                        <h5>Developer</h5>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <img src="../../assets/images/Figura_hombre2.jpg">
+            <div class="col-md col-sm-6">
+                <div class="card shadow rounded">
+                    <img src="../../assets/images/Figura_hombre2.jpg">
+                    <div class="card-text">
+                        <h3>Brayan Villamiazar</h3>
+                        <h5>Developer</h5>
+                    </div>
+                </div>
             </div>
-
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-dark" routerLink="/aboutUs">Conocer más</button>
         </div>
     </div>
 </section>
@@ -114,7 +145,6 @@
         <br>
         <p>{{"HOME.ATENCIONINTEGRAL" | translate}}</p>
         <button class="btn btn-dark">{{"HOME.AYUDA" | translate}}</button>
-
     </div>
     <br>
 </section>
@@ -122,15 +152,10 @@
 <button *ngIf="showBotton" (click)="onScrollTop()" class="buttonUp"><img src="../../assets/images/flecha2.jpg "
         width="35" height="35" class="center" class="rounded-circle"></button>
 
-
 <footer class="text-center text-lg-start bg-dark text-white">
-
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-
         <div class="me-5 d-none d-lg-block">
-
         </div>
-
         <div>
             <a href="" class="me-4 text-reset">
                 <i class="fab fa-facebook-f"></i>

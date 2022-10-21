@@ -1,0 +1,12 @@
+.hero {
+    display: flex;
+    /*align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;*/
+    height: 90vh;
+    color: white;
+    background-image: url("../../assets/images/Género.jpg");
+    background-size: cover;
+    background-position: center;
+}

@@ -4,5 +4,18 @@
     left: 600px;
     
 }
+.centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background: url(../../assets/images/fondo-violeta.jpg);
+}
 

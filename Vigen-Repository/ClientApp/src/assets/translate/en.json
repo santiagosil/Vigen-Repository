@@ -8,6 +8,17 @@
 
     },
     "HOME":{
+        "USUARIOCOMUN" : "Common User",
+        "ORGANIZACIONES" : "Organizations",
+        "BOTONREGISTRAR": "Sign up",
+        "BOTONINGRESAR": "Sign in "
+    },
+    "PANEL":{
+        "INICIO": "Home",
+        "ESTADISTICAS":"Statistics",
+        "SOBRENOSOTROS": "About",
+        "PERFIL": "profile",
+        "NUEVOPROYECTO":"New project",
         "NOALAVIOLENCIADEGENERO":"No to gender violence",
         "QUEES":"What is?",
         "TIPOS":"Types of violence",
