@@ -11,15 +11,8 @@
         "USUARIOCOMUN" : "Usuario Común",
         "ORGANIZACIONES" : "Organizaciones",
         "BOTONREGISTRAR": "Registrarse",
-        "BOTONINGRESAR": "Ingresar"
-    },
-    
-    "PANEL":{
-        "INICIO": "Inicio",
-        "ESTADISTICAS":"Estadísticas",
-        "SOBRENOSOTROS": "Sobre nosotros",
-        "PERFIL": "Perfil",
-        "NUEVOPROYECTO":"Nuevo proyecto",
+        "BOTONINGRESAR": "Ingresar",
+
         "NOALAVIOLENCIADEGENERO":"No a la violencia de género",
         "QUEES":"¿Que es?",
         "TIPOS":"Tipos de violencia",
@@ -43,6 +36,15 @@
         "OPCIONES":"Opciones",
         "PEDIDOS":"Pedidos",
         "CONTACTO":"Contacto"
+    },
+    
+    "PANEL":{
+        "INICIO": "Inicio",
+        "ESTADISTICAS":"Estadísticas",
+        "SOBRENOSOTROS": "Sobre nosotros",
+        "PERFIL": "Perfil",
+        "NUEVOPROYECTO":"Nuevo proyecto"
+        
     },    
     "PANEL-USER":{
         "MENU": ",Menú",
@@ -73,7 +75,7 @@
         "RECUERDAME":"Recordarme",
         "ORGANIZACION":"Organizacion",
         "USUARIO":"Usuario",
-        "INICIARSESION":"Iniciar sesion"
+        "INICIARSESION":"Iniciar sesion",
         "IDENTIFICACIÓN": "Identificación",
         "SELECCIONE": "Seleccione"
     },

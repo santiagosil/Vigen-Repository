@@ -11,14 +11,8 @@
         "USUARIOCOMUN" : "Common User",
         "ORGANIZACIONES" : "Organizations",
         "BOTONREGISTRAR": "Sign up",
-        "BOTONINGRESAR": "Sign in "
-    },
-    "PANEL":{
-        "INICIO": "Home",
-        "ESTADISTICAS":"Statistics",
-        "SOBRENOSOTROS": "About",
-        "PERFIL": "profile",
-        "NUEVOPROYECTO":"New project",
+        "BOTONINGRESAR": "Sign in ",
+
         "NOALAVIOLENCIADEGENERO":"No to gender violence",
         "QUEES":"What is?",
         "TIPOS":"Types of violence",
@@ -43,6 +37,13 @@
         "PEDIDOS":"Orders",
         "CONTACTO":"Contacts"
 
+    },
+    "PANEL":{
+        "INICIO": "Home",
+        "ESTADISTICAS":"Statistics",
+        "SOBRENOSOTROS": "About",
+        "PERFIL": "profile",
+        "NUEVOPROYECTO":"New project"
 
     },
     "PANEL-USER":{
@@ -70,9 +71,9 @@
     "LOGIN":{
         "TITULO":"Login Account",
         "CORREO":"Email",
-        "CONTRASEÑA":"Password",
+        "CONT   ÑA":"Password",
         "RECUERDAME":"Remember me",
-        "INICIARSESION":"log in"
+        "INICIARSESION":"log in",
         "IDENTIFICACIÓN": "Identification",
         "ORGANIZACIÓN": "Organization",
         "SELECCIONE": "Select"
