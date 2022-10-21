@@ -29,15 +29,20 @@
           <fa-icon style="color:white;" [icon]="faGlobeAmericas"></fa-icon>
         </button>
         <ul class="dropdown-menu dropdown-menu-dark">
-          <li><a class="dropdown-item" href="#">
+          <li><a class="dropdown-item" (click)="changeLang('en')">
               <img src="../../assets/images/usa.svg" style="height: 20px; width: 20px; margin-right: 8px;">English</a>
           </li>
-          <li><a class="dropdown-item" href="#">
+          <li><a class="dropdown-item" (click)="changeLang('es')">
               <img src="../../assets/images/spain.svg" style="height: 20px; width: 20px; margin-right: 8px;">Español</a>
           </li>
         </ul>
       </div>
-      
+      <!--div class="container">
+        <select class="form-select" #langSelect (change)="changeLang(langSelect.value)">
+          <option selected value="es">Español</option>
+          <option value="en">English</option>
+        </select>
+      </div-->
        <button class="btn btn-secundary m-2 text-black" type="submit" routerLink="/login">{{"NAV.LOGIN" | translate}}</button>
         <button class="btn btn-dark me-5" type="submit" routerLink="/signUp">{{"NAV.SIGNUP" | translate}}</button>
 

@@ -7,6 +7,7 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import {faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 import {faFlagUsa} from '@fortawesome/free-solid-svg-icons';
 import {faFlag} from '@fortawesome/free-solid-svg-icons';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-nav',
@@ -21,12 +22,15 @@ export class NavComponent implements OnInit {
 
   public user: User;
 //eliminar este llamado de no ser necesario
-  constructor(private api: UserService) {
+  constructor(private api: UserService, private translate: TranslateService) {
     this.user={};
     this.api.apiUserIdGet$Json({id:'123456789'}).subscribe(res=>{
       this.user=res;
     });
 
+  }
+  changeLang(lang: string){
+    this.translate.use(lang);
   }
   
   ngOnInit(): void {

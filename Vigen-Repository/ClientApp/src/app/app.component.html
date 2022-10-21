@@ -2,18 +2,9 @@
   <nav>
     <app-nav></app-nav>
   </nav>
-
 </header>
 <section>
-  <div>
     <router-outlet></router-outlet>
-    <div class="container">
-      <select class="form-select" #langSelect (change)="changeLang(langSelect.value)">
-        <option selected value="es">Español</option>
-        <option value="en">English</option>
-      </select>
-    </div>
-  </div>
 </section>
 <!--
 <section> 
