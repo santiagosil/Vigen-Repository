@@ -13,7 +13,7 @@ export let latlong = new LatLng(0, 0);
 })
 export class MapComponent implements OnInit {
 
-  private marker:Marker<any>;
+  public marker:Marker<any>;
 
   constructor(private reverse: InverseService, private user: RecordUserComponent) {
     this.marker=marker(new LatLng(0, 0));
@@ -37,6 +37,7 @@ export class MapComponent implements OnInit {
     }) => {
       this.marker.remove();
       this.marker = marker(e.latlng).addTo(map);
+      this.reverse.changeSite(this.marker.getLatLng().lat,this.marker.getLatLng().lng);
     });
 
     map.on('click', async (e: {
@@ -44,6 +45,7 @@ export class MapComponent implements OnInit {
     }) => {
       this.marker.remove();
       this.marker = marker(e.latlng).addTo(map);
+      this.reverse.changeSite(this.marker.getLatLng().lat,this.marker.getLatLng().lng);
   });
 
   }
