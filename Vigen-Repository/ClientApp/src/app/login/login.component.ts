@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { Organization, User } from '../api/models';
+import { SingletonUser } from '../api/MyServices/singletonUser';
 import { OrganizationService, UserService } from '../api/services';
 
 @Component({
@@ -9,12 +10,13 @@ import { OrganizationService, UserService } from '../api/services';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
   public usuario = {
     identification: "",
     password: "",
-    type: ""
+    type: "" //0=usuario, 0!=typoOrg
   };
   typeUser(lang: string) {
     this.usuario.type = lang;
@@ -35,12 +37,14 @@ export class LoginComponent implements OnInit {
   public get() {
     if (this.usuario.password === "" || this.usuario.identification === "") {
       console.log("Faltan algunos campos obligatorios por llenar");
-      console.log(this.usuario.type)
+      console.log(this.usuario.type);
     } else {
-      if (this.usuario.type == "user") {
+      if (this.usuario.type == "0") {
         this.api.apiUserIdGet$Json({ id: this.usuario.identification + "" })
           .subscribe(res => {
             if (res.password == this.usuario.password) {
+              SingletonUser.getInstance().identification=this.usuario.identification;
+              SingletonUser.getInstance().type=this.usuario.type;
               this.router.navigate(['/pUser']);
             } else {
               this.showModal();
@@ -51,6 +55,9 @@ export class LoginComponent implements OnInit {
         this.orga.apiOrganizationIdGet$Json({ id: this.usuario.identification + "" })
           .subscribe(res => {
             if (res.password == this.usuario.password) {
+              this.usuario.type=String(res.organizationTypeId);
+              SingletonUser.getInstance().identification=this.usuario.identification;
+              SingletonUser.getInstance().type=this.usuario.type;
               this.router.navigate(['/home']);
             } else {
               this.showModal();

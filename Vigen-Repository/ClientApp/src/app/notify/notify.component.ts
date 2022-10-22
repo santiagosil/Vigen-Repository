@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import * as SignalR from '@microsoft/signalr';
 import { ApiConfiguration } from '../api/api-configuration';
 import { BaseService } from '../api/base-service';
+import {LoginComponent} from 'src/app/login/login.component';
+import { SingletonUser } from '../api/MyServices/singletonUser';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -14,7 +17,8 @@ export class NotifyComponent extends BaseService implements OnInit {
 
   constructor(
     config: ApiConfiguration,
-    http: HttpClient
+    http: HttpClient,
+    //private login:LoginComponent
   ) {
     super(config, http);
   }
@@ -32,9 +36,21 @@ export class NotifyComponent extends BaseService implements OnInit {
     });
 
     connection.on("recibeNotify", notify=>{
-      //aqui llega la notificacion
-      console.log(notify);
+      var not:String[]=Object.values(notify);
+      if(SingletonUser.getInstance().type==String(not[5])){
+        this.showAlert(not);
+      }
+      console.log(SingletonUser.getInstance().type+" "+String(not[5]));
     });
+  }
+  showAlert(notify:String[]) {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'error',
+      title: notify[2],
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
 
 }
