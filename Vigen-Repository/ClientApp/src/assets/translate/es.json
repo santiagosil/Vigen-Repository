@@ -8,11 +8,6 @@
 
     },
     "HOME":{
-        "USUARIOCOMUN" : "Usuario Común",
-        "ORGANIZACIONES" : "Organizaciones",
-        "BOTONREGISTRAR": "Registrarse",
-        "BOTONINGRESAR": "Ingresar",
-
         "NOALAVIOLENCIADEGENERO":"No a la violencia de género",
         "QUEES":"¿Que es?",
         "TIPOS":"Tipos de violencia",
@@ -38,14 +33,6 @@
         "CONTACTO":"Contacto"
     },
     
-    "PANEL":{
-        "INICIO": "Inicio",
-        "ESTADISTICAS":"Estadísticas",
-        "SOBRENOSOTROS": "Sobre nosotros",
-        "PERFIL": "Perfil",
-        "NUEVOPROYECTO":"Nuevo proyecto"
-        
-    },    
     "PANEL-USER":{
         "MENU": ",Menú",
         "ACTUALIZARPERFIL":"Actualizar perfil",
@@ -116,6 +103,20 @@
         "RANGE":"Rango",
         "COUNTRYCODE":"Codigo del País",
         "PHONE":"Celular"
+    },
+    "SIGNUP":{
+        "ELIGETIPO":"Elige que tipo de cuenta que deseas ingresar",
+        "USUARIOCOMUN" : "Usuario Común",
+        "ORGANIZACIONES" : "Organizaciones",
+        "BOTONREGISTRAR": "Registrarse",
+        "BOTONINGRESAR": "Ingresar",
+        "AYUDA":"Ayuda",
+        "PRODUCTOS":"Productos",
+        "LINKS":"Links utiles",
+        "VALORAR":"Valorar",
+        "OPCIONES":"Opciones",
+        "PEDIDOS":"Pedidos",
+        "CONTACTO":"Contacto"
     }
     
 }

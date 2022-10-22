@@ -8,17 +8,13 @@
 
     },
     "HOME":{
-        "USUARIOCOMUN" : "Common User",
-        "ORGANIZACIONES" : "Organizations",
-        "BOTONREGISTRAR": "Sign up",
-        "BOTONINGRESAR": "Sign in ",
 
         "NOALAVIOLENCIADEGENERO":"No to gender violence",
         "QUEES":"What is?",
         "TIPOS":"Types of violence",
         "DONDE":"Where to report?",
         "PREGUNTASFRECUENTES":"frequent questions",
-        "VIOLNCIAESTODO":"Violence is any act, action, or omission that causes physical, sexual, psychological, verbal, or economic harm or suffering to a person; It can happen in public or in private. Violent situations occur every time a person imposes her power over another, violating her rights.",
+        "VIOLENCIAESTODO":"Violence is any act, action, or omission that causes physical, sexual, psychological, verbal, or economic harm or suffering to a person; It can happen in public or in private. Violent situations occur every time a person imposes her power over another, violating her rights.",
         "ESTASAGRESIONES":"This attacks are carried out against any person or group of people based on their sex or gender. Violence has a negative impact on their identity and social, physical, psychological or economic well-being. It is important to keep in mind that the different forms of violence can begin with very subtle manifestations that increase with the possibility of causing irreparable physical or emotional damage, and even death",
         "SABERMAS":"know more",
         "LAVIOLENCIA":"Violence can be present in any environment; whether at home or in public, the workplace, the street, public transport, school, etc. Given this, we all have the responsibility to break the silence and denounce. For this, it is important that you learn to differentiate the different types of violence that exist in order to identify them.",
@@ -110,5 +106,19 @@
         "RANGE":"Range",
         "COUNTRYCODE":"Country Code",
         "PHONE":"Phone"
+    },
+    "SIGNUP":{
+        "ELIGETIPO":"Choose type account",
+        "USUARIOCOMUN" : "Default User",
+        "ORGANIZACIONES" : "Organizations",
+        "BOTONREGISTRAR": "Sign up",
+        "BOTONINGRESAR": "Sign in ",
+        "PRODUCTOS":"Products",
+        "LINKS":"Usefull links",
+        "VALORAR":"Pricing",
+        "OPCIONES":"Settings",
+        "PEDIDOS":"Orders",
+        "CONTACTO":"Contacts"
+
     }
 }
