@@ -13,6 +13,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';
+import { InverseService } from '../api/MyServices/inverse.service';
 
 @Component({
   selector: 'app-record-org',
@@ -62,15 +63,10 @@ export class RecordOrgComponent implements OnInit {
     pass : ""
   }
 
-  constructor(private api:OrganizationService) { }
+  constructor(private api:OrganizationService,private reverse:InverseService) { }
 
   ngOnInit(): void {
-    /*this.form = this.fb.group({
-      nomOrg: ['', [Validators.required]],
-      nitOrg: ['', [Validators.required]],
-      ubiOrg: ['', [Validators.required]],
-      telOrg: ['', [Validators.required]],
-    })*/
+    
   }
   sendLogin():void{
     this.isCheck = { user:1 }
@@ -93,5 +89,9 @@ export class RecordOrgComponent implements OnInit {
       }
     
     }
+  }
+  update(){
+    var aux=this.reverse.getListSites();
+    console.log(aux);
   }
 }

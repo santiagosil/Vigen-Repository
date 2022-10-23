@@ -11,6 +11,7 @@ import { PanelUserComponent } from './panel-user/panel-user.component';
 import { StatisticsDashboardComponent } from './statistics-dashboard/statistics-dashboard.component';
 import { SingUpComponent } from './sign-up/sing-up.component';
 import { FAQComponent } from './faq/faq.component';
+import { EncuestaComponent } from './encuesta/encuesta.component';
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 import { PanelOrgComponent } from './panel-org/panel-org.component';
 
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'signUp',component: SingUpComponent},
   {path: 'faq',component:FAQComponent},
   {path: 'aboutUs',component:AcercaDeComponent},
-  {path: 'pOrg', component:PanelOrgComponent}
+  {path: 'pOrg', component:PanelOrgComponent},
+  {path: 'encuesta',component:EncuestaComponent}
 ];
 
 @NgModule({

@@ -10,7 +10,7 @@
                     </div>
                     <hr>
                     <div>
-                        <label>{{"LOGIN.IDENTIFICACIÓN" | translate}}</label>
+                        <label>{{"LOGIN.IDENTIFICACION" | translate}}</label>
                         <input type="text" class="shadow form-control rounded " name="identification"
                             [(ngModel)]="usuario.identification" [ngModelOptions]="{standalone: true}">
                     </div>
@@ -24,7 +24,7 @@
                     <div class="container mt-3">
                         <select class="form-select" #langSelect (change)="typeUser(langSelect.value)">
                             <option value="None" selected>{{"LOGIN.SELECCIONE" | translate}}</option>
-                            <option value="org">{{"LOGIN.ORGANIZACIÓN" | translate}}</option>
+                            <option value="org">{{"LOGIN.ORGANIZACION" | translate}}</option>
                             <option value="user">{{"LOGIN.USUARIO" | translate}}</option>
                         </select>
                     </div>
@@ -36,7 +36,7 @@
                         <!--button (click)="showModal()" type="submit" class="btn btn-primary">Iniciar sesión</button-->
                         <button class="btn btn-primary ">{{"LOGIN.INICIARSESION" | translate}}</button>
                     </div>
-                    <div class="mt-1"><a routerLink="/signUp">¿Aún no tienes una cuenta?</a></div>
+                    <div class="mt-1"><a routerLink="/signUp">{{"LOGIN.AUNNOTIENES" | translate}}</a></div>
 
                 </form>
 

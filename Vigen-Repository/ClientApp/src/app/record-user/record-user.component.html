@@ -105,11 +105,15 @@
                     </div>
                 </form>
             </div>
+
             <div class="col-sm mt-3">
                 <div class="container p-4">
                     <app-map></app-map>
                     <div class="row mt-3">
                         <h5>Informacion de Contacto</h5>
+                        <div class="col-12">
+                        <button (click)="update()" class="btn btn-primary">Actualizar Ubicación</button>
+                    </div>
                         <div class="col-1 text-center mt-3">
                             <fa-icon [icon]="faLocationDot"></fa-icon>
                         </div>

@@ -8,10 +8,6 @@
 
     },
     "HOME":{
-        "USUARIOCOMUN" : "Common User",
-        "ORGANIZACIONES" : "Organizations",
-        "BOTONREGISTRAR": "Sign up",
-        "BOTONINGRESAR": "Sign in ",
 
         "NOALAVIOLENCIADEGENERO":"No to gender violence",
         "QUEES":"What is?",
@@ -71,12 +67,14 @@
     "LOGIN":{
         "TITULO":"Login Account",
         "CORREO":"Email",
-        "CONT   ÑA":"Password",
+        "CONTRASEÑA":"Password",
         "RECUERDAME":"Remember me",
         "INICIARSESION":"log in",
-        "IDENTIFICACIÓN": "Identification",
-        "ORGANIZACIÓN": "Organization",
-        "SELECCIONE": "Select"
+        "IDENTIFICACION": "Identification",
+        "ORGANIZACION": "Organization",
+        "SELECCIONE": "Select",
+        "USUARIO":"User",
+        "AUNNOTIENES":"Do not you have an account yet?"
     },
     "REC":{
         "REGISTRO":"Register",
@@ -110,5 +108,19 @@
         "RANGE":"Range",
         "COUNTRYCODE":"Country Code",
         "PHONE":"Phone"
+    },
+    "SIGNUP":{
+        "ELIGETIPO":"Choose type account",
+        "USUARIOCOMUN" : "Default User",
+        "ORGANIZACIONES" : "Organizations",
+        "BOTONREGISTRAR": "Sign up",
+        "BOTONINGRESAR": "Sign in ",
+        "PRODUCTOS":"Products",
+        "LINKS":"Usefull links",
+        "VALORAR":"Pricing",
+        "OPCIONES":"Settings",
+        "PEDIDOS":"Orders",
+        "CONTACTO":"Contacts"
+
     }
 }
