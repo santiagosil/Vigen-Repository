@@ -45,6 +45,7 @@
             </div>
         </div>
     </div>
+<!--
 </nav>
 
 
@@ -67,89 +68,129 @@
             </div>
             <div class="carousel-item">
                 <img src="../../assets/images/violencia-3.jpg" class="d-block w-100" alt="...">
+                -->
+  </nav>
+  <div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark text-white ">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a 
+                    class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline mt-3">Menu</span>
+                </a>                   
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-white"
+                    id="menu">
+                    <li class="nav-item">
+                        <a routerLink="/pUser" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span
+                                class="ms-1 d-none d-sm-inline text-white">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-table"></i> <span
+                                class="ms-1 d-none d-sm-inline text-white">Alerta</span></a>
+                    </li>                    
+                    <li>
+                        <a routerLink="" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-people"></i> <span
+                                class="ms-1 d-none d-sm-inline text-white">Encuesta</span> </a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">{{"PANEL-USER.ANTERIOR" | translate}}</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">{{"PANEL-USER.SIGUIENTE" | translate}}</span>
-        </button>
-    </div>
-</div>
-<br>
-<br>
-<br>
-<div class="container">
-    <div class="row">
-        <div class="col-6">
-            <h2>Titulo</h2>
-            <div class="TxtPlanteamiento">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.
+        <div class="col p-4">
+            <div class="container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../assets/images/puño.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../assets/images/violencia-2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../assets/images/violencia-3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">{{"PANEL-USER.ANTERIOR" | translate}}</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">{{"PANEL-USER.SIGUIENTE" | translate}}</span>
+                    </button>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-6">
+                        <h2>Titulo</h2>
+                        <div class="TxtPlanteamiento">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                            into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                            software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h1></h1>
+                        <figure class="figure">
+                            <img src="../../assets/images/violencia-3.jpg" class="figure-img img-fluid rounded" alt="...">
+            
+                        </figure>
+                    </div>
+                </div>
+            </div>     
+            <div class="container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">{{"PANEL-USER.PAIS" | translate}}Country</th>
+                            <th scope="col">{{"PANEL-USER.FECHA" | translate}}Date</th>
+                            <th scope="col">{{"PANEL-USER.EDITAR" | translate}}Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
             </div>
         </div>
-        <div class="col-6">
-            <h1></h1>
-            <figure class="figure">
-                <img src="../../assets/images/violencia-3.jpg" class="figure-img img-fluid rounded" alt="...">
-
-            </figure>
-        </div>
     </div>
 </div>
-<br>
-<br>
-
-<div class="container">
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">{{"PANEL-USER.PAIS" | translate}}Country</th>
-                <th scope="col">{{"PANEL-USER.FECHA" | translate}}Date</th>
-                <th scope="col">{{"PANEL-USER.EDITAR" | translate}}Edit</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-        </tbody>
-    </table>
-    <br>
-    <hr>
-</div>
-
-<!--<form (ngSubmit)="submit()" #f="ngForm">
-    <select formControlName="orders" id="orders">
-        <option *ngFor="let order of orders; let i = index" [value]="orders[i]">
-            {{orders[i]}}
-        </option>
-    </select>
-</form>-->
+<app-footer></app-footer>
 
 <button class="buttonUp" (click)="formulario()">
     <fa-icon [icon]="faCircleExclamation" style="color:White"></fa-icon>

@@ -1,16 +1,7 @@
-.imagenUbi{
-    width: 20px;
-    height: 20px;
-    /*position: relative;*/
-    background-position: bottom;
-    display:block;
-    margin:auto;
+.color{
+    background-color: #e0d5f1;
 }
-.imagenMpa{
-    position: relative;
-    display:block;
-    margin:auto;
+.form-control{
+    background-color: #f1eef5;
 }
-.registro{
-    background-color: #593196;
-}
+

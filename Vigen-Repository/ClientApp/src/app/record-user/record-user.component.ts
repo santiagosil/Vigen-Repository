@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChange } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnChanges, OnInit, SimpleChange } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Data } from '@angular/router';
 import { UserService } from '../api/services';
@@ -12,14 +12,22 @@ import { HttpContext } from '@angular/common/http';
 import { InverseService } from '../api/MyServices/inverse.service';
 import Swal from 'sweetalert2';
 import { ReadVarExpr } from '@angular/compiler';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
-  selector: 'app-record-user',
+  selector: 'app-record-user',  
   templateUrl: './record-user.component.html',
   styleUrls: ['./record-user.component.css']
 })
 export class RecordUserComponent implements OnInit {
+  
+  faLocationDot = faLocationDot;
+  faEnvelope = faEnvelope;
+  faPhone = faPhone;
+  
   showEmoji: boolean = false;
   title = 'test 1';
   contentEmoji = '';
@@ -30,7 +38,7 @@ export class RecordUserComponent implements OnInit {
   public usuario: User = {
     identification: "",
     name: "",
-    password: "0",
+    password: "",
     code: "0",
     email: "",
     birthdate: "",
@@ -39,28 +47,22 @@ export class RecordUserComponent implements OnInit {
     occupation: "",
     postalCode: "",
     maritalStatus: "",
-    ubication: "",
+    ubication:""
   };
+  contra={
+    pass:""
+  }
 
   constructor(private api: UserService, private rever : InverseService) {
-    
   }
    
   ngOnInit() {
-    setTimeout(() => {
-    //location.reload();
-      this.data(this.rever.dir.direct)
-    }, 1000);
-  }
-
-  data(ubicacion: string ){
-    this.usuario.ubication = ubicacion;
-    this.ngOnInit();
+      
   }
   
   showbien() {
     Swal.fire({
-      position: 'top-end',
+      position: 'center',
       icon: 'success',
       title: 'Se ha enviado un codigo a su correo',
       showConfirmButton: false,
@@ -69,26 +71,44 @@ export class RecordUserComponent implements OnInit {
   }
   showModal() {
     Swal.fire({
-      position: 'top-end',
+      position: 'center',
       icon: 'error',
       title: 'Faltan algunos campos obligatorios por llenar',
       showConfirmButton: false,
       timer: 2000
     })
   }
+  showContra() {
+    Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: 'Las contraseñas no coinciden',
+      showConfirmButton: false,
+      timer: 2000
+    })
+  }
   public send() {
+    this.usuario.ubication=this.rever.getSite().geoInv;
     if (this.usuario.email === "" || this.usuario.name === "" || this.usuario.identification === ""
       || this.usuario.birthdate === "" || this.usuario.phone === ""
       || this.usuario.occupation === "" || this.usuario.maritalStatus === "") {
       this.showModal();
     } else {
-      var random: number;
-      random = Math.round(Math.random() * (9000) + 1000);
-      this.usuario.code = random + "";
-      this.api.apiUserPost$Json({ body: this.usuario })
-        .subscribe(res => {
-          this.showbien();
-        });
+      if(this.usuario.password==this.contra.pass){
+        var random: number;
+        random = Math.round(Math.random() * (9000) + 1000);
+        this.usuario.code = random + "";
+        this.api.apiUserPost$Json({ body: this.usuario })
+          .subscribe(res => {
+            this.showbien();
+          });
+      }
+      else{
+        this.showContra();
+      } 
     }
+  }
+  update(){
+    this.usuario.ubication=this.rever.getSite().geoInv;
   }
 }

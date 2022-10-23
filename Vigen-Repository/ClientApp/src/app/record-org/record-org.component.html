@@ -1,108 +1,116 @@
 <!--<h1>{{title}}</h1>
 <p><b>Form:{{isCheck | json}}</b></p>
 <p><b>Form:{{form.invalid | json}}</b></p>-->
-<br>
-<br>
-<br>
-<div class="container">
-    <div class="container">
+
+<div class="color p-5" style="margin-top: 4rem;">
+    <div class="container shadow rounded" style="background-color: #f5f3f7;">
         <div class="row">
-            <div class="col-6">
-                <!--form [formGroup]="form" (submit) ="sendLogin()" class="form"-->  
-                <form (ngSubmit)="send()">  
-                    <h1>{{"REC.REGISTRO" | translate}}</h1>
-                    <br>
-                    <div class="form-group row">
-                        <label>{{"REC.NOMBRE DE LA ORGANIZACIÓN" | translate}}</label>
-                        <br>
-                        <div class="col-sm-10">
+            <div class="col-sm p-3  mb-5 rounded ">
+                <!--form [formGroup]="form" (submit) ="sendLogin()" class="form"-->
+                <form (ngSubmit)="send()">
+                    <div class="ms-4 me-4">
+                        <h1>{{"REC.REGISTRO" | translate}}</h1>
+                        <label>Es rápido y fácil</label>
+                        <hr>
+                        <p class="mt-2" style="color:red;">{{"REC.CAMPOS" | translate}}</p>
+                    </div>
+                    <div class="form-group row mt-3">
+                        <div class="col-sm ms-4 me-4">
+                            <label>{{"REC.NOMBRE DE LA ORGANIZACIÓN" | translate}}<label
+                                    style="color:red;">*</label></label>
                             <!--input formControlName="nomOrg" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="organization.name" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
+                                [(ngModel)]="organization.name" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
-                    <br>
+
                     <div class="form-group row">
-                        <label>NIT</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm mt-3 ms-4 me-4">
+                            <label>NIT<label style="color:red;">*</label></label>
                             <!--input formControlName="nitOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="organization.nit" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
+                                [(ngModel)]="organization.nit" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
-                    <br>
+                    <!--<div class="form-group row">
+                        <div class="col-sm mt-3 ms-4 me-4">
+                            <label>Correo</label>
+                            input formControlName="nitOrg" type="text" class="form-control" placeholder=""
+                            <input type="email" class="form-control rounded" id="inlineFormInputGroup"
+                                [(ngModel)]="organization.nit" [ngModelOptions]="{standalone: true}" placeholder="">
+                        </div>
+                    </div>-->
+
                     <div class="form-group row">
-                        <label>{{"REC.TEL" | translate}}</label>
-                        <div class="col-sm-10">
+
+                        <div class="col-sm mt-3 ms-4 me-4">
+                            <label>{{"REC.TEL" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="organization.tel" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
+                                [(ngModel)]="organization.tel" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
-                    <br>
-                    <div class="form-group row">
-                        <label>{{"REC.CONTRASEÑA" | translate}}</label>
-                        <div class="col-sm-10">
+
+                    <div class="form-group row mt-3 ms-3 me-3">
+
+                        <div class="col-sm ">
+                            <label>{{"REC.CONTRASEÑA" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="organization.password" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="password" class="form-control rounded" id="inlineFormInputGroup"
+                                [(ngModel)]="organization.password" [ngModelOptions]="{standalone: true}"
+                                placeholder="">
+                        </div>
+                        <div class="col-sm ">
+                            <label>Confirmar Contraseña<label style="color:red;">*</label></label>
+                            <!--input  formControlName="ecivlUser" type="text" class="form-control"  placeholder=""-->
+                            <input type="password" class="form-control rounded" id="inlineFormInputGroup"
+                                [(ngModel)]="contra.pass" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
-                    <br>
-                    <br>
-                    <div class="row">
-                        <div class="col-3"></div>
-                        <div class="col-3">
-                            <div class="form-group row">
-                                <div class="col-sm-10">
-                                    <button type="submit" class="btn btn-primary ms-4">Submit</button>
-                                </div>
+
+                    <div class="row text-center mt-4">
+                        <div class="form-group row">
+                            <div class="col-sm">
+                                <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="col-6">
-                <app-map-organizacion></app-map-organizacion>
-                <!--<div class="imagenMpa">
-                    <img src="../../assets/images/maps.jpg" class="figure-img img-fluid rounded " alt="...">
-                </div>-->
-                <br>
-                <h5>{{organization.name}}</h5>
-                <br>
-                <div class="row">
-                    <div class="col-2">
-                        <div class="imagenUbi">
-                            <p></p>
-                            <img src="../../assets/images/ubi.png" class="figure-img img-fluid rounded " alt="...">
+            <div class="col-sm mt-3">
+                <div class="container p-4">
+                    <app-map-organizacion></app-map-organizacion>
+                    <!--<div class="imagenMpa">
+                            <img src="../../assets/images/maps.jpg" class="figure-img img-fluid rounded " alt="...">
+                        </div>-->
+                    <div class="row mt-3">
+                        <h5>Información Organización</h5>
+                        <p style="font-size: 90%">{{organization.name}}</p>
+                        <div class="col-12">
+                        <button class="btn btn-primary" (click)="update()">Actualizar Ubicaciones</button>
+                    </div>
+                        <div class="col-1 text-center mt-2">
+                            <fa-icon [icon]="faLocationDot"></fa-icon>
+
                         </div>
-                    </div>
-                    <div class="col-10">
-                        <p style="font-size: 13px"></p>
-                    </div>
-                    <div class="col-2">
-                        <div class="imagenUbi">
-                            <br>
-                            <img src="../../assets/images/email.png" class="figure-img img-fluid rounded " alt="...">
+                        <div class="col-11 mt-2">
+                            <label style="font-size: 80%"></label>
                         </div>
-                    </div>
-                    <div class="col-10">
-                        <br>
-                        <p style="font-size: 13px"></p>
-                    </div>
-                    <div class="col-2">
-                        <div class="imagenUbi">
-                            <br>
-                            <img src="../../assets/images/tel.png" class="figure-img img-fluid rounded " alt="...">
+                        <div class="col-1 text-center mt-4">
+                            <fa-icon [icon]="faEnvelope"></fa-icon>
                         </div>
-                    </div>
-                    <div class="col-10">
-                        <br>
-                        <p style="font-size: 13px">{{organization.tel}}</p>
+                        <div class="col-11 mt-4">
+                            <label style="font-size: 80%"></label>
+                        </div>
+                        <div class="col-1 text-center mt-4">
+                            <fa-icon [icon]="faPhone"></fa-icon>
+                        </div>
+                        <div class="col-11 mt-4">
+                            <label style="font-size: 80%">{{organization.tel}}</label>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <br>
-    <hr>
 </div>
-<br>
-<br>
-<br>
