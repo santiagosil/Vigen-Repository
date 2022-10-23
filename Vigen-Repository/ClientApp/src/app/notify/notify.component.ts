@@ -6,8 +6,8 @@ import { BaseService } from '../api/base-service';
 import {LoginComponent} from 'src/app/login/login.component';
 import { SingletonUser } from '../api/MyServices/singletonUser';
 import Swal from 'sweetalert2';
-
-
+import { IaService } from '../api/MyServices/ia.service';
+ 
 @Component({
   selector: 'app-notify',
   templateUrl: './notify.component.html',
@@ -19,12 +19,19 @@ export class NotifyComponent extends BaseService implements OnInit {
   constructor(
     config: ApiConfiguration,
     http: HttpClient,
+    private iaService:IaService
     //private login:LoginComponent
   ) {
     super(config, http);
   }
 
   ngOnInit(): void {
+
+    //console.log("per");
+    /*this.iaService.getPrueba().subscribe(resp=>{
+      console.log(resp);
+    });*/
+
     const connection = new SignalR.HubConnectionBuilder()
     .configureLogging(SignalR.LogLevel.Critical)
     .withUrl(this.rootUrl+"/notifyhub")

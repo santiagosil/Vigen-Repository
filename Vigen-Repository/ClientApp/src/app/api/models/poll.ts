@@ -1,0 +1,21 @@
+export interface Poll{
+    id?:null|number;
+    date?:null|Date;
+    genero?:null|number;
+    orientacionSexual?:null|number;
+    edad?:null|number;
+    municipio?:null|number;
+    sector?:null|number;
+    nivelEducativo?:null|number;
+    estadoCivil?:null|number;
+    etnia?:null|number;
+    ingresos?:null|number;
+    ocupacion?:null|number;
+    p1?:null|number;
+    p2?:null|number;
+    p3?:null|number;
+    p4?:null|number;
+    p5?:null|number;
+    p6?:null|number;
+    p7?:null|number;
+}

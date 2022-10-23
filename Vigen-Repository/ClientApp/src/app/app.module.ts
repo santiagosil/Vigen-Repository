@@ -56,7 +56,7 @@ export function HttpLoaderFactory(http: HttpClient){
     ReportesComponent,
     NotifyComponent,
     PanelOrgComponent,
-    FooterComponent
+    FooterComponent,
     EncuestaComponent,
     AcercaDeComponent
   ],

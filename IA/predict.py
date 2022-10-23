@@ -8,8 +8,18 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from keras.models import load_model
 from typing import Union
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = [""],
+    allow_credentials=True,
+    allow_methods=[""],
+    allow_headers=["*"],
+)
 
 class Item(BaseModel):
     genero: Union[int,None] = None
@@ -44,3 +54,7 @@ def Prediccion(resp:Item):
     predict=np.argmax(prediccion) 
     resp.p7=int(predict)
     return {'Label':label[predict], 'Responce':resp}
+
+@app.get("/pru")
+def prueba():
+    return "Hola"
