@@ -1,17 +1,4 @@
-<!--<nav class="navbar navbar-expand-lg bg-primary p-md-3">
-    <div class="container-fluid">
-        <a class="navbar-brand text-white ms-5" href="#"> Vigen</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        </div>
-        <a class="nav-link text-white ms-3 " href="#">Menu</a>
-        <a class="nav-link text-white ms-3 " href="#">Actualizar perfil</a>
-        <a class="nav-link text-white ms-3 " href="#">Lineas de atencion</a>
-    </div>
-</nav>-->
+
 <nav class="navbar navbar-dark bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand ms-5" href="#">Vigen</a>
@@ -26,13 +13,13 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Menu</a>
+              <a class="nav-link active" aria-current="page" href="#">{{"PANEL-USER.MENU" | translate}}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Actualizar perfil</a>
+              <a class="nav-link" href="#">{{"PANEL-USER.ACTUALIZARPERFIL" | translate}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Lineas de atencion</a>
+                <a class="nav-link" href="#">{{"PANEL-USER.LINEASDEATENCION" | translate}}</a>
               </li>
               <hr>
               <div class="dropdown">
@@ -42,13 +29,13 @@
                   <strong>SebasDesign</strong>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                  <li><a class="dropdown-item" href="#">New project...</a></li>
-                  <li><a class="dropdown-item" href="#">Settings</a></li>
-                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">{{"PANEL-USER.PROYECTONUEVO" | translate}}</a></li>
+                  <li><a class="dropdown-item" href="#">{{"PANEL-USER.SETTINGS" | translate}}</a></li>
+                  <li><a class="dropdown-item" href="#">{{"PANEL-USER.PROFILE" | translate}}</a></li>
                   <li>
                     <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item" href="#">Sign out</a></li>
+                  <li><a class="dropdown-item" href="#">{{"PANEL-USER.SIGNOUT" | translate}}</a></li>
                 </ul>
               </div>
           </ul>
@@ -82,12 +69,12 @@
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden">{{"PANEL-USER.ANTERIOR" | translate}}</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden">{{"PANEL-USER.SIGUIENTE" | translate}}</span>
         </button>
     </div>
 </div>
@@ -124,9 +111,9 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Country</th>
-                <th scope="col">Date</th>
-                <th scope="col">Edit</th>
+                <th scope="col">{{"PANEL-USER.PAIS" | translate}}Country</th>
+                <th scope="col">{{"PANEL-USER.FECHA" | translate}}Date</th>
+                <th scope="col">{{"PANEL-USER.EDITAR" | translate}}Edit</th>
             </tr>
         </thead>
         <tbody>

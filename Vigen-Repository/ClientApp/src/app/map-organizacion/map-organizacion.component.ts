@@ -27,6 +27,7 @@ export class MapOrganizacionComponent implements OnInit {
     // ----Encontrar Ubicación por medio del GPS---- 
     map.locate();
 
+
     map.on('locationfound', async (e: {
       accuracy: number, latlng: LatLng;
     }) => {

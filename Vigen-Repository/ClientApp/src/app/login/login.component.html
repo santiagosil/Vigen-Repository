@@ -1,22 +1,8 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<section>
-    <div class="container" style="position: relative;">
-
-        <div class="col-6">
-            <h3 style="position: absolute; left: 670px; top: 180px;  z-index: 3;" class="text-white">WELCOME!</h3>
-            <p style="position: absolute; left: 600px; top: 220px;  z-index: 4;" class="text-white">Enter your details
-                and start journey with us</p>
-            <img class="violeta" style=" z-index: 1;" src="../../assets/images/fondo-violeta.jpg" width="500"
-                height="470">
-        </div>
+<section style="margin-top: 7rem;">
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-6 shadow p-3 bg-white mb-5 rounded"
-                style="position: absolute; left: 120px; top: 40px; width: 400px;height: 390px;  z-index: 2;">
+            <div class="col-1"></div>
+            <div class="col-4 left shadow p-3 bg-white mb-5 rounded mt-5" style="position: relative; left: 2rem;">
                 <form action="" (ngSubmit)="get()">
                     <br>
                     <div class="text-center">
@@ -25,41 +11,44 @@
                     </div>
                     <hr>
                     <div>
-                        <label style="position: relative;  left: 60px">{{"LOGIN.IDENTIFICACIÓN" | translate}}</label>
-                        <input type="email" class="shadow form-control rounded " name="email"
-                            [(ngModel)]="usuario.identification" [ngModelOptions]="{standalone: true}"
-                            style="position: relative; width: 250px; left: 60px">
+                    
+                        <label>{{"LOGIN.IDENTIFICACIÓN" | translate}}</label>
+                        <input type="text" class="shadow form-control rounded " name="identification"
+                            [(ngModel)]="usuario.identification" [ngModelOptions]="{standalone: true}">
                     </div>
                     <br>
                     <div>
-                        <label style="position: relative; left: 60px">{{"LOGIN.CONTRASEÑA" | translate}}</label>
+                        <label>{{"LOGIN.CONTRASEÑA" | translate}}</label>
                         <input type="password" class="shadow form-control rounded " name="password"
-                            [(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}"
-                            style="position: relative; width: 250px;  left: 60px">
+                            [(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}">
                     </div>
                     <br>
-                    <div class="container">
+                    <div>
+                        <input type="checkbox" name="connected" class="form-check-input">
+                        <label>{{"LOGIN.RECUERDAME" | translate}}</label>
+                    </div>
+    <div class="container">
                         <select class="form-select" #langSelect (change)="typeUser(langSelect.value)">
                             <option value="None" selected>{{"LOGIN.SELECCIONE" | translate}}</option>
                             <option value="org">{{"LOGIN.ORGANIZACIÓN" | translate}}</option>
                             <option value="user">{{"LOGIN.USUARIO" | translate}}</option>
                         </select>
                     </div>
+                   
                     <br>
-                    <div>
-                        <input type="checkbox" name="connected" class="form-check-input"
-                            style="position: relative; left: 60px">
-                        <label style="position: relative; left: 65px">{{"LOGIN.RECUERDAME" | translate}}</label>
-                    </div>
-                    <br>
+
                     <div class="d-grid">
                         <!--button (click)="showModal()" type="submit" class="btn btn-primary">Iniciar sesión</button-->
-                        <button class="btn btn-primary" style="position: relative; width: 250px;  left: 60px">Iniciar
-                            sesión</button>
+                        <button class="btn btn-primary ">{{"LOGIN.INICIARSESION" | translate}}</button>
                     </div>
+                    <div class="mt-1"><a routerLink="/signUp">¿Aún no tienes una cuenta?</a></div>
 
                 </form>
 
+            </div>
+            <div class="col-6 image rounded">
+                <h3 class="text-white ">WELCOME!</h3>
+                <p class="text-white mt-1">Enter your details and start journey with us</p>
             </div>
         </div>
     </div>
