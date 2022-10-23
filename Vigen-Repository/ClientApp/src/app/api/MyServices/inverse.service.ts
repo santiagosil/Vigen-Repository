@@ -45,9 +45,9 @@ export class InverseService {
     this.listGpsSites.push(marker);
    }
    public deleteMarkerToList(lat:number, lng:number){
-    var aux:number=this.listGpsSites.findIndex(x=>x.lat==lat && x.lng==lng);
+    var aux:number=this.listGpsSites.findIndex(x=>(x.lat==lat&& x.lng==lng));
     if(aux>-1){
-      this.listGpsSites.slice(aux,1);
+      this.listGpsSites.splice(aux,1);
     }
    }
 
