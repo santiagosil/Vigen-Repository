@@ -63,8 +63,9 @@
         "ORGANIZACION":"Organizacion",
         "USUARIO":"Usuario",
         "INICIARSESION":"Iniciar sesion",
-        "IDENTIFICACIÓN": "Identificación",
-        "SELECCIONE": "Seleccione"
+        "IDENTIFICACION": "Identificación",
+        "SELECCIONE": "Seleccione",
+        "AUNNOTIENES":"¿Aun no tienes una cuenta?"
     },
     "REC":{
         "REGISTRO":"Registro",
@@ -82,12 +83,6 @@
         "NOMBRE DE LA ORGANIZACIÓN": "Nombre de la Organización",
         "CONTRASEÑA": "Contraseña"
         },
-    "lOGIN":{
-        "TITULO": "Acceder",
-        "CORREO": "Correo",
-        "CONTRASEÑA": "Contraseña",
-        "MANTENER_CONECTADO":"Mantenerme conectado"
-    },
     "REPORTS":{
         "IDENTIFICATION": "Identificacion",
         "NAME":"Nombre",

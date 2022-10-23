@@ -67,12 +67,14 @@
     "LOGIN":{
         "TITULO":"Login Account",
         "CORREO":"Email",
-        "CONT   ÑA":"Password",
+        "CONTRASEÑA":"Password",
         "RECUERDAME":"Remember me",
         "INICIARSESION":"log in",
-        "IDENTIFICACIÓN": "Identification",
-        "ORGANIZACIÓN": "Organization",
-        "SELECCIONE": "Select"
+        "IDENTIFICACION": "Identification",
+        "ORGANIZACION": "Organization",
+        "SELECCIONE": "Select",
+        "USUARIO":"User",
+        "AUNNOTIENES":"Do not you have an account yet?"
     },
     "REC":{
         "REGISTRO":"Register",
