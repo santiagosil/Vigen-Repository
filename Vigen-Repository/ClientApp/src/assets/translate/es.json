@@ -9,10 +9,10 @@
     },
     "HOME":{
         "NOALAVIOLENCIADEGENERO":"No a la violencia de género",
-        "QUEES":"¿Que es?",
+        "QUEES":"¿Qué es?",
         "TIPOS":"Tipos de violencia",
         "DONDE":"¿Donde denunciar?",
-        "PREGUNTASFRECUENTES":"preguntas frecuentes",
+        "PREGUNTASFRECUENTES":"Preguntas frecuentes",
         "VIOLENCIAESTODO":"Violencia es todo acto, acción u omisión que produzca daño o sufrimiento físico, sexual, psicológico, verbal, o económico a una persona; puede ocurrir en público o en privado. Las situaciones violentas ocurren cada vez que una persona impone su poder sobre otra vulnerando sus derechos.",
         "ESTASAGRESIONES":"Estas agresiones son ejercidas contra cualquier persona o grupo de personas sobre la base de su sexo o género. Las violencias impactan de manera negativa en su identidad y bienestar social, físico, psicológico o económico. Es importante tener en cuenta que las diferentes formas de violencia pueden iniciar con manifestaciones muy sutiles que van aumentando con la posibilidad de producir daños físicos o emocionales irreparables, e incluso, la muerte.",
         "SABERMAS":"Saber más",
@@ -23,7 +23,7 @@
         "LAVIOLENCIABASADA":"La violencia basada en género incluye cualquier acto de maltrato físico, sexual, psicológico y/o económico contra una persona con motivo de su sexo, incluyendo actos de privación de la libertad, tanto en el ámbito público como privado. Hombres y mujeres son víctimas de violencia basada en género debido a los roles y características que se les atribuyen en las diferentes sociedades",
         "ACERCADE":"Acerca de Nuestro Equipo",
         "NUESTRASPUERTAS":"Nuestras puertas abiertas, siempre",
-        "ATENCIONINTEGRAL":"Atención integral a las víctimas de violencias basadas en género y violencia sexual",
+        "ATENCIONINTEGRAL":"Atención integral a las víctimas de violencia basadas en género y violencia sexual",
         "AYUDA":"Ayuda",
         "PRODUCTOS":"Productos",
         "LINKS":"Links utiles",
@@ -68,7 +68,7 @@
         "AUNNOTIENES":"¿Aun no tienes una cuenta?"
     },
     "REC":{
-        "REGISTRO":"Registro",
+        "REGISTRO":"Registrarte",
         "CAMPOS":"Campos Requeridos *",
         "NAME":"Nombre",
         "EMAIL":"Correo",

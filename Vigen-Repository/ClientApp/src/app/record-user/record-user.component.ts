@@ -12,7 +12,9 @@ import { HttpContext } from '@angular/common/http';
 import { InverseService } from '../api/MyServices/inverse.service';
 import Swal from 'sweetalert2';
 import { ReadVarExpr } from '@angular/compiler';
-import { timeout } from 'rxjs';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -21,6 +23,11 @@ import { timeout } from 'rxjs';
   styleUrls: ['./record-user.component.css']
 })
 export class RecordUserComponent implements OnInit {
+  
+  faLocationDot = faLocationDot;
+  faEnvelope = faEnvelope;
+  faPhone = faPhone;
+  
   showEmoji: boolean = false;
   title = 'test 1';
   contentEmoji = '';
@@ -31,7 +38,7 @@ export class RecordUserComponent implements OnInit {
   public usuario: User = {
     identification: "",
     name: "",
-    password: "0",
+    password: "",
     code: "0",
     email: "",
     birthdate: "",
@@ -42,6 +49,9 @@ export class RecordUserComponent implements OnInit {
     maritalStatus: "",
     ubication:""
   };
+  contra={
+    pass:""
+  }
 
   constructor(private api: UserService, private rever : InverseService) {
   }
@@ -52,7 +62,7 @@ export class RecordUserComponent implements OnInit {
   
   showbien() {
     Swal.fire({
-      position: 'top-end',
+      position: 'center',
       icon: 'success',
       title: 'Se ha enviado un codigo a su correo',
       showConfirmButton: false,
@@ -61,9 +71,18 @@ export class RecordUserComponent implements OnInit {
   }
   showModal() {
     Swal.fire({
-      position: 'top-end',
+      position: 'center',
       icon: 'error',
       title: 'Faltan algunos campos obligatorios por llenar',
+      showConfirmButton: false,
+      timer: 2000
+    })
+  }
+  showContra() {
+    Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: 'Las contraseñas no coinciden',
       showConfirmButton: false,
       timer: 2000
     })
@@ -75,13 +94,18 @@ export class RecordUserComponent implements OnInit {
       || this.usuario.occupation === "" || this.usuario.maritalStatus === "") {
       this.showModal();
     } else {
-      var random: number;
-      random = Math.round(Math.random() * (9000) + 1000);
-      this.usuario.code = random + "";
-      this.api.apiUserPost$Json({ body: this.usuario })
-        .subscribe(res => {
-          this.showbien();
-        });
+      if(this.usuario.password==this.contra.pass){
+        var random: number;
+        random = Math.round(Math.random() * (9000) + 1000);
+        this.usuario.code = random + "";
+        this.api.apiUserPost$Json({ body: this.usuario })
+          .subscribe(res => {
+            this.showbien();
+          });
+      }
+      else{
+        this.showContra();
+      } 
     }
   }
   update(){
