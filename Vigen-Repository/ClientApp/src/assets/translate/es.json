@@ -2,39 +2,82 @@
     "NAV":{
         "HOME":"Inicio",
         "ABOUT":"Acerca de",
-        "HELP":"Ayuda"
+        "HELP":"Ayuda",
+        "LOGIN":"Iniciar sesion",
+        "SIGNUP":"Registrarse"
 
     },
     "HOME":{
-        "PARAVICTIMAS" : "Para victimas",
-        "PARAENTIDADES" : "Para entidades",
+        "USUARIOCOMUN" : "Usuario Común",
+        "ORGANIZACIONES" : "Organizaciones",
         "BOTONREGISTRAR": "Registrarse",
-        "BOTONINGRESAR": "Ingresar"
+        "BOTONINGRESAR": "Ingresar",
+
+        "NOALAVIOLENCIADEGENERO":"No a la violencia de género",
+        "QUEES":"¿Que es?",
+        "TIPOS":"Tipos de violencia",
+        "DONDE":"¿Donde denunciar?",
+        "PREGUNTASFRECUENTES":"preguntas frecuentes",
+        "VIOLENCIAESTODO":"Violencia es todo acto, acción u omisión que produzca daño o sufrimiento físico, sexual, psicológico, verbal, o económico a una persona; puede ocurrir en público o en privado. Las situaciones violentas ocurren cada vez que una persona impone su poder sobre otra vulnerando sus derechos.",
+        "ESTASAGRESIONES":"Estas agresiones son ejercidas contra cualquier persona o grupo de personas sobre la base de su sexo o género. Las violencias impactan de manera negativa en su identidad y bienestar social, físico, psicológico o económico. Es importante tener en cuenta que las diferentes formas de violencia pueden iniciar con manifestaciones muy sutiles que van aumentando con la posibilidad de producir daños físicos o emocionales irreparables, e incluso, la muerte.",
+        "SABERMAS":"Saber más",
+        "LAVIOLENCIA":"La violencia puede estar presente en cualquier ámbito; sea en el doméstico o en el público, el lugar de trabajo, la calle, el transporte público, el colegio, etc. Ante esto, todos tenemos la responsabilidad de romper el silencio y denunciar. Para ello es importante que aprendas a diferenciar los distintos tipos de violencia que existen para poder identificarlos.",
+        "SICREES":"Si crees que has sido víctima de alguna forma de violencia de género o sexual, acércate a cualquiera de las clínicas Profamilia a nivel nacional para recibir el apoyo necesario e iniciar con la ruta de atención integral. Con nosotros po encontrar atención humanizada y libre de discriminación en el marco de los Derechos Sexuales y los Derechos Reproductivos. Puedes tener la tranquilidad y la certeza que toda la información será tratada dentro de la reserva y confidencialidad que la ley exige y que Profamilia promueve y respeta.drás",
+        "SIERES":"Si eres víctima de cualquier tipo de violencia basada en género debes solicitarle a tu EPS atención integral e inmediata,  de manera gratuita. Cualquier negativa a cumplir con esta obligación, que está inmersa en el plan de beneficios en salud, es una falta al ejercicio del derecho a la salud.",
+        "QUEESLAVIOLENCIA":"¿Qué es la violencia basada en género?",
+        "LAVIOLENCIABASADA":"La violencia basada en género incluye cualquier acto de maltrato físico, sexual, psicológico y/o económico contra una persona con motivo de su sexo, incluyendo actos de privación de la libertad, tanto en el ámbito público como privado. Hombres y mujeres son víctimas de violencia basada en género debido a los roles y características que se les atribuyen en las diferentes sociedades",
+        "ACERCADE":"Acerca de Nuestro Equipo",
+        "NUESTRASPUERTAS":"Nuestras puertas abiertas, siempre",
+        "ATENCIONINTEGRAL":"Atención integral a las víctimas de violencias basadas en género y violencia sexual",
+        "AYUDA":"Ayuda",
+        "PRODUCTOS":"Productos",
+        "LINKS":"Links utiles",
+        "VALORAR":"Valorar",
+        "OPCIONES":"Opciones",
+        "PEDIDOS":"Pedidos",
+        "CONTACTO":"Contacto"
     },
     
     "PANEL":{
         "INICIO": "Inicio",
-        "ESTADISTICAS":"Estad�sticas",
+        "ESTADISTICAS":"Estadísticas",
         "SOBRENOSOTROS": "Sobre nosotros",
         "PERFIL": "Perfil",
-        "NUEVOPROYECTO":"Nuevo proyecto",
-        "OPCIONES":"Opciones",
-        "SALIR": "Salir",
-        "HOME":"Inicio",
-        "ABOUT":"Acerca de",
-        "HELP":"Ayuda"
+        "NUEVOPROYECTO":"Nuevo proyecto"
+        
+    },    
+    "PANEL-USER":{
+        "MENU": ",Menú",
+        "ACTUALIZARPERFIL":"Actualizar perfil",
+        "LINEASDEATENCION": "Lineas de atención",
+        "PROFILE": "Perfil",
+        "PROYECTONUEVO":"Proyecto nuevo",
+        "SETTINGS":"Opciones",
+        "SIGNOUT": "Salir",
+        "ANTERIOR":"Anterior",
+        "SIGUIENTE":"Siguiente",
+        "PAIS":"Païs",
+        "FECHA":"Fecha",
+        "EDITAR":"Editar"
 
     },
     "EDIT-USER":{
         "USERNAME":"Usuario",
         "EMAIL":"Correo",
-        "PASSWORD":"Contraseña"
+        "PASSWORD":"Contraseña",
+        "BUTTON1": "SI",
+        "BUTTON2":"NO"
     },
     "LOGIN":{
-        "TITULO":"Inicia Sesión",
+        "TITULO":"Iniciar Sesión",
         "CORREO":"Correo",
         "CONTRASEÑA":"Contraseña",
-        "RECUERDAME":"Recordarme"
+        "RECUERDAME":"Recordarme",
+        "ORGANIZACION":"Organizacion",
+        "USUARIO":"Usuario",
+        "INICIARSESION":"Iniciar sesion",
+        "IDENTIFICACIÓN": "Identificación",
+        "SELECCIONE": "Seleccione"
     },
     "REC":{
         "REGISTRO":"Registro",
@@ -48,7 +91,9 @@
         "CIVIL":"Estado Civil",
         "ID":"Identificación",
         "PRIVACIDAD":"Acuerdo de Privacidad",
-        "ENVIAR":"Enviar"
+        "ENVIAR":"Enviar",
+        "NOMBRE DE LA ORGANIZACIÓN": "Nombre de la Organización",
+        "CONTRASEÑA": "Contraseña"
         },
     "lOGIN":{
         "TITULO": "Acceder",

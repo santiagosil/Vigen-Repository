@@ -27,6 +27,8 @@ import { TokenComponent } from './token/token.component';
 import { ReportesComponent } from './reportes/reportes.component';
 import { NotifyComponent } from './notify/notify.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/translate/','.json')
@@ -51,7 +53,8 @@ export function HttpLoaderFactory(http: HttpClient){
     TokenComponent,
     ReportesComponent,
     NotifyComponent,
-    EncuestaComponent
+    EncuestaComponent,
+    AcercaDeComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +70,8 @@ export function HttpLoaderFactory(http: HttpClient){
     }),
     FormsModule,    
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
