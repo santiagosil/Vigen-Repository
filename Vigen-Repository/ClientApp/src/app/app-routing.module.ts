@@ -12,6 +12,7 @@ import { StatisticsDashboardComponent } from './statistics-dashboard/statistics-
 import { SingUpComponent } from './sign-up/sing-up.component';
 import { FAQComponent } from './faq/faq.component';
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
+import { PanelOrgComponent } from './panel-org/panel-org.component';
 
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path: 'statis',component: StatisticsDashboardComponent},
   {path: 'signUp',component: SingUpComponent},
   {path: 'faq',component:FAQComponent},
-  {path: 'aboutUs',component:AcercaDeComponent}
+  {path: 'aboutUs',component:AcercaDeComponent},
+  {path: 'pOrg', component:PanelOrgComponent}
 ];
 
 @NgModule({

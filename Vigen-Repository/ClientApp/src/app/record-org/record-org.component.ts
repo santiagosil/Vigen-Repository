@@ -12,6 +12,7 @@ import { HttpContext } from '@angular/common/http';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-record-org',
@@ -32,12 +33,34 @@ export class RecordOrgComponent implements OnInit {
   isCheck: any;
   /*constructor(private fb : FormBuilder) { }*/
 
+  showContra() {
+    Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: 'Las contraseñas no coinciden',
+      showConfirmButton: false,
+      timer: 2000
+    })
+  }
+  showModal() {
+    Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: 'Faltan algunos campos obligatorios por llenar',
+      showConfirmButton: false,
+      timer: 2000
+    })
+  }
+
   public organization: Organization = {
     name: "",
     nit: "",
     tel: "",
     password: "",
   };
+  contra={
+    pass : ""
+  }
 
   constructor(private api:OrganizationService) { }
 
@@ -57,13 +80,18 @@ export class RecordOrgComponent implements OnInit {
     if (this.organization.name === "" || this.organization.nit === ""
     || this.organization.tel === "") 
     {
-      console.log("Faltan algunos campos obligatorios por llenar");
-      return;
+      this.showModal();
     }else{
-    this.api.apiOrganizationPost$Json({body: this.organization})
-   .subscribe(res=>{
-      console.log(res);
+      if(this.organization.password==this.contra.pass){
+        this.api.apiOrganizationPost$Json({body: this.organization})
+        .subscribe(res=>{
+      //console.log(res);
      });
+      }
+      else{
+        this.showContra();
+      }
+    
     }
   }
 }

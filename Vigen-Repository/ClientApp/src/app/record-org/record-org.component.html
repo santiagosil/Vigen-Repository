@@ -8,10 +8,16 @@
             <div class="col-sm p-3  mb-5 rounded ">
                 <!--form [formGroup]="form" (submit) ="sendLogin()" class="form"-->
                 <form (ngSubmit)="send()">
-                    <h1 class="ms-4">{{"REC.REGISTRO" | translate}}</h1>
+                    <div class="ms-4 me-4">
+                        <h1>{{"REC.REGISTRO" | translate}}</h1>
+                        <label>Es rápido y fácil</label>
+                        <hr>
+                        <p class="mt-2" style="color:red;">{{"REC.CAMPOS" | translate}}</p>
+                    </div>
                     <div class="form-group row mt-3">
                         <div class="col-sm ms-4 me-4">
-                            <label>{{"REC.NOMBRE DE LA ORGANIZACIÓN" | translate}}</label>
+                            <label>{{"REC.NOMBRE DE LA ORGANIZACIÓN" | translate}}<label
+                                    style="color:red;">*</label></label>
                             <!--input formControlName="nomOrg" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control rounded" id="inlineFormInputGroup"
                                 [(ngModel)]="organization.name" [ngModelOptions]="{standalone: true}" placeholder="">
@@ -20,25 +26,25 @@
 
                     <div class="form-group row">
                         <div class="col-sm mt-3 ms-4 me-4">
-                            <label>NIT</label>
+                            <label>NIT<label style="color:red;">*</label></label>
                             <!--input formControlName="nitOrg" type="text" class="form-control" placeholder=""-->
                             <input type="text" class="form-control rounded" id="inlineFormInputGroup"
                                 [(ngModel)]="organization.nit" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <!--<div class="form-group row">
                         <div class="col-sm mt-3 ms-4 me-4">
                             <label>Correo</label>
-                            <!--input formControlName="nitOrg" type="text" class="form-control" placeholder=""-->
+                            input formControlName="nitOrg" type="text" class="form-control" placeholder=""
                             <input type="email" class="form-control rounded" id="inlineFormInputGroup"
                                 [(ngModel)]="organization.nit" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
-                    </div>
+                    </div>-->
 
                     <div class="form-group row">
 
                         <div class="col-sm mt-3 ms-4 me-4">
-                            <label>{{"REC.TEL" | translate}}</label>
+                            <label>{{"REC.TEL" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
                             <input type="text" class="form-control rounded" id="inlineFormInputGroup"
                                 [(ngModel)]="organization.tel" [ngModelOptions]="{standalone: true}" placeholder="">
@@ -58,8 +64,7 @@
                             <label>Confirmar Contraseña<label style="color:red;">*</label></label>
                             <!--input  formControlName="ecivlUser" type="text" class="form-control"  placeholder=""-->
                             <input type="password" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="organization.password" [ngModelOptions]="{standalone: true}"
-                                placeholder="">
+                                [(ngModel)]="contra.pass" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
 
