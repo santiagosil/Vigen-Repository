@@ -26,6 +26,7 @@ import { FAQComponent } from './faq/faq.component';
 import { TokenComponent } from './token/token.component';
 import { ReportesComponent } from './reportes/reportes.component';
 import { NotifyComponent } from './notify/notify.component';
+import { EncuestaComponent } from './encuesta/encuesta.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 
@@ -52,6 +53,7 @@ export function HttpLoaderFactory(http: HttpClient){
     TokenComponent,
     ReportesComponent,
     NotifyComponent,
+    EncuestaComponent,
     AcercaDeComponent
   ],
   imports: [
