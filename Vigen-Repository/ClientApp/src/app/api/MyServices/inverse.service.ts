@@ -22,6 +22,7 @@ export class InverseService {
     url="https://nominatim.openstreetmap.org/reverse?format=json&lat="+String(marker.lat)+"&lon="+String(marker.lng)+"&zoom=18&addressdetails=1";
     await this.http.get(url)
    .subscribe(data => {
+
       var direc = Object.values(data);
       marker.geoInv=direc[6];
     });
@@ -29,6 +30,7 @@ export class InverseService {
    public getListSites(){
     return this.listGpsSites;
    }
+
 
    public getSite(){
     return this.SiteUser;

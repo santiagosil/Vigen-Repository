@@ -13,3 +13,21 @@
     -webkit-background-size:cover;
     background-size: cover;
 }
+.buttonUp {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 3;
+    background-color: red;
+    border: 1px solid red;
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    border-radius: 50%;
+    }
+
