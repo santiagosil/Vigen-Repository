@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChange } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnChanges, OnInit, SimpleChange } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Data } from '@angular/router';
 import { UserService } from '../api/services';
@@ -12,10 +12,11 @@ import { HttpContext } from '@angular/common/http';
 import { InverseService } from '../api/MyServices/inverse.service';
 import Swal from 'sweetalert2';
 import { ReadVarExpr } from '@angular/compiler';
+import { timeout } from 'rxjs';
 
 
 @Component({
-  selector: 'app-record-user',
+  selector: 'app-record-user',  
   templateUrl: './record-user.component.html',
   styleUrls: ['./record-user.component.css']
 })
@@ -39,23 +40,14 @@ export class RecordUserComponent implements OnInit {
     occupation: "",
     postalCode: "",
     maritalStatus: "",
-    ubication: "",
+    ubication:""
   };
 
   constructor(private api: UserService, private rever : InverseService) {
-    
   }
    
   ngOnInit() {
-    setTimeout(() => {
-    //location.reload();
-      this.data(this.rever.dir.direct)
-    }, 1000);
-  }
-
-  data(ubicacion: string ){
-    this.usuario.ubication = ubicacion;
-    this.ngOnInit();
+      
   }
   
   showbien() {
@@ -77,6 +69,7 @@ export class RecordUserComponent implements OnInit {
     })
   }
   public send() {
+    this.usuario.ubication=this.rever.getSite().geoInv;
     if (this.usuario.email === "" || this.usuario.name === "" || this.usuario.identification === ""
       || this.usuario.birthdate === "" || this.usuario.phone === ""
       || this.usuario.occupation === "" || this.usuario.maritalStatus === "") {
@@ -90,5 +83,8 @@ export class RecordUserComponent implements OnInit {
           this.showbien();
         });
     }
+  }
+  update(){
+    this.usuario.ubication=this.rever.getSite().geoInv;
   }
 }

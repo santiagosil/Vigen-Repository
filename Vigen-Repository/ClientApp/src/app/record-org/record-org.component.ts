@@ -9,6 +9,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpContext } from '@angular/common/http';
+import { InverseService } from '../api/MyServices/inverse.service';
 
 @Component({
   selector: 'app-record-org',
@@ -31,15 +32,10 @@ export class RecordOrgComponent implements OnInit {
     password: "",
   };
 
-  constructor(private api:OrganizationService) { }
+  constructor(private api:OrganizationService,private reverse:InverseService) { }
 
   ngOnInit(): void {
-    /*this.form = this.fb.group({
-      nomOrg: ['', [Validators.required]],
-      nitOrg: ['', [Validators.required]],
-      ubiOrg: ['', [Validators.required]],
-      telOrg: ['', [Validators.required]],
-    })*/
+    
   }
   sendLogin():void{
     this.isCheck = { user:1 }
@@ -57,5 +53,9 @@ export class RecordOrgComponent implements OnInit {
       console.log(res);
      });
     }
+  }
+  update(){
+    var aux=this.reverse.getListSites();
+    console.log(aux);
   }
 }
