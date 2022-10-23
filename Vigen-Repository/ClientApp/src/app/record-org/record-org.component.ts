@@ -9,6 +9,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpContext } from '@angular/common/http';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-record-org',
@@ -16,6 +19,11 @@ import { HttpContext } from '@angular/common/http';
   styleUrls: ['./record-org.component.css']
 })
 export class RecordOrgComponent implements OnInit {
+
+  faLocationDot = faLocationDot;
+  faEnvelope = faEnvelope;
+  faPhone = faPhone;
+
   showEmoji: boolean = false;
   title = 'test 1';
   contentEmoji = '';

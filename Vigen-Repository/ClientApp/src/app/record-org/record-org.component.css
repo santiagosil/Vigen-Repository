@@ -11,3 +11,9 @@
     display:block;
     margin:auto;
 }
+.color{
+    background-color: #e0d5f1;
+}
+.form-control{
+    background-color: #f1eef5;
+}
