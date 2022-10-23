@@ -28,7 +28,7 @@ export class InverseService {
    .subscribe(data => {
     direc = Object.values(data);
     this.dir.direct = direc[6];
-    console.log(this.dir.direct);
+    //console.log(this.dir.direct);
     });
     return this.dir.direct;
    }
@@ -45,7 +45,7 @@ export class InverseService {
    .subscribe(data => {
     direc = Object.values(data);
     this.dir.direct = direc[6];
-    console.log(this.dir.direct);
+    //console.log(this.dir.direct);
     });
     return this.dir.direct;
    }

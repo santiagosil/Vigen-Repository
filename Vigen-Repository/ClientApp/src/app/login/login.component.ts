@@ -16,7 +16,8 @@ export class LoginComponent implements OnInit {
   public usuario = {
     identification: "",
     password: "",
-    type: "" //0=usuario, 0!=typoOrg
+    type: "", //0=usuario, 0!=typoOrg,
+    name:""
   };
   typeUser(lang: string) {
     this.usuario.type = lang;
@@ -43,8 +44,10 @@ export class LoginComponent implements OnInit {
         this.api.apiUserIdGet$Json({ id: this.usuario.identification + "" })
           .subscribe(res => {
             if (res.password == this.usuario.password) {
+              this.usuario.name = String(res.name);
               SingletonUser.getInstance().identification=this.usuario.identification;
               SingletonUser.getInstance().type=this.usuario.type;
+              SingletonUser.getInstance().type=this.usuario.name;
               this.router.navigate(['/pUser']);
             } else {
               this.showModal();
@@ -55,7 +58,7 @@ export class LoginComponent implements OnInit {
         this.orga.apiOrganizationIdGet$Json({ id: this.usuario.identification + "" })
           .subscribe(res => {
             if (res.password == this.usuario.password) {
-              this.usuario.type=String(res.organizationTypeId);
+              this.usuario.type=Object.values(res)[5];
               SingletonUser.getInstance().identification=this.usuario.identification;
               SingletonUser.getInstance().type=this.usuario.type;
               this.router.navigate(['/home']);

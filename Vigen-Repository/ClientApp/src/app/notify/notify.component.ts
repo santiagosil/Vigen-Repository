@@ -13,7 +13,8 @@ import Swal from 'sweetalert2';
   templateUrl: './notify.component.html',
   styleUrls: ['./notify.component.css']
 })
-export class NotifyComponent extends BaseService implements OnInit {
+export class NotifyComponent extends BaseService implements OnInit {  
+
 
   constructor(
     config: ApiConfiguration,
@@ -30,27 +31,42 @@ export class NotifyComponent extends BaseService implements OnInit {
     .build();
 
     connection.start().then(() => {
-      console.log("SignalR Connected!");
+      //console.log("SignalR Connected!");
     }).catch(err=>{
       console.error(err.toString());
     });
 
     connection.on("recibeNotify", notify=>{
       var not:String[]=Object.values(notify);
-      if(SingletonUser.getInstance().type==String(not[5])){
+      //console.log(not);
+      if(SingletonUser.getInstance().type != "0"){
         this.showAlert(not);
       }
-      console.log(SingletonUser.getInstance().type+" "+String(not[5]));
+      //console.log(SingletonUser.getInstance().type+" "+String(not[5]));
     });
   }
+
   showAlert(notify:String[]) {
     Swal.fire({
       position: 'top-end',
-      icon: 'error',
       title: notify[2],
-      showConfirmButton: false,
-      timer: 1500
+      html: "Identificaction: "+notify[1]+
+      '<br>Direccion: ',
+      icon: 'warning',
+      showCancelButton: false,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Close',
+      timer: 15000,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Clear',
+          'You are close the notification',
+          'success'
+        )
+        IdleDeadline;
+      }
     })
-  }
-
+}
 }
