@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { Organization, User } from '../api/models';
-import { SingletonUser } from '../api/MyServices/singletonUser';
 import { OrganizationService, UserService } from '../api/services';
 
 @Component({
@@ -45,9 +44,9 @@ export class LoginComponent implements OnInit {
           .subscribe(res => {
             if (res.password == this.usuario.password) {
               this.usuario.name = String(res.name);
-              SingletonUser.getInstance().identification=this.usuario.identification;
-              SingletonUser.getInstance().type=this.usuario.type;
-              SingletonUser.getInstance().type=this.usuario.name;
+              localStorage.setItem("UserId",this.usuario.identification);
+              localStorage.setItem("TypeUser", this.usuario.type);
+              localStorage.setItem("UserName",this.usuario.name);
               this.router.navigate(['/pUser']);
             } else {
               this.showModal();
@@ -59,8 +58,9 @@ export class LoginComponent implements OnInit {
           .subscribe(res => {
             if (res.password == this.usuario.password) {
               this.usuario.type=Object.values(res)[5];
-              SingletonUser.getInstance().identification=this.usuario.identification;
-              SingletonUser.getInstance().type=this.usuario.type;
+              localStorage.setItem("UserId",this.usuario.identification);
+              localStorage.setItem("TypeUser", this.usuario.type);
+              localStorage.setItem("UserName",this.usuario.name);
               this.router.navigate(['/home']);
             } else {
               this.showModal();

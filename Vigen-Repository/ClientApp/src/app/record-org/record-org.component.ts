@@ -90,8 +90,7 @@ export class RecordOrgComponent implements OnInit {
     
     }
   }
-  update(){
-    var aux=this.reverse.getListSites();
-    console.log(aux);
+  get listSites(){
+    return this.reverse.getListSites;
   }
 }

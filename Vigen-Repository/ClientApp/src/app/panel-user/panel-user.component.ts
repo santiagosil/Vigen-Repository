@@ -4,8 +4,6 @@ import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';
 import {NotifyService, UserService } from '../api/services';
 import { NotifyComponent } from '../notify/notify.component';
-import { timeout, timer } from 'rxjs';
-import { SingletonUser } from '../api/MyServices/singletonUser';
 import { Notify } from '../api/models';
 
 
@@ -41,10 +39,10 @@ export class PanelUserComponent implements OnInit {
       timer:10000,
     }).then((result) => {
       if (result.isConfirmed) {
-        var identi = String(SingletonUser.getInstance().identification);
+        var identi = String(localStorage.getItem("UserId"));
         
-          this.notif.description = String(SingletonUser.getInstance().name);
-          this.notif.userId = String(SingletonUser.getInstance().identification);
+          this.notif.description = String(localStorage.getItem("UserName"));
+          this.notif.userId = String(localStorage.getItem("UserId"));
           this.notif.title = "Help Me";
           this.notif.stateId = 1;
           this.notif.organizationTypeId=1;

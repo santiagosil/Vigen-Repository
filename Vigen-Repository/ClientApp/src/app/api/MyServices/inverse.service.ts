@@ -27,12 +27,12 @@ export class InverseService {
       marker.geoInv=direc[6];
     });
    }
-   public getListSites(){
+   get getListSites(){
     return this.listGpsSites;
    }
 
 
-   public getSite(){
+   get getSite(){
     return this.SiteUser;
    }
 

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Poll } from '../api/models/poll';
 import { IaService } from '../api/MyServices/ia.service';
-import { SingletonUser } from '../api/MyServices/singletonUser';
 import { PollService } from '../api/services/poll.service';
 
 @Component({

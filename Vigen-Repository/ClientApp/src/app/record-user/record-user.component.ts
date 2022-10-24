@@ -56,6 +56,12 @@ export class RecordUserComponent implements OnInit {
   constructor(private api: UserService, private rever : InverseService) {
   }
    
+  get ubication(){
+    this.usuario.ubication=this.rever.getSite.geoInv
+    return this.rever.getSite
+  }
+
+
   ngOnInit() {
       
   }
@@ -88,7 +94,6 @@ export class RecordUserComponent implements OnInit {
     })
   }
   public send() {
-    this.usuario.ubication=this.rever.getSite().geoInv;
     if (this.usuario.email === "" || this.usuario.name === "" || this.usuario.identification === ""
       || this.usuario.birthdate === "" || this.usuario.phone === ""
       || this.usuario.occupation === "" || this.usuario.maritalStatus === "") {
@@ -107,8 +112,5 @@ export class RecordUserComponent implements OnInit {
         this.showContra();
       } 
     }
-  }
-  update(){
-    this.usuario.ubication=this.rever.getSite().geoInv;
   }
 }
