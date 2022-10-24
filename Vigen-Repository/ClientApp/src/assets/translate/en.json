@@ -54,8 +54,15 @@
         "SIGUIENTE":"Next",
         "PAIS":"Country",
         "FECHA":"Date",
-        "EDITAR":"Edit"
-
+        "EDITAR":"Edit",
+        "SECCIONINF":"INFORMATION SECTION",
+        "DENUNCIAINF":"Sexual harassment complaint",
+        "CONTEDENUNCIA":"Woman who reported sexual harassment in a bathroom in Monteria took the case to the Prosecutor's Office.",
+        "SABERMAS":"Learn more",
+        "POLINF":"Polemic for physical aggression",
+        "POLCONTEN":"Controversy over Didi driver who allegedly physically assaulted a female user",
+        "NUEINF":"New case of femicide",
+        "NUECONTEN":"Debanhi Escobar: What is the status of her femicide case after six months?"
     },
     "EDIT-USER":{
         "INFORMACIONPERFIL":"Profile information",

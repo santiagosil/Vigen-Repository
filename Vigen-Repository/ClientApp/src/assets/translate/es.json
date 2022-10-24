@@ -45,8 +45,15 @@
         "SIGUIENTE":"Siguiente",
         "PAIS":"Païs",
         "FECHA":"Fecha",
-        "EDITAR":"Editar"
-
+        "EDITAR":"Editar",
+        "SECCIONINF":"SECCIÓN INFORMATIVA",
+        "DENUNCIAINF":"Denuncia por acoso sexual",
+        "CONTEDENUNCIA":"Mujer que denunció acoso sexual en baño de Montería llevó el caso a la Fiscalía",
+        "SABERMAS":"Saber más",
+        "POLINF":"Polemica por agresión física",
+        "POLCONTEN":"Polémica por conductor de Didi que habría agredido físicamente a una usuaria",
+        "NUEINF":"Nuevo caso de feminicidio",
+        "NUECONTEN":"Debanhi Escobar: ¿En qué va el caso de su feminicidio luego de seis meses?"
     },
     "EDIT-USER":{
         "INFORMACIONPERFIL":"Informacion de perfil",
