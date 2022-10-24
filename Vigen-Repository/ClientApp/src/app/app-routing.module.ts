@@ -14,6 +14,7 @@ import { FAQComponent } from './faq/faq.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 import { PanelOrgComponent } from './panel-org/panel-org.component';
+import { EditOrgComponent } from './edit-org/edit-org.component';
 
 
 const routes: Routes = [
@@ -30,7 +31,8 @@ const routes: Routes = [
   {path: 'faq',component:FAQComponent},
   {path: 'aboutUs',component:AcercaDeComponent},
   {path: 'pOrg', component:PanelOrgComponent},
-  {path: 'encuesta',component:EncuestaComponent}
+  {path: 'encuesta',component:EncuestaComponent},
+  {path: 'edOrg',component:EditOrgComponent}
 ];
 
 @NgModule({

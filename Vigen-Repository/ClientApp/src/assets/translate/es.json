@@ -45,15 +45,57 @@
         "SIGUIENTE":"Siguiente",
         "PAIS":"Païs",
         "FECHA":"Fecha",
-        "EDITAR":"Editar"
+        "EDITAR":"Editar",
+        "MENU2":"Menú",
+        "HOME":"Inicio",
+        "PERFIL":"Perfil",
+        "ENCUESTA":"Encuesta"
 
+
+    },
+    "PANEL-ORG":{
+        "MENU2":"Menú",
+        "HOME":"Inicio",
+        "PERFIL":"Perfil",
+        "ESTADISTICAS":"Estadisticas"
+    },
+    "EDIT-ORG":{
+        "MENU2":"Menú",
+        "HOME":"Inicio",
+        "PERFIL":"Perfil",
+        "ESTADISTICAS":"Estadisticas", 
+        "BIENVENIDO":"Bienvenido",
+        "INFOORG":"Información de la Organización",
+        "NOMBRE":"Nombre",
+        "TELÉFONO":"Teléfono",
+        "CONTRA":"Contraseña",
+        "NEWCONTRA":"Nueva Contraseña",
+        "CONFCONTRA":"Confirmar Contraseña",
+        "GUARDAR":"Guardar"
     },
     "EDIT-USER":{
         "USERNAME":"Usuario",
         "EMAIL":"Correo",
         "PASSWORD":"Contraseña",
         "BUTTON1": "SI",
-        "BUTTON2":"NO"
+        "BUTTON2":"NO",
+        "MENU2":"Menú",
+        "HOME":"Inicio",
+        "PERFIL":"Perfil",
+        "ENCUESTA":"Encuesta",
+        "INFBAS":"Información Básica",
+        "NOMBRE":"Nombre",
+        "GÉNERO":"Género",
+        "FECHANA":"Fecha de Nacimiento",
+        "ESTADOCI":"Estado Civil",
+        "INFOCON":"información de Contacto",
+        "CORREO":"Correo",
+        "OCUPACIÓN":"Ocupación",
+        "TELÉFONO":"Teléfono",
+        "CONTRA":"Contraseña",
+        "NEWCONTRA":"Nueva Contraseña",
+        "CONFCONTRA":"Confirmar Contraseña",
+        "GUARDAR":"Guardar"
     },
     "LOGIN":{
         "TITULO":"Iniciar Sesión",
@@ -66,6 +108,12 @@
         "IDENTIFICACION": "Identificación",
         "SELECCIONE": "Seleccione",
         "AUNNOTIENES":"¿Aun no tienes una cuenta?"
+    },
+    "REPORTES":{
+        "REPORTES":"Reportes",
+        "REPORTEPRUEBA":"Reporte Prueba",
+        "REPORTEUSUARIO":"Reporte Usuario",
+        "REPORTEORG":"Reporte Organización" 
     },
     "REC":{
         "REGISTRO":"Registrarte",
