@@ -32,6 +32,8 @@
         "PEDIDOS":"Pedidos",
         "CONTACTO":"Contacto"
     },
+
+    
     
     "PANEL-USER":{
         "MENU": ",Menú",
@@ -48,6 +50,20 @@
         "EDITAR":"Editar"
 
     },
+
+    "ORG":{
+        "P1":"Organizaciones Locales",
+        "P2":"Sistema Local de Salud (SILOS):",
+        "P3":"En el caso específico de Colombia el sistema local de salud esta dividido en el régimen Contributivo (Privado) y el régimen Subsidiado (gratuit) por medio de Sisbén que tienen la finalidad de a los colombianos acceso a medicamentos, procedimientos quirúrgicos, servicios odontológicos y en general servicios médicos.",
+        "P4":"Centros de Atención Médica Inmediata (CAMI):",
+        "P5":"Son aquellas instalaciones de salud que tienen como objetivo prestar atención las 24 horas del día para atender partos de bajo riesgo, consulta externa médica, odontológica y atención de urgencias.",
+        "P6":"Entidades publicas",
+        "P7":"Una entidad pública son todas aquellas entidades del estado que prestan un servicio al pueblo Colombiano, las cuales están divididas en orden nacional y las de orden territorial, lo que diferencia a estas últimas, es el campo de acción el cual corresponde al municipio, distrito o departamento al cual pertenezcan.",
+        "P8":"Dentro de estas entidades que prestan servicio a la ciudadanía colombiana se pueden encontrar al Instituto Colombiano de Bienestar Familiar (ICBF), La Fiscalía, entre otras.",
+        "P9":"Fuerza Publica",
+        "P10":"En el caso de Colombia la fuerza pública comprende las fuerzas armadas y policía nacional que pretenden ejecutar las políticas y acciones de seguridad ciudadana y nacional para el ejercicio y respeto a la Constitución Política y de forma global mantener el orden público."
+        },
+
     "EDIT-USER":{
         "USERNAME":"Usuario",
         "EMAIL":"Correo",
