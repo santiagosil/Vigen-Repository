@@ -12,9 +12,7 @@ import { HttpContext } from '@angular/common/http';
 import { InverseService } from '../api/MyServices/inverse.service';
 import Swal from 'sweetalert2';
 import { ReadVarExpr } from '@angular/compiler';
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+
 
 
 @Component({
@@ -24,9 +22,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 })
 export class RecordUserComponent implements OnInit {
   
-  faLocationDot = faLocationDot;
-  faEnvelope = faEnvelope;
-  faPhone = faPhone;
+
   
   showEmoji: boolean = false;
   title = 'test 1';

@@ -3,10 +3,6 @@ import { UserService } from '../api/services';
 import { User } from '../api/models';
 import { HomeComponent } from '../home/home.component';
 import {InverseService} from '../api/MyServices/inverse.service'
-import { faYoutube } from '@fortawesome/free-brands-svg-icons';
-import {faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
-import {faFlagUsa} from '@fortawesome/free-solid-svg-icons';
-import {faFlag} from '@fortawesome/free-solid-svg-icons';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -15,10 +11,6 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
-  faGlobeAmericas = faGlobeAmericas;
-  faFlagUsa = faFlagUsa;
-  faFlag = faFlag;
 
   public user: User;
 //eliminar este llamado de no ser necesario
