@@ -15,9 +15,9 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = [""],
+    allow_origins = ["*"],
     allow_credentials=True,
-    allow_methods=[""],
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
@@ -54,7 +54,3 @@ def Prediccion(resp:Item):
     predict=np.argmax(prediccion) 
     resp.p7=int(predict)
     return {'Label':label[predict], 'Responce':resp}
-
-@app.get("/pru")
-def prueba():
-    return "Hola"

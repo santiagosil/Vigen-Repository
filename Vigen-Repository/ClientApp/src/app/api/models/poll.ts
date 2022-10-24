@@ -1,5 +1,6 @@
 export interface Poll{
     id?:null|number;
+    userId?:null|string;
     date?:null|Date;
     genero?:null|number;
     orientacionSexual?:null|number;

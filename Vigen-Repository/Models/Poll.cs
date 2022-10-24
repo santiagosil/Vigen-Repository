@@ -11,6 +11,9 @@ namespace Vigen_Repository.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        [Column("user_id")]
+        public string UserId { get; set; }
+
         [Column("date")]
         public DateTime Date { get; set; }
 
