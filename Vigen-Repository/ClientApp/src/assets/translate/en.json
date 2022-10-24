@@ -64,6 +64,20 @@
         "NUEINF":"New case of femicide",
         "NUECONTEN":"Debanhi Escobar: What is the status of her femicide case after six months?"
     },
+
+    "ORG":{
+        "P1": "Local Organizations",
+        "P2": "Local Health System (LHS):",
+        "P3": "In the specific case of Colombia, the local health system is divided into the Contributive (Private) and Subsidized (free) regimes through Sisbén, which have the purpose of providing Colombians with access to medicines, surgical procedures, dental services and medical services in general",
+        "P4": "Centers for Immediate Medical Attention (CAMI):",
+        "P5": "These are those health facilities that aim to provide 24-hour care for low-risk deliveries, outpatient medical, dental and emergency care.",
+        "P6": "Public entities.",
+        "P7": "A public entity is all those state entities that provide a service to the Colombian people, which are divided into national order and territorial order, what differentiates the latter is the field of action which corresponds to the municipality, district or department to which they belong",
+        "P8": "Among these entities that provide services to Colombian citizens are the Colombian Institute of Family Welfare (ICBF), the Prosecutor's Office, among others.",
+        "P9": "Public Forces",
+        "P10": "In the case of Colombia, the public force comprises the armed forces and national police that intend to execute the policies and actions of citizen and national security for the exercise and respect to the Political Constitution and in a global way to maintain the public order."
+        },
+
     "EDIT-USER":{
         "INFORMACIONPERFIL":"Profile information",
         "INFROMACIONBASICA":"Basic information",
