@@ -47,8 +47,15 @@
         "SIGUIENTE":"Siguiente",
         "PAIS":"Païs",
         "FECHA":"Fecha",
-        "EDITAR":"Editar"
-
+        "EDITAR":"Editar",
+        "SECCIONINF":"SECCIÓN INFORMATIVA",
+        "DENUNCIAINF":"Denuncia por acoso sexual",
+        "CONTEDENUNCIA":"Mujer que denunció acoso sexual en baño de Montería llevó el caso a la Fiscalía",
+        "SABERMAS":"Saber más",
+        "POLINF":"Polemica por agresión física",
+        "POLCONTEN":"Polémica por conductor de Didi que habría agredido físicamente a una usuaria",
+        "NUEINF":"Nuevo caso de feminicidio",
+        "NUECONTEN":"Debanhi Escobar: ¿En qué va el caso de su feminicidio luego de seis meses?"
     },
 
     "ORG":{
@@ -65,11 +72,20 @@
         },
 
     "EDIT-USER":{
-        "USERNAME":"Usuario",
-        "EMAIL":"Correo",
-        "PASSWORD":"Contraseña",
-        "BUTTON1": "SI",
-        "BUTTON2":"NO"
+        "INFORMACIONPERFIL":"Informacion de perfil",
+        "INFROMACIONBASICA":"Informacion básica",
+        "NOMBRE":"Nombre",
+        "GENERO":"Género",
+        "FECHA":"Fecha de Nacimiento",
+        "ESTADO":"Estado civil",
+        "INFORMACIONCONTACTOS":"Información de contactos",
+        "CORREO":"Correo",
+        "OCCUPATION":"Ocupación",
+        "TEL":"Teléfono",
+        "CONTRASEÑA":"Contraseña",
+        "NUEVACONTRASEÑA":"Nueva contraseña",
+        "CONFIRMARCONTRASEÑA":"Confirmar contraseña"
+
     },
     "LOGIN":{
         "TITULO":"Iniciar Sesión",
@@ -128,6 +144,78 @@
         "OPCIONES":"Opciones",
         "PEDIDOS":"Pedidos",
         "CONTACTO":"Contacto"
+    },
+    "ACERCA":{
+        "CONOCEMAS":"Conoce más sobre nosotros",
+        "NUESTRAMISION":"Nuestra misión",
+        "NUESTRAVISION":"Nuestra vision",
+        "OBJETIVOGENERALES":"Objetivos generales",
+        "OBJETIVOSESPECIFICOS":"Objetivos especificos"
+    },
+    "ENCUESTA":{
+        "VIOLENCIAGENERO":"Violencia de género",
+        "INVITAMOSRESPONDER": "Le invitamos a responder las siguientes preguntas relacionadas al eje de Violencia de género. La información recopilada mediante este instrumento es de carácter confidencial y tiene fines netamente académicos.",
+        "DATOSPERSONALES":"Datos personales",
+        "GENERO":"Género",
+        "HOMBRE":"Hombre",
+        "MUJER":"Mujer",
+        "NOBINARIO":"No binario",
+        "ORIENTACIONSEXUAL":"Orientación sexual",
+        "HETEROSEXUAL":"Heterosexual",
+        "HOMOSEXUAL":"Homosexual",
+        "BISEXUAL":"Bisexual",
+        "ASEXUAL":"Asexual",
+        "PANSEXUAL":"Pan sexual",
+        "EDAD":"Edad",
+        "CIUDAD":"Ciudad/Municipio de residencia",
+        "SECTOR":"Sector donde vive",
+        "RURAL":"Rural",
+        "URBANO":"Urbano",
+        "NIVEL":"Nivel educativo",
+        "BASICAPRIMARIA":"Básica primaria",
+        "BASICASECUNDARIA":"Básica secundaria",
+        "MEDIA": "Media",
+        "TECNICO":"Técnica y/o tecnológica ",
+        "PREGRADO":"Pregrado (Universidad)",
+        "POSTGRADOS":"Postgrado u otros",
+        "ESTADOCIVIL":"Estado civil",
+        "SOLTERO": "Soltero/a",
+        "CASADO":"Casado/a",
+        "VIUDO":"Viudo/a",
+        "UNIONLIBRE":"Unión libre",
+        "ETNICO":"Autorreconocimiento étnico",
+        "COMUNIDADES":"Comunidades Negras-Afrocolombianas",
+        "PUEBLOS":"Pueblos Indígenas",
+        "GITANO":"Pueblo Rom o Gitano",
+        "RAIZALES":"Raizales y Palenqueras- NARP",
+        "NINGUNO":"Ninguno",
+        "CUENTAINGRESOS":"¿Cuenta con ingresos propios?",
+        "SI":"Sí",
+        "OCUPACIONAL":"Actualmente ¿En qué categoría de posición ocupacional se encuentra?",
+        "EMPLEADO":"Empleado/a particular (Sector privado)",
+        "GOBIERNO":"Empleado/a del gobierno (Sector público)",
+        "DOMESTICADO":"Empleado/a doméstico",
+        "CUENTA":"Trabajador/a por cuenta propia (Independiente)",
+        "EMPLEADOR": "Empleador/a",
+        "FAMILIAR":"Trabajador/a familiar sin remuneración",
+        "ESTUDIANTES":"Estudiante",
+        "DESEMPLEADO": "Desempleado",
+        "SECCIONPREGUNTAS":"Sección de preguntas",
+        "SUPAREJA":"¿Su pareja, familiar u otra persona cercana a usted ha realizado alguna de las siguientes acciones?",
+        "HAOBSERVADO":"¿Ha observado a esa persona golpear o patear la pared o algún otro mueble?",
+        "AMENAZADO":"¿Le han amenazado con golpearle?",
+        "PRESIONADO":"¿Se ha sentido presionado a tener relaciones sexuales?",
+        "DESTRUIDO":"¿Le han destruido algunas de sus pertenencias?",
+        "SACUDIDO":"¿Le han sacudido, zarandeado, jaloneado o empujado?",
+        "AGREDIDO":"¿Se ha sentido agredido física o psicológicamente?",
+        "SUFRIDO":"¿Ha sufrido o sido testigo de algún tipo de violencia? ¿Cuál? ",
+        "VIOLENCIAINTRAFAMILIAR":"Violencia intrafamiliar",
+        "ADULTOMAYOR":"Violencia Adulto Mayor",
+        "INFANTIL":"Violencia infantil",
+        "NOHESUFRIDO":"No he sufrido ni visto ninguna de las anteriores",
+
+    },
+    "FAQ":{
+        
     }
-    
 }
