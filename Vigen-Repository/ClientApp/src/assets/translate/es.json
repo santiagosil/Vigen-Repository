@@ -105,7 +105,18 @@
         "POLINF":"Polemica por agresión física",
         "POLCONTEN":"Polémica por conductor de Didi que habría agredido físicamente a una usuaria",
         "NUEINF":"Nuevo caso de feminicidio",
-        "NUECONTEN":"Debanhi Escobar: ¿En qué va el caso de su feminicidio luego de seis meses?"
+        "NUECONTEN":"Debanhi Escobar: ¿En qué va el caso de su feminicidio luego de seis meses?",
+        "INFORMACIONPERFIL":"Informacion de perfil",
+        "INFROMACIONBASICA":"Informacion básica",
+        "GENERO":"Género",
+        "FECHA":"Fecha de Nacimiento",
+        "ESTADO":"Estado civil",
+        "INFORMACIONCONTACTOS":"Información de contactos",
+        "OCCUPATION":"Ocupación",
+        "TEL":"Teléfono",
+        "CONTRASEÑA":"Contraseña",
+        "NUEVACONTRASEÑA":"Nueva contraseña",
+        "CONFIRMARCONTRASEÑA":"Confirmar contraseña"
     },
 
     "ORG":{
@@ -120,23 +131,6 @@
         "P9":"Fuerza Publica",
         "P10":"En el caso de Colombia la fuerza pública comprende las fuerzas armadas y policía nacional que pretenden ejecutar las políticas y acciones de seguridad ciudadana y nacional para el ejercicio y respeto a la Constitución Política y de forma global mantener el orden público."
         },
-
-    "EDIT-USER":{
-        "INFORMACIONPERFIL":"Informacion de perfil",
-        "INFROMACIONBASICA":"Informacion básica",
-        "NOMBRE":"Nombre",
-        "GENERO":"Género",
-        "FECHA":"Fecha de Nacimiento",
-        "ESTADO":"Estado civil",
-        "INFORMACIONCONTACTOS":"Información de contactos",
-        "CORREO":"Correo",
-        "OCCUPATION":"Ocupación",
-        "TEL":"Teléfono",
-        "CONTRASEÑA":"Contraseña",
-        "NUEVACONTRASEÑA":"Nueva contraseña",
-        "CONFIRMARCONTRASEÑA":"Confirmar contraseña"
-
-    },
     "LOGIN":{
         "TITULO":"Iniciar Sesión",
         "CORREO":"Correo",
@@ -268,7 +262,7 @@
         "VIOLENCIAINTRAFAMILIAR":"Violencia intrafamiliar",
         "ADULTOMAYOR":"Violencia Adulto Mayor",
         "INFANTIL":"Violencia infantil",
-        "NOHESUFRIDO":"No he sufrido ni visto ninguna de las anteriores",
+        "NOHESUFRIDO":"No he sufrido ni visto ninguna de las anteriores"
 
     },
     "FAQ":{
