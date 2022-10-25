@@ -39,7 +39,7 @@ export class EncuestaComponent implements OnInit {
     await this.iaService.getPredict(this.poll).subscribe(res=>{
       this.poll=Object.values(res)[1];
       this.poll.date=new Date();
-      this.poll.userId="123456789";
+      this.poll.userId=localStorage.getItem("UserId");
       
       this.pollService.postPoll(this.poll).subscribe(res=>{
         console.log(res);
