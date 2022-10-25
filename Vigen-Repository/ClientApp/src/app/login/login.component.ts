@@ -61,7 +61,7 @@ export class LoginComponent implements OnInit {
               this.usuario.type=Object.values(res)[5];
               SingletonUser.getInstance().identification=this.usuario.identification;
               SingletonUser.getInstance().type=this.usuario.type;
-              this.router.navigate(['/home']);
+              this.router.navigate(['/pOrg']);
             } else {
               this.showModal();
             }
