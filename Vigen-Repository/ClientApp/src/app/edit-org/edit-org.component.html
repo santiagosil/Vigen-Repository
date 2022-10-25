@@ -1,0 +1,91 @@
+<div style="margin-top: 5rem;">
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark text-white ">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline mt-3">{{"EDIT-ORG.MENU2" | translate}}</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-white"
+                        id="menu">
+                        <li class="nav-item ms-3">
+                            <a routerLink="/pOrg" class="nav-link align-middle px-0">
+                                <fa-icon style="color: white" [icon]="['fas', 'house']"></fa-icon><span
+                                    class="ms-1 d-none d-sm-inline text-white">{{"EDIT-ORG.HOME" | translate}}</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a routerLink="/edOrg" class="nav-link px-0 align-middle">
+                                <fa-icon style="color: white" [icon]="['fas', 'briefcase']"></fa-icon> <span
+                                    class="ms-1 d-none d-sm-inline text-white">{{"EDIT-ORG.PERFIL" | translate}}</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a routerLink="/statis" class="nav-link px-0 align-middle">
+                                <fa-icon style="color: white" [icon]="['fas', 'chart-line']"></fa-icon> <span
+                                    class="ms-1 d-none d-sm-inline text-white">{{"EDIT-ORG.ESTADISTICAS" | translate}}</span>
+                            </a>
+                        </li>
+                        <app-reportes></app-reportes>
+                    </ul>
+                </div>
+            </div>
+            <div class="col p-4">
+                <h1><b>{{"EDIT-ORG.BIENVENIDO" | translate}}</b></h1>
+                <hr>
+                <div class="container shadow p-3 bg-white mb-2">
+                    <h4><b>{{"EDIT-ORG.INFOORG" | translate}}</b></h4>
+                    <hr>
+                    <div class="form">
+                        <div class="form-group row">
+                            <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.NOMBRE" | translate}}</label>
+                            <div class="col-sm-9 ms-3">
+                                <input type="text" class="form-control rounded">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-2 col-form-label">NIT</label>
+                            <div class="col-sm-9 ms-3">
+                                <input type="text" class="form-control rounded" name="" id="">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.TELÉFONO" | translate}}</label>
+                            <div class="col-sm-9 ms-3">
+                                <input type="text" class="form-control rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="mt-5"><b>{{"EDIT-ORG.CONTRA" | translate}}</b></h4>
+                    <hr>
+                    <div class="form">
+                        <div class="form-group row">
+                            <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.CONTRA" | translate}}</label>
+                             <div class="col-sm-9 ms-3">
+                                <input type="password"class="form-control rounded"  aria-label="Disabled input example" disabled >
+                             </div>   
+                        </div><hr>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.NEWCONTRA" | translate}}</label>
+                             <div class="col-sm-9 ms-3">
+                                <input type="password"class="form-control rounded" name="" id="">
+                             </div>   
+                        </div><hr>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.CONFCONTRA" | translate}}</label>
+                             <div class="col-sm-9 ms-3">
+                                <input type="password"class="form-control rounded">
+                             </div>   
+                        </div>
+                    </div>
+                    <div class="conatiner text-center mt-4">
+                        <button class="btn btn-dark">{{"EDIT-ORG.GUARDAR" | translate}}</button>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

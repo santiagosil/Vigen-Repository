@@ -80,30 +80,33 @@
             <div class="col-sm mt-3">
                 <div class="container p-4">
                     <app-map-organizacion></app-map-organizacion>
+                    <!--button class="btn btn-primary mt-3" (click)="update()">Actualizar Ubicaciones</button-->
                     <!--<div class="imagenMpa">
                             <img src="../../assets/images/maps.jpg" class="figure-img img-fluid rounded " alt="...">
                         </div>-->
                     <div class="row mt-3">
                         <h5>Información Organización</h5>
                         <p style="font-size: 90%">{{organization.name}}</p>
-                        <div class="col-12">
-                        <!--button class="btn btn-primary" (click)="update()">Actualizar Ubicaciones</button-->
-                    </div>
+                        <!--div class="col-12">
+                        <button class="btn btn-primary" (click)="update()">Actualizar Ubicaciones</button>
+                    </div-->
+
+
                         <div class="col-1 text-center mt-2">
-                            <fa-icon [icon]="faLocationDot"></fa-icon>
+                            <fa-icon [icon]="['fas', 'location-dot']"></fa-icon>
 
                         </div>
                         <div class="col-11 mt-2">
                             <label style="font-size: 80%"></label>
                         </div>
                         <div class="col-1 text-center mt-4">
-                            <fa-icon [icon]="faEnvelope"></fa-icon>
+                            <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
                         </div>
                         <div class="col-11 mt-4">
                             <label style="font-size: 80%"></label>
                         </div>
                         <div class="col-1 text-center mt-4">
-                            <fa-icon [icon]="faPhone"></fa-icon>
+                            <fa-icon [icon]="['fas', 'phone']"></fa-icon>
                         </div>
                         <div class="col-11 mt-4">
                             <label style="font-size: 80%">{{organization.tel}}</label>
@@ -114,3 +117,4 @@
         </div>
     </div>
 </div>
+<app-footer></app-footer>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { circle } from 'leaflet';
-import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+
 import Swal from 'sweetalert2';
 import {NotifyService, UserService } from '../api/services';
 import { NotifyComponent } from '../notify/notify.component';
@@ -14,7 +14,7 @@ import { Notify } from '../api/models';
 })
 export class PanelUserComponent implements OnInit {
 
-  faCircleExclamation = faCircleExclamation;
+  
 
   public notif: Notify = {
     description: "",
