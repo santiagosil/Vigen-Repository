@@ -14,6 +14,6 @@ export class IaService{
         return this.http.post(environment.urlIa,poll);
     }
     public getPrueba(){
-        return this.http.get(environment.urlIa+"pru");
+        return this.http.get(environment.urlIa+"/pru");
     }
 }
