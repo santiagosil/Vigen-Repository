@@ -9,12 +9,13 @@
     </ul>
   </div>-->
   <li class="nav-item dropdown text-white">
-    <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Reportes
+    
+    <a class="nav-link text-white ms-1" role="button" data-bs-toggle="dropdown" aria-expanded="false"><fa-icon style="color: white"  [icon]="['far', 'file-lines']"></fa-icon>
+      <span class="ms-2 d-none d-sm-inline">{{"REPORTES.REPORTES" | translate}}</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-dark">
-      <li><a class="dropdown-item" (click)="ejecutar()">Reporte Prueba</a></li>
-      <li><a class="dropdown-item" (click)="ejecutarU()">Reporte Usuario</a></li>
-      <li><a class="dropdown-item" (click)="ejecutarO()">Reporte Organización</a></li>
+      <li><a class="dropdown-item" (click)="ejecutar()">{{"REPORTES.REPORTEPRUEBA" | translate}}</a></li>
+      <li><a class="dropdown-item" (click)="ejecutarU()">{{"REPORTES.REPORTEUSUARIO" | translate}}</a></li>
+      <li><a class="dropdown-item" (click)="ejecutarO()">{{"REPORTES.REPORTEORG" | translate}}</a></li>
     </ul>
   </li>

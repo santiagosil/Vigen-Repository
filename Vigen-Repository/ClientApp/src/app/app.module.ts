@@ -27,10 +27,13 @@ import { TokenComponent } from './token/token.component';
 import { ReportesComponent } from './reportes/reportes.component';
 import { NotifyComponent } from './notify/notify.component';
 import { EncuestaComponent } from './encuesta/encuesta.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 import { PanelOrgComponent } from './panel-org/panel-org.component';
 import { FooterComponent } from './footer/footer.component';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { EditOrgComponent } from './edit-org/edit-org.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/translate/','.json')
@@ -58,7 +61,8 @@ export function HttpLoaderFactory(http: HttpClient){
     PanelOrgComponent,
     FooterComponent,
     EncuestaComponent,
-    AcercaDeComponent
+    AcercaDeComponent,
+    EditOrgComponent
   ],
   imports: [
     BrowserModule,
@@ -80,4 +84,8 @@ export function HttpLoaderFactory(http: HttpClient){
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas, far);
+  }
+}
