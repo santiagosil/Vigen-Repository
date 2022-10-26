@@ -3,7 +3,7 @@
         "HOME":"Inicio",
         "ABOUT":"Acerca de",
         "HELP":"Ayuda",
-        "LOGIN":"Iniciar sesion",
+        "LOGIN":"Iniciar sesión",
         "SIGNUP":"Registrarse"
 
     },
@@ -51,7 +51,15 @@
         "MENU2":"Menú",
         "HOME":"Inicio",
         "PERFIL":"Perfil",
-        "ENCUESTA":"Encuesta"
+        "ENCUESTA":"Encuesta",
+        "SECCIONINF":"SECCIÓN INFORMATIVA",
+        "DENUNCIAINF":"Denuncia por acoso sexual",
+        "CONTEDENUNCIA":"Mujer que denunció acoso sexual en baño de Montería llevó el caso a la Fiscalía",
+        "SABERMAS":"Saber más",
+        "POLINF":"Polemica por agresión física",
+        "POLCONTEN":"Polémica por conductor de Didi que habría agredido físicamente a una usuaria",
+        "NUEINF":"Nuevo caso de feminicidio",
+        "NUECONTEN":"Debanhi Escobar: ¿En qué va el caso de su feminicidio luego de seis meses?"
 
 
     },
@@ -98,14 +106,6 @@
         "NEWCONTRA":"Nueva Contraseña",
         "CONFCONTRA":"Confirmar Contraseña",
         "GUARDAR":"Guardar",
-        "SECCIONINF":"SECCIÓN INFORMATIVA",
-        "DENUNCIAINF":"Denuncia por acoso sexual",
-        "CONTEDENUNCIA":"Mujer que denunció acoso sexual en baño de Montería llevó el caso a la Fiscalía",
-        "SABERMAS":"Saber más",
-        "POLINF":"Polemica por agresión física",
-        "POLCONTEN":"Polémica por conductor de Didi que habría agredido físicamente a una usuaria",
-        "NUEINF":"Nuevo caso de feminicidio",
-        "NUECONTEN":"Debanhi Escobar: ¿En qué va el caso de su feminicidio luego de seis meses?",
         "INFORMACIONPERFIL":"Informacion de perfil",
         "INFROMACIONBASICA":"Informacion básica",
         "GENERO":"Género",
@@ -136,12 +136,12 @@
         "CORREO":"Correo",
         "CONTRASEÑA":"Contraseña",
         "RECUERDAME":"Recordarme",
-        "ORGANIZACION":"Organizacion",
+        "ORGANIZACION":"Organización",
         "USUARIO":"Usuario",
-        "INICIARSESION":"Iniciar sesion",
+        "INICIARSESION":"Iniciar sesión",
         "IDENTIFICACION": "Identificación",
-        "SELECCIONE": "Seleccione",
-        "AUNNOTIENES":"¿Aun no tienes una cuenta?"
+        "SELECCIONE": "Tipo de Cuenta",
+        "AUNNOTIENES":"¿Aún no tienes una cuenta?"
     },
     "REPORTES":{
         "REPORTES":"Reportes",
@@ -182,7 +182,7 @@
         "PHONE":"Celular"
     },
     "SIGNUP":{
-        "ELIGETIPO":"Elige que tipo de cuenta que deseas ingresar",
+        "ELIGETIPO":"Elige que tipo de cuenta",
         "USUARIOCOMUN" : "Usuario Común",
         "ORGANIZACIONES" : "Organizaciones",
         "BOTONREGISTRAR": "Registrarse",
@@ -198,8 +198,8 @@
     "ACERCA":{
         "CONOCEMAS":"Conoce más sobre nosotros",
         "NUESTRAMISION":"Nuestra misión",
-        "NUESTRAVISION":"Nuestra vision",
-        "OBJETIVOGENERALES":"Objetivos generales",
+        "NUESTRAVISION":"Nuestra visión",
+        "OBJETIVOSGENERALES":"Objetivos generales",
         "OBJETIVOSESPECIFICOS":"Objetivos especificos"
     },
     "ENCUESTA":{
@@ -244,7 +244,7 @@
         "OCUPACIONAL":"Actualmente ¿En qué categoría de posición ocupacional se encuentra?",
         "EMPLEADO":"Empleado/a particular (Sector privado)",
         "GOBIERNO":"Empleado/a del gobierno (Sector público)",
-        "DOMESTICADO":"Empleado/a doméstico",
+        "DOMESTICO":"Empleado/a doméstico",
         "CUENTA":"Trabajador/a por cuenta propia (Independiente)",
         "EMPLEADOR": "Empleador/a",
         "FAMILIAR":"Trabajador/a familiar sin remuneración",
