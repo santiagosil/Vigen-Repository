@@ -60,7 +60,7 @@ create table violence_types_organization(
 
 
 create table state(
-	id int identity(1,1) primary key,
+	id int identity(0,1) primary key, //1=
 	name varchar(100) not null,
 	description varchar(200) not null
 );
@@ -82,7 +82,7 @@ create table poll(
 	user_id varchar(50) NOT NULL,
 	date datetime not null,
 	genero int not null, /*0=Hombre, 1=Mujer, 2=No Binario*/
-	orientacion_sexual int not null, /*0=Hetero, 1=Homosexual, 2=Bisexual, 3=Pansexual*/
+	orientacion_sexual int not null, /*0=Hetero, 1=Homosexual, 2=Bisexual, 3=Pansexual, 4=Asexual*/
 	edad int not null,
 	municipio int not null, /*0=Bogota, 1=Facatativa, 2=Madrid, 3=Mosquera, 4=Funza, 5=Otro*/
 	sector int not null, /*0=Urbano, 1=Rural*/
@@ -137,6 +137,7 @@ insert into organization_type(name,description) VALUES('Police','Police Entity g
 
 insert into state(name,description) VALUES 
 ('Active','this alert is active'),
+('In Progress','this alert is in progress'),
 ('serviced','this alert is serviced');
 
 Insert Into notify(user_id,title,state_id,description,organization_type_id) VALUES('123456789','Alerta',1,'I Need Help',1);

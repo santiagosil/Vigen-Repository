@@ -13,4 +13,7 @@ export class NotifyService extends BaseService{
   public postNotify(notify: Notify){
     return this.http.post(this.rootUrl+"/api/Notify",notify);
   }
+  public getNotifies(){
+    return this.http.get<Notify[]>(this.rootUrl+"/api/notify");
+  }
 }
