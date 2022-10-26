@@ -58,7 +58,15 @@
         "MENU2":"Menu",
         "HOME":"Home",
         "PERFIL":"Profile",
-        "ENCUESTA":"Poll"
+        "ENCUESTA":"Poll",
+        "SECCIONINF":"INFORMATION SECTION",
+        "DENUNCIAINF":"Sexual harassment complaint",
+        "CONTEDENUNCIA":"Woman who reported sexual harassment in a bathroom in Monteria took the case to the Prosecutor's Office.",
+        "SABERMAS":"Learn more",
+        "POLINF":"Polemic for physical aggression",
+        "POLCONTEN":"Controversy over Didi driver who allegedly physically assaulted a female user",
+        "NUEINF":"New case of femicide",
+        "NUECONTEN":"Debanhi Escobar: What is the status of her femicide case after six months?"
     },
     "PANEL-ORG":{
         "MENU2":"Menu",
@@ -73,21 +81,14 @@
         "ESTADISTICAS":"Statistics",
         "ENCUESTA":"Poll",
         "BIENVENIDO":"Welcome",
-        "INFOORG":"Información de la Organización",
+        "INFOORG":"Organization Information",
         "NOMBRE":"Name",
         "TELÉFONO":"Phone",
         "CONTRA":"Password",
         "NEWCONTRA":"New Password",
         "CONFCONTRA":"Confirm Password",
-        "GUARDAR":"Save",
-        "SECCIONINF":"INFORMATION SECTION",
-        "DENUNCIAINF":"Sexual harassment complaint",
-        "CONTEDENUNCIA":"Woman who reported sexual harassment in a bathroom in Monteria took the case to the Prosecutor's Office.",
-        "SABERMAS":"Learn more",
-        "POLINF":"Polemic for physical aggression",
-        "POLCONTEN":"Controversy over Didi driver who allegedly physically assaulted a female user",
-        "NUEINF":"New case of femicide",
-        "NUECONTEN":"Debanhi Escobar: What is the status of her femicide case after six months?"
+        "GUARDAR":"Save"
+        
     },
 
     "ORG":{
@@ -146,7 +147,7 @@
         "INICIARSESION":"log in",
         "IDENTIFICACION": "Identification",
         "ORGANIZACION": "Organization",
-        "SELECCIONE": "Select",
+        "SELECCIONE": "Account Type",
         "USUARIO":"User",
         "AUNNOTIENES":"Do not you have an account yet?"
     },
@@ -207,7 +208,7 @@
         "CONOCEMAS":"Learn more about us",
         "NUESTRAMISION":"Our mission",
         "NUESTRAVISION":"Our vision",
-        "OBJETIVOGENERALES":"General objectives",
+        "OBJETIVOSGENERALES":"General objectives",
         "OBJETIVOSESPECIFICOS":"Specific objectives"
     },
     "ENCUESTA":{
@@ -252,7 +253,7 @@
         "OCUPACIONAL": "Currently in what category of occupational position are you?",
         "EMPLEADO": "Private employee (private sector)",
         "GOBIERNO": "Government employee (Public sector)", 
-        "DOMESTICADO": "Domestic employee",
+        "DOMESTICO": "Domestic employee",
         "CUENTA": "Self-employed (Self-employed)", 
         "EMPLEADOR": "Employer", 
         "FAMILIAR": "Unpaid family worker",
