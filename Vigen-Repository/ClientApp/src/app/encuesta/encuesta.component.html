@@ -62,20 +62,20 @@
                                 <hr>
                                 <h4>{{"ENCUESTA.GENERO"| translate}}<label style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="GENERO" value="0" [(ngModel)]="data.genero">
+                                    <label class="form-check-label" for="GENERO">
                                         {{"ENCUESTA.HOMBRE"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="GENERO" value="1" [(ngModel)]="data.genero">
+                                    <label class="form-check-label" for="GENERO">
                                         {{"ENCUESTA.MUJER"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="2">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="GENERO" value="2" [(ngModel)]="data.genero">
+                                    <label class="form-check-label" for="GENERO">
                                         {{"ENCUESTA.NOBINARIO"| translate}}
                                     </label>
                                 </div>
@@ -92,32 +92,32 @@
                             <div class="col-10 shadow bg-white rounded p-3">
                                 <h4>{{"ENCUESTA.ORIENTACIONSEXUAL"| translate}}<label style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="ORIENTACIONSEXUAL" value="0" [(ngModel)]="data.orientacionSexual">
+                                    <label class="form-check-label" for="ORIENTACIONSEXUAL">
                                         {{"ENCUESTA.HETEROSEXUAL"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="ORIENTACIONSEXUAL" value="1" [(ngModel)]="data.orientacionSexual">
+                                    <label class="form-check-label" for="ORIENTACIONSEXUAL">
                                         {{"ENCUESTA.HOMOSEXUAL"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="2">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="ORIENTACIONSEXUAL" value="2" [(ngModel)]="data.orientacionSexual">
+                                    <label class="form-check-label" for="ORIENTACIONSEXUAL">
                                         {{"ENCUESTA.BISEXUAL"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="ORIENTACIONSEXUAL" value="4" [(ngModel)]="data.orientacionSexual">
+                                    <label class="form-check-label" for="ORIENTACIONSEXUAL">
                                         {{"ENCUESTA.ASEXUAL"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="3">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="ORIENTACIONSEXUAL" value="3" [(ngModel)]="data.orientacionSexual">
+                                    <label class="form-check-label" for="ORIENTACIONSEXUAL">
                                         {{"ENCUESTA.PANSEXUAL"| translate}}
                                     </label>
                                 </div>
@@ -134,7 +134,7 @@
                             <div class="col-10 shadow bg-white rounded p-3">
                                 <h4>{{"ENCUESTA.EDAD" | translate}}<label style="color:red;">*</label></h4>
                                 <input class="margin" type="text" class="shadow form-control rounded" placeholder="Ingrese su edad"
-                                    style="width: 50%">
+                                    style="width: 50%" [(ngModel)]="data.edad">
                             </div>
                             <div class="col-1"></div>
                         </div>
@@ -148,32 +148,32 @@
                             <div class="col-10 shadow bg-white rounded p-3">
                                 <h4>{{"ENCUESTA.CIUDAD"| translate}}<label style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="CIUDAD" value="0" [(ngModel)]="data.municipio">
+                                    <label class="form-check-label" for="CIUDAD">
                                         Bogotá
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="2">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="CIUDAD" value="2" [(ngModel)]="data.municipio">
+                                    <label class="form-check-label" for="CIUDAD">
                                         Madrid
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="3">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="CIUDAD" value="3" [(ngModel)]="data.municipio">
+                                    <label class="form-check-label" for="CIUDAD">
                                         Mosquera
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="CIUDAD" value="1" [(ngModel)]="data.municipio">
+                                    <label class="form-check-label" for="CIUDAD">
                                         Facatativá
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="CIUDAD" value="4" [(ngModel)]="data.municipio">
+                                    <label class="form-check-label" for="CIUDAD">
                                         Funza
                                     </label>
                                 </div>
@@ -181,7 +181,7 @@
                                     <div class="row">
                                         <div class="input-group">
                                             <div class="input-group-text">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault" value="5">
+                                                <input class="form-check-input" type="radio" name="CIUDAD" value="5" [(ngModel)]="data.municipio">
                                             </div>
                                             <input type="text" class="form-control" placeholder="Otra">
                                         </div>
@@ -200,14 +200,14 @@
                             <div class="col-10 shadow bg-white rounded p-3">
                                 <h4>{{"ENCUESTA.SECTOR"| translate}}<label style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="SECTOR" value="1" [(ngModel)]="data.sector">
+                                    <label class="form-check-label" for="SECTOR">
                                         {{"ENCUESTA.RURAL"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="SECTOR" value="0" [(ngModel)]="data.sector">
+                                    <label class="form-check-label" for="SECTOR">
                                         {{"ENCUESTA.URBANO"| translate}}
                                     </label>
                                 </div>
@@ -224,38 +224,38 @@
                             <div class="col-10 shadow bg-white rounded p-3">
                                 <h4>{{"ENCUESTA.NIVEL"| translate}}<label style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="NIVEL" value="0" [(ngModel)]="data.nivelEducativo">
+                                    <label class="form-check-label" for="NIVEL">
                                         {{"ENCUESTA.BASICAPRIMARIA"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="NIVEL" value="1" [(ngModel)]="data.nivelEducativo">
+                                    <label class="form-check-label" for="NIVEL">
                                         {{"ENCUESTA.BASICASECUNDARIA"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="2">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="NIVEL" value="2" [(ngModel)]="data.nivelEducativo">
+                                    <label class="form-check-label" for="NIVEL">
                                         {{"ENCUESTA.MEDIA"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="3">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="NIVEL" value="3" [(ngModel)]="data.nivelEducativo">
+                                    <label class="form-check-label" for="NIVEL">
                                         {{"ENCUESTA.TECNICO"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="NIVEL" value="4" [(ngModel)]="data.nivelEducativo">
+                                    <label class="form-check-label" for="NIVEL">
                                         {{"ENCUESTA.PREGRADO"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="5">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="NIVEL" value="5" [(ngModel)]="data.nivelEducativo">
+                                    <label class="form-check-label" for="NIVEL">
                                         {{"ENCUESTA.POSTGRADOS"| translate}}
                                     </label>
                                 </div>
@@ -272,26 +272,26 @@
                             <div class="col-10 shadow bg-white rounded p-3">
                                 <h4>{{"ENCUESTA.ESTADOCIVIL"| translate}}<label style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="ESTADOCIVIL" value="0" [(ngModel)]="data.estadoCivil">
+                                    <label class="form-check-label" for="ESTADOCIVIL">
                                         {{"ENCUESTA.SOLTERO"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="ESTADOCIVIL" value="1" [(ngModel)]="data.estadoCivil">
+                                    <label class="form-check-label" for="ESTADOCIVIL">
                                         {{"ENCUESTA.CASADO"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="2">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="ESTADOCIVIL" value="2" [(ngModel)]="data.estadoCivil">
+                                    <label class="form-check-label" for="ESTADOCIVIL">
                                         {{"ENCUESTA.VIUDO"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="3">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="ESTADOCIVIL" value="3" [(ngModel)]="data.estadoCivil">
+                                    <label class="form-check-label" for="ESTADOCIVIL">
                                         {{"ENCUESTA.UNIONLIBRE"| translate}}
                                     </label>
                                 </div>
@@ -308,39 +308,39 @@
                             <div class="col-10 shadow bg-white rounded p-3">
                                 <h4> {{"ENCUESTA.ETNICO"| translate}}<label style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="ETNICO" value="1" [(ngModel)]="data.etnia">
+                                    <label class="form-check-label" for="ETNICO">
                                         {{"ENCUESTA.COMUNIDADES"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="ETNICO" value="2" [(ngModel)]="data.etnia">
+                                    <label class="form-check-label" for="ETNICO">
                                         {{"ENCUESTA.PUEBLOS"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="ETNICO" value="3" [(ngModel)]="data.etnia">
+                                    <label class="form-check-label" for="ETNICO">
                                         {{"ENCUESTA.GITANO"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="ETNICO" value="4" [(ngModel)]="data.etnia">
+                                    <label class="form-check-label" for="ETNICO">
                                         {{"ENCUESTA.RAIZALES"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="ETNICO" value="0" [(ngModel)]="data.etnia">
+                                    <label class="form-check-label" for="ETNICO">
                                         {{"ENCUESTA.NINGUNO"| translate}}
                                     </label>
                                 </div>
                                 <div class="row">
                                     <div class="input-group">
                                         <div class="input-group-text">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" value="5">
+                                            <input class="form-check-input" type="radio" name="ETNICO" value="5" [(ngModel)]="data.etnia">
                                         </div>
                                         <input type="text" class="form-control" placeholder="Otra">
                                     </div>
@@ -358,15 +358,15 @@
                             <div class="col-10 shadow bg-white rounded p-3">
                                 <h4>{{"ENCUESTA.CUENTAINGRESOS"| translate}}<label style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        {{"ENCUESTA.SI"| translate}}Sí
+                                    <input class="form-check-input" type="radio" name="CUENTAINGRESOS" value="1" [(ngModel)]="data.ingresos">
+                                    <label class="form-check-label" for="CUENTAINGRESOS">
+                                        {{"ENCUESTA.SI"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        No
+                                    <input class="form-check-input" type="radio" name="CUENTAINGRESOS" value="0" [(ngModel)]="data.ingresos">
+                                    <label class="form-check-label" for="CUENTAINGRESOS">
+                                        {{"ENCUESTA.NO"| translate}}
                                     </label>
                                 </div>
                                 <div class="col-1"></div>
@@ -384,50 +384,50 @@
                                         style="color:red;">*</label>
                                 </h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="2">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="2" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
                                         {{"ENCUESTA.EMPLEADO"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="3">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="3" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
                                         {{"ENCUESTA.GOBIERNO"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="4" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
                                         {{"ENCUESTA.DOMESTICO"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="6">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="6" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
                                         {{"ENCUESTA.CUENTA"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="5">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="5" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
                                         {{"ENCUESTA.EMPLEADOR"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="7">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="7" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
                                         {{"ENCUESTA.FAMILIAR"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="1" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
                                         {{"ENCUESTA.ESTUDIANTES"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="0" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
                                         {{"ENCUESTA.DESEMPLEADO"| translate}}
                                     </label>
                                 </div>
@@ -453,15 +453,15 @@
                                 <h4>{{"ENCUESTA.HAOBSERVADO"| translate}}<label
                                         style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="HAOBSERVADO" value="1" [(ngModel)]="data.p1">
+                                    <label class="form-check-label" for="HAOBSERVADO">
                                         {{"ENCUESTA.SI"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        No
+                                    <input class="form-check-input" type="radio" name="HAOBSERVADO" value="0" [(ngModel)]="data.p1">
+                                    <label class="form-check-label" for="HAOBSERVADO">
+                                        {{"ENCUESTA.NO"| translate}}
                                     </label>
                                 </div>
                                 <div class="col-1"></div>
@@ -477,15 +477,15 @@
                             <div class="col-10 shadow bg-white rounded p-3">
                                 <h4>{{"ENCUESTA.AMENAZADO"| translate}}<label style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="AMENAZADO" value="1" [(ngModel)]="data.p2">
+                                    <label class="form-check-label" for="AMENAZADO">
                                         {{"ENCUESTA.SI"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        No
+                                    <input class="form-check-input" type="radio" name="AMENAZADO" value="0" [(ngModel)]="data.p2">
+                                    <label class="form-check-label" for="AMENAZADO">
+                                        {{"ENCUESTA.NO"| translate}}
                                     </label>
                                 </div>
                                 <div class="col-1"></div>
@@ -501,15 +501,15 @@
                             <div class="col-10 shadow bg-white rounded p-3">
                                 <h4>{{"ENCUESTA.PRESIONADO"| translate}}<label style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="PRESIONADO" value="1" [(ngModel)]="data.p3">
+                                    <label class="form-check-label" for="PRESIONADO">
                                         {{"ENCUESTA.SI"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        No
+                                    <input class="form-check-input" type="radio" name="PRESIONADO" value="0" [(ngModel)]="data.p3">
+                                    <label class="form-check-label" for="PRESIONADO">
+                                        {{"ENCUESTA.NO"| translate}}
                                     </label>
                                 </div>
                                 <div class="col-1"></div>
@@ -525,15 +525,15 @@
                             <div class="col-10 shadow bg-white rounded p-3">
                                 <h4>{{"ENCUESTA.DESTRUIDO"| translate}}<label style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="DESTRUIDO" value="1" [(ngModel)]="data.p4">
+                                    <label class="form-check-label" for="DESTRUIDO">
                                         {{"ENCUESTA.SI"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        No
+                                    <input class="form-check-input" type="radio" name="DESTRUIDO" value="0" [(ngModel)]="data.p4">
+                                    <label class="form-check-label" for="DESTRUIDO">
+                                        {{"ENCUESTA.NO"| translate}}
                                     </label>
                                 </div>
                                 <div class="col-1"></div>
@@ -549,15 +549,15 @@
                             <div class="col-10 shadow bg-white rounded p-3">
                                 <h4>{{"ENCUESTA.SACUDIDO"| translate}}<label style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="SACUDIDO" value="1" [(ngModel)]="data.p5">
+                                    <label class="form-check-label" for="SACUDIDO">
                                         {{"ENCUESTA.SI"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        No
+                                    <input class="form-check-input" type="radio" name="SACUDIDO" value="0" [(ngModel)]="data.p5">
+                                    <label class="form-check-label" for="SACUDIDO">
+                                        {{"ENCUESTA.NO"| translate}}
                                     </label>
                                 </div>
                                 <div class="col-1"></div>
@@ -573,15 +573,15 @@
                             <div class="col-10 shadow bg-white rounded p-3">
                                 <h4>{{"ENCUESTA.AGREDIDO"| translate}}<label style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="AGREDIDO" value="1" [(ngModel)]="data.p6">
+                                    <label class="form-check-label" for="AGREDIDO">
                                         {{"ENCUESTA.SI"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        No
+                                    <input class="form-check-input" type="radio" name="AGREDIDO" value="0" [(ngModel)]="data.p6">
+                                    <label class="form-check-label" for="AGREDIDO">
+                                        {{"ENCUESTA.NO"| translate}}
                                     </label>
                                 </div>
                                 <div class="col-1"></div>
@@ -598,32 +598,32 @@
                                 <h4>{{"ENCUESTA.SUFRIDO"| translate}}<label
                                         style="color:red;">*</label></h4>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="2">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="2" [(ngModel)]="data.p7">
+                                    <label class="form-check-label" for="SUFRIDO">
                                         {{"ENCUESTA.VIOLENCIAINTRAFAMILIAR"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="3">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="3" [(ngModel)]="data.p7">
+                                    <label class="form-check-label" for="SUFRIDO">
                                         {{"ENCUESTA.ADULTOMAYOR"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="1" [(ngModel)]="data.p7">
+                                    <label class="form-check-label" for="SUFRIDO">
                                         {{"ENCUESTA.INFANTIL"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="4" [(ngModel)]="data.p7">
+                                    <label class="form-check-label" for="SUFRIDO">
                                         {{"ENCUESTA.VIOLENCIAGENERO"| translate}}
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="0" [(ngModel)]="data.p7">
+                                    <label class="form-check-label" for="SUFRIDO">
                                         {{"ENCUESTA.NOHESUFRIDO"| translate}}
                                     </label>
                                 </div>
