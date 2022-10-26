@@ -17,6 +17,7 @@ import { PanelOrgComponent } from './panel-org/panel-org.component';
 import { EditOrgComponent } from './edit-org/edit-org.component';
 import { PollStadisticsComponent } from './poll-stadistics/poll-stadistics.component';
 import { NotifyStadisticsComponent } from './notify-stadistics/notify-stadistics.component';
+import { SitesComponent } from './sites/sites.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,7 @@ const routes: Routes = [
   {path: 'edOrg',component:EditOrgComponent},
   {path: 'pollStadistics',component:PollStadisticsComponent},
   {path: 'notifyStadistics',component:NotifyStadisticsComponent},
+  {path: 'sites',component:SitesComponent},
 ];
 
 @NgModule({

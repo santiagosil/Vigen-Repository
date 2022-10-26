@@ -38,6 +38,7 @@ import { EstadisticasComponent } from './estadisticas/estadisticas.component';
 import { PollStadisticsComponent } from './poll-stadistics/poll-stadistics.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NotifyStadisticsComponent } from './notify-stadistics/notify-stadistics.component';
+import { SitesComponent } from './sites/sites.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/translate/','.json')
@@ -69,7 +70,8 @@ export function HttpLoaderFactory(http: HttpClient){
     EditOrgComponent,
     EstadisticasComponent,
     PollStadisticsComponent,
-    NotifyStadisticsComponent
+    NotifyStadisticsComponent,
+    SitesComponent
   ],
   imports: [
     BrowserModule,

@@ -166,8 +166,13 @@
         "PRIVACIDAD":"Privacy Agreement",
         "ENVIAR":"Submit",
         "NOMBRE DE LA ORGANIZACIÓN": "Name of Organization",
-        "CONTRASEÑA": "Password"
-
+        "CONTRASEÑA": "Password",
+        "RAPIDO": "It's quick and easy",
+        "CONFIRMAR": "Confirm password",
+        "INFORMACION": "Organization information",
+        "INFORMACIONCONTACTOS": "Contact information",
+        "INFORACIONPERSONAL": "Personal Information",
+        "SIGUIENTE":"Next"
     },
     "REPORTS":{
         "IDENTIFICATION": "Identificacion",
@@ -317,6 +322,12 @@
         "ALERTAS":"Alerts",
         "USUARIO":"User",
         "BIENVENIDO":"Welcome"
+    },
+    "SITES":{
+        "COUNTRY":"CountryCode",
+        "PHONE":"Mobile",
+        "RANGE":"Range",
+        "UBICATION":"Ubication"
     }
 
 }
