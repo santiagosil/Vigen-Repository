@@ -84,6 +84,7 @@ export class RecordOrgComponent implements OnInit {
     }
   }
   get listSites(){
+    console.log(this.reverse.getListSites);
     return this.reverse.getListSites;
   }
 }

@@ -96,4 +96,36 @@
             <div class="col-sm mt-3">
                 <div class="container p-4">
                     <app-map-organizacion></app-map-organizacion>
+                    <div class="row mt-3">
+                        <h5>{{"REC.INFORMACION"|translate}}</h5>
+                        <!--div class="col-12">
+                        <button class="btn btn-primary" (click)="update()">Actualizar Ubicaciones</button>
+                    </div-->
+
+
+                        <div class="col-1 text-center mt-2">
+                            <fa-icon [icon]="['fas', 'location-dot']"></fa-icon>
+
+                        </div>
+                        <div class="col-11 mt-2">
+                            <label style="font-size: 80%">{{site.ubication}}</label>
+                        </div>
+                        <div class="col-1 text-center mt-4">
+                            <fa-icon [icon]="['fas', 'phone']"></fa-icon>
+                        </div>
+                        <div class="col-11 mt-4">
+                            <label style="font-size: 80%">{{site.tel}}</label>
+                        </div>
+                        <div class="col-1 text-center mt-4">
+                            <fa-icon [icon]="['fas', 'phone']"></fa-icon>
+                        </div>
+                        <div class="col-11 mt-4">
+                            <label style="font-size: 80%">{{site.phone}}</label>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                     
