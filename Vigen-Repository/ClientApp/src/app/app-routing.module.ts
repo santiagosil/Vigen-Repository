@@ -15,6 +15,8 @@ import { EncuestaComponent } from './encuesta/encuesta.component';
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 import { PanelOrgComponent } from './panel-org/panel-org.component';
 import { EditOrgComponent } from './edit-org/edit-org.component';
+import { PollStadisticsComponent } from './poll-stadistics/poll-stadistics.component';
+import { NotifyStadisticsComponent } from './notify-stadistics/notify-stadistics.component';
 
 
 const routes: Routes = [
@@ -32,7 +34,9 @@ const routes: Routes = [
   {path: 'aboutUs',component:AcercaDeComponent},
   {path: 'pOrg', component:PanelOrgComponent},
   {path: 'encuesta',component:EncuestaComponent},
-  {path: 'edOrg',component:EditOrgComponent}
+  {path: 'edOrg',component:EditOrgComponent},
+  {path: 'pollStadistics',component:PollStadisticsComponent},
+  {path: 'notifyStadistics',component:NotifyStadisticsComponent},
 ];
 
 @NgModule({

@@ -22,26 +22,10 @@ namespace Vigen_Repository.Controllers
         {
             List<Notify> notifies = await _context.Notifies.ToListAsync();
             if (notifies.Count == 0) return NoContent();
-            reloj();
             return Ok(notifies);
         }
 
-        private async Task reloj()
-        {
-            while (true)
-            {
-                await _hubContext.Clients.All.recibeNotify(new Notify
-                {
-                    Id = 0,
-                    Description = "ayudaa",
-                    OrganizationTypeId = 1,
-                    StateId = 0,
-                    Title = "Help me",
-                    UserId = "123456789"
-                });
-                await Task.Delay(3000);
-            }
-        }
+        
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Notify>> getNotify(string id)

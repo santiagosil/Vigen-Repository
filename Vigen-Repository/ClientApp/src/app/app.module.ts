@@ -34,6 +34,10 @@ import { FooterComponent } from './footer/footer.component';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { EditOrgComponent } from './edit-org/edit-org.component';
+import { EstadisticasComponent } from './estadisticas/estadisticas.component';
+import { PollStadisticsComponent } from './poll-stadistics/poll-stadistics.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { NotifyStadisticsComponent } from './notify-stadistics/notify-stadistics.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/translate/','.json')
@@ -62,13 +66,17 @@ export function HttpLoaderFactory(http: HttpClient){
     FooterComponent,
     EncuestaComponent,
     AcercaDeComponent,
-    EditOrgComponent
+    EditOrgComponent,
+    EstadisticasComponent,
+    PollStadisticsComponent,
+    NotifyStadisticsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgxChartsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
