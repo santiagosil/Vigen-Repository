@@ -19,6 +19,7 @@ import { AyudaComponent } from './ayuda/ayuda.component';
 import { PollStadisticsComponent } from './poll-stadistics/poll-stadistics.component';
 import { NotifyStadisticsComponent } from './notify-stadistics/notify-stadistics.component';
 import { SitesComponent } from './sites/sites.component';
+import { TokenComponent } from './token/token.component';
 
 
 const routes: Routes = [
@@ -41,6 +42,7 @@ const routes: Routes = [
   {path: 'pollStadistics',component:PollStadisticsComponent},
   {path: 'notifyStadistics',component:NotifyStadisticsComponent},
   {path: 'sites',component:SitesComponent},
+  {path: 'token',component:TokenComponent}
 ];
 
 @NgModule({

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnChanges, OnInit, SimpleChange } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { Data } from '@angular/router';
+import { Data, Router } from '@angular/router';
 import { UserService } from '../api/services';
 import { User } from '../api/models';
 import { NgModule } from '@angular/core';
@@ -47,7 +47,7 @@ export class RecordUserComponent implements OnInit {
     pass:""
   }
 
-  constructor(private api: UserService, private rever : InverseService) {
+  constructor(private api: UserService, private rever : InverseService, private router: Router) {
   }
    
   get ubication(){
@@ -100,6 +100,7 @@ export class RecordUserComponent implements OnInit {
         this.api.apiUserPost$Json({ body: this.usuario })
           .subscribe(res => {
             this.showbien();
+            this.router.navigate(['/token']);
           });
       }
       else{

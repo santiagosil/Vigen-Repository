@@ -589,49 +589,7 @@
                         </div>
                     </div>
                 </section>
-                <section>
-                    <div class="container mt-4">
-                        <div class="row">
-                            <div class="col-1">
-                            </div>
-                            <div class="col-10 shadow bg-white rounded p-3">
-                                <h4>{{"ENCUESTA.SUFRIDO"| translate}}<label
-                                        style="color:red;">*</label></h4>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="2" [(ngModel)]="data.p7">
-                                    <label class="form-check-label" for="SUFRIDO">
-                                        {{"ENCUESTA.VIOLENCIAINTRAFAMILIAR"| translate}}
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="3" [(ngModel)]="data.p7">
-                                    <label class="form-check-label" for="SUFRIDO">
-                                        {{"ENCUESTA.ADULTOMAYOR"| translate}}
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="1" [(ngModel)]="data.p7">
-                                    <label class="form-check-label" for="SUFRIDO">
-                                        {{"ENCUESTA.INFANTIL"| translate}}
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="4" [(ngModel)]="data.p7">
-                                    <label class="form-check-label" for="SUFRIDO">
-                                        {{"ENCUESTA.VIOLENCIAGENERO"| translate}}
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="0" [(ngModel)]="data.p7">
-                                    <label class="form-check-label" for="SUFRIDO">
-                                        {{"ENCUESTA.NOHESUFRIDO"| translate}}
-                                    </label>
-                                </div>
-                                <div class="col-1"></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                
                 <section class="text-center mt-5 mb-5">
                     <button class="btn btn-primary" (click)="sendEncuesta()">Finalizar</button>
                 </section>
