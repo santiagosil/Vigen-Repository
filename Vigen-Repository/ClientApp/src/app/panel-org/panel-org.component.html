@@ -38,28 +38,26 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">User ID</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">State</th>
+                                <th scope="col">Organization Type</th>
+                                <th scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
+                            <tr *ngFor="let notify of activeNotifies; index as i">
+                                <th scope="row">i</th>
+                                <td>{{notify.userId}}</td>
+                                <td>{{notify.title}}</td>
+                                <td>{{notify.description}}</td>
+                                <td>{{notify.stateId}}</td>
+                                <td>{{notify.organizationTypeId}}</td>
+                                <td>
+                                    <button class="btn btn-success me-1" (click)="updateNotify(notify)"><fa-icon [icon]="['fas', 'check']"></fa-icon></button>
+                                    <button class="btn btn-danger ms-1" (click)="deleteNotify(notify)"><fa-icon [icon]="['fas', 'trash']"></fa-icon></button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -69,28 +67,26 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">User ID</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">State</th>
+                                <th scope="col">Organization Type</th>
+                                <th scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
+                            <tr *ngFor="let notify of inProgressNotifies; index as i">
+                                <th scope="row">i</th>
+                                <td>{{notify.userId}}</td>
+                                <td>{{notify.title}}</td>
+                                <td>{{notify.description}}</td>
+                                <td>{{notify.stateId}}</td>
+                                <td>{{notify.organizationTypeId}}</td>
+                                <td>
+                                    <button class="btn btn-success me-1" (click)="updateNotify(notify)"><fa-icon [icon]="['fas', 'check']"></fa-icon></button>
+                                    <button class="btn btn-danger ms-1" (click)="deleteNotify(notify)"><fa-icon [icon]="['fas', 'trash']"></fa-icon></button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
