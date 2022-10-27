@@ -69,7 +69,7 @@ export function HttpLoaderFactory(http: HttpClient){
     EncuestaComponent,
     AcercaDeComponent,
     EditOrgComponent,
-    AyudaComponent
+    AyudaComponent,
     EstadisticasComponent,
     PollStadisticsComponent,
     NotifyStadisticsComponent,

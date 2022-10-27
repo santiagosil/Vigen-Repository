@@ -210,13 +210,12 @@
         "NUESTRAMISION":"Our mission",
         "NUESTRAVISION":"Our vision",
         "OBJETIVOSGENERALES":"General objectives",
-        "OBJETIVOSESPECIFICOS":"Specific objectives",
         "MISION":"Vigen contributes to the reduction of different types of violence against families, children, women and the elderly in the public and private spheres through the use of information technology, communication and artificial intelligence to make predictive models that can foresee any violent, aggressive and/or abusive event before it occurs, partially preventing physical or psychological harm to the victim.",
         "VISION":"Vigen will have possibilities of growth in any place where there is support for action, research and data collection for further analysis and prediction for the reduction of domestic, child, gender and elder violence. Taking into account that we do NOT suggest the creation of new care institutions under any circumstances, nor are we a direct part of any of them.",
         "OBJETIVOGENERAL":"• To develop software trained in the collection, study, presentation and prediction of risks in gender, elder, intra-family and child violence (from 13 years and older). To present to the governmental media by means of reports and reports, so that the most vulnerable people or the most at-risk areas can be followed up in a local context.",
         "OBJETIVOESPECIFICOS1":"• Implement surveys for the enrichment of knowledge of artificial intelligence.",
         "OBJETIVOESPECIFICOS2":"• Generate mechanisms for prevention and assistance to people who show signs of some type of violence.",
-        "OBJETIVOESPECIFICOS3":"• Carry out strategic articulations with state or private institutions whose social reason is oriented to the protection and accompaniment of subjects in condition of victims of some type of violence, in order to follow up the most vulnerable people or the areas with more risk, in a local context."
+        "OBJETIVOESPECIFICOS3":"• Carry out strategic articulations with state or private institutions whose social reason is oriented to the protection and accompaniment of subjects in condition of victims of some type of violence, in order to follow up the most vulnerable people or the areas with more risk, in a local context.",
         "OBJETIVOSESPECIFICOS":"Specific objectives"
 
     },
@@ -294,7 +293,7 @@
         "SUB4":"4. Demonstrate your opposition to rape culture:",
         "CONTSUB4":"Rape culture occurs in social environments that allow sexual violence to be normalized and justified, and in these environments it is fueled by persistent gender inequalities and attitudes about gender and sexuality. Naming rape culture is the first step in banishing it. Every day we have the opportunity to examine our behaviors and beliefs for the biases that allow rape culture to continue to exist. Think about how you define masculinity and femininity, and how your own biases and stereotypes influence them. From our attitudes about gender identities to the policies we support in our communities, everyone can take action to fight rape culture.",
         "SUB5":"5. Be responsible and hold others accountable.",
-        "CONTSUB5":"Violence can take many forms, including sexual harassment in the workplace and in public spaces. Speak out against certain behaviors by pointing them out: whistling, inappropriate sexual comments and sexist jokes are never acceptable. Promote a safer environment by challenging your colleagues to reflect on their own."
+        "CONTSUB5":"Violence can take many forms, including sexual harassment in the workplace and in public spaces. Speak out against certain behaviors by pointing them out: whistling, inappropriate sexual comments and sexist jokes are never acceptable. Promote a safer environment by challenging your colleagues to reflect on their own.",
         "NOHESUFRIDO": "I have not suffered or seen any of the above",
         "NO":"No"
     },

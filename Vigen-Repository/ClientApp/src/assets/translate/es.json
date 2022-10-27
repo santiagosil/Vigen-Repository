@@ -201,7 +201,6 @@
     "ACERCA":{
         "CONOCEMAS":"Conoce más sobre nosotros",
         "NUESTRAMISION":"Nuestra misión",
-        "NUESTRAVISION":"Nuestra vision",
         "OBJETIVOSGENERALES":"Objetivo general",
         "OBJETIVOSESPECIFICOS":"Objetivos especificos",
         "MISION":"Vigen aporta a la reducción de diferentes tipos de violencia contra las familias, niños/as, mujeres y adultos mayores en los ámbitos público y privado a través del uso de tecnología de la información, la comunicación y la inteligencia artificial para realizar modelos predictivos que puedan prever cualquier evento violento, agresivo y/o abusivo antes de que ocurra, previniendo parcialmente el daño físico o psicológico en la victima.",
@@ -209,10 +208,8 @@
         "OBJETIVOGENERAL":"• Desarrollar un software capacitado en la recolección, estudio, presentación y predicción de riegos relacionados a violencia de género, adulto mayor, intrafamiliar e infantil (desde los 13 años en adelante) para la mitigación de situaciones de peligro o mortalidad en personas expuestas a cualquiera de estos tipos de violencia.",
         "OBJETIVOESPECIFICOS1":"• Implementar encuestas para el enriquecimiento de conocimiento de la inteligencia artificial.",
         "OBJETIVOESPECIFICOS2":"• Generar mecanismos de prevención y ayuda a las personas que presentan signos de algún tipo de violencia.",
-        "OBJETIVOESPECIFICOS3":"• Realizar articulaciones estratégicas con instituciones estatales o privadas cuya razón social se oriente a la protección y el acompañamiento de sujetos/as en condición de víctimas de algún tipo de violencia, en aras de dar un seguimiento a las personas más vulnerables o las zonas con más riesgo, en un contexto local."
-        "NUESTRAVISION":"Nuestra visión",
-        "OBJETIVOSGENERALES":"Objetivos generales",
-        "OBJETIVOSESPECIFICOS":"Objetivos especificos"
+        "OBJETIVOESPECIFICOS3":"• Realizar articulaciones estratégicas con instituciones estatales o privadas cuya razón social se oriente a la protección y el acompañamiento de sujetos/as en condición de víctimas de algún tipo de violencia, en aras de dar un seguimiento a las personas más vulnerables o las zonas con más riesgo, en un contexto local.",
+        "NUESTRAVISION":"Nuestra visión"
     },
     "ENCUESTA":{
         "VIOLENCIAGENERO":"Violencia de género",
@@ -293,7 +290,7 @@
         "SUB4":"4. Demuestra tu oposición a la cultura de la violación.",
         "CONTSUB4":"La cultura de la violación se da en entornos sociales que permiten que se normalice y justifique la violencia sexual, y en estos entornos se alimenta de las persistentes desigualdades de género y las actitudes sobre el género y la sexualidad. Poner nombre a la cultura de la violación es el primer paso para desterrarla. Cada día tenemos la oportunidad de examinar nuestros comportamientos y creencias en busca de los sesgos que permiten que siga existiendo la cultura de la violación. Piensa en cómo defines la masculinidad y la feminidad, y cómo influyen tus propios prejuicios y estereotipos. Desde nuestra actitud acerca de las identidades de género hasta las políticas que apoyamos en nuestras comunidades, todo el mundo puede tomar medidas para luchar contra la cultura de la violación.",
         "SUB5":"5. Sé responsable y exige responsabilidades a los demás.",
-        "CONTSUB5":"La violencia puede adoptar muchas formas, incluido el acoso sexual en el lugar de trabajo y en los espacios públicos. Pronúnciate contra ciertos comportamientos señalándolos: los silbidos, los comentarios sexuales inapropiados y los chistes sexistas nunca son aceptables. Promueve un ambiente más seguro retando a tus compañeras y compañeros a reflexionar sobre su propio. "
+        "CONTSUB5":"La violencia puede adoptar muchas formas, incluido el acoso sexual en el lugar de trabajo y en los espacios públicos. Pronúnciate contra ciertos comportamientos señalándolos: los silbidos, los comentarios sexuales inapropiados y los chistes sexistas nunca son aceptables. Promueve un ambiente más seguro retando a tus compañeras y compañeros a reflexionar sobre su propio. ",
         "PREGUNTAS":"Preguntas Frecuentes",
         "QUEES":"¿Qué es?",
         "VIOLENCIAES":"Violencia es todo acto, acción u omisión que produzca daño o sufrimiento físico, sexual, psicológico verbal, o económico a una persona; puede ocurrir en público o en privado. Las situaciones violentas ocurren cada vez que una persona impone su poder sobre otra vulnerando sus derechos.",
