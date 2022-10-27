@@ -30,7 +30,8 @@
         "VALORAR":"Valorar",
         "OPCIONES":"Opciones",
         "PEDIDOS":"Pedidos",
-        "CONTACTO":"Contacto"
+        "CONTACTO":"Contacto",
+        "SOMOS":"Somos un equipo de estudiantes de la universidad de Cundinamarca extensión Facatativá que implementa la metodología Scrum para la elaboración de un proyecto que tiene como finalidad la mitigación de casos de violencia de género, intrafamiliar, infantil y adulto mayor por medio de una Inteligencia Artificial (IA). "
     },
 
     
@@ -63,12 +64,7 @@
 
 
     },
-    "PANEL-ORG":{
-        "MENU2":"Menú",
-        "HOME":"Inicio",
-        "PERFIL":"Perfil",
-        "ESTADISTICAS":"Estadisticas"
-    },
+    
     "EDIT-ORG":{
         "MENU2":"Menú",
         "HOME":"Inicio",
@@ -198,6 +194,15 @@
     "ACERCA":{
         "CONOCEMAS":"Conoce más sobre nosotros",
         "NUESTRAMISION":"Nuestra misión",
+        "NUESTRAVISION":"Nuestra vision",
+        "OBJETIVOSGENERALES":"Objetivo general",
+        "OBJETIVOSESPECIFICOS":"Objetivos especificos",
+        "MISION":"Vigen aporta a la reducción de diferentes tipos de violencia contra las familias, niños/as, mujeres y adultos mayores en los ámbitos público y privado a través del uso de tecnología de la información, la comunicación y la inteligencia artificial para realizar modelos predictivos que puedan prever cualquier evento violento, agresivo y/o abusivo antes de que ocurra, previniendo parcialmente el daño físico o psicológico en la victima.",
+        "VISION":"Vigen contará con posibilidades de crecimiento en cualquier lugar en el que se cuente con un apoyo para la acción, investigación y recolección de datos para su posterior análisis y predicción en pro de la reducción de la violencia intrafamiliar, infantil, de género y de adulto mayor. Teniendo en cuenta que NO sugerimos la creación de nuevas instituciones de atención en ninguna circunstancia, así como tampoco hacemos parte directa de ninguna de ellas.",
+        "OBJETIVOGENERAL":"• Desarrollar un software capacitado en la recolección, estudio, presentación y predicción de riegos relacionados a violencia de género, adulto mayor, intrafamiliar e infantil (desde los 13 años en adelante) para la mitigación de situaciones de peligro o mortalidad en personas expuestas a cualquiera de estos tipos de violencia.",
+        "OBJETIVOESPECIFICOS1":"• Implementar encuestas para el enriquecimiento de conocimiento de la inteligencia artificial.",
+        "OBJETIVOESPECIFICOS2":"• Generar mecanismos de prevención y ayuda a las personas que presentan signos de algún tipo de violencia.",
+        "OBJETIVOESPECIFICOS3":"• Realizar articulaciones estratégicas con instituciones estatales o privadas cuya razón social se oriente a la protección y el acompañamiento de sujetos/as en condición de víctimas de algún tipo de violencia, en aras de dar un seguimiento a las personas más vulnerables o las zonas con más riesgo, en un contexto local."
         "NUESTRAVISION":"Nuestra visión",
         "OBJETIVOSGENERALES":"Objetivos generales",
         "OBJETIVOSESPECIFICOS":"Objetivos especificos"
@@ -262,10 +267,73 @@
         "VIOLENCIAINTRAFAMILIAR":"Violencia intrafamiliar",
         "ADULTOMAYOR":"Violencia Adulto Mayor",
         "INFANTIL":"Violencia infantil",
-        "NOHESUFRIDO":"No he sufrido ni visto ninguna de las anteriores"
+        "NOHESUFRIDO":"No he sufrido ni visto ninguna de las anteriores",
+        "NO":"No"
 
     },
     "FAQ":{
         
+    },
+    "AYUDA":{
+        "TITULO":"MANERAS PARA CONTRIBUIR CONTRA LA VIOLENCIA DE GÉNERO",
+        "TITULOCONT":"La lucha contra la violencia de género es algo que nos incumbe a todos, tanto a hombres como a mujeres, estas son algunas recomendaciones para empezar a realizar un cambio y generar un cambio en nuestra sociedad:",
+        "SUB1":"1. Escucha y cree a los sobrevivientes.",
+        "CONTSUB1":"Cuando una persona comparte su historia de violencia, está dando el primer paso para romper el ciclo de maltrato. Debemos garantizarle el espacio seguro que necesita para hablar y ser escuchada. Conviene recordar que, al tratar casos de violencia sexual, la sobriedad, la vestimenta y la sexualidad de la víctima son irrelevantes. El autor es el único responsable de la agresión y debe asumir la responsabilidad por sí solo. Protesta contra la culpabilización de la víctima y haz frente a la idea de que las personas deben evitar situaciones que se perciban como “peligrosas” según los estándares tradicionales. Las sobrevivientes están alzando la voz más que nunca, y todas y todos podemos hacer algo para asegurar que se les haga justicia. No digas “¿por qué no te fuiste de allí?” Di: “Te escuchamos. Te creemos. Estamos contigo”.",
+        "SUB2":"2. Enseña a la próxima generación y aprende de ella.",
+        "CONTSUB2":"El ejemplo que damos a la generación más joven determina la manera en que esta piensa sobre el género, el respeto y los derechos humanos. Inicia conversaciones sobre los roles de género a una edad temprana y cuestiona los rasgos y las características tradicionales asignadas a hombres y mujeres. Señala los estereotipos a los que niñas y niños se enfrentan constantemente, ya sea en los medios de comunicación, en la calle o en la escuela, y hazles saber que no hay nada malo en ser diferente. Fomenta una cultura de aceptación.",
+        "SUB3":"3. Conoce los indicios del maltrato y aprende cómo puedes ayudar.",
+        "CONTSUB3":"Hay muchas formas de maltrato y todas ellas pueden dejar secuelas físicas y emocionales graves. Si te preocupa una amiga o amigo que pueda estar sufriendo violencia o que se siente insegura/o junto a alguien, revisa los siguientes indicios de maltrato y aprende las maneras de ayudarlos a encontrar seguridad y apoyo. Si crees que alguien te está maltratando, hay ayuda disponible.",
+        "SUB4":"4. Demuestra tu oposición a la cultura de la violación.",
+        "CONTSUB4":"La cultura de la violación se da en entornos sociales que permiten que se normalice y justifique la violencia sexual, y en estos entornos se alimenta de las persistentes desigualdades de género y las actitudes sobre el género y la sexualidad. Poner nombre a la cultura de la violación es el primer paso para desterrarla. Cada día tenemos la oportunidad de examinar nuestros comportamientos y creencias en busca de los sesgos que permiten que siga existiendo la cultura de la violación. Piensa en cómo defines la masculinidad y la feminidad, y cómo influyen tus propios prejuicios y estereotipos. Desde nuestra actitud acerca de las identidades de género hasta las políticas que apoyamos en nuestras comunidades, todo el mundo puede tomar medidas para luchar contra la cultura de la violación.",
+        "SUB5":"5. Sé responsable y exige responsabilidades a los demás.",
+        "CONTSUB5":"La violencia puede adoptar muchas formas, incluido el acoso sexual en el lugar de trabajo y en los espacios públicos. Pronúnciate contra ciertos comportamientos señalándolos: los silbidos, los comentarios sexuales inapropiados y los chistes sexistas nunca son aceptables. Promueve un ambiente más seguro retando a tus compañeras y compañeros a reflexionar sobre su propio. "
+        "PREGUNTAS":"Preguntas Frecuentes",
+        "QUEES":"¿Qué es?",
+        "VIOLENCIAES":"Violencia es todo acto, acción u omisión que produzca daño o sufrimiento físico, sexual, psicológico verbal, o económico a una persona; puede ocurrir en público o en privado. Las situaciones violentas ocurren cada vez que una persona impone su poder sobre otra vulnerando sus derechos.",
+        "AGRESIONES":"Estas agresiones son ejercidas contra cualquier persona o grupo de personas sobre la base de su sexo o género. Las violencias impactan de manera negativa en su identidad y bienestar social, físico, psicológico o económico. Es importante tener en cuenta que las diferentes formas de violencia pueden iniciar con manifestaciones muy sutiles que van aumentando con la posibilidad de producir daños físicos o emocionales irreparables, e incluso, la muerte.",
+        "TIPOS":"Tipos de violencia",
+        "VIOLENCIAPUEDE":"La violencia puede estar presente en cualquier ámbito; sea en el doméstico o en el público, el lugar de trabajo, la calle, el transporte público, el colegio, etc. Ante esto, todos tenemos la responsabilidad de romper el silencio y denunciar. Para ello es importante que aprendas a diferenciar los distintos tipos de violencia que existen para poder identificarlos.",
+        "FISICA":"·Física:",
+        "TODASAGRESIONES":"son todas las agresiones que atentan contra el cuerpo de una persona, ya sea a través de golpes, lanzamiento de objetos, encierro, sacudidas o estrujones, entre otras conductas que puedan ocasionar daños físicos.",
+        "PSICOLOGIA":"·Psicológica o emocional:",
+        "ACCION":"es toda acción u omisión destinada a degradar o controlar las acciones, comportamientos, creencias y decisiones de otras personas por medio de intimidación, manipulación amenaza, humillación, aislamiento, o cualquier conducta que implique un perjuicio en la salud psicológica. Este tipo de violencia es de las más comunes y naturalizadas de la sociedad, por lo que es necesario aprender a reconocerla y denunciar.",
+        "SEXUAL":"·Sexual:",
+        "RELACIONES":"en ella se incluyen todas las relaciones o actos sexuales, físicos o verbales, no deseados ni aceptados por la otra persona. La violencia sexual puede presentarse hacia hombres o mujeres utilizando la fuerza o la coacción física, psicológica o cualquier otro mecanismo que anule o limite la voluntad personal.",
+        "ECONOMIA":"·Económica:",
+        "DINERO":"ocurre cuando se utiliza el dinero como un factor para dominar o establecer relaciones de poder perjudiciales. Este tipo de violencia se puede manifestar cuando a la persona se le quita el dinero que gana, se le impide gastarlo en beneficio suyo o de su familia, o se le niega el dinero para controlar su independencia. Todas estas formas de violencia son consideradas delito y son sancionadas por la ley.",
+        "DEGENERO":"·De género:",
+        "ACTOS":" son los actos violentos contra una persona en razón de su sexo o preferencia sexual. En muchos casos, son actos que se ejercen contra las mujeres y están relacionados con el control que algunos hombres creen tener sobre ellas, generalmente, aprovechándose de condiciones de indefensión, desigualdad y poder. También puede ocurrir contra hombres que se salen del rol masculino culturalmente aceptado, por ejemplo en casos de violencia homofóbica o por conductas consideradas femeninas, como llorar o expresar sus sentimientos.",
+        "DENUNCIAR":"¿Dónde denunciar?",
+        "VICTIMA":"Si eres víctima de cualquier tipo de violencia basada en género debes solicitarle a tu EPS atención integral e inmediata, de manera gratuita. Cualquier negativa a cumplir con esta obligación, que está inmersa en el plan de beneficios en salud, es una falta al ejercicio del derecho a la salud.",
+        "ACUDIR":"¿A quién acudir?",
+        "FISCALIAS":"·Fiscalías:",
+        "DELITO":"la violencia sexual es un delito. Por eso, debes denunciarlo. Puedes hacerlo de forma verbal o escrita, en primera instancia en los Centros de Atención Integral a Víctimas de Delitos Sexuales de la Fiscalía, que atienden de lunes a viernes de 8 a 12 del día y de 1 a 5 de la tarde, o en las Unidades de Reacción Inmediata (URI) de la Fiscalía, que prestan su servicio en todo el país las 24 horas del día.",
+        "ESTACIONES":"·Estaciones de Policía:",
+        "DENUNCIA":" la denuncia también puede hacerse en las estaciones de Policía o en las Unidades de Policía Judicial como la Dijin, Sijin o el CTI. Estas remiten el caso a la Fiscalía y remiten a la víctima a Medicina Legal.",
+        "MEDICINA":"·Medicina Legal:",
+        "ESTABLECER":" para establecer la gravedad de las lesiones y el estado en que se encuentra la víctima después de la agresión, la autoridad que recibe la denuncia remite a la víctima al Instituto de Medicina Legal y Ciencias Forenses.",
+        "COMISARIAS":"·Comisarías de Familia:",
+        "DENUNCIAS":" reciben denuncias en casos de violencia intrafamiliar para remitirlas a la Fiscalía. Estas pueden ordenar medidas de protección tales como expulsar al agresor de la casa; retirar ropa, documentos y elementos indispensables para la víctima; en el caso de tener hijos, resolver provisionalmente el tema de la custodia y cuota de alimentos de los menores y obtener protección de la Policía. Estas medidas se cumplen siempre y cuando la denuncia se interponga dentro de los 30 días siguientes a la ocurrencia de la agresión.",
+        "BIENESTAR":"·Instituto Colombiano de Bienestar Familiar (ICBF):",
+        "PERSONASMENORES":"en todas las ciudades hay Centros Zonales de Bienestar Familiar. Sin embargo, solo atienden casos en que se encuentren involucradas personas menores de 18 años. Si la agresión se trata de abuso sexual, está facultado para recibir la denuncia y trasladarla a la Fiscalía. Además, debe velar por la protección restablecimiento y garantía de los derechos de los menores involucrados (víctimas y agresores) y a la víctima debe ofrecerle apoyo integral, incluyendo un albergue seguro.",
+        "DEFENSORIA":"·Defensoría del Pueblo y Personería Municipal:",
+        "DERECHOS":"les corresponde velar por la promoción, el ejercicio y la divulgación de los derechos humanos, tanto de víctimas como de agresores en casos de violencia. Prestan asesoría y ayuda gratuita a las personas que requieran apoyo para la defensa de sus derechos humanos, prevenir vulneraciones de sus derechos o restablecimiento de los mismos, por ejemplo, para la formulación de derechos de petición o acciones de tutela.",
+        "AFRONTAR":"¿Cómo afrontar la violencia intrafamiliar?",
+        "RECONOCER":"Lo más importante es reconocer y aceptar que hay una situación de violencia y maltrato, para poder buscar ayuda de profesionales e instituciones especializadas. Si la persona lo desea puede denunciar la violencia en las Comisarías de Familia de cada localidad, en las estaciones de Policía o en los Juzgados Promiscuos Municipales o de Circuito. Es importante tener en cuenta que en estos casos, si los involucrados son niños, es obligación de cualquier persona de la comunidad denunciar.",
+        "VIOLENCIABASADA":"¿Qué es la violencia basada en género?",
+        "VIOLENCIABASADAGENERO":"La violencia basada en género incluye cualquier acto de maltrato físico, sexual, psicológico y/o económico contra unA persona con motivo de su sexo, incluyendo actos de privación de la libertad, tanto en el ámbito público como privado. Hombres y mujeres son víctimas de violencia basada en género debido a los roles y características que se les atribuyen en las diferentes sociedades.",
+        "PROBLEMAS":"¿Qué problemas sexuales puede presentar una mujer abusada sexualmente?",
+        "ABUSO":"El abuso sexual puede originar problemas de diversa índole en la vivencia sexual de la víctima, dependiendo de la edad en la que ocurre el abuso, las características del abusador (si es un familiar o un extraño), del apoyo que reciba la persona abusada, etc",
+        "COMPROBADO":"Se ha comprobado en aquellos casos en que la víctima de abuso sexual recibe una ayuda profesional adecuada, ésta tiende a presentar menores problemas sexuales que aquella persona que se calla o no recibe una intervención pronta y efectiva.",
+        "PROBLEMASFRECUENTES":"Entre los problemas sexuales más frecuentes en las mujeres abusadas sexualmente encontramos: ausencia o bajo deseo sexual, anorgasmia (dificultad para tener orgasmos), trastorno de la excitación y dispareunia (dolor durante la relación sexual)."
+    },
+    "PANEL-ORG": {
+        "MENU":"Menú",
+        "HOME":"Inicio",
+        "ESTADISTICAS":"Estadísticas",
+        "ALERTAS":"Alertas",
+        "USUARIO":"Usuario",
+        "BIENVENIDO":"Bienvenido"
     }
 }
+
