@@ -147,6 +147,7 @@
     },
     "REC":{
         "REGISTRO":"Registrarte",
+        "RAPIDO":"Es rápido y fácil",
         "CAMPOS":"Campos Requeridos *",
         "NAME":"Nombre",
         "EMAIL":"Correo",
@@ -159,7 +160,13 @@
         "PRIVACIDAD":"Acuerdo de Privacidad",
         "ENVIAR":"Enviar",
         "NOMBRE DE LA ORGANIZACIÓN": "Nombre de la Organización",
-        "CONTRASEÑA": "Contraseña"
+        "CONTRASEÑA": "Contraseña",
+        "CONFIRMAR":"Confirmar contraseña",
+        "INFORMACION":"Informacion de organización",
+        "INFORMACIONCONTACTOS":"Información de contactos",
+        "INFORACIONPERSONAL":"Informacion Personal",
+        "SIGUIENTE":"Siguiente"
+
         },
     "REPORTS":{
         "IDENTIFICATION": "Identificacion",
@@ -334,6 +341,12 @@
         "ALERTAS":"Alertas",
         "USUARIO":"Usuario",
         "BIENVENIDO":"Bienvenido"
+    },
+    "SITES":{
+        "COUNTRY":"codigo de país",
+        "PHONE":"Celular",
+        "RANGE":"Rango",
+        "UBICATION":"Ubicación"
     }
 }
 

@@ -3,8 +3,6 @@ import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms'
 import { Data } from '@angular/router';
 import { UserService } from '../api/services';
 import { User } from '../api/models';
-
-
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';

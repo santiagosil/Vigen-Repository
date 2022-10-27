@@ -18,6 +18,7 @@ import { EditOrgComponent } from './edit-org/edit-org.component';
 import { AyudaComponent } from './ayuda/ayuda.component';
 import { PollStadisticsComponent } from './poll-stadistics/poll-stadistics.component';
 import { NotifyStadisticsComponent } from './notify-stadistics/notify-stadistics.component';
+import { SitesComponent } from './sites/sites.component';
 
 
 const routes: Routes = [
@@ -39,6 +40,7 @@ const routes: Routes = [
   {path: 'ayuda',component:AyudaComponent},
   {path: 'pollStadistics',component:PollStadisticsComponent},
   {path: 'notifyStadistics',component:NotifyStadisticsComponent},
+  {path: 'sites',component:SitesComponent},
 ];
 
 @NgModule({

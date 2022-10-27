@@ -12,20 +12,30 @@
                     </div>
                     <div class="form-group row mt-3">
                         <div class="col-sm ms-4 me-4">
-                            <label>{{"REC.NOMBRE DE LA ORGANIZACIÓN" | translate}}<label
+                            <label>{{"SITES.COUNTRY" | translate}}<label
                                     style="color:red;">*</label></label>
                             <!--input formControlName="nomOrg" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="organization.name" [ngModelOptions]="{standalone: true}" placeholder="">
+                                [(ngModel)]="site.countryCode" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
+                    <div class="form-group row mt-3">
+                        <div class="col-sm ms-4 me-4">
+                            <label>{{"SITES.RANGE" | translate}}<label
+                                    style="color:red;">*</label></label>
+                            <!--input formControlName="nomOrg" type="text" class="form-control"  placeholder=""-->
+                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
+                                [(ngModel)]="site.range" [ngModelOptions]="{standalone: true}" placeholder="">
+                        </div>
+                    </div>
+
 
                     <div class="form-group row">
                         <div class="col-sm mt-3 ms-4 me-4">
                             <label>NIT<label style="color:red;">*</label></label>
                             <!--input formControlName="nitOrg" type="text" class="form-control" placeholder=""-->
                             <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="organization.nit" [ngModelOptions]="{standalone: true}" placeholder="">
+                                [(ngModel)]="site.nit" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
                     <!--<div class="form-group row">
@@ -40,34 +50,44 @@
                     <div class="form-group row">
 
                         <div class="col-sm mt-3 ms-4 me-4">
-                            <label>{{"REC.TEL" | translate}}<label style="color:red;">*</label></label>
+                            <label>{{"SITES.UBICATION" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
                             <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="organization.tel" [ngModelOptions]="{standalone: true}" placeholder="">
+                                [(ngModel)]="site.ubication" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
+                    <div class="form-group row">
+
+                        <div class="col-sm mt-3 ms-4 me-4">
+                            <label>ID<label style="color:red;">*</label></label>
+                            <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
+                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
+                                [(ngModel)]="site.id" [ngModelOptions]="{standalone: true}" placeholder="">
+                        </div>
+                    </div>
+
 
                     <div class="form-group row mt-3 ms-3 me-3">
 
                         <div class="col-sm ">
-                            <label>{{"REC.CONTRASEÑA" | translate}}<label style="color:red;">*</label></label>
+                            <label>{{"SITES.PHONE" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="password" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="organization.password" [ngModelOptions]="{standalone: true}"
+                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
+                                [(ngModel)]="site.phone" [ngModelOptions]="{standalone: true}"
                                 placeholder="">
                         </div>
                         <div class="col-sm ">
-                            <label>{{"REC.CONFIRMAR"|translate}}<label style="color:red;">*</label></label>
+                            <label>{{"REC.TEL"|translate}}<label style="color:red;">*</label></label>
                             <!--input  formControlName="ecivlUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="password" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="contra.pass" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
+                                [(ngModel)]="site.tel" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
 
                     <div class="row text-center mt-4">
                         <div class="form-group row">
                             <div class="col-sm">
-                                <button type="submit" routerLink="/sites" class="btn btn-primary">{{"REC.SIGUIENTE"|translate}}</button>
+                                <button type="submit" class="btn btn-primary">{{"REC.ENVIAR"|translate}}</button>
                             </div>
                         </div>
                     </div>
@@ -76,29 +96,36 @@
             <div class="col-sm mt-3">
                 <div class="container p-4">
                     <app-map-organizacion></app-map-organizacion>
-                    <!--button class="btn btn-primary mt-3" (click)="update()">Actualizar Ubicaciones</button-->
-                    <!--<div class="imagenMpa">
-                            <img src="../../assets/images/maps.jpg" class="figure-img img-fluid rounded " alt="...">
-                        </div>-->
                     <div class="row mt-3">
                         <h5>{{"REC.INFORMACION"|translate}}</h5>
-                        <p style="font-size: 90%">{{organization.name}}</p>
                         <!--div class="col-12">
                         <button class="btn btn-primary" (click)="update()">Actualizar Ubicaciones</button>
                     </div-->
 
 
-                        
+                        <div class="col-1 text-center mt-2">
+                            <fa-icon [icon]="['fas', 'location-dot']"></fa-icon>
+
+                        </div>
+                        <div class="col-11 mt-2">
+                            <label style="font-size: 80%">{{site.ubication}}</label>
+                        </div>
                         <div class="col-1 text-center mt-4">
                             <fa-icon [icon]="['fas', 'phone']"></fa-icon>
                         </div>
                         <div class="col-11 mt-4">
-                            <label style="font-size: 80%">{{organization.tel}}</label>
+                            <label style="font-size: 80%">{{site.tel}}</label>
                         </div>
-                    </div>
+                        <div class="col-1 text-center mt-4">
+                            <fa-icon [icon]="['fas', 'phone']"></fa-icon>
+                        </div>
+                        <div class="col-11 mt-4">
+                            <label style="font-size: 80%">{{site.phone}}</label>
+                        </div>
+                    
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+                    
