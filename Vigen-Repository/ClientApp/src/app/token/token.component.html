@@ -1,39 +1,39 @@
-<br>
-<br>
-<div class="row">
-    <div class="col-4">
-    </div>
-    <div class="col-4">
-        <form>
-            <h1>Verificación</h1>
-            <div class="form-group row">
-                <label>Numero de Identifiación</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" placeholder="" [(ngModel)]="token.ide"
-                        [ngModelOptions]="{ standalone: true }">
+<div class="container" style="margin-top:7rem; margin-bottom: 3rem;">
+    <div class="row">
+        <div class="col-4">
+        </div>
+        <div class="col-4 shadow p-4">
+            <form>
+                <h1 class="text-center">Verificación</h1>
+                <div class="form-group row ms-3 me-3">
+                    <label>Numero de Identifiación</label>
+                    <div>
+                        <input type="email" class="form-control" placeholder="Identificación" [(ngModel)]="token.ide"
+                            [ngModelOptions]="{ standalone: true }">
+                    </div>
                 </div>
-            </div>
-            <br>
-            <div class="form-group row">
-                <label>Codigo enviado a su correo</label>
                 <br>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="" [(ngModel)]="token.codigo"
-                        [ngModelOptions]="{ standalone: true }">
+                <div class="form-group row ms-3 me-3">
+                    <label>Codigo enviado a su correo</label>
+                    <div>
+                        <input type="text" class="form-control" placeholder="Código" [(ngModel)]="token.codigo"
+                            [ngModelOptions]="{ standalone: true }">
+                    </div>
                 </div>
-            </div>
-            <br>
-            <div class="col-sm-10">
+                
+                
+            </form>
+            <div class="alert alert-dismissible alert-info mt-3 ms-3 me-3">
+                
+                <label><fa-icon [icon]="['fas', 'circle-info']"></fa-icon><b> Nota:</b> El código de Verificación fue enviado a su correo.</label>
+              </div>
+            <div class="text-center mt-3">
                 <button (click)="send()" class="btn btn-primary">Verificar</button>
             </div>
-        </form>
-    </div>
-    <div class="col-4">
+        </div>
+        <div class="col-4">
+        </div>
     </div>
 </div>
-<div class="container">
-  <br>
-  <hr>
-</div>
-<br>
-<br>
+
+

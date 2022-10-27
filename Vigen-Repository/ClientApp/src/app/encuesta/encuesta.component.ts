@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
+import Swal from 'sweetalert2';
 import { Poll } from '../api/models/poll';
 import { IaService } from '../api/MyServices/ia.service';
 import { PollService } from '../api/services/poll.service';
@@ -82,7 +83,11 @@ export class EncuestaComponent implements OnInit {
       this.poll.userId=localStorage.getItem("UserId");
       
       this.pollService.postPoll(this.poll).subscribe(res=>{
-        console.log(res);
+        Swal.fire({
+          icon: 'success',
+        position: 'top-end',
+        title: 'Encuesta Enviada',
+        });
       },err=>{
         console.error(err);
       });

@@ -40,9 +40,9 @@ namespace Vigen_Repository.Controllers
                     UserId = poll.UserId,
                     Title = "VIGEN - Posible caso de: " + violenceType.Name,
                     Description = "Se ha reportado un POSIBLE caso de " + violenceType.Name +
-                    "Identificacion: " + poll.UserId +
-                    "Nombre: " + user.Name + "" +
-                    "Ubicación: " + user.Ubication,
+                    " Identificacion: " + poll.UserId +
+                    " Nombre: " + user.Name +
+                    " Ubicación: " + user.Ubication,
                     OrganizationTypeId = 1,
                     StateId = 1
                 };
