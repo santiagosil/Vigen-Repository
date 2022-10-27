@@ -68,12 +68,7 @@
         "NUEINF":"New case of femicide",
         "NUECONTEN":"Debanhi Escobar: What is the status of her femicide case after six months?"
     },
-    "PANEL-ORG":{
-        "MENU2":"Menu",
-        "HOME":"Home",
-        "PERFIL":"Profile",
-        "ESTADISTICAS":"Statistics"
-    },
+    
     "EDIT-ORG":{
         "MENU2":"Menu",
         "HOME":"Home",
@@ -272,5 +267,56 @@
         "ADULTOMAYOR": "Elderly violence",
         "INFANTIL": "Child violence",
         "NOHESUFRIDO": "I have not suffered or seen any of the above"
+    },
+    "FAQ": {
+        "PREGUNTAS": "Frequently Asked Questions",
+        "QUEES": "What is it?",
+        "VIOLENCIAES": "Violence is any act, action or omission that produces physical, sexual, psychological, verbal, or economic harm or suffering to a person; it can occur in public or in private. Violent situations occur whenever a person imposes his power over another person violating his rights",
+        "AGRESIONES": "These aggressions are exercised against any person or group of persons on the basis of their sex or gender. The violence has a negative impact on their identity and social, physical, psychological or economic well-being. It is important to keep in mind that the different forms of violence can begin with very subtle manifestations that increase with the possibility of producing irreparable physical or emotional damage, and even death.",
+        "TIPOS": "Types of Violence",
+        "VIOLENCIAPUEDE": "Violence can be present in any environment; be it in the domestic or public sphere, the workplace, the street, public transportation, the school, etc. In the face of this, we all have the responsibility to break the silence and denounce. For this it is important that you learn to differentiate the different types of violence that exist in order to identify them.",
+        "FISICA":"-Physical:",
+        "TODASAGRESIONES":"-All aggressions that attempt against a person's body, either through blows, throwing objects, confinement, shaking or squeezing, among other behaviors that may cause physical damage.",
+        "PSICOLOGIA":"-Psychological or emotional:",
+        "ACCION": "is any action or omission intended to degrade or control the actions, behaviors, beliefs and decisions of others through intimidation, manipulation, threats, humiliation, isolation, or any conduct that implies harm to psychological health. This type of violence is one of the most common and naturalized in society, so it is necessary to learn to recognize it and denounce it.",
+        "SEXUAL":"-Sexual:",
+        "RELACIONES": "It includes all sexual relations or acts, physical or verbal, unwanted and unaccepted by the other person. Sexual violence can occur towards men or women using force or physical or psychological coercion or any other mechanism that overrides or limits personal will.",
+        "ECONOMIA":"-Economic:",
+        "DINERO": "occurs when money is used as a factor to dominate or establish harmful power relations. This type of violence can manifest itself when the person is deprived of the money they earn, prevented from spending it for their own or their family's benefit, or denied money to control their independence. All these forms of violence are considered a crime and are punishable by law.",
+        "DEGENERO":"-Gender-based:",
+        "ACTOS":" are violent acts against a person because of their sex or sexual preference. In many cases, they are acts that are exercised against women and are related to the control that some men believe they have over them, generally, taking advantage of conditions of defenselessness, inequality and power. It can also occur against men who step out of the culturally accepted masculine role, for example in cases of homophobic violence or for behaviors considered feminine, such as crying or expressing their feelings.",
+        "DENUNCIAR": "Where to report?",
+        "VICTIMA": "If you are a victim of any type of gender-based violence you should ask your EPS for immediate and comprehensive attention, free of charge. Any refusal to comply with this obligation, which is included in the health benefits plan, is a failure to exercise the right to health",
+        "ACUDIR": "Who to go to?",
+        "FISCALIAS":"-FISCALITIES:",
+        "DELITO": "Sexual violence is a crime. Therefore, you must report it. You can do it verbally or in writing, in the first instance in the Integral Attention Centers for Victims of Sexual Crimes of the Prosecutor's Office, which are open from Monday to Friday from 8 to 12 noon and from 1 to 5 in the afternoon, or in the Immediate Reaction Units (URI) of the Prosecutor's Office, which provide their services throughout the country 24 hours a day.", 
+        "ESTACIONES":"-Police Stations:",
+        "DENUNCIA": "the denunciation can also be made at Police Stations or Judicial Police Units such as the Dijin, Sijin or CTI. These refer the case to the Prosecutor's Office and refer the victim to Legal Medicine.",
+        "MEDICINA":"-Medicina Legal:",
+        "ESTABLECER":"-to establish the seriousness of the injuries and the state in which the victim is after the aggression, the authority receiving the complaint refers the victim to the Institute of Legal Medicine and Forensic Sciences.", 
+        "COMISARIAS":"-Family Police Stations:",
+        "DENUNCIAS":" receive complaints in cases of domestic violence and forward them to the Public Prosecutor's Office. These may order protection measures such as expelling the aggressor from the house; removing clothes, documents and indispensable elements for the victim; in the case of having children, provisionally resolving the issue of custody and child support and obtaining protection from the Police. These measures are complied with as long as the complaint is filed within 30 days following the occurrence of the aggression.",
+        "BIENESTAR":"-Instituto Colombiano de Bienestar Familiar (ICBF):",
+        "PERSONASMENORES": "there are Family Welfare Zonal Centers in all cities. However, they only attend cases involving persons under 18 years of age. If the aggression is sexual abuse, it is empowered to receive the complaint and transfer it to the Prosecutor's Office. In addition, it must ensure the protection, reestablishment and guarantee of the rights of the minors involved (victims and aggressors) and the victim must be offered comprehensive support, including a safe shelter",
+        "DEFENSORIA":"-Defensoría del Pueblo y Personería Municipal:",
+        "DERECHOS": "are responsible for ensuring the promotion, exercise and dissemination of human rights, both for victims and aggressors in cases of violence. They provide free advice and assistance to people who require support to defend their human rights, prevent violations of their rights or reestablish them, for example, for the formulation of petition rights or protection actions",
+        "AFRONTAR": "How to deal with domestic violence?",
+        "RECONOCER": "The most important thing is to recognize and accept that there is a situation of violence and abuse, in order to seek help from professionals and specialized institutions. If the person wishes, he/she can report the violence in the Family Police Stations of each locality, in the Police Stations or in the Municipal or Circuit Courts. It is important to keep in mind that in these cases, if children are involved, it is the obligation of any person in the community to denounce.",
+        "VIOLENCIABASADA": "What is gender-based violence?", 
+        "VIOLENCIABASADAGENERO": "Gender-based violence includes any act of physical, sexual, psychological and/or economic abuse against aA person because of his or her sex, including acts of deprivation of liberty, in both the public and private spheres. Men and women are victims of gender-based violence due to the roles and characteristics attributed to them in the different societies.",
+        "PROBLEMAS": "What sexual problems can a sexually abused woman present?",
+        "ABUSO": "Sexual abuse can cause problems of various kinds in the sexual experience of the victim, depending on the age at which the abuse occurs, the characteristics of the abuser (whether it is a family member or a stranger), the support received by the abused person, etc.",
+        "COMPROBADO": "It has been proven in those cases in which the victim of sexual abuse receives adequate professional help, she tends to present fewer sexual problems than that person who keeps quiet or does not receive prompt and effective intervention.",
+        "PROBLEMASFRECUENTES":"Among the most frequent sexual problems in sexually abused women are: absence or low sexual desire, anorgasmia (difficulty in having orgasms), arousal disorder and dyspareunia (pain during sexual intercourse)"
+
+    },
+    "PANEL-ORG": {
+        "MENU":",Menu",
+        "HOME":"Home",
+        "ESTADISTICAS":"Statistics",
+        "ALERTAS":"Alerts",
+        "USUARIO":"User",
+        "BIENVENIDO":"Welcome"
     }
+
 }
