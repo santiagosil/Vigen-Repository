@@ -34,6 +34,7 @@ import { FooterComponent } from './footer/footer.component';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { EditOrgComponent } from './edit-org/edit-org.component';
+import { AyudaComponent } from './ayuda/ayuda.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/translate/','.json')
@@ -62,7 +63,8 @@ export function HttpLoaderFactory(http: HttpClient){
     FooterComponent,
     EncuestaComponent,
     AcercaDeComponent,
-    EditOrgComponent
+    EditOrgComponent,
+    AyudaComponent
   ],
   imports: [
     BrowserModule,
