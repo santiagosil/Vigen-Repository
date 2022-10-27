@@ -266,7 +266,8 @@
         "VIOLENCIAINTRAFAMILIAR": "Intrafamilial violence",
         "ADULTOMAYOR": "Elderly violence",
         "INFANTIL": "Child violence",
-        "NOHESUFRIDO": "I have not suffered or seen any of the above"
+        "NOHESUFRIDO": "I have not suffered or seen any of the above",
+        "NO":"No"
     },
     "FAQ": {
         "PREGUNTAS": "Frequently Asked Questions",

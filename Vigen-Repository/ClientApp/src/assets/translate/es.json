@@ -257,7 +257,8 @@
         "VIOLENCIAINTRAFAMILIAR":"Violencia intrafamiliar",
         "ADULTOMAYOR":"Violencia Adulto Mayor",
         "INFANTIL":"Violencia infantil",
-        "NOHESUFRIDO":"No he sufrido ni visto ninguna de las anteriores"
+        "NOHESUFRIDO":"No he sufrido ni visto ninguna de las anteriores",
+        "NO":"No"
 
     },
     "FAQ":{
