@@ -27,6 +27,11 @@ export class OrganizationService extends BaseService {
    */
   static readonly ApiOrganizationGetPath = '/api/Organization';
 
+
+  putOrganization(id:string, body:Organization){
+    return this.http.put(this.rootUrl+'/api/Organization/'+id, body);
+  }
+
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
    * To access only the response body, use `apiOrganizationGet$Plain()` instead.

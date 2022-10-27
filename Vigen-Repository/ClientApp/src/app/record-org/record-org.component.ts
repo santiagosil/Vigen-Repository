@@ -19,12 +19,12 @@ import { InverseService } from '../api/MyServices/inverse.service';
 })
 export class RecordOrgComponent implements OnInit {
 
-  showEmoji: boolean = false;
+  /*showEmoji: boolean = false;
   title = 'test 1';
   contentEmoji = '';
   listData: Data[] = [];
   form: FormGroup = new FormGroup({});
-  isCheck: any;
+  isCheck: any;*/
   /*constructor(private fb : FormBuilder) { }*/
 
   showContra() {
@@ -56,14 +56,11 @@ export class RecordOrgComponent implements OnInit {
     pass : ""
   }
 
+
+
   constructor(private api:OrganizationService,private reverse:InverseService) { }
 
   ngOnInit(): void {
-    
-  }
-  sendLogin():void{
-    this.isCheck = { user:1 }
-    console.error(latlong);
   }
   public send(){
     if (this.organization.name === "" || this.organization.nit === ""

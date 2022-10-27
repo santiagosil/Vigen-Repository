@@ -18,6 +18,9 @@ namespace Vigen_Repository.Models
         [Column("name")]
         public string Name { get; set; } = null!;
 
+        [Column("gender")]
+        public string? Gender { get; set; }
+
         [Column("email")]
         public string Email { get; set; } = null!;
 

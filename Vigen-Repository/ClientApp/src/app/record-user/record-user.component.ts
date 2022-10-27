@@ -53,8 +53,8 @@ export class RecordUserComponent implements OnInit {
   }
    
   get ubication(){
-    this.usuario.ubication=this.rever.getSite.geoInv
-    return this.rever.getSite
+    this.usuario.ubication=this.rever.getSite.geoInv;
+    return this.rever.getSite;
   }
 
 

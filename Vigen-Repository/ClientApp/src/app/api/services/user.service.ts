@@ -444,6 +444,10 @@ export class UserService extends BaseService {
     );
   }
 
+  putUser(id:string,body:User){
+    return this.http.put<User>(this.rootUrl+'/api/User/'+id,body);
+  }
+
   /**
    * This method provides access to only to the response body.
    * To access the full response (for headers, for example), `apiUserIdDelete$Plain$Response()` instead.
