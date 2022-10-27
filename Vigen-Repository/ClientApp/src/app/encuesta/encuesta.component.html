@@ -1,606 +1,646 @@
-<section class="color p-5">
-    <section>
-        <div class="container mt-5 ">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <b>
-                        <h1>{{"ENCUESTA.VIOLENCIAGENERO"| translate}}</h1>
-                    </b>
-                    <p>{{"ENCUESTA.INVITAMOSRESPONDER"| translate}}
-                       
-                    </p>
-                </div>
-                <div class="col-1"></div>
+<div class="container-fluid" style="margin-top: 5rem;">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark text-white ">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+
+                <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline mt-3">{{"PANEL-USER.MENU2" | translate}}</span>
+                </a>
+                <h4 class="d-none d-sm-inline mx-1 mt-2">Nombre</h4>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-white"
+                    id="menu">
+                    <li class="nav-item">
+                        <a routerLink="/pUser" class="nav-link align-middle px-0">
+                            <fa-icon style="color: white" [icon]="['fas', 'house']"></fa-icon> <span
+                                class="ms-2 d-none d-sm-inline text-white">{{"PANEL-USER.HOME" | translate}}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/edUser" class="nav-link px-0 align-middle">
+                            <fa-icon style="color: white" [icon]="['far', 'user']"></fa-icon> <span
+                                class="ms-2 d-none d-sm-inline text-white">{{"PANEL-USER.PERFIL" | translate}}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/encuesta" class="nav-link px-0 align-middle">
+                            <fa-icon style="color: white" [icon]="['fas', 'square-poll-horizontal']"></fa-icon> <span
+                                class="ms-2 d-none d-sm-inline text-white">{{"PANEL-USER.ENCUESTA" | translate}}</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <b>
-                        <h3>{{"ENCUESTA.DATOSPERSONALES"| translate}}
-                        </h3>
-                    </b>
-                    <hr>
-                    <h4>{{"ENCUESTA.GENERO"| translate}}<label style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.HOMBRE"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.MUJER"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="2">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.NOBINARIO"| translate}}
-                        </label>
-                    </div>
-                </div>
-                <div class="col-1"></div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4>{{"ENCUESTA.ORIENTACIONSEXUAL"| translate}}<label style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.HETEROSEXUAL"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.HOMOSEXUAL"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="2">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.BISEXUAL"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.ASEXUAL"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="3">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.PANSEXUAL"| translate}}
-                        </label>
-                    </div>
-                </div>
-                <div class="col-1"></div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4>{{"ENCUESTA.EDAD"}}<label style="color:red;">*</label></h4>
-                    <input class="margin" type="text" class="shadow form-control rounded" placeholder="Ingrese su edad"
-                        style="width: 50%">
-                </div>
-                <div class="col-1"></div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4>{{"ENCUESTA.CIUDAD"| translate}}<label style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Bogotá
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="2">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Madrid
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="3">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Mosquera
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Facatativá
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Funza
-                        </label>
-                    </div>
-                    <div class="row">
+        <div class="col color">
+            <section class="color">
+                <section>
+                    <div class="container mt-5 ">
                         <div class="row">
-                            <div class="input-group">
-                                <div class="input-group-text">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="5">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <b>
+                                    <h1>{{"ENCUESTA.VIOLENCIAGENERO"| translate}}</h1>
+                                </b>
+                                <p>{{"ENCUESTA.INVITAMOSRESPONDER"| translate}}
+                                   
+                                </p>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <b>
+                                    <h3>{{"ENCUESTA.DATOSPERSONALES"| translate}}
+                                    </h3>
+                                </b>
+                                <hr>
+                                <h4>{{"ENCUESTA.GENERO"| translate}}<label style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="GENERO" value="0" [(ngModel)]="data.genero">
+                                    <label class="form-check-label" for="GENERO">
+                                        {{"ENCUESTA.HOMBRE"| translate}}
+                                    </label>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Otra">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="GENERO" value="1" [(ngModel)]="data.genero">
+                                    <label class="form-check-label" for="GENERO">
+                                        {{"ENCUESTA.MUJER"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="GENERO" value="2" [(ngModel)]="data.genero">
+                                    <label class="form-check-label" for="GENERO">
+                                        {{"ENCUESTA.NOBINARIO"| translate}}
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4>{{"ENCUESTA.ORIENTACIONSEXUAL"| translate}}<label style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ORIENTACIONSEXUAL" value="0" [(ngModel)]="data.orientacionSexual">
+                                    <label class="form-check-label" for="ORIENTACIONSEXUAL">
+                                        {{"ENCUESTA.HETEROSEXUAL"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ORIENTACIONSEXUAL" value="1" [(ngModel)]="data.orientacionSexual">
+                                    <label class="form-check-label" for="ORIENTACIONSEXUAL">
+                                        {{"ENCUESTA.HOMOSEXUAL"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ORIENTACIONSEXUAL" value="2" [(ngModel)]="data.orientacionSexual">
+                                    <label class="form-check-label" for="ORIENTACIONSEXUAL">
+                                        {{"ENCUESTA.BISEXUAL"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ORIENTACIONSEXUAL" value="4" [(ngModel)]="data.orientacionSexual">
+                                    <label class="form-check-label" for="ORIENTACIONSEXUAL">
+                                        {{"ENCUESTA.ASEXUAL"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ORIENTACIONSEXUAL" value="3" [(ngModel)]="data.orientacionSexual">
+                                    <label class="form-check-label" for="ORIENTACIONSEXUAL">
+                                        {{"ENCUESTA.PANSEXUAL"| translate}}
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4>{{"ENCUESTA.EDAD" | translate}}<label style="color:red;">*</label></h4>
+                                <input class="margin" type="text" class="shadow form-control rounded" placeholder="Ingrese su edad"
+                                    style="width: 50%" [(ngModel)]="data.edad">
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4>{{"ENCUESTA.CIUDAD"| translate}}<label style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="CIUDAD" value="0" [(ngModel)]="data.municipio">
+                                    <label class="form-check-label" for="CIUDAD">
+                                        Bogotá
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="CIUDAD" value="2" [(ngModel)]="data.municipio">
+                                    <label class="form-check-label" for="CIUDAD">
+                                        Madrid
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="CIUDAD" value="3" [(ngModel)]="data.municipio">
+                                    <label class="form-check-label" for="CIUDAD">
+                                        Mosquera
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="CIUDAD" value="1" [(ngModel)]="data.municipio">
+                                    <label class="form-check-label" for="CIUDAD">
+                                        Facatativá
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="CIUDAD" value="4" [(ngModel)]="data.municipio">
+                                    <label class="form-check-label" for="CIUDAD">
+                                        Funza
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <div class="row">
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <input class="form-check-input" type="radio" name="CIUDAD" value="5" [(ngModel)]="data.municipio">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Otra">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4>{{"ENCUESTA.SECTOR"| translate}}<label style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="SECTOR" value="1" [(ngModel)]="data.sector">
+                                    <label class="form-check-label" for="SECTOR">
+                                        {{"ENCUESTA.RURAL"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="SECTOR" value="0" [(ngModel)]="data.sector">
+                                    <label class="form-check-label" for="SECTOR">
+                                        {{"ENCUESTA.URBANO"| translate}}
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4>{{"ENCUESTA.NIVEL"| translate}}<label style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="NIVEL" value="0" [(ngModel)]="data.nivelEducativo">
+                                    <label class="form-check-label" for="NIVEL">
+                                        {{"ENCUESTA.BASICAPRIMARIA"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="NIVEL" value="1" [(ngModel)]="data.nivelEducativo">
+                                    <label class="form-check-label" for="NIVEL">
+                                        {{"ENCUESTA.BASICASECUNDARIA"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="NIVEL" value="2" [(ngModel)]="data.nivelEducativo">
+                                    <label class="form-check-label" for="NIVEL">
+                                        {{"ENCUESTA.MEDIA"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="NIVEL" value="3" [(ngModel)]="data.nivelEducativo">
+                                    <label class="form-check-label" for="NIVEL">
+                                        {{"ENCUESTA.TECNICO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="NIVEL" value="4" [(ngModel)]="data.nivelEducativo">
+                                    <label class="form-check-label" for="NIVEL">
+                                        {{"ENCUESTA.PREGRADO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="NIVEL" value="5" [(ngModel)]="data.nivelEducativo">
+                                    <label class="form-check-label" for="NIVEL">
+                                        {{"ENCUESTA.POSTGRADOS"| translate}}
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4>{{"ENCUESTA.ESTADOCIVIL"| translate}}<label style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ESTADOCIVIL" value="0" [(ngModel)]="data.estadoCivil">
+                                    <label class="form-check-label" for="ESTADOCIVIL">
+                                        {{"ENCUESTA.SOLTERO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ESTADOCIVIL" value="1" [(ngModel)]="data.estadoCivil">
+                                    <label class="form-check-label" for="ESTADOCIVIL">
+                                        {{"ENCUESTA.CASADO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ESTADOCIVIL" value="2" [(ngModel)]="data.estadoCivil">
+                                    <label class="form-check-label" for="ESTADOCIVIL">
+                                        {{"ENCUESTA.VIUDO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ESTADOCIVIL" value="3" [(ngModel)]="data.estadoCivil">
+                                    <label class="form-check-label" for="ESTADOCIVIL">
+                                        {{"ENCUESTA.UNIONLIBRE"| translate}}
+                                    </label>
+                                </div>
+                                <div class="col-1"></div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-1"></div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4>{{"ENCUESTA.SECTOR"| translate}}<label style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.RURAL"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.URBANO"| translate}}
-                        </label>
-                    </div>
-                </div>
-                <div class="col-1"></div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4>{{"ENCUESTA.NIVEL"| translate}}<label style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.BASICAPRIMARIA"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.BASICASECUNDARIA"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="2">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.MEDIA"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="3">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.TECNICO"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.PREGRADO"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="5">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.POSTGRADOS"| translate}}
-                        </label>
-                    </div>
-                </div>
-                <div class="col-1"></div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4>{{"ENCUESTA.ESTADOCIVIL"| translate}}<label style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.SOLTERO"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.CASADO"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="2">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.VIUDO"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="3">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.UNIONLIBRE"| translate}}
-                        </label>
-                    </div>
-                    <div class="col-1"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4> {{"ENCUESTA.ETNICO"| translate}}<label style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.COMUNIDADES"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.PUEBLOS"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.GITANO"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.RAIZALES"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.NINGUNO"| translate}}
-                        </label>
-                    </div>
-                    <div class="row">
-                        <div class="input-group">
-                            <div class="input-group-text">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" value="5">
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
                             </div>
-                            <input type="text" class="form-control" placeholder="Otra">
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4> {{"ENCUESTA.ETNICO"| translate}}<label style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ETNICO" value="1" [(ngModel)]="data.etnia">
+                                    <label class="form-check-label" for="ETNICO">
+                                        {{"ENCUESTA.COMUNIDADES"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ETNICO" value="2" [(ngModel)]="data.etnia">
+                                    <label class="form-check-label" for="ETNICO">
+                                        {{"ENCUESTA.PUEBLOS"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ETNICO" value="3" [(ngModel)]="data.etnia">
+                                    <label class="form-check-label" for="ETNICO">
+                                        {{"ENCUESTA.GITANO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ETNICO" value="4" [(ngModel)]="data.etnia">
+                                    <label class="form-check-label" for="ETNICO">
+                                        {{"ENCUESTA.RAIZALES"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="ETNICO" value="0" [(ngModel)]="data.etnia">
+                                    <label class="form-check-label" for="ETNICO">
+                                        {{"ENCUESTA.NINGUNO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <input class="form-check-input" type="radio" name="ETNICO" value="5" [(ngModel)]="data.etnia">
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Otra">
+                                    </div>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-1"></div>
-                </div>
-            </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4>{{"ENCUESTA.CUENTAINGRESOS"| translate}}<label style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="CUENTAINGRESOS" value="1" [(ngModel)]="data.ingresos">
+                                    <label class="form-check-label" for="CUENTAINGRESOS">
+                                        {{"ENCUESTA.SI"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="CUENTAINGRESOS" value="0" [(ngModel)]="data.ingresos">
+                                    <label class="form-check-label" for="CUENTAINGRESOS">
+                                        {{"ENCUESTA.NO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4>{{"ENCUESTA.OCUPACIONAL"| translate}} <label
+                                        style="color:red;">*</label>
+                                </h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="2" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
+                                        {{"ENCUESTA.EMPLEADO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="3" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
+                                        {{"ENCUESTA.GOBIERNO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="4" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
+                                        {{"ENCUESTA.DOMESTICO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="6" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
+                                        {{"ENCUESTA.CUENTA"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="5" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
+                                        {{"ENCUESTA.EMPLEADOR"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="7" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
+                                        {{"ENCUESTA.FAMILIAR"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="1" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
+                                        {{"ENCUESTA.ESTUDIANTES"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="OCUPACIONAL" value="0" [(ngModel)]="data.ocupacion">
+                                    <label class="form-check-label" for="OCUPACIONAL">
+                                        {{"ENCUESTA.DESEMPLEADO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <b>
+                                    <h3>
+                                        {{"ENCUESTA.SECCIONPREGUNTAS"| translate}}
+                                    </h3>
+                                </b>
+                                <p>{{"ENCUESTA.SUPAREJA"| translate}}
+                                </p>
+                                <hr>
+                                <h4>{{"ENCUESTA.HAOBSERVADO"| translate}}<label
+                                        style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="HAOBSERVADO" value="1" [(ngModel)]="data.p1">
+                                    <label class="form-check-label" for="HAOBSERVADO">
+                                        {{"ENCUESTA.SI"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="HAOBSERVADO" value="0" [(ngModel)]="data.p1">
+                                    <label class="form-check-label" for="HAOBSERVADO">
+                                        {{"ENCUESTA.NO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4>{{"ENCUESTA.AMENAZADO"| translate}}<label style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="AMENAZADO" value="1" [(ngModel)]="data.p2">
+                                    <label class="form-check-label" for="AMENAZADO">
+                                        {{"ENCUESTA.SI"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="AMENAZADO" value="0" [(ngModel)]="data.p2">
+                                    <label class="form-check-label" for="AMENAZADO">
+                                        {{"ENCUESTA.NO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4>{{"ENCUESTA.PRESIONADO"| translate}}<label style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="PRESIONADO" value="1" [(ngModel)]="data.p3">
+                                    <label class="form-check-label" for="PRESIONADO">
+                                        {{"ENCUESTA.SI"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="PRESIONADO" value="0" [(ngModel)]="data.p3">
+                                    <label class="form-check-label" for="PRESIONADO">
+                                        {{"ENCUESTA.NO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4>{{"ENCUESTA.DESTRUIDO"| translate}}<label style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="DESTRUIDO" value="1" [(ngModel)]="data.p4">
+                                    <label class="form-check-label" for="DESTRUIDO">
+                                        {{"ENCUESTA.SI"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="DESTRUIDO" value="0" [(ngModel)]="data.p4">
+                                    <label class="form-check-label" for="DESTRUIDO">
+                                        {{"ENCUESTA.NO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4>{{"ENCUESTA.SACUDIDO"| translate}}<label style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="SACUDIDO" value="1" [(ngModel)]="data.p5">
+                                    <label class="form-check-label" for="SACUDIDO">
+                                        {{"ENCUESTA.SI"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="SACUDIDO" value="0" [(ngModel)]="data.p5">
+                                    <label class="form-check-label" for="SACUDIDO">
+                                        {{"ENCUESTA.NO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4>{{"ENCUESTA.AGREDIDO"| translate}}<label style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="AGREDIDO" value="1" [(ngModel)]="data.p6">
+                                    <label class="form-check-label" for="AGREDIDO">
+                                        {{"ENCUESTA.SI"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="AGREDIDO" value="0" [(ngModel)]="data.p6">
+                                    <label class="form-check-label" for="AGREDIDO">
+                                        {{"ENCUESTA.NO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-10 shadow bg-white rounded p-3">
+                                <h4>{{"ENCUESTA.SUFRIDO"| translate}}<label
+                                        style="color:red;">*</label></h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="2" [(ngModel)]="data.p7">
+                                    <label class="form-check-label" for="SUFRIDO">
+                                        {{"ENCUESTA.VIOLENCIAINTRAFAMILIAR"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="3" [(ngModel)]="data.p7">
+                                    <label class="form-check-label" for="SUFRIDO">
+                                        {{"ENCUESTA.ADULTOMAYOR"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="1" [(ngModel)]="data.p7">
+                                    <label class="form-check-label" for="SUFRIDO">
+                                        {{"ENCUESTA.INFANTIL"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="4" [(ngModel)]="data.p7">
+                                    <label class="form-check-label" for="SUFRIDO">
+                                        {{"ENCUESTA.VIOLENCIAGENERO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="SUFRIDO" value="0" [(ngModel)]="data.p7">
+                                    <label class="form-check-label" for="SUFRIDO">
+                                        {{"ENCUESTA.NOHESUFRIDO"| translate}}
+                                    </label>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="text-center mt-5 mb-5">
+                    <button class="btn btn-primary" (click)="sendEncuesta()">Finalizar</button>
+                </section>
+            </section>
+            
         </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4>{{"ENCUESTA.CUENTAINGRESOS"| translate}}<label style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.SI"| translate}}Sí
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            No
-                        </label>
-                    </div>
-                    <div class="col-1"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4>{{"ENCUESTA.OCUPACIONAL"| translate}} <label
-                            style="color:red;">*</label>
-                    </h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="2">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.EMPLEADO"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="3">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.GOBIERNO"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.DOMESTICO"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="6">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.CUENTA"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="5">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.EMPLEADOR"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="7">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.FAMILIAR"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.ESTUDIANTES"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.DESEMPLEADO"| translate}}
-                        </label>
-                    </div>
-                    <div class="col-1"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <b>
-                        <h3>
-                            {{"ENCUESTA.SECCIONPREGUNTAS"| translate}}
-                        </h3>
-                    </b>
-                    <p>{{"ENCUESTA.SUPAREJA"| translate}}
-                    </p>
-                    <hr>
-                    <h4>{{"ENCUESTA.HAOBSERVADO"| translate}}<label
-                            style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.SI"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            No
-                        </label>
-                    </div>
-                    <div class="col-1"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4>{{"ENCUESTA.AMENAZADO"| translate}}<label style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.SI"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            No
-                        </label>
-                    </div>
-                    <div class="col-1"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4>{{"ENCUESTA.PRESIONADO"| translate}}<label style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.SI"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            No
-                        </label>
-                    </div>
-                    <div class="col-1"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4>{{"ENCUESTA.DESTRUIDO"| translate}}<label style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.SI"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            No
-                        </label>
-                    </div>
-                    <div class="col-1"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4>{{"ENCUESTA.SACUDIDO"| translate}}<label style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.SI"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            No
-                        </label>
-                    </div>
-                    <div class="col-1"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4>{{"ENCUESTA.AGREDIDO"| translate}}<label style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.SI"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            No
-                        </label>
-                    </div>
-                    <div class="col-1"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-10 shadow bg-white rounded p-3">
-                    <h4>{{"ENCUESTA.SUFRIDO"| translate}}<label
-                            style="color:red;">*</label></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="2">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.VIOLENCIAINTRAFAMILIAR"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="3">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.ADULTOMAYOR"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.INFANTIL"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="4">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.VIOLENCIAGENERO"| translate}}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            {{"ENCUESTA.NOHESUFRIDO"| translate}}
-                        </label>
-                    </div>
-                    <div class="col-1"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <button class="btn btn-primary" (click)="sendEncuesta()">Finalizar</button>
-    </section>
-</section>
-<app-footer></app-footer>
+    </div>
+</div>
+
+
+
+

@@ -5,6 +5,7 @@ import { ApiConfiguration } from '../api/api-configuration';
 import { BaseService } from '../api/base-service';
 import {LoginComponent} from 'src/app/login/login.component';
 import Swal from 'sweetalert2';
+import { EstadisticasService} from '../api/MyServices/estadisticas.service';
 
  
 @Component({
@@ -17,14 +18,13 @@ export class NotifyComponent extends BaseService implements OnInit {
 
   constructor(
     config: ApiConfiguration,
-    http: HttpClient
+    http: HttpClient,
     //private login:LoginComponent
   ) {
     super(config, http);
   }
 
   ngOnInit(): void {
-
     const connection = new SignalR.HubConnectionBuilder()
     .configureLogging(SignalR.LogLevel.Critical)
     .withUrl(this.rootUrl+"/notifyhub")
@@ -42,7 +42,6 @@ export class NotifyComponent extends BaseService implements OnInit {
       if((localStorage.getItem("TypeUser")) != '0'){
         this.showAlert(not);
       }
-      //console.log(SingletonUser.getInstance().type+" "+String(not[5]));
     });
   }
 

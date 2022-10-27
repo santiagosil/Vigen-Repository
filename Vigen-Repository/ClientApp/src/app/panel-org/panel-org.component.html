@@ -3,35 +3,54 @@
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark text-white ">
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline mt-3">{{"PANEL-ORG.MENU2" | translate}}</span>
+                    <a 
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline mt-3">{{"PANEL-ORG.MENU"|translate}}</span>
                     </a>                   
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-white"
                         id="menu">
-                        <li class="nav-item ms-3">
+                        <li class="nav-item">
                             <a href="#" class="nav-link align-middle px-0">
-                                <fa-icon style="color: white"  [icon]="['fas', 'house']"></fa-icon><span
-                                    class="ms-1 d-none d-sm-inline text-white">{{"PANEL-ORG.HOME" | translate}}</span>
+                                <i class="fs-4 bi-house"></i> <span
+                                    class="ms-1 d-none d-sm-inline text-white">{{"PANEL-ORG.HOME"|translate}}</span>
                             </a>
                         </li>
-                        <li class="nav-item ms-3">
-                            <a routerLink="/edOrg" class="nav-link px-0 align-middle">
-                                <fa-icon style="color: white" [icon]="['fas', 'briefcase']"></fa-icon> <span
-                                    class="ms-1 d-none d-sm-inline text-white">{{"PANEL-ORG.PERFIL" | translate}}</span>
-                            </a>
-                        </li>
-                        <li class="nav-item ms-3">
+                        <li>
                             <a routerLink="/statis" class="nav-link px-0 align-middle">
-                                <fa-icon style="color: white"  [icon]="['fas', 'chart-line']"></fa-icon> <span
-                                    class="ms-1 d-none d-sm-inline text-white">{{"PANEL-ORG.ESTADISTICAS" | translate}}</span></a>
+                                <i class="fs-4 bi-table"></i> <span
+                                    class="ms-1 d-none d-sm-inline text-white">{{"PANEL-ORG.ESTADISTICAS"|translate}}</span></a>
                         </li>
                         <app-reportes></app-reportes>
+                        <li>
+                            <!--<a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                <i class="fs-4 bi-bootstrap"></i> <span
+                                    class="ms-1 d-none d-sm-inline text-white">Reportes</span></a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span
+                                            class="d-none d-sm-inline text-white">Reporte</span> 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span
+                                            class="d-none d-sm-inline text-white">Reporte</span> 2</a>
+                                </li>
+                            </ul>-->
+                              
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-people"></i> <span
+                                    class="ms-1 d-none d-sm-inline text-white">{{"PANEL-ORG.ALERTA"|translate}}</span> </a>
+                        </li>
                     </ul>                    
-                    
+                    <label class="mb-4">
+                        <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30"
+                        class="rounded-circle">
+                    <span class="d-none d-sm-inline mx-1">{{"PANEL-ORG.USUARIO"|translate}}</span></label>
                 </div>
             </div>
             <div class="col p-4">
-                <h1><b>Bienvenido</b></h1>
+                <h1><b>{{"PANEL-ORG.BIENVENIDO"|translate}}</b></h1>
                 <hr>
                 <div class="mt-4">
                     <table class="table table-primary table-striped">

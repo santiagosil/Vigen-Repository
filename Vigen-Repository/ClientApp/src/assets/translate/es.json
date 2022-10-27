@@ -3,7 +3,7 @@
         "HOME":"Inicio",
         "ABOUT":"Acerca de",
         "HELP":"Ayuda",
-        "LOGIN":"Iniciar sesion",
+        "LOGIN":"Iniciar sesión",
         "SIGNUP":"Registrarse"
 
     },
@@ -30,7 +30,8 @@
         "VALORAR":"Valorar",
         "OPCIONES":"Opciones",
         "PEDIDOS":"Pedidos",
-        "CONTACTO":"Contacto"
+        "CONTACTO":"Contacto",
+        "SOMOS":"Somos un equipo de estudiantes de la universidad de Cundinamarca extensión Facatativá que implementa la metodología Scrum para la elaboración de un proyecto que tiene como finalidad la mitigación de casos de violencia de género, intrafamiliar, infantil y adulto mayor por medio de una Inteligencia Artificial (IA). "
     },
 
     
@@ -51,16 +52,19 @@
         "MENU2":"Menú",
         "HOME":"Inicio",
         "PERFIL":"Perfil",
-        "ENCUESTA":"Encuesta"
+        "ENCUESTA":"Encuesta",
+        "SECCIONINF":"SECCIÓN INFORMATIVA",
+        "DENUNCIAINF":"Denuncia por acoso sexual",
+        "CONTEDENUNCIA":"Mujer que denunció acoso sexual en baño de Montería llevó el caso a la Fiscalía",
+        "SABERMAS":"Saber más",
+        "POLINF":"Polemica por agresión física",
+        "POLCONTEN":"Polémica por conductor de Didi que habría agredido físicamente a una usuaria",
+        "NUEINF":"Nuevo caso de feminicidio",
+        "NUECONTEN":"Debanhi Escobar: ¿En qué va el caso de su feminicidio luego de seis meses?"
 
 
     },
-    "PANEL-ORG":{
-        "MENU2":"Menú",
-        "HOME":"Inicio",
-        "PERFIL":"Perfil",
-        "ESTADISTICAS":"Estadisticas"
-    },
+    
     "EDIT-ORG":{
         "MENU2":"Menú",
         "HOME":"Inicio",
@@ -98,14 +102,6 @@
         "NEWCONTRA":"Nueva Contraseña",
         "CONFCONTRA":"Confirmar Contraseña",
         "GUARDAR":"Guardar",
-        "SECCIONINF":"SECCIÓN INFORMATIVA",
-        "DENUNCIAINF":"Denuncia por acoso sexual",
-        "CONTEDENUNCIA":"Mujer que denunció acoso sexual en baño de Montería llevó el caso a la Fiscalía",
-        "SABERMAS":"Saber más",
-        "POLINF":"Polemica por agresión física",
-        "POLCONTEN":"Polémica por conductor de Didi que habría agredido físicamente a una usuaria",
-        "NUEINF":"Nuevo caso de feminicidio",
-        "NUECONTEN":"Debanhi Escobar: ¿En qué va el caso de su feminicidio luego de seis meses?",
         "INFORMACIONPERFIL":"Informacion de perfil",
         "INFROMACIONBASICA":"Informacion básica",
         "GENERO":"Género",
@@ -136,12 +132,12 @@
         "CORREO":"Correo",
         "CONTRASEÑA":"Contraseña",
         "RECUERDAME":"Recordarme",
-        "ORGANIZACION":"Organizacion",
+        "ORGANIZACION":"Organización",
         "USUARIO":"Usuario",
-        "INICIARSESION":"Iniciar sesion",
+        "INICIARSESION":"Iniciar sesión",
         "IDENTIFICACION": "Identificación",
-        "SELECCIONE": "Seleccione",
-        "AUNNOTIENES":"¿Aun no tienes una cuenta?"
+        "SELECCIONE": "Tipo de Cuenta",
+        "AUNNOTIENES":"¿Aún no tienes una cuenta?"
     },
     "REPORTES":{
         "REPORTES":"Reportes",
@@ -182,7 +178,7 @@
         "PHONE":"Celular"
     },
     "SIGNUP":{
-        "ELIGETIPO":"Elige que tipo de cuenta que deseas ingresar",
+        "ELIGETIPO":"Elige que tipo de cuenta",
         "USUARIOCOMUN" : "Usuario Común",
         "ORGANIZACIONES" : "Organizaciones",
         "BOTONREGISTRAR": "Registrarse",
@@ -207,6 +203,9 @@
         "OBJETIVOESPECIFICOS1":"• Implementar encuestas para el enriquecimiento de conocimiento de la inteligencia artificial.",
         "OBJETIVOESPECIFICOS2":"• Generar mecanismos de prevención y ayuda a las personas que presentan signos de algún tipo de violencia.",
         "OBJETIVOESPECIFICOS3":"• Realizar articulaciones estratégicas con instituciones estatales o privadas cuya razón social se oriente a la protección y el acompañamiento de sujetos/as en condición de víctimas de algún tipo de violencia, en aras de dar un seguimiento a las personas más vulnerables o las zonas con más riesgo, en un contexto local."
+        "NUESTRAVISION":"Nuestra visión",
+        "OBJETIVOSGENERALES":"Objetivos generales",
+        "OBJETIVOSESPECIFICOS":"Objetivos especificos"
     },
     "ENCUESTA":{
         "VIOLENCIAGENERO":"Violencia de género",
@@ -250,7 +249,7 @@
         "OCUPACIONAL":"Actualmente ¿En qué categoría de posición ocupacional se encuentra?",
         "EMPLEADO":"Empleado/a particular (Sector privado)",
         "GOBIERNO":"Empleado/a del gobierno (Sector público)",
-        "DOMESTICADO":"Empleado/a doméstico",
+        "DOMESTICO":"Empleado/a doméstico",
         "CUENTA":"Trabajador/a por cuenta propia (Independiente)",
         "EMPLEADOR": "Empleador/a",
         "FAMILIAR":"Trabajador/a familiar sin remuneración",
@@ -268,7 +267,8 @@
         "VIOLENCIAINTRAFAMILIAR":"Violencia intrafamiliar",
         "ADULTOMAYOR":"Violencia Adulto Mayor",
         "INFANTIL":"Violencia infantil",
-        "NOHESUFRIDO":"No he sufrido ni visto ninguna de las anteriores"
+        "NOHESUFRIDO":"No he sufrido ni visto ninguna de las anteriores",
+        "NO":"No"
 
     },
     "FAQ":{
@@ -287,5 +287,53 @@
         "CONTSUB4":"La cultura de la violación se da en entornos sociales que permiten que se normalice y justifique la violencia sexual, y en estos entornos se alimenta de las persistentes desigualdades de género y las actitudes sobre el género y la sexualidad. Poner nombre a la cultura de la violación es el primer paso para desterrarla. Cada día tenemos la oportunidad de examinar nuestros comportamientos y creencias en busca de los sesgos que permiten que siga existiendo la cultura de la violación. Piensa en cómo defines la masculinidad y la feminidad, y cómo influyen tus propios prejuicios y estereotipos. Desde nuestra actitud acerca de las identidades de género hasta las políticas que apoyamos en nuestras comunidades, todo el mundo puede tomar medidas para luchar contra la cultura de la violación.",
         "SUB5":"5. Sé responsable y exige responsabilidades a los demás.",
         "CONTSUB5":"La violencia puede adoptar muchas formas, incluido el acoso sexual en el lugar de trabajo y en los espacios públicos. Pronúnciate contra ciertos comportamientos señalándolos: los silbidos, los comentarios sexuales inapropiados y los chistes sexistas nunca son aceptables. Promueve un ambiente más seguro retando a tus compañeras y compañeros a reflexionar sobre su propio. "
+        "PREGUNTAS":"Preguntas Frecuentes",
+        "QUEES":"¿Qué es?",
+        "VIOLENCIAES":"Violencia es todo acto, acción u omisión que produzca daño o sufrimiento físico, sexual, psicológico verbal, o económico a una persona; puede ocurrir en público o en privado. Las situaciones violentas ocurren cada vez que una persona impone su poder sobre otra vulnerando sus derechos.",
+        "AGRESIONES":"Estas agresiones son ejercidas contra cualquier persona o grupo de personas sobre la base de su sexo o género. Las violencias impactan de manera negativa en su identidad y bienestar social, físico, psicológico o económico. Es importante tener en cuenta que las diferentes formas de violencia pueden iniciar con manifestaciones muy sutiles que van aumentando con la posibilidad de producir daños físicos o emocionales irreparables, e incluso, la muerte.",
+        "TIPOS":"Tipos de violencia",
+        "VIOLENCIAPUEDE":"La violencia puede estar presente en cualquier ámbito; sea en el doméstico o en el público, el lugar de trabajo, la calle, el transporte público, el colegio, etc. Ante esto, todos tenemos la responsabilidad de romper el silencio y denunciar. Para ello es importante que aprendas a diferenciar los distintos tipos de violencia que existen para poder identificarlos.",
+        "FISICA":"·Física:",
+        "TODASAGRESIONES":"son todas las agresiones que atentan contra el cuerpo de una persona, ya sea a través de golpes, lanzamiento de objetos, encierro, sacudidas o estrujones, entre otras conductas que puedan ocasionar daños físicos.",
+        "PSICOLOGIA":"·Psicológica o emocional:",
+        "ACCION":"es toda acción u omisión destinada a degradar o controlar las acciones, comportamientos, creencias y decisiones de otras personas por medio de intimidación, manipulación amenaza, humillación, aislamiento, o cualquier conducta que implique un perjuicio en la salud psicológica. Este tipo de violencia es de las más comunes y naturalizadas de la sociedad, por lo que es necesario aprender a reconocerla y denunciar.",
+        "SEXUAL":"·Sexual:",
+        "RELACIONES":"en ella se incluyen todas las relaciones o actos sexuales, físicos o verbales, no deseados ni aceptados por la otra persona. La violencia sexual puede presentarse hacia hombres o mujeres utilizando la fuerza o la coacción física, psicológica o cualquier otro mecanismo que anule o limite la voluntad personal.",
+        "ECONOMIA":"·Económica:",
+        "DINERO":"ocurre cuando se utiliza el dinero como un factor para dominar o establecer relaciones de poder perjudiciales. Este tipo de violencia se puede manifestar cuando a la persona se le quita el dinero que gana, se le impide gastarlo en beneficio suyo o de su familia, o se le niega el dinero para controlar su independencia. Todas estas formas de violencia son consideradas delito y son sancionadas por la ley.",
+        "DEGENERO":"·De género:",
+        "ACTOS":" son los actos violentos contra una persona en razón de su sexo o preferencia sexual. En muchos casos, son actos que se ejercen contra las mujeres y están relacionados con el control que algunos hombres creen tener sobre ellas, generalmente, aprovechándose de condiciones de indefensión, desigualdad y poder. También puede ocurrir contra hombres que se salen del rol masculino culturalmente aceptado, por ejemplo en casos de violencia homofóbica o por conductas consideradas femeninas, como llorar o expresar sus sentimientos.",
+        "DENUNCIAR":"¿Dónde denunciar?",
+        "VICTIMA":"Si eres víctima de cualquier tipo de violencia basada en género debes solicitarle a tu EPS atención integral e inmediata, de manera gratuita. Cualquier negativa a cumplir con esta obligación, que está inmersa en el plan de beneficios en salud, es una falta al ejercicio del derecho a la salud.",
+        "ACUDIR":"¿A quién acudir?",
+        "FISCALIAS":"·Fiscalías:",
+        "DELITO":"la violencia sexual es un delito. Por eso, debes denunciarlo. Puedes hacerlo de forma verbal o escrita, en primera instancia en los Centros de Atención Integral a Víctimas de Delitos Sexuales de la Fiscalía, que atienden de lunes a viernes de 8 a 12 del día y de 1 a 5 de la tarde, o en las Unidades de Reacción Inmediata (URI) de la Fiscalía, que prestan su servicio en todo el país las 24 horas del día.",
+        "ESTACIONES":"·Estaciones de Policía:",
+        "DENUNCIA":" la denuncia también puede hacerse en las estaciones de Policía o en las Unidades de Policía Judicial como la Dijin, Sijin o el CTI. Estas remiten el caso a la Fiscalía y remiten a la víctima a Medicina Legal.",
+        "MEDICINA":"·Medicina Legal:",
+        "ESTABLECER":" para establecer la gravedad de las lesiones y el estado en que se encuentra la víctima después de la agresión, la autoridad que recibe la denuncia remite a la víctima al Instituto de Medicina Legal y Ciencias Forenses.",
+        "COMISARIAS":"·Comisarías de Familia:",
+        "DENUNCIAS":" reciben denuncias en casos de violencia intrafamiliar para remitirlas a la Fiscalía. Estas pueden ordenar medidas de protección tales como expulsar al agresor de la casa; retirar ropa, documentos y elementos indispensables para la víctima; en el caso de tener hijos, resolver provisionalmente el tema de la custodia y cuota de alimentos de los menores y obtener protección de la Policía. Estas medidas se cumplen siempre y cuando la denuncia se interponga dentro de los 30 días siguientes a la ocurrencia de la agresión.",
+        "BIENESTAR":"·Instituto Colombiano de Bienestar Familiar (ICBF):",
+        "PERSONASMENORES":"en todas las ciudades hay Centros Zonales de Bienestar Familiar. Sin embargo, solo atienden casos en que se encuentren involucradas personas menores de 18 años. Si la agresión se trata de abuso sexual, está facultado para recibir la denuncia y trasladarla a la Fiscalía. Además, debe velar por la protección restablecimiento y garantía de los derechos de los menores involucrados (víctimas y agresores) y a la víctima debe ofrecerle apoyo integral, incluyendo un albergue seguro.",
+        "DEFENSORIA":"·Defensoría del Pueblo y Personería Municipal:",
+        "DERECHOS":"les corresponde velar por la promoción, el ejercicio y la divulgación de los derechos humanos, tanto de víctimas como de agresores en casos de violencia. Prestan asesoría y ayuda gratuita a las personas que requieran apoyo para la defensa de sus derechos humanos, prevenir vulneraciones de sus derechos o restablecimiento de los mismos, por ejemplo, para la formulación de derechos de petición o acciones de tutela.",
+        "AFRONTAR":"¿Cómo afrontar la violencia intrafamiliar?",
+        "RECONOCER":"Lo más importante es reconocer y aceptar que hay una situación de violencia y maltrato, para poder buscar ayuda de profesionales e instituciones especializadas. Si la persona lo desea puede denunciar la violencia en las Comisarías de Familia de cada localidad, en las estaciones de Policía o en los Juzgados Promiscuos Municipales o de Circuito. Es importante tener en cuenta que en estos casos, si los involucrados son niños, es obligación de cualquier persona de la comunidad denunciar.",
+        "VIOLENCIABASADA":"¿Qué es la violencia basada en género?",
+        "VIOLENCIABASADAGENERO":"La violencia basada en género incluye cualquier acto de maltrato físico, sexual, psicológico y/o económico contra unA persona con motivo de su sexo, incluyendo actos de privación de la libertad, tanto en el ámbito público como privado. Hombres y mujeres son víctimas de violencia basada en género debido a los roles y características que se les atribuyen en las diferentes sociedades.",
+        "PROBLEMAS":"¿Qué problemas sexuales puede presentar una mujer abusada sexualmente?",
+        "ABUSO":"El abuso sexual puede originar problemas de diversa índole en la vivencia sexual de la víctima, dependiendo de la edad en la que ocurre el abuso, las características del abusador (si es un familiar o un extraño), del apoyo que reciba la persona abusada, etc",
+        "COMPROBADO":"Se ha comprobado en aquellos casos en que la víctima de abuso sexual recibe una ayuda profesional adecuada, ésta tiende a presentar menores problemas sexuales que aquella persona que se calla o no recibe una intervención pronta y efectiva.",
+        "PROBLEMASFRECUENTES":"Entre los problemas sexuales más frecuentes en las mujeres abusadas sexualmente encontramos: ausencia o bajo deseo sexual, anorgasmia (dificultad para tener orgasmos), trastorno de la excitación y dispareunia (dolor durante la relación sexual)."
+    },
+    "PANEL-ORG": {
+        "MENU":"Menú",
+        "HOME":"Inicio",
+        "ESTADISTICAS":"Estadísticas",
+        "ALERTAS":"Alertas",
+        "USUARIO":"Usuario",
+        "BIENVENIDO":"Bienvenido"
     }
 }
+
