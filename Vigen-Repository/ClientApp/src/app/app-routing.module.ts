@@ -15,6 +15,7 @@ import { EncuestaComponent } from './encuesta/encuesta.component';
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 import { PanelOrgComponent } from './panel-org/panel-org.component';
 import { EditOrgComponent } from './edit-org/edit-org.component';
+import { AyudaComponent } from './ayuda/ayuda.component';
 import { PollStadisticsComponent } from './poll-stadistics/poll-stadistics.component';
 import { NotifyStadisticsComponent } from './notify-stadistics/notify-stadistics.component';
 
@@ -35,6 +36,7 @@ const routes: Routes = [
   {path: 'pOrg', component:PanelOrgComponent},
   {path: 'encuesta',component:EncuestaComponent},
   {path: 'edOrg',component:EditOrgComponent},
+  {path: 'ayuda',component:AyudaComponent},
   {path: 'pollStadistics',component:PollStadisticsComponent},
   {path: 'notifyStadistics',component:NotifyStadisticsComponent},
 ];

@@ -205,7 +205,15 @@
         "NUESTRAMISION":"Our mission",
         "NUESTRAVISION":"Our vision",
         "OBJETIVOSGENERALES":"General objectives",
+        "OBJETIVOSESPECIFICOS":"Specific objectives",
+        "MISION":"Vigen contributes to the reduction of different types of violence against families, children, women and the elderly in the public and private spheres through the use of information technology, communication and artificial intelligence to make predictive models that can foresee any violent, aggressive and/or abusive event before it occurs, partially preventing physical or psychological harm to the victim.",
+        "VISION":"Vigen will have possibilities of growth in any place where there is support for action, research and data collection for further analysis and prediction for the reduction of domestic, child, gender and elder violence. Taking into account that we do NOT suggest the creation of new care institutions under any circumstances, nor are we a direct part of any of them.",
+        "OBJETIVOGENERAL":"• To develop software trained in the collection, study, presentation and prediction of risks in gender, elder, intra-family and child violence (from 13 years and older). To present to the governmental media by means of reports and reports, so that the most vulnerable people or the most at-risk areas can be followed up in a local context.",
+        "OBJETIVOESPECIFICOS1":"• Implement surveys for the enrichment of knowledge of artificial intelligence.",
+        "OBJETIVOESPECIFICOS2":"• Generate mechanisms for prevention and assistance to people who show signs of some type of violence.",
+        "OBJETIVOESPECIFICOS3":"• Carry out strategic articulations with state or private institutions whose social reason is oriented to the protection and accompaniment of subjects in condition of victims of some type of violence, in order to follow up the most vulnerable people or the areas with more risk, in a local context."
         "OBJETIVOSESPECIFICOS":"Specific objectives"
+
     },
     "ENCUESTA":{
         "VIOLENCIAGENERO": "Gender violence",
@@ -267,6 +275,21 @@
         "VIOLENCIAINTRAFAMILIAR": "Intrafamilial violence",
         "ADULTOMAYOR": "Elderly violence",
         "INFANTIL": "Child violence",
+        "NOHESUFRIDO": "I have not suffered or seen any of the above"
+    },
+    "AYUDA":{
+        "TITULO":"WAYS TO CONTRIBUTE AGAINST GENDER VIOLENCE",
+        "TITULOCONT":"The fight against gender violence is something that concerns us all, both men and women, these are some recommendations to start making a change and generate a change in our society:",
+        "SUB1":"1. Listen to and believe survivors.",
+        "CONTSUB1":"When a person shares her story of violence, she is taking the first step in breaking the cycle of abuse. We must ensure that she has the safe space she needs to speak and be heard. It is important to remember that when dealing with cases of sexual violence, the victim's sobriety, dress and sexuality are irrelevant. The perpetrator is solely responsible for the assault and must take responsibility alone. Protest against victim-blaming and challenge the idea that people should avoid situations that are perceived as ''dangerous'' by traditional standards. Survivors are speaking out more than ever, and we can all do something to ensure they get justice. Don't say, 'Why didn't you get out of there?' Say, 'We hear you. We believe you. We are with you.'",
+        "SUB2":"2. Teach and learn from the next generation.",
+        "CONTSUB2":"The example we set for the younger generation shapes the way they think about gender, respect and human rights. It initiates conversations about gender roles at an early age and challenges the traditional traits and characteristics assigned to men and women. Point out the stereotypes that girls and boys constantly face, whether in the media, on the street or at school, and let them know that there is nothing wrong with being different. Encourage a culture of acceptance.",
+        "SUB3":"3. Know the signs of abuse and learn how you can help.",
+        "CONTSUB3":"There are many forms of abuse and all of them can leave serious physical and emotional after-effects. If you are concerned about a friend who may be experiencing violence or who feels unsafe around someone, review the following signs of abuse and learn ways to help them find safety and support. If you think someone is abusing you, help is available.",
+        "SUB4":"4. Demonstrate your opposition to rape culture:",
+        "CONTSUB4":"Rape culture occurs in social environments that allow sexual violence to be normalized and justified, and in these environments it is fueled by persistent gender inequalities and attitudes about gender and sexuality. Naming rape culture is the first step in banishing it. Every day we have the opportunity to examine our behaviors and beliefs for the biases that allow rape culture to continue to exist. Think about how you define masculinity and femininity, and how your own biases and stereotypes influence them. From our attitudes about gender identities to the policies we support in our communities, everyone can take action to fight rape culture.",
+        "SUB5":"5. Be responsible and hold others accountable.",
+        "CONTSUB5":"Violence can take many forms, including sexual harassment in the workplace and in public spaces. Speak out against certain behaviors by pointing them out: whistling, inappropriate sexual comments and sexist jokes are never acceptable. Promote a safer environment by challenging your colleagues to reflect on their own."
         "NOHESUFRIDO": "I have not suffered or seen any of the above",
         "NO":"No"
     },
