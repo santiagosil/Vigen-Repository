@@ -34,6 +34,7 @@ import { FooterComponent } from './footer/footer.component';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { EditOrgComponent } from './edit-org/edit-org.component';
+import { AyudaComponent } from './ayuda/ayuda.component';
 import { EstadisticasComponent } from './estadisticas/estadisticas.component';
 import { PollStadisticsComponent } from './poll-stadistics/poll-stadistics.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
@@ -68,6 +69,7 @@ export function HttpLoaderFactory(http: HttpClient){
     EncuestaComponent,
     AcercaDeComponent,
     EditOrgComponent,
+    AyudaComponent
     EstadisticasComponent,
     PollStadisticsComponent,
     NotifyStadisticsComponent,

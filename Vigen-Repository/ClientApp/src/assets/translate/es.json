@@ -30,7 +30,8 @@
         "VALORAR":"Valorar",
         "OPCIONES":"Opciones",
         "PEDIDOS":"Pedidos",
-        "CONTACTO":"Contacto"
+        "CONTACTO":"Contacto",
+        "SOMOS":"Somos un equipo de estudiantes de la universidad de Cundinamarca extensión Facatativá que implementa la metodología Scrum para la elaboración de un proyecto que tiene como finalidad la mitigación de casos de violencia de género, intrafamiliar, infantil y adulto mayor por medio de una Inteligencia Artificial (IA). "
     },
 
     
@@ -200,6 +201,15 @@
     "ACERCA":{
         "CONOCEMAS":"Conoce más sobre nosotros",
         "NUESTRAMISION":"Nuestra misión",
+        "NUESTRAVISION":"Nuestra vision",
+        "OBJETIVOSGENERALES":"Objetivo general",
+        "OBJETIVOSESPECIFICOS":"Objetivos especificos",
+        "MISION":"Vigen aporta a la reducción de diferentes tipos de violencia contra las familias, niños/as, mujeres y adultos mayores en los ámbitos público y privado a través del uso de tecnología de la información, la comunicación y la inteligencia artificial para realizar modelos predictivos que puedan prever cualquier evento violento, agresivo y/o abusivo antes de que ocurra, previniendo parcialmente el daño físico o psicológico en la victima.",
+        "VISION":"Vigen contará con posibilidades de crecimiento en cualquier lugar en el que se cuente con un apoyo para la acción, investigación y recolección de datos para su posterior análisis y predicción en pro de la reducción de la violencia intrafamiliar, infantil, de género y de adulto mayor. Teniendo en cuenta que NO sugerimos la creación de nuevas instituciones de atención en ninguna circunstancia, así como tampoco hacemos parte directa de ninguna de ellas.",
+        "OBJETIVOGENERAL":"• Desarrollar un software capacitado en la recolección, estudio, presentación y predicción de riegos relacionados a violencia de género, adulto mayor, intrafamiliar e infantil (desde los 13 años en adelante) para la mitigación de situaciones de peligro o mortalidad en personas expuestas a cualquiera de estos tipos de violencia.",
+        "OBJETIVOESPECIFICOS1":"• Implementar encuestas para el enriquecimiento de conocimiento de la inteligencia artificial.",
+        "OBJETIVOESPECIFICOS2":"• Generar mecanismos de prevención y ayuda a las personas que presentan signos de algún tipo de violencia.",
+        "OBJETIVOESPECIFICOS3":"• Realizar articulaciones estratégicas con instituciones estatales o privadas cuya razón social se oriente a la protección y el acompañamiento de sujetos/as en condición de víctimas de algún tipo de violencia, en aras de dar un seguimiento a las personas más vulnerables o las zonas con más riesgo, en un contexto local."
         "NUESTRAVISION":"Nuestra visión",
         "OBJETIVOSGENERALES":"Objetivos generales",
         "OBJETIVOSESPECIFICOS":"Objetivos especificos"
@@ -264,10 +274,26 @@
         "VIOLENCIAINTRAFAMILIAR":"Violencia intrafamiliar",
         "ADULTOMAYOR":"Violencia Adulto Mayor",
         "INFANTIL":"Violencia infantil",
-        "NOHESUFRIDO":"No he sufrido ni visto ninguna de las anteriores"
+        "NOHESUFRIDO":"No he sufrido ni visto ninguna de las anteriores",
+        "NO":"No"
 
     },
     "FAQ":{
+        
+    },
+    "AYUDA":{
+        "TITULO":"MANERAS PARA CONTRIBUIR CONTRA LA VIOLENCIA DE GÉNERO",
+        "TITULOCONT":"La lucha contra la violencia de género es algo que nos incumbe a todos, tanto a hombres como a mujeres, estas son algunas recomendaciones para empezar a realizar un cambio y generar un cambio en nuestra sociedad:",
+        "SUB1":"1. Escucha y cree a los sobrevivientes.",
+        "CONTSUB1":"Cuando una persona comparte su historia de violencia, está dando el primer paso para romper el ciclo de maltrato. Debemos garantizarle el espacio seguro que necesita para hablar y ser escuchada. Conviene recordar que, al tratar casos de violencia sexual, la sobriedad, la vestimenta y la sexualidad de la víctima son irrelevantes. El autor es el único responsable de la agresión y debe asumir la responsabilidad por sí solo. Protesta contra la culpabilización de la víctima y haz frente a la idea de que las personas deben evitar situaciones que se perciban como “peligrosas” según los estándares tradicionales. Las sobrevivientes están alzando la voz más que nunca, y todas y todos podemos hacer algo para asegurar que se les haga justicia. No digas “¿por qué no te fuiste de allí?” Di: “Te escuchamos. Te creemos. Estamos contigo”.",
+        "SUB2":"2. Enseña a la próxima generación y aprende de ella.",
+        "CONTSUB2":"El ejemplo que damos a la generación más joven determina la manera en que esta piensa sobre el género, el respeto y los derechos humanos. Inicia conversaciones sobre los roles de género a una edad temprana y cuestiona los rasgos y las características tradicionales asignadas a hombres y mujeres. Señala los estereotipos a los que niñas y niños se enfrentan constantemente, ya sea en los medios de comunicación, en la calle o en la escuela, y hazles saber que no hay nada malo en ser diferente. Fomenta una cultura de aceptación.",
+        "SUB3":"3. Conoce los indicios del maltrato y aprende cómo puedes ayudar.",
+        "CONTSUB3":"Hay muchas formas de maltrato y todas ellas pueden dejar secuelas físicas y emocionales graves. Si te preocupa una amiga o amigo que pueda estar sufriendo violencia o que se siente insegura/o junto a alguien, revisa los siguientes indicios de maltrato y aprende las maneras de ayudarlos a encontrar seguridad y apoyo. Si crees que alguien te está maltratando, hay ayuda disponible.",
+        "SUB4":"4. Demuestra tu oposición a la cultura de la violación.",
+        "CONTSUB4":"La cultura de la violación se da en entornos sociales que permiten que se normalice y justifique la violencia sexual, y en estos entornos se alimenta de las persistentes desigualdades de género y las actitudes sobre el género y la sexualidad. Poner nombre a la cultura de la violación es el primer paso para desterrarla. Cada día tenemos la oportunidad de examinar nuestros comportamientos y creencias en busca de los sesgos que permiten que siga existiendo la cultura de la violación. Piensa en cómo defines la masculinidad y la feminidad, y cómo influyen tus propios prejuicios y estereotipos. Desde nuestra actitud acerca de las identidades de género hasta las políticas que apoyamos en nuestras comunidades, todo el mundo puede tomar medidas para luchar contra la cultura de la violación.",
+        "SUB5":"5. Sé responsable y exige responsabilidades a los demás.",
+        "CONTSUB5":"La violencia puede adoptar muchas formas, incluido el acoso sexual en el lugar de trabajo y en los espacios públicos. Pronúnciate contra ciertos comportamientos señalándolos: los silbidos, los comentarios sexuales inapropiados y los chistes sexistas nunca son aceptables. Promueve un ambiente más seguro retando a tus compañeras y compañeros a reflexionar sobre su propio. "
         "PREGUNTAS":"Preguntas Frecuentes",
         "QUEES":"¿Qué es?",
         "VIOLENCIAES":"Violencia es todo acto, acción u omisión que produzca daño o sufrimiento físico, sexual, psicológico verbal, o económico a una persona; puede ocurrir en público o en privado. Las situaciones violentas ocurren cada vez que una persona impone su poder sobre otra vulnerando sus derechos.",
