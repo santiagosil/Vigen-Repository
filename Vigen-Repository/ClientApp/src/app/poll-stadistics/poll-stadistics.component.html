@@ -1,17 +1,229 @@
-<h1>HOla Mundo</h1>
-<h1>HOla Mundo</h1>
-<h1>HOla Mundo</h1>
-<h1>HOla Mundo</h1>
-<h1>HOla Mundo</h1>
-<h1>HOla Mundo</h1>
-
-<ngx-charts-pie-chart
-  [view]="[700, 400]"
-  [results]="single['etnia']"
-  [gradient]="true"
-  [animations]="false"
-  [legend]="true"
-  [labels]="true"
-  [doughnut]="false"
-  >
-</ngx-charts-pie-chart>
+<div class="color">
+  <h1>Estadisticas</h1>
+  <div class="container mt-3">
+    <div class="row ">
+      <div class="">
+        <h3>Género</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['genero']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+      <div class="">
+        <h3>Orientación Sexual</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['orientacionSexual']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+    </div>
+    <div class="row p-4 mt-4">
+      <div class="">
+        <h3>Edad</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['edad']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+      <div class="">
+        <h3>Ciudad/Municipio de residencia</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['municipio']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+    </div>
+    <div class="row p-4 mt-4">
+      <div class="">
+        <h3>Sector donde vive</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['sector']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+      <div class="">
+        <h3>Nivel educativo</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['nivelEducativo']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+    </div>
+    <div class="row p-4 mt-4">
+      <div class="">
+        <h3>Estado civil</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['estadoCivil']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+      <div class="">
+        <h3>Autorreconocimiento étnico</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['etnia']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+    </div>
+    <div class="row p-4 mt-4">
+      <div class="">
+        <h3>¿Cuenta con ingresos propios?</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['ingresos']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+      <div class="">
+        <h3>¿En qué categoría de posición ocupacional se encuentra? </h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['ocupacion']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+    </div>
+    <div class="row p-4 mt-4">
+      <h1>Sección de preguntas</h1>
+      <hr>
+      <div class="">
+        <h3>Pregunta 1</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['p1']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+      <div class="">
+        <h3>Pregunta 2</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['p2']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+    </div>
+    <div class="row p-4 mt-4">
+      <div class="">
+        <h3>Pregunta 3</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['p3']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+      <div class="">
+        <h3>Pregunta 4</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['p4']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+    </div>
+    <div class="row p-4 mt-4">
+      <div class="">
+        <h3>Pregunta 5</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['p5']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+      <div class="">
+        <h3>Pregunta 6</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['p6']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+    </div>
+    <div class="row p-4 mt-4">
+      <div class="">
+        <h3>Pregunta 7</h3>
+        <ngx-charts-pie-chart
+          [view]="[600, 300]"
+          [results]="single['p7']"
+          [gradient]="true"
+          [animations]="false"
+          [legend]="true"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+    </div>
+  </div>
+</div>
