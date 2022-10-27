@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Data } from '@angular/router';
+import { FormBuilder} from '@angular/forms';
+import { User } from '../api/models';
+import { UserService } from '../api/services';
+import {FormsModule} from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-user',
@@ -8,22 +11,40 @@ import { Data } from '@angular/router';
   styleUrls: ['./edit-user.component.css']
 })
 export class EditUserComponent implements OnInit {
-  showEmoji: boolean = false;
-  title = 'test 1';
-  contentEmoji = '';
-  listData: Data[] = [];
-  form: FormGroup = new FormGroup({});
-  isCheck: any;
-  constructor(private fb : FormBuilder) { }
+
+  usuarioForm: User={
+    birthdate: '',
+    code: '',
+    countryCode: '',
+    gender:'',
+    email: '',
+    identification: '',
+    maritalStatus: '',
+    name: '',
+    occupation: '',
+    password: '',
+    phone: '',
+    postalCode: '',
+    ubication: '',
+    verification: false,
+  }
+
+  constructor(private api:UserService) { }
 
   ngOnInit(): void {
-    this.form = this.fb.group({
-      userName: ['', [Validators.required]],
-      correo: ['', [Validators.required]],
-      pass: ['', [Validators.required]],
-    })
+    this.api.apiUserIdGet$Json({id: String(localStorage.getItem('UserId'))}).subscribe((res) => {
+      this.usuarioForm=res;
+    });
   }
-  sendLogin():void{
-    this.isCheck = { user:1 }
+  onSubmit(){
+    this.api.putUser(String(localStorage.getItem('UserId')),this.usuarioForm).subscribe((res)=>{
+      Swal.fire({
+        icon: 'success',
+        position: 'top-end',
+        title: 'El Usuario ha sido actualizado',
+      });
+    },(error)=>{
+      console.log("Mal: "+error);
+    });
   }
 }

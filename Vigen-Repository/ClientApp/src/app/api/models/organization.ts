@@ -8,4 +8,5 @@ export interface Organization {
   phone?: null | string;
   tel?: null | string;
   organizationTypeId?: null | string;
+  sites?: null | string[];
 }

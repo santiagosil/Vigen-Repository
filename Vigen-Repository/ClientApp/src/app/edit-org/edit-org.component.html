@@ -30,6 +30,7 @@
                     </ul>
                 </div>
             </div>
+            <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="was-validated">
             <div class="col p-4">
                 <h1><b>{{"EDIT-ORG.BIENVENIDO" | translate}}</b></h1>
                 <hr>
@@ -40,21 +41,21 @@
                         <div class="form-group row">
                             <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.NOMBRE" | translate}}</label>
                             <div class="col-sm-9 ms-3">
-                                <input type="text" class="form-control rounded">
+                                <input type="text" class="form-control rounded" [(ngModel)]="orgForm.name" name="name" required>
                             </div>
                         </div>
                         <hr>
                         <div class="form-group row">
                             <label for="" class="col-sm-2 col-form-label">NIT</label>
                             <div class="col-sm-9 ms-3">
-                                <input type="text" class="form-control rounded" name="" id="">
+                                <input type="text" class="form-control rounded" [(ngModel)]="orgForm.nit" name="nit">
                             </div>
                         </div>
                         <hr>
                         <div class="form-group row">
                             <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.TELÉFONO" | translate}}</label>
                             <div class="col-sm-9 ms-3">
-                                <input type="text" class="form-control rounded">
+                                <input type="text" class="form-control rounded" [(ngModel)]="orgForm.tel" name="tel" required>
                             </div>
                         </div>
                     </div>
@@ -64,13 +65,13 @@
                         <div class="form-group row">
                             <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.CONTRA" | translate}}</label>
                              <div class="col-sm-9 ms-3">
-                                <input type="password"class="form-control rounded"  aria-label="Disabled input example" disabled >
+                                <input type="password"class="form-control rounded" >
                              </div>   
                         </div><hr>
                         <div class="form-group row">
                             <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.NEWCONTRA" | translate}}</label>
                              <div class="col-sm-9 ms-3">
-                                <input type="password"class="form-control rounded" name="" id="">
+                                <input type="password"class="form-control rounded" [(ngModel)]="orgForm.password" name="password">
                              </div>   
                         </div><hr>
                         <div class="form-group row">
@@ -81,10 +82,11 @@
                         </div>
                     </div>
                     <div class="conatiner text-center mt-4">
-                        <button class="btn btn-dark">{{"EDIT-ORG.GUARDAR" | translate}}</button>
+                        <button type="submit" class="btn btn-dark">{{"EDIT-ORG.GUARDAR" | translate}}</button>
                     </div>
                 </div>                
             </div>
+        </form>
         </div>
     </div>
 </div>
