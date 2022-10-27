@@ -17,7 +17,7 @@ export class EditOrgComponent implements OnInit {
     nit: '',
     phone: '',
     tel: '',
-    organizationTypeId: ''
+    organizationTypeId: 1
   }
 
 

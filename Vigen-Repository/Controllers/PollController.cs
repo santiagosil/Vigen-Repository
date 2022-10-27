@@ -44,7 +44,7 @@ namespace Vigen_Repository.Controllers
                     " Nombre: " + user.Name +
                     " Ubicación: " + user.Ubication,
                     OrganizationTypeId = 1,
-                    StateId = 1
+                    StateId = 0
                 };
                 
                 

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Data } from '@angular/router';
 import Swal from 'sweetalert2';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { InverseService } from '../api/MyServices/inverse.service';
+import { InverseService, MarkerCustom } from '../api/MyServices/inverse.service';
 import {Site} from '../api/models/site';
 import { SiteService } from '../api/services';
 
@@ -13,43 +13,35 @@ import { SiteService } from '../api/services';
 })
 export class SitesComponent implements OnInit {
 
-  
-  showEmoji: boolean = false;
-  title = 'test 1';
-  contentEmoji = '';
-  listData: Data[] = [];
-  form: FormGroup = new FormGroup({});
-  isCheck: any;
+  public sites: SiteCustom[] =[];
+  public selected:number=0;
 
-  public site: Site = {
-    countryCode: "",
-    id: "",
-    nit: "",
-    phone: "0",
-    range: 0,
-    tel: "",
-    ubication: "",
-    
-  };
 
   constructor(private api: SiteService, private rever : InverseService) {
   }
-  
+  get listSites(){
+    return this.rever.getListSites;
+  }
+  async addSites(){
+    if(this.listSites.length>this.sites.length){
+    this.listSites.forEach((marker,index)=>{
+      if(this.sites.length-1<index){
+        this.sites.push(new SiteCustom());
+      }
+      this.sites[index].marker=marker;
+      this.sites[index].ubication=String(marker.lat)+", "+String(marker.lng);
+    });
+  }else if(this.listSites.length<this.sites.length){}
+}
 
 
   ngOnInit() {
-      
+      setInterval(()=>{
+        this.addSites();
+      },1000);
+      this.sites[0]=new SiteCustom();
   }
   
-  showbien() {
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Se ha enviado un codigo a su correo',
-      showConfirmButton: false,
-      timer: 2000
-    })
-  }
   showModal() {
     Swal.fire({
       position: 'center',
@@ -69,15 +61,25 @@ export class SitesComponent implements OnInit {
     })
   }
   public send() {
-    if (this.site.countryCode === "" || this.site.id === "" || this.site.nit === ""
-      || this.site.phone === "" || this.site.range === 0
-      || this.site.tel === "" || this.site.ubication === "") {
-      this.showModal();
-    } else {
-      this.api.apiSitePost$Json({body:this.site})
-      .subscribe(res=> {
-        console.log(res)
-      });
-    }
+    
   }
+
+  public addSite(){
+    this.selected+=1;
+    this.sites.push(new SiteCustom());
+  }
+
+}
+
+
+class SiteCustom{
+  marker:MarkerCustom=new MarkerCustom(0,0);
+  countryCode:string='';
+    id:string='';
+    nit:string='';
+    phone:string='';
+    range:number=0;
+    tel:string='';
+    ubication:string='';
+
 }

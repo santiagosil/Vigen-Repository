@@ -10,6 +10,14 @@
                         <hr>
                         <p class="mt-2" style="color:red;">{{"REC.CAMPOS" | translate}}</p>
                     </div>
+                    <div class="form-group row">
+                        <div class="col-sm mt-3 ms-4 me-4">
+                            <label>NIT<label style="color:red;">*</label></label>
+                            <!--input formControlName="nitOrg" type="text" class="form-control" placeholder=""-->
+                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
+                                [(ngModel)]="organization.nit" [ngModelOptions]="{standalone: true}" placeholder="">
+                        </div>
+                    </div>
                     <div class="form-group row mt-3">
                         <div class="col-sm ms-4 me-4">
                             <label>{{"REC.NOMBRE DE LA ORGANIZACIÓN" | translate}}<label
@@ -17,15 +25,6 @@
                             <!--input formControlName="nomOrg" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control rounded" id="inlineFormInputGroup"
                                 [(ngModel)]="organization.name" [ngModelOptions]="{standalone: true}" placeholder="">
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-sm mt-3 ms-4 me-4">
-                            <label>NIT<label style="color:red;">*</label></label>
-                            <!--input formControlName="nitOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="organization.nit" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
                     <!--<div class="form-group row">
@@ -67,7 +66,7 @@
                     <div class="row text-center mt-4">
                         <div class="form-group row">
                             <div class="col-sm">
-                                <button type="submit" routerLink="/sites" class="btn btn-primary">{{"REC.SIGUIENTE"|translate}}</button>
+                                <button type="submit" (click)="send()" class="btn btn-primary">{{"REC.SIGUIENTE"|translate}}</button>
                             </div>
                         </div>
                     </div>
@@ -75,26 +74,11 @@
             </div>
             <div class="col-sm mt-3">
                 <div class="container p-4">
-                    <app-map-organizacion></app-map-organizacion>
-                    <!--button class="btn btn-primary mt-3" (click)="update()">Actualizar Ubicaciones</button-->
-                    <!--<div class="imagenMpa">
-                            <img src="../../assets/images/maps.jpg" class="figure-img img-fluid rounded " alt="...">
-                        </div>-->
-                    <div class="row mt-3">
-                        <h5>{{"REC.INFORMACION"|translate}}</h5>
-                        <p style="font-size: 90%">{{organization.name}}</p>
-                        <!--div class="col-12">
-                        <button class="btn btn-primary" (click)="update()">Actualizar Ubicaciones</button>
-                    </div-->
-
-
-                        
-                        <div class="col-1 text-center mt-4">
-                            <fa-icon [icon]="['fas', 'phone']"></fa-icon>
-                        </div>
-                        <div class="col-11 mt-4">
-                            <label style="font-size: 80%">{{organization.tel}}</label>
-                        </div>
+                    <div class="card text-left">
+                      <div class="card-body">
+                        <h4 class="card-title">{{organization.nit==''?'NIT':organization.nit}} - {{organization.name==''?'Organization Name':organization.name}}</h4>
+                        <p class="card-text"><fa-icon [icon]="['fas','phone']"></fa-icon> {{organization.tel==''?'Tel':organization.tel}}</p>
+                      </div>
                     </div>
                 </div>
             </div>

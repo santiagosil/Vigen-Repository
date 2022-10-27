@@ -31,6 +31,9 @@ export class OrganizationService extends BaseService {
   putOrganization(id:string, body:Organization){
     return this.http.put(this.rootUrl+'/api/Organization/'+id, body);
   }
+  postOrganization(body:Organization){
+    return this.http.post(this.rootUrl+'/api/Organization/',body);
+  }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
