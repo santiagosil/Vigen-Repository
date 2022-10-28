@@ -70,6 +70,7 @@ export class RecordOrgComponent implements OnInit {
         this.organization.organizationTypeId=1;
         this.api.postOrganization(this.organization)
         .subscribe(res=>{
+          localStorage.setItem("NitRegister", String(this.organization.nit));
           this.router.navigate(['/sites']);
      });
       }

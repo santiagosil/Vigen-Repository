@@ -50,7 +50,7 @@ export class NotifyComponent extends BaseService implements OnInit {
       position: 'top-end',
       title: notify[2],
       html: "Identificaction: "+notify[1]+
-      '<br>Direccion: ',
+      '',
       icon: 'warning',
       showCancelButton: false,
       confirmButtonColor: '#3085d6',
