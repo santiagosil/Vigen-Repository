@@ -44,7 +44,7 @@ export class PanelUserComponent implements OnInit {
           this.notif.description = String(localStorage.getItem("UserName"));
           this.notif.userId = String(localStorage.getItem("UserId"));
           this.notif.title = "Help Me";
-          this.notif.stateId = 1;
+          this.notif.stateId = 0;
           this.notif.organizationTypeId=1;
         
         console.log(this.notif);

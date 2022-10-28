@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Data } from '@angular/router';
+import { Data, Router } from '@angular/router';
 import {latlong} from '../map/map.component';
 import { OrganizationService } from '../api/services';
 import { Organization, User } from '../api/models';
@@ -18,14 +18,6 @@ import { InverseService } from '../api/MyServices/inverse.service';
   styleUrls: ['./record-org.component.css']
 })
 export class RecordOrgComponent implements OnInit {
-
-  /*showEmoji: boolean = false;
-  title = 'test 1';
-  contentEmoji = '';
-  listData: Data[] = [];
-  form: FormGroup = new FormGroup({});
-  isCheck: any;*/
-  /*constructor(private fb : FormBuilder) { }*/
 
   showContra() {
     Swal.fire({
@@ -58,20 +50,28 @@ export class RecordOrgComponent implements OnInit {
 
 
 
-  constructor(private api:OrganizationService,private reverse:InverseService) { }
+  constructor(
+    private api:OrganizationService,
+    private reverse:InverseService,
+    private router:Router,
+    ) { }
 
   ngOnInit(): void {
   }
   public send(){
+    console.log("send");
     if (this.organization.name === "" || this.organization.nit === ""
     || this.organization.tel === "") 
     {
       this.showModal();
     }else{
       if(this.organization.password==this.contra.pass){
-        this.api.apiOrganizationPost$Json({body: this.organization})
+        this.organization.phone='miPhone';
+        this.organization.organizationTypeId=1;
+        this.api.postOrganization(this.organization)
         .subscribe(res=>{
-      //console.log(res);
+          localStorage.setItem("NitRegister", String(this.organization.nit));
+          this.router.navigate(['/sites']);
      });
       }
       else{
@@ -79,9 +79,5 @@ export class RecordOrgComponent implements OnInit {
       }
     
     }
-  }
-  get listSites(){
-    console.log(this.reverse.getListSites);
-    return this.reverse.getListSites;
   }
 }

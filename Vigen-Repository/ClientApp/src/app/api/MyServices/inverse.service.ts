@@ -54,7 +54,7 @@ export class InverseService {
    }
 
 }
-class MarkerCustom{
+export class MarkerCustom{
   lat:number;
   lng:number;
   geoInv:string;

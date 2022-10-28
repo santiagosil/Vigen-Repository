@@ -16,7 +16,7 @@
                                     style="color:red;">*</label></label>
                             <!--input formControlName="nomOrg" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="site.countryCode" [ngModelOptions]="{standalone: true}" placeholder="">
+                                [(ngModel)]="sites[selected].countryCode" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
                     <div class="form-group row mt-3">
@@ -25,7 +25,7 @@
                                     style="color:red;">*</label></label>
                             <!--input formControlName="nomOrg" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="site.range" [ngModelOptions]="{standalone: true}" placeholder="">
+                                [(ngModel)]="sites[selected].range" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
 
@@ -35,7 +35,7 @@
                             <label>NIT<label style="color:red;">*</label></label>
                             <!--input formControlName="nitOrg" type="text" class="form-control" placeholder=""-->
                             <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="site.nit" [ngModelOptions]="{standalone: true}" placeholder="">
+                                [(ngModel)]="sites[selected].nit" [ngModelOptions]="{standalone: true}" disabled="true">
                         </div>
                     </div>
                     <!--<div class="form-group row">
@@ -53,7 +53,7 @@
                             <label>{{"SITES.UBICATION" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
                             <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="site.ubication" [ngModelOptions]="{standalone: true}" placeholder="">
+                                [value]="sites[selected].marker.geoInv" placeholder="">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -62,7 +62,7 @@
                             <label>ID<label style="color:red;">*</label></label>
                             <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
                             <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="site.id" [ngModelOptions]="{standalone: true}" placeholder="">
+                                [(ngModel)]="sites[selected].id" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
 
@@ -73,14 +73,14 @@
                             <label>{{"SITES.PHONE" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
                             <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="site.phone" [ngModelOptions]="{standalone: true}"
+                                [(ngModel)]="sites[selected].phone" [ngModelOptions]="{standalone: true}"
                                 placeholder="">
                         </div>
                         <div class="col-sm ">
                             <label>{{"REC.TEL"|translate}}<label style="color:red;">*</label></label>
                             <!--input  formControlName="ecivlUser" type="text" class="form-control"  placeholder=""-->
                             <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="site.tel" [ngModelOptions]="{standalone: true}" placeholder="">
+                                [(ngModel)]="sites[selected].tel" [ngModelOptions]="{standalone: true}" placeholder="">
                         </div>
                     </div>
 
@@ -98,31 +98,32 @@
                     <app-map-organizacion></app-map-organizacion>
                     <div class="row mt-3">
                         <h5>{{"REC.INFORMACION"|translate}}</h5>
-                        <!--div class="col-12">
-                        <button class="btn btn-primary" (click)="update()">Actualizar Ubicaciones</button>
-                    </div-->
 
-
-                        <div class="col-1 text-center mt-2">
-                            <fa-icon [icon]="['fas', 'location-dot']"></fa-icon>
-
-                        </div>
-                        <div class="col-11 mt-2">
-                            <label style="font-size: 80%">{{site.ubication}}</label>
-                        </div>
-                        <div class="col-1 text-center mt-4">
-                            <fa-icon [icon]="['fas', 'phone']"></fa-icon>
-                        </div>
-                        <div class="col-11 mt-4">
-                            <label style="font-size: 80%">{{site.tel}}</label>
-                        </div>
-                        <div class="col-1 text-center mt-4">
-                            <fa-icon [icon]="['fas', 'phone']"></fa-icon>
-                        </div>
-                        <div class="col-11 mt-4">
-                            <label style="font-size: 80%">{{site.phone}}</label>
-                        </div>
-                    
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>Range</th>
+                                    <th>Phone</th>
+                                    <th>Tel</th>
+                                    <th>Ubication</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let site of sites; index as i">
+                                    <td>{{site.id}}</td>
+                                    <td>{{site.range}}</td>
+                                    <td>{{site.phone}}</td>
+                                    <td>{{site.tel}}</td>
+                                    <td>{{site.marker.geoInv}}</td>
+                                    <td>
+                                        <button class="btn btn-info" (click)="selected=i"><fa-icon [icon]="['fas','square-pen']"></fa-icon></button>
+                                        <button class="btn btn-danger"><fa-icon [icon]="['fas','trash']"></fa-icon></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                 </div>
             </div>
         </div>

@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Data } from '@angular/router';
+import { Data, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { InverseService } from '../api/MyServices/inverse.service';
-import {Site} from '../api/models/site';
+import { InverseService, MarkerCustom } from '../api/MyServices/inverse.service';
+import { Site } from '../api/models/site';
 import { SiteService } from '../api/services';
+import { ConsoleLogger } from '@microsoft/signalr/dist/esm/Utils';
 
 @Component({
   selector: 'app-sites',
@@ -13,43 +14,39 @@ import { SiteService } from '../api/services';
 })
 export class SitesComponent implements OnInit {
 
-  
-  showEmoji: boolean = false;
-  title = 'test 1';
-  contentEmoji = '';
-  listData: Data[] = [];
-  form: FormGroup = new FormGroup({});
-  isCheck: any;
+  public sites: SiteCustom[] = [];
+  public selected: number = 0;
 
-  public site: Site = {
-    countryCode: "",
-    id: "",
-    nit: "",
-    phone: "0",
-    range: 0,
-    tel: "",
-    ubication: "",
-    
-  };
 
-  constructor(private api: SiteService, private rever : InverseService) {
+  constructor(private api: SiteService, private rever: InverseService,private router:Router) {
   }
-  
+  get listSites() {
+    return this.rever.getListSites;
+  }
+  async addSites() {
+    setInterval(() => {
+      let long = this.listSites.length;
+      this.listSites[0].geoInv;
+      if (this.listSites.length > this.sites.length) {
+        this.sites.push(new SiteCustom());
+        this.sites[long - 1].nit=String(localStorage.getItem('NitRegister'));
+        this.sites[long - 1].marker = this.listSites[long - 1];
+        this.sites[long - 1].ubication = String(this.listSites[long - 1].lat) + ", " + String(this.listSites[long - 1].lng);
+      }
+      if(this.sites.length==1){
+        this.sites[0].marker=this.listSites[0];
+        this.sites[0].nit=String(localStorage.getItem('NitRegister'));
+        this.sites[0].ubication = String(this.listSites[0].lat) + ", " + String(this.listSites[0].lng);
+      }
+    }, 1000);
+  }
 
 
   ngOnInit() {
-      
+    this.addSites();
+    this.sites.push(new SiteCustom());
   }
-  
-  showbien() {
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Se ha enviado un codigo a su correo',
-      showConfirmButton: false,
-      timer: 2000
-    })
-  }
+
   showModal() {
     Swal.fire({
       position: 'center',
@@ -69,15 +66,40 @@ export class SitesComponent implements OnInit {
     })
   }
   public send() {
-    if (this.site.countryCode === "" || this.site.id === "" || this.site.nit === ""
-      || this.site.phone === "" || this.site.range === 0
-      || this.site.tel === "" || this.site.ubication === "") {
-      this.showModal();
-    } else {
-      this.api.apiSitePost$Json({body:this.site})
-      .subscribe(res=> {
-        console.log(res)
+    this.sites.forEach((site)=>{
+      var siteAux:Site={
+        id:site.id,
+        nit:site.nit,
+        countryCode:site.countryCode,
+        phone:site.phone,
+        range:site.range,
+        tel:site.tel,
+        ubication:site.ubication
+      }
+      this.api.apiSitePost$Json({body:siteAux}).subscribe((res)=>{
+        console.log("Success");
+        console.log(res);
+      },(err)=>{
+        console.log("Error");
+        console.log(err);
       });
-    }
+    });
+    localStorage.setItem("UserId",String(localStorage.getItem('NitRegister')));
+    localStorage.setItem("TypeUser","1");
+    this.router.navigate(["/pOrg"]);
   }
+
+}
+
+
+class SiteCustom {
+  marker: MarkerCustom = new MarkerCustom(0, 0);
+  countryCode: string = '';
+  id: string = '';
+  nit: string = '';
+  phone: string = '';
+  range: number = 0;
+  tel: string = '';
+  ubication: string = '';
+
 }
