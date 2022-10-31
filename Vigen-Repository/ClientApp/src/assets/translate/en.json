@@ -282,7 +282,8 @@
         "VIOLENCIAINTRAFAMILIAR": "Intrafamilial violence",
         "ADULTOMAYOR": "Elderly violence",
         "INFANTIL": "Child violence",
-        "NOHESUFRIDO": "I have not suffered or seen any of the above"
+        "NOHESUFRIDO": "I have not suffered or seen any of the above",
+        "FINALIZAR":"Finish"
     },
     "AYUDA":{
         "TITULO":"WAYS TO CONTRIBUTE AGAINST GENDER VIOLENCE",
@@ -345,9 +346,15 @@
     "PANEL-ORG": {
         "MENU":",Menu",
         "HOME":"Home",
-        "ESTADISTICAS":"Statistics",
+        "PROFILES":"Profile",
+        "STATISTICS":"Statistics",
         "ALERTAS":"Alerts",
-        "USUARIO":"User",
+        "USUARIOID":"User ID",
+        "TITTLE":"Tittle",
+        "DESCRIPTION":"Description",
+        "STATE":"State",
+        "ORGANIZATION":"Organization",
+        "ACTIONS":"Actions",
         "BIENVENIDO":"Welcome"
     },
     "SITES":{
@@ -355,6 +362,39 @@
         "PHONE":"Mobile",
         "RANGE":"Range",
         "UBICATION":"Ubication"
+    },
+    "POL":{
+        "STATISTICS":"Statistics",
+        "GENERO": "Gender",
+        "EDAD": "Age",
+        "CIUDAD": "City/Municipality of residence",
+        "ESTADOCIVIL": "Marital status",
+        "ETNICO": "Ethnic self-recognition",
+        "CUENTAINGRESOS": "Do you have your own income?",
+        "SI": "Yes",
+        "OCUPACIONAL": "Currently in what category of occupational position are you?",
+        "SECCIONPREGUNTAS": "Question section",
+        "SUPAREJA": "Has your partner, family member or other person close to you performed any of the following actions?",
+        "HAOBSERVADO": "Have you observed that person hitting or kicking the wall or any other piece of furniture?", 
+        "AMENAZADO": "Have you been threatened with being hit?", 
+        "PRESIONADO": "Have you felt pressured to have sex?",
+        "DESTRUIDO": "Have you had any of your belongings destroyed?",
+        "SACUDIDO": "Have you been shaken, shook, pulled or pushed?",
+        "AGREDIDO": "Have you felt physically or psychologically assaulted?", 
+        "SUFRIDO": "Have you suffered or witnessed any type of violence? Which one?", "VIOLENCEINTRAFFERED": "Have you suffered or witnessed any type of violence? Which one?",
+        "VIOLENCIAINTRAFAMILIAR": "Intrafamilial violence",
+        "ADULTOMAYOR": "Elderly violence",
+        "INFANTIL": "Child violence",
+        "NOHESUFRIDO": "I have not suffered or seen any of the above",
+        "NIVEL": "Educational level",
+        "ORIENTACIONSEXUAL": "Sexual orientation",
+        "RESULTADO":"Predicted Result (Type of Violence)"
+    },
+    "STATISTICS":{
+        "MENU":",Menu",
+        "HOME":"Home",
+        "PROFILES":"Profile",
+        "STATISTICS":"Statistics"
     }
 
 }
