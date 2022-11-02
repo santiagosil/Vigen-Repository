@@ -14,20 +14,20 @@ import { ReadVarExpr } from '@angular/compiler';
 
 
 @Component({
-  selector: 'app-record-user',  
+  selector: 'app-record-user',
   templateUrl: './record-user.component.html',
   styleUrls: ['./record-user.component.css']
 })
 export class RecordUserComponent implements OnInit {
-  
 
-  
+
+
   showEmoji: boolean = false;
   title = 'test 1';
   contentEmoji = '';
   listData: Data[] = [];
   form: FormGroup = new FormGroup({});
-  isCheck: any;
+  isCheck: boolean = false;
 
   public usuario: User = {
     identification: "",
@@ -41,25 +41,61 @@ export class RecordUserComponent implements OnInit {
     occupation: "",
     postalCode: "",
     maritalStatus: "",
-    ubication:""
+    ubication: ""
   };
-  contra={
-    pass:""
+
+  
+  contra = {
+    pass: ""
   }
 
-  constructor(private api: UserService, private rever : InverseService, private router: Router) {
+  constructor(private api: UserService, private rever: InverseService, private router: Router) {
   }
-   
-  get ubication(){
-    this.usuario.ubication=this.rever.getSite.geoInv;
+
+  get ubication() {
+    this.usuario.ubication = this.rever.getSite.geoInv;
     return this.rever.getSite;
   }
 
 
   ngOnInit() {
-      
+
   }
-  
+
+  acuerdo() {
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+    })
+
+    swalWithBootstrapButtons.fire({
+      title: '¿Acepta los terminos del acuerdo de privacidad?',
+      html: " Los creadores de la página Vigen.com le informan sobre su política de privacidad con respecto al manejo y protección de los datos de carácter personal de los usuarios y clientes que puedan ser recabados por la navegación y obtención de datos a través de nuestro sitio web."+
+      "En este sentido, garantizamos el cumplimiento de la normativa vigente en materia nacional e internacional del manejo de datos personales y privacidad del usuario. Dejando claro que los datos exigidos al momento de unirse a la pagina son meramente de registro, utilizados para personalizar la página acorde a cada usuario, generación de estadisticas y predicciones, en otras palabras, nuestro algoritmo lo necesita para bridar la mejor experiencia posible. Ninguna parte de la información presentada ni compartida será utilizada para beneficio propio ni intercambio con terceros.",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Si, de acuerdo!',
+      cancelButtonText: 'No, cancelar!',
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.isCheck = true;
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire(
+          'Cancelado',
+          'NO podra crear un usuario hasta que acepte los terminos del acuerdo de privacidad:',
+          'error'
+        )
+      }
+    })
+  }
+
   showbien() {
     Swal.fire({
       position: 'center',
@@ -87,25 +123,41 @@ export class RecordUserComponent implements OnInit {
       timer: 2000
     })
   }
+  showPrivacidad() {
+    Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: 'Verifique el acuerdo de privacidad',
+      showConfirmButton: false,
+      timer: 2000
+    })
+  }
   public send() {
     if (this.usuario.email === "" || this.usuario.name === "" || this.usuario.identification === ""
       || this.usuario.birthdate === "" || this.usuario.phone === ""
       || this.usuario.occupation === "" || this.usuario.maritalStatus === "") {
       this.showModal();
     } else {
-      if(this.usuario.password==this.contra.pass){
-        var random: number;
-        random = Math.round(Math.random() * (9000) + 1000);
-        this.usuario.code = random + "";
-        this.api.apiUserPost$Json({ body: this.usuario })
-          .subscribe(res => {
-            this.showbien();
-            this.router.navigate(['/token']);
-          });
+      if (this.isCheck) {
+        if (this.usuario.password == this.contra.pass) {
+          var random: number;
+          random = Math.round(Math.random() * (9000) + 1000);
+          this.usuario.code = random + "";
+          this.api.apiUserPost$Json({ body: this.usuario })
+            .subscribe(res => {
+              localStorage.setItem("UserId", String(this.usuario.identification));
+              localStorage.setItem("TypeUser", "0");
+              localStorage.setItem("UserName", String(this.usuario.name));
+              this.showbien();
+              this.router.navigate(['/token']);
+            });
+        }
+        else {
+          this.showContra();
+        }
+      } else {
+        this.showPrivacidad();
       }
-      else{
-        this.showContra();
-      } 
     }
   }
 }

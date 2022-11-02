@@ -2,7 +2,7 @@ create table users(
 	identification varchar(50) primary key,
 	password varchar(30) not null,
 	name varchar(100) not null,
-	gender varchar(50) not null,
+	gender varchar(50),
 	email varchar(100) not null,
 	birthdate date not null,
 	country_code varchar(4) not null,
@@ -144,7 +144,7 @@ insert into state(name,description) VALUES
 ('In Progress','this alert is in progress'),
 ('serviced','this alert is serviced');
 
-Insert Into notify(user_id,title,date,state_id,description,organization_type_id) VALUES('123456789','2022-10-27','Alerta',1,'I Need Help',1);
+Insert Into notify(user_id,title,state_id,description,organization_type_id) VALUES('123456789','Alerta',1,'I Need Help',1);
 
 INSERT INTO organization(nit,password,name,tel,phone,organization_type_id) VALUES ('8032546897','thePolice','Policia Nacional','7532158','3115462575',1);
 

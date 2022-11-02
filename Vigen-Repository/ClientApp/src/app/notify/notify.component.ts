@@ -49,8 +49,8 @@ export class NotifyComponent extends BaseService implements OnInit {
     Swal.fire({
       position: 'top-end',
       title: notify[2],
-      html: notify[2]+"<br>Identificaction: "+notify[1]+
-      "<br>Direccion: "+notify[4]+
+      html: "Identificaction: "+notify[1]+
+      "<br>Descripción: "+notify[4]+
       "<br>Notificación Nº: " +notify[0],
       icon: 'warning',
       showCancelButton: false,
