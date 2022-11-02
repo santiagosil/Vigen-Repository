@@ -23,70 +23,81 @@
                         <li class="nav-item ms-3">
                             <a routerLink="/statis" class="nav-link px-0 align-middle">
                                 <fa-icon style="color: white" [icon]="['fas', 'chart-line']"></fa-icon> <span
-                                    class="ms-1 d-none d-sm-inline text-white">{{"EDIT-ORG.ESTADISTICAS" | translate}}</span>
+                                    class="ms-1 d-none d-sm-inline text-white">{{"EDIT-ORG.ESTADISTICAS" |
+                                    translate}}</span>
                             </a>
                         </li>
                         <app-reportes></app-reportes>
                     </ul>
                 </div>
             </div>
-            <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="was-validated">
+
             <div class="col p-4">
-                <h1><b>{{"EDIT-ORG.BIENVENIDO" | translate}}</b></h1>
-                <hr>
-                <div class="container shadow p-3 bg-white mb-2">
-                    <h4><b>{{"EDIT-ORG.INFOORG" | translate}}</b></h4>
+                <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="was-validated">
+                    <h1><b>{{"EDIT-ORG.BIENVENIDO" | translate}}</b></h1>
                     <hr>
-                    <div class="form">
-                        <div class="form-group row">
-                            <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.NOMBRE" | translate}}</label>
-                            <div class="col-sm-9 ms-3">
-                                <input type="text" class="form-control rounded" [(ngModel)]="orgForm.name" name="name" required>
-                            </div>
-                        </div>
+                    <div class="container shadow p-3 bg-white mb-2">
+                        <h4><b>{{"EDIT-ORG.INFOORG" | translate}}</b></h4>
                         <hr>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-2 col-form-label">NIT</label>
-                            <div class="col-sm-9 ms-3">
-                                <input type="text" class="form-control rounded" [(ngModel)]="orgForm.nit" name="nit">
+                        <div class="form">
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.NOMBRE" | translate}}</label>
+                                <div class="col-sm-9 ms-3">
+                                    <input type="text" class="form-control rounded" [(ngModel)]="orgForm.name"
+                                        name="name" required>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">NIT</label>
+                                <div class="col-sm-9 ms-3">
+                                    <input type="text" class="form-control rounded" [(ngModel)]="orgForm.nit"
+                                        name="nit">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.TELÉFONO" |
+                                    translate}}</label>
+                                <div class="col-sm-9 ms-3">
+                                    <input type="text" class="form-control rounded" [(ngModel)]="orgForm.tel" name="tel"
+                                        required>
+                                </div>
                             </div>
                         </div>
+                        <h4 class="mt-5"><b>{{"EDIT-ORG.CONTRA" | translate}}</b></h4>
                         <hr>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.TELÉFONO" | translate}}</label>
-                            <div class="col-sm-9 ms-3">
-                                <input type="text" class="form-control rounded" [(ngModel)]="orgForm.tel" name="tel" required>
+                        <div class="form">
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.CONTRA" | translate}}</label>
+                                <div class="col-sm-9 ms-3">
+                                    <input type="password" class="form-control rounded">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.NEWCONTRA" |
+                                    translate}}</label>
+                                <div class="col-sm-9 ms-3">
+                                    <input type="password" class="form-control rounded" [(ngModel)]="orgForm.password"
+                                        name="password">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.CONFCONTRA" |
+                                    translate}}</label>
+                                <div class="col-sm-9 ms-3">
+                                    <input type="password" class="form-control rounded">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <h4 class="mt-5"><b>{{"EDIT-ORG.CONTRA" | translate}}</b></h4>
-                    <hr>
-                    <div class="form">
-                        <div class="form-group row">
-                            <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.CONTRA" | translate}}</label>
-                             <div class="col-sm-9 ms-3">
-                                <input type="password"class="form-control rounded" >
-                             </div>   
-                        </div><hr>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.NEWCONTRA" | translate}}</label>
-                             <div class="col-sm-9 ms-3">
-                                <input type="password"class="form-control rounded" [(ngModel)]="orgForm.password" name="password">
-                             </div>   
-                        </div><hr>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.CONFCONTRA" | translate}}</label>
-                             <div class="col-sm-9 ms-3">
-                                <input type="password"class="form-control rounded">
-                             </div>   
+                        <div class="conatiner text-center mt-4">
+                            <button type="submit" class="btn btn-dark">{{"EDIT-ORG.GUARDAR" | translate}}</button>
                         </div>
                     </div>
-                    <div class="conatiner text-center mt-4">
-                        <button type="submit" class="btn btn-dark">{{"EDIT-ORG.GUARDAR" | translate}}</button>
-                    </div>
-                </div>                
+                </form>
             </div>
-        </form>
         </div>
     </div>
 </div>
