@@ -337,6 +337,8 @@
     },
     "PANEL-ORG": {
         "MENU":"Menú",
+        "NOTIFIYACTIVE":"Notificaciones activas",
+        "NOTIFYINPROGRESS":"Notificaciones en progreso",
         "HOME":"Inicio",
         "PROFILE":"Perfil",
         "STATISTICS":"Estadísticas",
@@ -355,7 +357,7 @@
         "RANGE":"Rango",
         "UBICATION":"Ubicación"
     },
-    "POL":{
+    "POLL":{
         "STATISTICS":"Estadísticas",
         "GENERO":"Género",
         "ORIENTACIONSEXUAL":"Orientación sexual",

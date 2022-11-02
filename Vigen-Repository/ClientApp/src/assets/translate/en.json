@@ -345,6 +345,8 @@
     },
     "PANEL-ORG": {
         "MENU":",Menu",
+        "NOTIFIYACTIVE":"Active Notifies",
+        "NOTIFYINPROGRESS":"In progress Notifies",
         "HOME":"Home",
         "PROFILES":"Profile",
         "STATISTICS":"Statistics",
@@ -363,7 +365,7 @@
         "RANGE":"Range",
         "UBICATION":"Ubication"
     },
-    "POL":{
+    "POLL":{
         "STATISTICS":"Statistics",
         "GENERO": "Gender",
         "EDAD": "Age",

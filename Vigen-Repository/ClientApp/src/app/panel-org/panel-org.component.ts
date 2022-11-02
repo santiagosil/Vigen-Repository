@@ -58,7 +58,6 @@ export class PanelOrgComponent implements OnInit {
         icon: 'question',
         title:'¿Que tipo de violencia identificó?',
         html: '<select class="form-select" aria-label="Default select example">'+
-        '<option selected>Open this select menu</option>'+
         '<option value="0" selected>Ninguna</option>'+
         '<option value="1">Violencia de Género</option>'+
         '<option value="2">Violencia Intrafamiliar</option>'+
