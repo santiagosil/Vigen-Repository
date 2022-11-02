@@ -1,3 +1,4 @@
+import { ResourceLoader } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 import { Notify } from '../api/models';
@@ -52,14 +53,31 @@ export class PanelOrgComponent implements OnInit {
 
   toFinishNotify(notify:Notify){
     notify.stateId=2;
-    this.apiNotify.putNotify(Number(notify.id), notify).subscribe(res=>{
+    
       Swal.fire({
-        icon: 'success',
-        title: 'Se ha atendido la notificacion: '+res.title,
+        icon: 'question',
+        title:'¿Que tipo de violencia identificó?',
+        html: '<select class="form-select" aria-label="Default select example">'+
+        '<option selected>Open this select menu</option>'+
+        '<option value="0" selected>Ninguna</option>'+
+        '<option value="1">Violencia de Género</option>'+
+        '<option value="2">Violencia Intrafamiliar</option>'+
+        '<option value="3">Violencia Adulto Mayor</option>'+
+        '<option value="4">Violencia Infantil</option>'+
+        '<option value="5">Otra</option>'+
+      '</select>',
+        confirmButtonText: 'Save',
+        
+      }).then((result)=>{
+        if(result.isConfirmed){
+          this.apiNotify.putNotify(Number(notify.id), notify).subscribe(res=>{
+          Swal.fire({
+            icon:'success',
+            title: 'Se ha atendido la notificacion: '+res.title,
+          });
+        });
+        }
       });
       this.ngOnInit();
-    },err=>{
-      console.log(err);
-    });
   }
 }
