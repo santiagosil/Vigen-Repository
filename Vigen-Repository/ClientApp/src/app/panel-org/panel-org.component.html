@@ -33,59 +33,66 @@
             <div class="col p-4">
                 <h1><b>{{"PANEL-ORG.BIENVENIDO"|translate}}</b></h1>
                 <hr>
-                <div class="mt-4">
-                    <table class="table table-primary table-striped">
+                <div class="table-responsive">
+                    <table class="table align-middle table-primary table-striped">
                         <thead>
-                            <tr>
+                            <tr class="align-middle">
                                 <th scope="col">#</th>
                                 <th scope="col">User ID</th>
                                 <th scope="col">Title</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">State</th>
+                                <th scope="col" style="width: 40%;">Description</th>
                                 <th scope="col">Organization Type</th>
-                                <th scope="col">Actions</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let notify of activeNotifies; index as i">
+                            <tr *ngFor="let notify of activeNotifies; index as i" class="align-middle">
                                 <th scope="row">i</th>
                                 <td>{{notify.userId}}</td>
                                 <td>{{notify.title}}</td>
                                 <td>{{notify.description}}</td>
-                                <td>{{notify.stateId}}</td>
                                 <td>{{notify.organizationTypeId}}</td>
                                 <td>
-                                    <button class="btn btn-success me-1" (click)="toInProgressNotify(notify)"><fa-icon [icon]="['fas', 'check']"></fa-icon></button>
-                                    <button class="btn btn-danger ms-1" (click)="deleteNotify(notify)"><fa-icon [icon]="['fas', 'trash']"></fa-icon></button>
+                                    <button class="btn btn-success me-1" (click)="toInProgressNotify(notify)">
+                                        <fa-icon [icon]="['fas', 'check']"></fa-icon>
+                                    </button>
+                                    <button class="btn btn-danger ms-1" (click)="deleteNotify(notify)">
+                                        <fa-icon [icon]="['fas', 'trash']"></fa-icon>
+                                    </button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="mt-4">
-                    <table class="table table-primary table-striped">
+                    <h5>Notificaciones en espera de solución</h5>
+                </div>
+                <div class="table-responsive mt-2">
+                    <table class="table align-middle table-primary table-striped shadow">
                         <thead>
-                            <tr>
+                            <tr class="align-middle">
                                 <th scope="col">#</th>
                                 <th scope="col">User ID</th>
                                 <th scope="col">Title</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">State</th>
+                                <th scope="col" style="width: 40%;">Description</th>
                                 <th scope="col">Organization Type</th>
-                                <th scope="col">Actions</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let notify of inProgressNotifies; index as i">
+                            <tr *ngFor="let notify of inProgressNotifies; index as i" class="align-middle">
                                 <th scope="row">i</th>
                                 <td>{{notify.userId}}</td>
                                 <td>{{notify.title}}</td>
                                 <td>{{notify.description}}</td>
-                                <td>{{notify.stateId}}</td>
                                 <td>{{notify.organizationTypeId}}</td>
                                 <td>
-                                    <button class="btn btn-success me-1" (click)="toFinishNotify(notify)"><fa-icon [icon]="['fas', 'check']"></fa-icon></button>
-                                    <button class="btn btn-danger ms-1" (click)="deleteNotify(notify)"><fa-icon [icon]="['fas', 'trash']"></fa-icon></button>
+                                    <button class="btn btn-success me-1" (click)="toFinishNotify(notify)">
+                                        <fa-icon [icon]="['fas', 'check']"></fa-icon>
+                                    </button>
+                                    <button class="btn btn-danger ms-1" (click)="deleteNotify(notify)">
+                                        <fa-icon [icon]="['fas', 'trash']"></fa-icon>
+                                    </button>
                                 </td>
                             </tr>
                         </tbody>
