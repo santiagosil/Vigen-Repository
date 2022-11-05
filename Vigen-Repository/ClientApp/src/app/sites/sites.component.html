@@ -2,8 +2,7 @@
     <div class="container shadow rounded" style="background-color: #f5f3f7;">
         <div class="row">
             <div class="col-sm p-3  mb-5 rounded ">
-                <!--form [formGroup]="form" (submit) ="sendLogin()" class="form"-->
-                <form (ngSubmit)="send()">
+                <form (ngSubmit)="test()" [formGroup]="organizationForm">
                     <div class="ms-4 me-4">
                         <h1>{{"REC.REGISTRO" | translate}}</h1>
                         <label>{{"REC.RAPIDO"|translate}}</label>
@@ -14,55 +13,37 @@
                         <div class="col-sm ms-4 me-4">
                             <label>{{"SITES.COUNTRY" | translate}}<label
                                     style="color:red;">*</label></label>
-                            <!--input formControlName="nomOrg" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="sites[selected].countryCode" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded"  formControlName="countryCode" (change)="onChangeForm()">
                         </div>
                     </div>
                     <div class="form-group row mt-3">
                         <div class="col-sm ms-4 me-4">
                             <label>{{"SITES.RANGE" | translate}}<label
                                     style="color:red;">*</label></label>
-                            <!--input formControlName="nomOrg" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="sites[selected].range" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded" formControlName="range" (change)="onChangeForm()">
                         </div>
                     </div>
 
 
                     <div class="form-group row">
                         <div class="col-sm mt-3 ms-4 me-4">
-                            <label>NIT<label style="color:red;">*</label></label>
-                            <!--input formControlName="nitOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="sites[selected].nit" [ngModelOptions]="{standalone: true}" disabled="true">
+                            <label>NIT<span style="color:red;">*</span></label>
+                            <input type="text" class="form-control rounded" formControlName="nit" (change)="onChangeForm()" readonly>
                         </div>
                     </div>
-                    <!--<div class="form-group row">
-                        <div class="col-sm mt-3 ms-4 me-4">
-                            <label>Correo</label>
-                            input formControlName="nitOrg" type="text" class="form-control" placeholder=""
-                            <input type="email" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="organization.nit" [ngModelOptions]="{standalone: true}" placeholder="">
-                        </div>
-                    </div>-->
 
                     <div class="form-group row">
 
                         <div class="col-sm mt-3 ms-4 me-4">
                             <label>{{"SITES.UBICATION" | translate}}<label style="color:red;">*</label></label>
-                            <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [value]="sites[selected].marker.geoInv" placeholder="">
+                            <input type="text" class="form-control rounded" formControlName="ubication" (change)="onChangeForm()" readonly>
                         </div>
                     </div>
                     <div class="form-group row">
 
                         <div class="col-sm mt-3 ms-4 me-4">
                             <label>ID<label style="color:red;">*</label></label>
-                            <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="sites[selected].id" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded" formControlName="id" (change)="onChangeForm()">
                         </div>
                     </div>
 
@@ -71,22 +52,18 @@
 
                         <div class="col-sm ">
                             <label>{{"SITES.PHONE" | translate}}<label style="color:red;">*</label></label>
-                            <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="sites[selected].phone" [ngModelOptions]="{standalone: true}"
-                                placeholder="">
+                            <input type="text" class="form-control rounded" formControlName="phone" (change)="onChangeForm()">
                         </div>
                         <div class="col-sm ">
                             <label>{{"REC.TEL"|translate}}<label style="color:red;">*</label></label>
-                            <!--input  formControlName="ecivlUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="sites[selected].tel" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded" formControlName="tel" (change)="onChangeForm()">
                         </div>
                     </div>
 
                     <div class="row text-center mt-4">
                         <div class="form-group row">
                             <div class="col-sm">
+                                <button class="btn btn-success" (click)="addSite()"><fa-icon [icon]="['fas','add']"></fa-icon> Agregar</button>
                                 <button type="submit" class="btn btn-primary">{{"REC.ENVIAR"|translate}}</button>
                             </div>
                         </div>
@@ -95,13 +72,14 @@
             </div>
             <div class="col-sm mt-3">
                 <div class="container p-4">
-                    <app-map-organizacion></app-map-organizacion>
+                <app-map (latLngEvent)="onChangeSite($event)" [latLng]="sites[selected].ubication ?? ''" [range]="sites[selected].range ?? 0"></app-map>
                     <div class="row mt-3">
                         <h5>{{"REC.INFORMACION"|translate}}</h5>
 
                         <table class="table">
                             <thead>
                                 <tr>
+                                    <th>#</th>
                                     <th>id</th>
                                     <th>Range</th>
                                     <th>Phone</th>
@@ -112,14 +90,15 @@
                             </thead>
                             <tbody>
                                 <tr *ngFor="let site of sites; index as i">
+                                    <td>{{i}}</td>
                                     <td>{{site.id}}</td>
                                     <td>{{site.range}}</td>
                                     <td>{{site.phone}}</td>
                                     <td>{{site.tel}}</td>
-                                    <td>{{site.marker.geoInv}}</td>
+                                    <td>{{geoInv[i]}}</td>
                                     <td>
-                                        <button class="btn btn-info" (click)="selected=i"><fa-icon [icon]="['fas','square-pen']"></fa-icon></button>
-                                        <button class="btn btn-danger"><fa-icon [icon]="['fas','trash']"></fa-icon></button>
+                                        <button class="btn btn-info" (click)="onSelectEdit(i)"><fa-icon [icon]="['fas','square-pen']"></fa-icon></button>
+                                        <button class="btn btn-danger" (click)="onSelectDelete(i)"><fa-icon [icon]="['fas','trash']"></fa-icon></button>
                                     </td>
                                 </tr>
                             </tbody>

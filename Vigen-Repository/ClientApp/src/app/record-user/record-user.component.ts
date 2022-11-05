@@ -5,11 +5,11 @@ import { UserService } from '../api/services';
 import { User } from '../api/models';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 import { HttpContext } from '@angular/common/http';
 import { InverseService } from '../api/MyServices/inverse.service';
 import Swal from 'sweetalert2';
 import { ReadVarExpr } from '@angular/compiler';
+import { LatLng } from 'leaflet';
 
 
 
@@ -52,14 +52,22 @@ export class RecordUserComponent implements OnInit {
   constructor(private api: UserService, private rever: InverseService, private router: Router) {
   }
 
-  get ubication() {
+  /*get ubication() {
     this.usuario.ubication = this.rever.getSite.geoInv;
     return this.rever.getSite;
-  }
+  }*/
 
 
   ngOnInit() {
+    this.rever.geoLocalitation.subscribe(
+      res=>{
+        this.usuario.ubication = res;
+      }
+    );
+  }
 
+  onUbicationChange(event:LatLng):void{
+    this.rever.calculateGeoLocalitation(event);
   }
 
   acuerdo() {

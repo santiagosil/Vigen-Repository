@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { circle, latLng, LatLng, map, Map, Marker, marker, tileLayer } from 'leaflet';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Circle, circle, latLng, LatLng, map, Map, Marker, marker, tileLayer } from 'leaflet';
 import { __values } from 'tslib';
 import { InverseService } from '../api/MyServices/inverse.service'
-import { RecordUserComponent } from '../record-user/record-user.component';
 
 export let latlong = new LatLng(0, 0);
 
@@ -11,18 +10,31 @@ export let latlong = new LatLng(0, 0);
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
-export class MapComponent implements OnInit {
+export class MapComponent implements OnInit, OnChanges {
+  @Input() range: number = 0;
+  @Input() latLng: string = '';
+  @Output() latLngEvent = new EventEmitter<LatLng>();
 
-  public marker:Marker<any>;
+  public marker: Marker<any>;
+  private circle: Circle<any>;
 
-  constructor(private reverse: InverseService, private user: RecordUserComponent) {
-    this.marker=marker(new LatLng(0, 0));
-   }
+  constructor() {
+    this.marker = marker(new LatLng(0, 0));
+    this.circle = circle(new LatLng(0, 0));
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    const auxLatLng = this.latLng.split(', ');
+    if (!isNaN(Number(auxLatLng[0])) && !isNaN(Number(auxLatLng[1]))) {
+      const aux=new LatLng(Number(auxLatLng[0]), Number(auxLatLng[1]));
+      this.marker.setLatLng(aux);
+      this.circle.setLatLng(aux);
+      //map.setView(aux)
+    }
+    this.circle.setRadius(this.range);
+  }
 
   ngOnInit(): void {
-  }
-  ngAfterViewInit() {
-    
     const map = new Map('map').setView([4.82882, -74.35513], 18);
     tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
@@ -36,17 +48,22 @@ export class MapComponent implements OnInit {
       latlng: LatLng;
     }) => {
       this.marker.remove();
+      this.circle.remove();
       this.marker = marker(e.latlng).addTo(map);
-      this.reverse.changeSite(this.marker.getLatLng().lat,this.marker.getLatLng().lng);
+      this.circle = circle(e.latlng, { radius: this.range }).addTo(map);
+      this.latLngEvent.emit(e.latlng);
+      map.setView(e.latlng, 18);
     });
 
     map.on('click', async (e: {
       latlng: LatLng
     }) => {
       this.marker.remove();
+      this.circle.remove();
       this.marker = marker(e.latlng).addTo(map);
-      this.reverse.changeSite(this.marker.getLatLng().lat,this.marker.getLatLng().lng);
-  });
-
+      this.circle = circle(e.latlng, { radius: this.range }).addTo(map);
+      this.latLngEvent.emit(e.latlng);
+    });
   }
+
 }

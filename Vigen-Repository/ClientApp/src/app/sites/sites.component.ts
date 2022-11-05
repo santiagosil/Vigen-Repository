@@ -3,9 +3,21 @@ import { Data, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { InverseService, MarkerCustom } from '../api/MyServices/inverse.service';
-import { Site } from '../api/models/site';
 import { SiteService } from '../api/services';
 import { ConsoleLogger } from '@microsoft/signalr/dist/esm/Utils';
+import { LatLng } from 'leaflet';
+import { Site } from '../api/models';
+import { select } from 'd3';
+
+const site:Site={
+  countryCode:'',
+  id:'',
+  nit:localStorage.getItem("NitRegister"),
+  phone:'',
+  range:0,
+  tel:'',
+  ubication:''
+};
 
 @Component({
   selector: 'app-sites',
@@ -14,37 +26,96 @@ import { ConsoleLogger } from '@microsoft/signalr/dist/esm/Utils';
 })
 export class SitesComponent implements OnInit {
 
-  public sites: SiteCustom[] = [];
+  public sites: Site[] = [];
+  public geoInv:String[]=[];
   public selected: number = 0;
 
-
-  constructor(private api: SiteService, private rever: InverseService,private router:Router) {
-  }
-  get listSites() {
-    return this.rever.getListSites;
-  }
-  async addSites() {
-    setInterval(() => {
-      let long = this.listSites.length;
-      this.listSites[0].geoInv;
-      if (this.listSites.length > this.sites.length) {
-        this.sites.push(new SiteCustom());
-        this.sites[long - 1].nit=String(localStorage.getItem('NitRegister'));
-        this.sites[long - 1].marker = this.listSites[long - 1];
-        this.sites[long - 1].ubication = String(this.listSites[long - 1].lat) + ", " + String(this.listSites[long - 1].lng);
-      }
-      if(this.sites.length==1){
-        this.sites[0].marker=this.listSites[0];
-        this.sites[0].nit=String(localStorage.getItem('NitRegister'));
-        this.sites[0].ubication = String(this.listSites[0].lat) + ", " + String(this.listSites[0].lng);
-      }
-    }, 1000);
-  }
-
+  organizationForm!:FormGroup;
 
   ngOnInit() {
-    this.addSites();
-    this.sites.push(new SiteCustom());
+    this.sites.push(site);
+    this.geoInv.push('');
+    this.organizationForm = this.initForm();
+    this.rever.geoLocalitation.subscribe(
+      res=>{
+        this.organizationForm.patchValue({"geoInv":res});
+        this.geoInv.push(res);
+        this.geoInv[this.selected]=res;
+      });
+    
+  }
+
+  initForm():FormGroup{
+    return this.fb.group({
+      id:['',Validators.required],
+      nit:[localStorage.getItem("NitRegister"),Validators.required],
+      ubication:['',Validators.required],
+      range:[0,Validators.required],
+      countryCode:['',Validators.required],
+      phone:['',Validators.required],
+      tel:['',Validators.required],
+      geoInv:['']
+    });
+  }
+
+  
+
+
+  constructor(private api: SiteService, private rever: InverseService,private router:Router,private fb:FormBuilder) {
+  }
+
+  onChangeSite(latLng:LatLng):void {
+    this.organizationForm.patchValue({"ubication":latLng.lat+', '+latLng.lng});
+    this.rever.calculateGeoLocalitation(latLng);
+    this.onChangeForm();
+  }
+
+  onChangeForm():void{
+    this.sites[this.selected]= {
+      id: this.organizationForm.get('id')?.value,
+      nit: localStorage.getItem("NitRegister"),
+      range: this.organizationForm.get('range')?.value,
+      ubication: this.organizationForm.get('ubication')?.value,
+      countryCode: this.organizationForm.get('countryCode')?.value,
+      phone: this.organizationForm.get('phone')?.value,
+      tel: this.organizationForm.get('tel')?.value,
+    };
+  }
+
+  onSelectEdit(i:number): void{
+    this.onChangeForm();
+    this.selected=i;
+    this.organizationForm.setValue({
+      id:this.sites[i].id,
+      nit:this.sites[i].nit,
+      range:this.sites[i].range,
+      ubication:this.sites[i].ubication,
+      geoInv:this.geoInv[i],
+      countryCode:this.sites[i].countryCode,
+      phone:this.sites[i].phone,
+      tel:this.sites[i].tel
+    });
+  }
+
+  onSelectDelete(i:number):void{
+    console.log(i);
+    if(this.sites.length===1){
+      Swal.fire({
+        icon: 'error',
+        title: 'Debe de existir al menos una sede'
+      });
+    }else{
+      this.selected=0;
+      this.sites.splice(i,1);
+      this.geoInv.splice(i,1);
+    }
+    
+  }
+
+  addSite() {
+    this.sites.push(site);
+    this.geoInv.push('');
+    this.onSelectEdit(this.sites.length-1);
   }
 
   showModal() {
@@ -65,6 +136,14 @@ export class SitesComponent implements OnInit {
       timer: 2000
     })
   }
+
+
+public test(){
+  console.log(this.sites);
+  console.log(this.organizationForm);
+  
+}
+
   public send() {
     this.sites.forEach((site)=>{
       var siteAux:Site={
@@ -88,18 +167,5 @@ export class SitesComponent implements OnInit {
     localStorage.setItem("TypeUser","1");
     this.router.navigate(["/pOrg"]);
   }
-
-}
-
-
-class SiteCustom {
-  marker: MarkerCustom = new MarkerCustom(0, 0);
-  countryCode: string = '';
-  id: string = '';
-  nit: string = '';
-  phone: string = '';
-  range: number = 0;
-  tel: string = '';
-  ubication: string = '';
 
 }
