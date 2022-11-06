@@ -24,14 +24,14 @@ export class EditOrgComponent implements OnInit {
   constructor(private api: OrganizationService) { }
 
   ngOnInit(): void {
-    this.api.apiOrganizationIdGet$Json({ id: String(localStorage.getItem('UserId')) }).subscribe((res) => {
+    this.api.apiOrganizationIdGet$Json({ id: String(sessionStorage.getItem('UserId')) }).subscribe((res) => {
       this.orgForm = res;
       console.log(this.orgForm);
     });
   }
 
   onSubmit(){
-    this.api.putOrganization(String(localStorage.getItem('UserId')),this.orgForm).subscribe((res)=>{
+    this.api.putOrganization(String(sessionStorage.getItem('UserId')),this.orgForm).subscribe((res)=>{
       Swal.fire({
         icon: 'success',
         position: 'top-end',

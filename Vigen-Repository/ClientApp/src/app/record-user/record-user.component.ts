@@ -153,9 +153,9 @@ export class RecordUserComponent implements OnInit {
           this.usuario.code = random + "";
           this.api.apiUserPost$Json({ body: this.usuario })
             .subscribe(res => {
-              localStorage.setItem("UserId", String(this.usuario.identification));
-              localStorage.setItem("TypeUser", "0");
-              localStorage.setItem("UserName", String(this.usuario.name));
+              sessionStorage.setItem("UserId", String(this.usuario.identification));
+              sessionStorage.setItem("TypeUser", "0");
+              sessionStorage.setItem("UserName", String(this.usuario.name));
               this.showbien();
               this.router.navigate(['/token']);
             });

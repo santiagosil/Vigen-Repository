@@ -7,7 +7,7 @@ import { ApiConfiguration } from '../api-configuration';
 import { StrictHttpResponse } from '../strict-http-response';
 import { RequestBuilder } from '../request-builder';
 import { Observable } from 'rxjs';
-import { map, filter } from 'rxjs/operators';
+import { map, filter, observeOn } from 'rxjs/operators';
 
 import { User } from '../models/user';
 
@@ -21,6 +21,10 @@ export class UserService extends BaseService {
   ) {
     super(config, http);
   }
+
+  loginUser(id:string,pass:string):Observable<string>{
+    return this.http.get<string>(this.rootUrl+'/api/User/'+id+'/'+pass);
+  } 
 
   /**
    * Path part for operation apiUserGet

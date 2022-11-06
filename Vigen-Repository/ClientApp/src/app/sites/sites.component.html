@@ -2,69 +2,76 @@
     <div class="container shadow rounded" style="background-color: #f5f3f7;">
         <div class="row">
             <div class="col-sm p-3  mb-5 rounded ">
-                <form (ngSubmit)="test()" [formGroup]="organizationForm">
+                <form [formGroup]="siteForm">
                     <div class="ms-4 me-4">
                         <h1>{{"REC.REGISTRO" | translate}}</h1>
                         <label>{{"REC.RAPIDO"|translate}}</label>
                         <hr>
                         <p class="mt-2" style="color:red;">{{"REC.CAMPOS" | translate}}</p>
                     </div>
-                    <div class="form-group row mt-3">
-                        <div class="col-sm ms-4 me-4">
-                            <label>{{"SITES.COUNTRY" | translate}}<label
-                                    style="color:red;">*</label></label>
-                            <input type="text" class="form-control rounded"  formControlName="countryCode" (change)="onChangeForm()">
-                        </div>
-                    </div>
-                    <div class="form-group row mt-3">
-                        <div class="col-sm ms-4 me-4">
-                            <label>{{"SITES.RANGE" | translate}}<label
-                                    style="color:red;">*</label></label>
-                            <input type="text" class="form-control rounded" formControlName="range" (change)="onChangeForm()">
-                        </div>
-                    </div>
 
+                    <div class="form-group row">
+                        <div class="col-sm mt-3 ms-4 me-4">
+                            <label>ID<label style="color:red;">*</label></label>
+                            <input type="text" class="form-control rounded" [ngClass]="(siteForm.get('id')?.valid)?'is-valid':'is-invalid'" formControlName="id"
+                                (change)="onChangeForm()">
+                        </div>
+                        
+                    </div>
 
                     <div class="form-group row">
                         <div class="col-sm mt-3 ms-4 me-4">
                             <label>NIT<span style="color:red;">*</span></label>
-                            <input type="text" class="form-control rounded" formControlName="nit" (change)="onChangeForm()" readonly>
+                            <input type="text" class="form-control rounded" [ngClass]="(siteForm.get('nit')?.valid)?'is-valid':'is-invalid'" formControlName="nit"
+                                (change)="onChangeForm()" readonly>
                         </div>
                     </div>
 
                     <div class="form-group row">
-
                         <div class="col-sm mt-3 ms-4 me-4">
                             <label>{{"SITES.UBICATION" | translate}}<label style="color:red;">*</label></label>
-                            <input type="text" class="form-control rounded" formControlName="ubication" (change)="onChangeForm()" readonly>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-
-                        <div class="col-sm mt-3 ms-4 me-4">
-                            <label>ID<label style="color:red;">*</label></label>
-                            <input type="text" class="form-control rounded" formControlName="id" (change)="onChangeForm()">
+                            <input type="text" class="form-control rounded" [ngClass]="(siteForm.get('ubication')?.valid)?'is-valid':'is-invalid'" formControlName="ubication"
+                                (change)="onChangeForm()" readonly>
                         </div>
                     </div>
 
+                    <div class="form-group row mt-3">
+                        <div class="col-sm ms-4 me-4">
+                            <label>{{"SITES.RANGE" | translate}}<label style="color:red;">*</label></label>
+                            <input type="text" class="form-control rounded" [ngClass]="(siteForm.get('range')?.valid)?'is-valid':'is-invalid'" formControlName="range"
+                                (change)="onChangeForm()">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mt-3">
+                        <div class="col-sm ms-4 me-4">
+                            <label>{{"SITES.COUNTRY" | translate}}<label style="color:red;">*</label></label>
+                            <input type="text" class="form-control rounded" [ngClass]="(siteForm.get('countryCode')?.valid)?'is-valid':'is-invalid'" formControlName="countryCode"
+                                (change)="onChangeForm()">
+                        </div>
+                    </div>
 
                     <div class="form-group row mt-3 ms-3 me-3">
-
                         <div class="col-sm ">
                             <label>{{"SITES.PHONE" | translate}}<label style="color:red;">*</label></label>
-                            <input type="text" class="form-control rounded" formControlName="phone" (change)="onChangeForm()">
+                            <input type="text" class="form-control rounded" [ngClass]="(siteForm.get('phone')?.valid)?'is-valid':'is-invalid'" formControlName="phone"
+                                (change)="onChangeForm()">
                         </div>
+
                         <div class="col-sm ">
                             <label>{{"REC.TEL"|translate}}<label style="color:red;">*</label></label>
-                            <input type="text" class="form-control rounded" formControlName="tel" (change)="onChangeForm()">
+                            <input type="text" class="form-control rounded" [ngClass]="(siteForm.get('tel')?.valid)?'is-valid':'is-invalid'" formControlName="tel"
+                                (change)="onChangeForm()">
                         </div>
                     </div>
 
                     <div class="row text-center mt-4">
                         <div class="form-group row">
                             <div class="col-sm">
-                                <button class="btn btn-success" (click)="addSite()"><fa-icon [icon]="['fas','add']"></fa-icon> Agregar</button>
-                                <button type="submit" class="btn btn-primary">{{"REC.ENVIAR"|translate}}</button>
+                                <button class="btn btn-success" (click)="addSite()">
+                                    <fa-icon [icon]="['fas','add']"></fa-icon> Agregar
+                                </button>
+                                <button type="submit" (click)="send()" class="btn btn-primary">{{"REC.ENVIAR"|translate}}</button>
                             </div>
                         </div>
                     </div>
@@ -72,7 +79,8 @@
             </div>
             <div class="col-sm mt-3">
                 <div class="container p-4">
-                <app-map (latLngEvent)="onChangeSite($event)" [latLng]="sites[selected].ubication ?? ''" [range]="sites[selected].range ?? 0"></app-map>
+                    <app-map (latLngEvent)="onChangeSite($event)" [latLng]="sites[selected].ubication ?? ''"
+                        [range]="sites[selected].range ?? 0"></app-map>
                     <div class="row mt-3">
                         <h5>{{"REC.INFORMACION"|translate}}</h5>
 
@@ -97,15 +105,18 @@
                                     <td>{{site.tel}}</td>
                                     <td>{{geoInv[i]}}</td>
                                     <td>
-                                        <button class="btn btn-info" (click)="onSelectEdit(i)"><fa-icon [icon]="['fas','square-pen']"></fa-icon></button>
-                                        <button class="btn btn-danger" (click)="onSelectDelete(i)"><fa-icon [icon]="['fas','trash']"></fa-icon></button>
+                                        <button class="btn btn-info" (click)="onSelectEdit(i)">
+                                            <fa-icon [icon]="['fas','square-pen']"></fa-icon>
+                                        </button>
+                                        <button class="btn btn-danger" (click)="onSelectDelete(i)">
+                                            <fa-icon [icon]="['fas','trash']"></fa-icon>
+                                        </button>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-                    

@@ -23,6 +23,17 @@ namespace Vigen_Repository.Controllers
             return Ok(users);
         }
 
+        [HttpGet("{user}/{password}")]
+        public async Task<ActionResult<Object>> loginUser(string user, string password)
+        {
+            User? userObject = await _context.Users.FindAsync(user);
+            if(userObject?.Password != password)
+            {
+                return null;
+            }
+            return new {name=userObject.Name };
+        }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> getUser(string id)
         {
