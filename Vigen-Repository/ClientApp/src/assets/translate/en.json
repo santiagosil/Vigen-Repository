@@ -209,16 +209,17 @@
 
     },
     "ACERCA":{
-        "CONOCEMAS":"Learn more about us",
+        "CONOCEMAS":"Learn more about",
+        "NOSOTROS":"Us",
         "NUESTRAMISION":"Our mission",
         "NUESTRAVISION":"Our vision",
         "OBJETIVOSGENERALES":"General objectives",
         "MISION":"Vigen contributes to the reduction of different types of violence against families, children, women and the elderly in the public and private spheres through the use of information technology, communication and artificial intelligence to make predictive models that can foresee any violent, aggressive and/or abusive event before it occurs, partially preventing physical or psychological harm to the victim.",
         "VISION":"Vigen will have possibilities of growth in any place where there is support for action, research and data collection for further analysis and prediction for the reduction of domestic, child, gender and elder violence. Taking into account that we do NOT suggest the creation of new care institutions under any circumstances, nor are we a direct part of any of them.",
-        "OBJETIVOGENERAL":"• To develop software trained in the collection, study, presentation and prediction of risks in gender, elder, intra-family and child violence (from 13 years and older). To present to the governmental media by means of reports and reports, so that the most vulnerable people or the most at-risk areas can be followed up in a local context.",
-        "OBJETIVOESPECIFICOS1":"• Implement surveys for the enrichment of knowledge of artificial intelligence.",
-        "OBJETIVOESPECIFICOS2":"• Generate mechanisms for prevention and assistance to people who show signs of some type of violence.",
-        "OBJETIVOESPECIFICOS3":"• Carry out strategic articulations with state or private institutions whose social reason is oriented to the protection and accompaniment of subjects in condition of victims of some type of violence, in order to follow up the most vulnerable people or the areas with more risk, in a local context.",
+        "OBJETIVOGENERAL":"To develop software trained in the collection, study, presentation and prediction of risks in gender, elder, intra-family and child violence (from 13 years and older). To present to the governmental media by means of reports and reports, so that the most vulnerable people or the most at-risk areas can be followed up in a local context.",
+        "OBJETIVOESPECIFICOS1":"Implement surveys for the enrichment of knowledge of artificial intelligence.",
+        "OBJETIVOESPECIFICOS2":"Generate mechanisms for prevention and assistance to people who show signs of some type of violence.",
+        "OBJETIVOESPECIFICOS3":"Carry out strategic articulations with state or private institutions whose social reason is oriented to the protection and accompaniment of subjects in condition of victims of some type of violence, in order to follow up the most vulnerable people or the areas with more risk, in a local context.",
         "OBJETIVOSESPECIFICOS":"Specific objectives"
 
     },

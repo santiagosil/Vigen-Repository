@@ -1,109 +1,13 @@
-<nav class="navbar navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand ms-5" href="#">Vigen</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-            aria-controls="offcanvasDarkNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-            aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Vigen</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">{{"PANEL-USER.MENU" | translate}}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">{{"PANEL-USER.ACTUALIZARPERFIL" | translate}}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">{{"PANEL-USER.LINEASDEATENCION" | translate}}</a>
-                    </li>
-                    <hr>
-                    <div class="dropdown">
-                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../../assets/images/kes.jpg" alt="" width="32" height="32"
-                                class="rounded-circle me-2">
-                            <strong>SebasDesign</strong>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                            <li><a class="dropdown-item" href="#">{{"PANEL-USER.PROYECTONUEVO" | translate}}</a></li>
-                            <li><a class="dropdown-item" href="#">{{"PANEL-USER.SETTINGS" | translate}}</a></li>
-                            <li><a class="dropdown-item" href="#">{{"PANEL-USER.PROFILE" | translate}}</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">{{"PANEL-USER.SIGNOUT" | translate}}</a></li>
-                        </ul>
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--
-</nav>
-
-
-<div class="container">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../../assets/images/violencia-1.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../../assets/images/violencia-2.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../../assets/images/violencia-3.jpg" class="d-block w-100" alt="...">
-                -->
-</nav>
-<div class="container-fluid">
+<div style="margin-top: 5rem;" class="container-fluid">
     <div class="row flex-nowrap">
-        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark text-white ">
-            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
 
-                <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline mt-3">{{"PANEL-USER.MENU2" | translate}}</span>
-                </a>
-                <h4 class="d-none d-sm-inline mx-1 mt-2">Nombre</h4>
-                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-white"
-                    id="menu">
-                    <li class="nav-item">
-                        <a routerLink="/pUser" class="nav-link align-middle px-0">
-                            <fa-icon style="color: white" [icon]="['fas', 'house']"></fa-icon> <span
-                                class="ms-2 d-none d-sm-inline text-white">{{"PANEL-USER.HOME" | translate}}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a routerLink="/edUser" class="nav-link px-0 align-middle">
-                            <fa-icon style="color: white" [icon]="['far', 'user']"></fa-icon> <span
-                                class="ms-2 d-none d-sm-inline text-white">{{"PANEL-USER.PERFIL" | translate}}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a routerLink="/encuesta" class="nav-link px-0 align-middle">
-                            <fa-icon style="color: white" [icon]="['fas', 'square-poll-horizontal']"></fa-icon> <span
-                                class="ms-2 d-none d-sm-inline text-white">{{"PANEL-USER.ENCUESTA" | translate}}</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col color p-4">
+      
+            
+        
+        <div class="col-sm color p-4">
+            <app-side class="fixed-bottom"></app-side>
             <div class="container">
+                
                 <h1 class="text-dark"><b>Vigen te da la bienvenida</b></h1>
                 <hr>
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
