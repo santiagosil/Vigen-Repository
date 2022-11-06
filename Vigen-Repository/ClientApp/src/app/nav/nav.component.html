@@ -1,14 +1,16 @@
 <!--p *ngIf="user">{{user.name}}</p>-->
 <nav class="navbar fixed-top navbar-expand-lg bg-primary p-md-3">
   <div class="container-fluid">
-    <a class="navbar-brand text-white ms-5" (click)="toHome()" routerLink="/home" routerLinkActivate="activate">
-      <img class="vigen" src="../../assets/images/vigenb.png" alt="">
-    </a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    <button class="navbar-toggler order-md-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    
+    <a class="navbar-brand text-white ms-5" (click)="toHome()" routerLink="/home" routerLinkActivate="activate">
+      <img class="vigen" src="../../assets/images/vigenb.png" alt="">
+    </a>
+    <button class="btn btn-dark order-md-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+        aria-controls="offcanvasScrolling">Menú</button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav nav nav-pills me-auto mb-2 mb-lg-0">
@@ -42,20 +44,10 @@
         </ul>
 
       </div>
-      <!--div class="container">
-        <select class="form-select" #langSelect (change)="changeLang(langSelect.value)">
-          <option selected value="es">Español</option>
-          <option value="en">English</option>
-        </select>
-      </div-->
 
       <button class="btn btn-secundary m-2 text-black" type="submit" routerLink="/login">{{"NAV.LOGIN" |
         translate}}</button>
       <button class="btn btn-dark me-5" type="submit" routerLink="/signUp">{{"NAV.SIGNUP" | translate}}</button>
-      <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-        aria-controls="offcanvasScrolling">Menú</button>
-      <div>
-      </div>
     </div>
 
   </div>
