@@ -97,44 +97,37 @@
     </ul>
   </div>
 </div>-->
-<div>
 
-  <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Menú</button>
+<div class="offcanvas-header">
+  <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <span>{{"PANEL-USER.MENU2" | translate}}</span>
+  </a>
 
-  <div class="offcanvas offcanvas-start bg-dark text-white" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-    <div class="offcanvas-header">
-      <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        <span>{{"PANEL-USER.MENU2" | translate}}</span>
-    </a>
-    
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-    <h4>Nombre</h4>
-      
-    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-white"
-        id="menu">
-        <li class="nav-item">
-            <a routerLink="/pUser" class="nav-link align-middle px-0">
-                <fa-icon style="color: white" [icon]="['fas', 'house']"></fa-icon> <span
-                    class="text-white ms-2">{{"PANEL-USER.HOME" | translate}}</span>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/edUser" class="nav-link px-0 align-middle">
-                <fa-icon style="color: white" [icon]="['far', 'user']"></fa-icon> <span
-                    class="text-white ms-2">{{"PANEL-USER.PERFIL" | translate}}</span>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/encuesta" class="nav-link px-0 align-middle">
-                <fa-icon style="color: white" [icon]="['fas', 'square-poll-horizontal']"></fa-icon> <span
-                    class="text-white ms-2">{{"PANEL-USER.ENCUESTA" | translate}}</span>
-            </a>
-        </li>
-    </ul>
-    </div>
-  </div>
+  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body">
+  <h4>Nombre</h4>
+
+  <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-white" id="menu">
+    <li class="nav-item">
+      <a routerLink="/pUser" class="nav-link align-middle px-0">
+        <fa-icon style="color: white" [icon]="['fas', 'house']"></fa-icon> <span
+          class="text-white ms-2">{{"PANEL-USER.HOME" | translate}}</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/edUser" class="nav-link px-0 align-middle">
+        <fa-icon style="color: white" [icon]="['far', 'user']"></fa-icon> <span
+          class="text-white ms-2">{{"PANEL-USER.PERFIL" | translate}}</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/encuesta" class="nav-link px-0 align-middle">
+        <fa-icon style="color: white" [icon]="['fas', 'square-poll-horizontal']"></fa-icon> <span
+          class="text-white ms-2">{{"PANEL-USER.ENCUESTA" | translate}}</span>
+      </a>
+    </li>
+  </ul>
 </div>
 <!--
 
