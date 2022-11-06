@@ -22,6 +22,17 @@ namespace Vigen_Repository.Controllers
             return Ok(organization);
         }
 
+        [HttpGet("{user}/{password}")]
+        public async Task<ActionResult<Object>> loginUser(string user, string password)
+        {
+            Organization? orgObject = await _context.Organizations.FindAsync(user);
+            if (orgObject?.Password != password)
+            {
+                return null;
+            }
+            return new { name = orgObject.Name };
+        }
+
         [HttpGet("{nit}")]
         public async Task<ActionResult<Organization>> getOrganization(string nit)
         {

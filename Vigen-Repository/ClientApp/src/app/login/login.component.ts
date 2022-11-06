@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { Organization, User } from '../api/models';
@@ -12,18 +13,20 @@ import { OrganizationService, UserService } from '../api/services';
 
 export class LoginComponent implements OnInit {
 
-  public usuario = {
-    identification: "",
-    password: "",
-    type: "", //0=usuario, 0!=typoOrg,
-    name:""
-  };
-  typeUser(lang: string) {
-    this.usuario.type = lang;
+  loginForm!: FormGroup;
+
+  initForm(): FormGroup {
+    return this.fb.group({
+      identification: [localStorage.getItem("UserId") ?? '', Validators.required],
+      password: ['', Validators.required],
+      typeUser: [localStorage.getItem("TypeUser") ?? '', Validators.required],
+      rememberMe: [localStorage.getItem("UserId") ? true : false]
+    });
   }
-  constructor(private api: UserService, private router: Router, private orga: OrganizationService) {
+  constructor(private api: UserService, private router: Router, private orga: OrganizationService, private fb: FormBuilder) {
   }
   ngOnInit(): void {
+    this.loginForm = this.initForm();
   }
   showModal() {
     Swal.fire({
@@ -34,40 +37,48 @@ export class LoginComponent implements OnInit {
       timer: 1500
     })
   }
-  public get() {
-    if (this.usuario.password === "" || this.usuario.identification === "") {
-      console.log("Faltan algunos campos obligatorios por llenar");
-      console.log(this.usuario.type);
-    } else {
-      if (this.usuario.type == "0") {
-        this.api.apiUserIdGet$Json({ id: this.usuario.identification + "" })
-          .subscribe(res => {
-            if (res.password == this.usuario.password) {
-              this.usuario.name = String(res.name);
-              localStorage.setItem("UserId",this.usuario.identification);
-              localStorage.setItem("TypeUser", this.usuario.type);
-              localStorage.setItem("UserName",this.usuario.name);
-              this.router.navigate(['/pUser']);
-            } else {
-              this.showModal();
-            }
-          });
-      }
-      if (this.usuario.type == "org") {
-        this.orga.apiOrganizationIdGet$Json({ id: this.usuario.identification + "" })
-          .subscribe(res => {
-            if (res.password == this.usuario.password) {
-              this.usuario.type=Object.values(res)[5];
-              localStorage.setItem("UserId",this.usuario.identification);
-              localStorage.setItem("TypeUser", this.usuario.type);
-              localStorage.setItem("UserName",this.usuario.name);
-              this.router.navigate(['/pOrg']);
-            } else {
-              this.showModal();
-            }
-          });
-      }
+  public send() {
+    if (!this.loginForm.valid) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Faltan Algunos campos por completar'
+      });
+      return;
     }
+
+    if (this.loginForm.value.rememberMe) {
+      localStorage.setItem("UserId", this.loginForm.get("identification")?.value);
+      localStorage.setItem("TypeUser", this.loginForm.get("typeUser")?.value);
+    } else {
+      localStorage.removeItem("UserId");
+      localStorage.removeItem("TypeUser");
+    }
+
+    sessionStorage.setItem("UserId", this.loginForm.get('identification')?.value);
+    sessionStorage.setItem("TypeUser", this.loginForm.get('typeUser')?.value);
+    
+    if(this.loginForm.get('typeUser')?.value==='0'){      
+      this.api.loginUser(this.loginForm.get('identification')?.value,this.loginForm.get('password')?.value).subscribe(
+        res=>{
+          if(!res){
+            this.showModal();
+            return;
+          }
+          sessionStorage.setItem("UserName", Object.values(res)[0]);
+          this.router.navigate(["/pUser"]);
+        });
+    }else if(this.loginForm.get('typeUser')?.value==='org'){
+      this.orga.loginOrg(this.loginForm.get('identification')?.value,this.loginForm.get('password')?.value).subscribe(
+        res=>{
+          if(!res){
+            this.showModal();
+            return;
+          }
+          sessionStorage.setItem("UserName", Object.values(res)[0]);
+          this.router.navigate(["/pOrg"]);
+        });
+    }
+    
   }
 }
 

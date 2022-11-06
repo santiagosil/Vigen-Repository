@@ -32,12 +32,12 @@ export class EditUserComponent implements OnInit {
   constructor(private api:UserService) { }
 
   ngOnInit(): void {
-    this.api.apiUserIdGet$Json({id: String(localStorage.getItem('UserId'))}).subscribe((res) => {
+    this.api.apiUserIdGet$Json({id: String(sessionStorage.getItem('UserId'))}).subscribe((res) => {
       this.usuarioForm=res;
     });
   }
   onSubmit(){
-    this.api.putUser(String(localStorage.getItem('UserId')),this.usuarioForm).subscribe((res)=>{
+    this.api.putUser(String(sessionStorage.getItem('UserId')),this.usuarioForm).subscribe((res)=>{
       Swal.fire({
         icon: 'success',
         position: 'top-end',

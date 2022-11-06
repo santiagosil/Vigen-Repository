@@ -22,6 +22,9 @@ export class OrganizationService extends BaseService {
     super(config, http);
   }
 
+  loginOrg(id:string,pass:string){
+    return this.http.get(this.rootUrl+'/api/Organization/'+id+'/'+pass);
+  }
   /**
    * Path part for operation apiOrganizationGet
    */

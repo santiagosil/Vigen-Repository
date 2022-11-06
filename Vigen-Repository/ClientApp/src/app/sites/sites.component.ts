@@ -12,7 +12,7 @@ import { select } from 'd3';
 const site:Site={
   countryCode:'',
   id:'',
-  nit:localStorage.getItem("NitRegister"),
+  nit:sessionStorage.getItem("NitRegister"),
   phone:'',
   range:0,
   tel:'',
@@ -30,15 +30,15 @@ export class SitesComponent implements OnInit {
   public geoInv:String[]=[];
   public selected: number = 0;
 
-  organizationForm!:FormGroup;
+  siteForm!:FormGroup;
 
   ngOnInit() {
     this.sites.push(site);
     this.geoInv.push('');
-    this.organizationForm = this.initForm();
+    this.siteForm = this.initForm();
     this.rever.geoLocalitation.subscribe(
       res=>{
-        this.organizationForm.patchValue({"geoInv":res});
+        this.siteForm.patchValue({"geoInv":res});
         this.geoInv.push(res);
         this.geoInv[this.selected]=res;
       });
@@ -48,7 +48,7 @@ export class SitesComponent implements OnInit {
   initForm():FormGroup{
     return this.fb.group({
       id:['',Validators.required],
-      nit:[localStorage.getItem("NitRegister"),Validators.required],
+      nit:[sessionStorage.getItem("NitRegister"),Validators.required],
       ubication:['',Validators.required],
       range:[0,Validators.required],
       countryCode:['',Validators.required],
@@ -65,27 +65,25 @@ export class SitesComponent implements OnInit {
   }
 
   onChangeSite(latLng:LatLng):void {
-    this.organizationForm.patchValue({"ubication":latLng.lat+', '+latLng.lng});
+    this.siteForm.patchValue({"ubication":latLng.lat+', '+latLng.lng});
     this.rever.calculateGeoLocalitation(latLng);
     this.onChangeForm();
   }
 
   onChangeForm():void{
     this.sites[this.selected]= {
-      id: this.organizationForm.get('id')?.value,
-      nit: localStorage.getItem("NitRegister"),
-      range: this.organizationForm.get('range')?.value,
-      ubication: this.organizationForm.get('ubication')?.value,
-      countryCode: this.organizationForm.get('countryCode')?.value,
-      phone: this.organizationForm.get('phone')?.value,
-      tel: this.organizationForm.get('tel')?.value,
+      id: this.siteForm.get('id')?.value,
+      nit: sessionStorage.getItem("NitRegister"),
+      range: this.siteForm.get('range')?.value,
+      ubication: this.siteForm.get('ubication')?.value,
+      countryCode: this.siteForm.get('countryCode')?.value,
+      phone: this.siteForm.get('phone')?.value,
+      tel: this.siteForm.get('tel')?.value,
     };
   }
-
-  onSelectEdit(i:number): void{
-    this.onChangeForm();
+  autocompleteForm(i:number){
     this.selected=i;
-    this.organizationForm.setValue({
+    this.siteForm.setValue({
       id:this.sites[i].id,
       nit:this.sites[i].nit,
       range:this.sites[i].range,
@@ -97,6 +95,20 @@ export class SitesComponent implements OnInit {
     });
   }
 
+  onSelectEdit(i:number): void{
+    if(!this.siteForm.valid){
+      Swal.fire({
+        icon:'error',
+        title:'por favor complete el formulario actual'
+      });
+      return;
+    }
+    this.onChangeForm();
+    this.autocompleteForm(i);
+    
+    
+  }
+
   onSelectDelete(i:number):void{
     console.log(i);
     if(this.sites.length===1){
@@ -105,14 +117,22 @@ export class SitesComponent implements OnInit {
         title: 'Debe de existir al menos una sede'
       });
     }else{
-      this.selected=0;
       this.sites.splice(i,1);
       this.geoInv.splice(i,1);
+      this.selected=0;
+      this.autocompleteForm(this.selected);
     }
     
   }
 
   addSite() {
+    if(!this.siteForm.valid){
+      Swal.fire({
+        icon:'info',
+        title:'Debe completar la sede actual antes de agregar una adicional'
+      });
+      return;
+    }
     this.sites.push(site);
     this.geoInv.push('');
     this.onSelectEdit(this.sites.length-1);
@@ -137,14 +157,15 @@ export class SitesComponent implements OnInit {
     })
   }
 
-
-public test(){
-  console.log(this.sites);
-  console.log(this.organizationForm);
-  
-}
-
   public send() {
+    if(!this.siteForm.valid){
+      Swal.fire({
+        icon:'warning',
+        title:'uno o mas campos no han sido completados'
+      });
+      return;
+    }
+
     this.sites.forEach((site)=>{
       var siteAux:Site={
         id:site.id,
@@ -163,8 +184,8 @@ public test(){
         console.log(err);
       });
     });
-    localStorage.setItem("UserId",String(localStorage.getItem('NitRegister')));
-    localStorage.setItem("TypeUser","1");
+    sessionStorage.setItem("UserId",String(sessionStorage.getItem('NitRegister')));
+    sessionStorage.setItem("TypeUser","1");
     this.router.navigate(["/pOrg"]);
   }
 

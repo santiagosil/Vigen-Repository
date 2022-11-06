@@ -38,8 +38,8 @@ export class NotifyComponent extends BaseService implements OnInit {
 
     connection.on("recibeNotify", notify=>{
       var not:String[]=Object.values(notify);
-      console.log(localStorage.getItem("TypeUser") ?? '0');
-      if((localStorage.getItem("TypeUser")) != '0'){
+      console.log(sessionStorage.getItem("TypeUser") ?? '0');
+      if((sessionStorage.getItem("TypeUser")) != '0'){
         this.showAlert(not);
       }
     });

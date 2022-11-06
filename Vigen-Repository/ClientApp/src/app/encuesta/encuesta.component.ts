@@ -58,7 +58,7 @@ export class EncuestaComponent implements OnInit {
   constructor(private iaService:IaService, private pollService:PollService) { }
 
   ngOnInit(): void {
-    this.nameUser=String(localStorage.getItem("UserName"));
+    this.nameUser=String(sessionStorage.getItem("UserName"));
   }
 
   async sendEncuesta()  {
@@ -83,7 +83,7 @@ export class EncuestaComponent implements OnInit {
     await this.iaService.getPredict(this.poll).subscribe(res=>{
       this.poll=Object.values(res)[1];
       this.poll.date=new Date();
-      this.poll.userId=localStorage.getItem("UserId");
+      this.poll.userId=sessionStorage.getItem("UserId");
       this.pollService.postPoll(this.poll).subscribe(res=>{
         Swal.fire({
           icon: 'success',

@@ -27,7 +27,7 @@ export class PanelUserComponent implements OnInit {
   constructor(private not: NotifyService, private user: UserService) { }
 
   ngOnInit(){
-    this.nameUser=String(localStorage.getItem("UserName"));
+    this.nameUser=String(sessionStorage.getItem("UserName"));
   }
 
   cancel(){
@@ -40,10 +40,10 @@ export class PanelUserComponent implements OnInit {
       timer:10000,
     }).then((result) => {
       if (result.isConfirmed) {
-        var identi = String(localStorage.getItem("UserId"));
+        var identi = String(sessionStorage.getItem("UserId"));
         
-          this.notif.description = String(localStorage.getItem("UserName"));
-          this.notif.userId = String(localStorage.getItem("UserId"));
+          this.notif.description = String(sessionStorage.getItem("UserName"));
+          this.notif.userId = String(sessionStorage.getItem("UserId"));
           this.notif.title = "Help Me";
           this.notif.stateId = 0;
           this.notif.organizationTypeId=1;
