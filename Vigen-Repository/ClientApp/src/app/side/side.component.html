@@ -1,144 +1,48 @@
-<!--<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 200px" >
-  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-    <svg class="bi me-2" width="40" height="32">
-      <use xlink:href="#bootstrap" />
-    </svg>
-    <span class="fs-4">Vigen</span>
-  </a>
-  <hr>
-  <ul class="nav nav-pills flex-column mb-auto">
-    <li class="nav-item">
-      <a href="#" class="nav-link active" aria-current="page">
-        <svg class="bi me-2" width="16" height="16">
-          <use xlink:href="#home" />
-        </svg>
-        Home
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi me-2" width="16" height="16">
-          <use xlink:href="#speedometer2" />
-        </svg>
-        Dashboard
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi me-2" width="16" height="16">
-          <use xlink:href="#table" />
-        </svg>
-        Orders
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi me-2" width="16" height="16">
-          <use xlink:href="#grid" />
-        </svg>
-        Products
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi me-2" width="16" height="16">
-          <use xlink:href="#people-circle" />
-        </svg>
-        Customers
-      </a>
-    </li>
-  </ul>
-  <hr>
-  <div class="dropdown">
-    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1"
-      data-bs-toggle="dropdown" aria-expanded="false">
-      <img src="../../assets/images/kes.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
-      <strong>SebasDesign</strong>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-      <li><a class="dropdown-item" href="#">New project...</a></li>
-      <li><a class="dropdown-item" href="#">Settings</a></li>
-      <li><a class="dropdown-item" href="#">Profile</a></li>
-      <li>
-        <hr class="dropdown-divider">
-      </li>
-      <li><a class="dropdown-item" href="#">Sign out</a></li>
-    </ul>
-  </div>
-  
-</div>
-<div class="">
-  <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-
+<div *ngIf="typeUser" class="offcanvas offcanvas-start bg-dark text-white" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1"
+  id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
     <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        <span class="fs-5 d-none d-sm-inline mt-3">{{"PANEL-USER.MENU2" | translate}}</span>
+      <span>{{"PANEL-USER.MENU2" | translate}}</span>
     </a>
-    <h4 class="d-none d-sm-inline mx-1 mt-2">Nombre</h4>
-    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-white"
-        id="menu">
-        <li class="nav-item">
-            <a routerLink="/pUser" class="nav-link align-middle px-0">
-                <fa-icon style="color: white" [icon]="['fas', 'house']"></fa-icon> <span
-                    class="ms-2 d-none d-sm-inline text-white">{{"PANEL-USER.HOME" | translate}}</span>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/edUser" class="nav-link px-0 align-middle">
-                <fa-icon style="color: white" [icon]="['far', 'user']"></fa-icon> <span
-                    class="ms-2 d-none d-sm-inline text-white">{{"PANEL-USER.PERFIL" | translate}}</span>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/encuesta" class="nav-link px-0 align-middle">
-                <fa-icon style="color: white" [icon]="['fas', 'square-poll-horizontal']"></fa-icon> <span
-                    class="ms-2 d-none d-sm-inline text-white">{{"PANEL-USER.ENCUESTA" | translate}}</span>
-            </a>
-        </li>
+
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h4>{{userName}}</h4>
+
+    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-white" id="menu">
+      <li class="nav-item">
+        <a [routerLink]="typeUser=='0'?'/pUser':'/pOrg'" class="nav-link align-middle px-0">
+          <fa-icon style="color: white" [icon]="['fas', 'house']"></fa-icon> <span
+            class="text-white ms-2">{{"PANEL-USER.HOME" | translate}}</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="typeUser=='0'?'/edUser':'/edOrg'" class="nav-link px-0 align-middle">
+          <fa-icon style="color: white" [icon]="['far', 'user']"></fa-icon> <span
+            class="text-white ms-2">{{"PANEL-USER.PERFIL" | translate}}</span>
+        </a>
+      </li>
+      <li>
+        <a *ngIf="typeUser=='0'" routerLink="/encuesta" class="nav-link px-0 align-middle">
+          <fa-icon style="color: white" [icon]="['fas', 'square-poll-horizontal']"></fa-icon> <span
+            class="text-white ms-2">{{"PANEL-USER.ENCUESTA" | translate}}</span>
+        </a>
+        <a *ngIf="typeUser=='org'" routerLink="/statis" class="nav-link px-0 align-middle">
+          <fa-icon style="color: white" [icon]="['fas', 'chart-line']"></fa-icon> <span
+            class="ms-1 d-none d-sm-inline text-white">{{"PANEL-ORG.STATISTICS"|translate}}</span>
+        </a>
+      </li>
+      <li *ngIf="typeUser=='org'" class="nav-item dropdown ms-3">
+        <app-reportes></app-reportes>
+      </li>
+      <li>
+        <a class="nav-link px-0 align-middle" (click)="logOut()">
+          <fa-icon style="color: white" [icon]="['fas','right-from-bracket']"></fa-icon>
+          <span
+            class="ms-1 d-none d-sm-inline text-white">
+            {{"PANEL-USER.SALIR" | translate}}</span></a>
+      </li>
     </ul>
   </div>
-</div>-->
-
-<div class="offcanvas-header">
-  <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-    <span>{{"PANEL-USER.MENU2" | translate}}</span>
-  </a>
-
-  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 </div>
-<div class="offcanvas-body">
-  <h4>Nombre</h4>
-
-  <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-white" id="menu">
-    <li class="nav-item">
-      <a routerLink="/pUser" class="nav-link align-middle px-0">
-        <fa-icon style="color: white" [icon]="['fas', 'house']"></fa-icon> <span
-          class="text-white ms-2">{{"PANEL-USER.HOME" | translate}}</span>
-      </a>
-    </li>
-    <li>
-      <a routerLink="/edUser" class="nav-link px-0 align-middle">
-        <fa-icon style="color: white" [icon]="['far', 'user']"></fa-icon> <span
-          class="text-white ms-2">{{"PANEL-USER.PERFIL" | translate}}</span>
-      </a>
-    </li>
-    <li>
-      <a routerLink="/encuesta" class="nav-link px-0 align-middle">
-        <fa-icon style="color: white" [icon]="['fas', 'square-poll-horizontal']"></fa-icon> <span
-          class="text-white ms-2">{{"PANEL-USER.ENCUESTA" | translate}}</span>
-      </a>
-    </li>
-  </ul>
-</div>
-<!--
-
-<div class="d-flex align-items-start text-black">
-  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-    <button routerLink="/pUser" class="nav-link active " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><fa-icon  [icon]="['fas', 'house']"></fa-icon> <span
-      class=" text-black ms-2">{{"PANEL-USER.HOME" | translate}}</span></button>
-    <button routerLink="/edUser" class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><fa-icon  [icon]="['far', 'user']"></fa-icon> <span
-      class="text-black ms-2">{{"PANEL-USER.PERFIL" | translate}}</span></button>
-    <button routerLink="/encuesta"  class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false"><fa-icon  [icon]="['fas', 'square-poll-horizontal']"></fa-icon> <span
-      class="text-black ms-2">{{"PANEL-USER.ENCUESTA" | translate}}</span></button>
-    
-  </div>
-</div>-->

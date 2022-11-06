@@ -63,7 +63,8 @@
         "POLINF":"Polemica por agresión física",
         "POLCONTEN":"Polémica por conductor de Didi que habría agredido físicamente a una usuaria",
         "NUEINF":"Nuevo caso de feminicidio",
-        "NUECONTEN":"Debanhi Escobar: ¿En qué va el caso de su feminicidio luego de seis meses?"
+        "NUECONTEN":"Debanhi Escobar: ¿En qué va el caso de su feminicidio luego de seis meses?",
+        "SALIR":"Cerrar Sesión"
 
 
     },
@@ -153,9 +154,12 @@
         "RAPIDO":"Es rápido y fácil",
         "CAMPOS":"Campos Requeridos *",
         "NAME":"Nombre",
+        "CCODE":"Código del País",
+        "GENDER":"Género",
         "EMAIL":"Correo",
         "FECHA":"Fecha de Nacimiento",
         "TEL":"Teléfono",
+        "PHONE":"Celular",
         "OCCUPATION":"Ocupación",
         "COD":"Código Postal",
         "CIVIL":"Estado Civil",
