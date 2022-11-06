@@ -9,6 +9,7 @@
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav nav nav-pills me-auto mb-2 mb-lg-0">
         <li class="nav-item">
@@ -23,7 +24,8 @@
         <li class="nav-item">
           <button class="btn btn-primary mt-1" routerLink="/ayuda"
             routerLinkActivate="activate">{{"NAV.HELP" | translate}}</button>
-        </li>
+       
+        </li >
       </ul>
 
       <div class="dropdown">
@@ -38,6 +40,7 @@
               <img src="../../assets/images/spain.svg" style="height: 20px; width: 20px; margin-right: 8px;">Español</a>
           </li>
         </ul>
+        
       </div>
       <!--div class="container">
         <select class="form-select" #langSelect (change)="changeLang(langSelect.value)">
@@ -45,12 +48,18 @@
           <option value="en">English</option>
         </select>
       </div-->
-       <button class="btn btn-secundary m-2 text-black" type="submit" routerLink="/login">{{"NAV.LOGIN" | translate}}</button>
-        <button class="btn btn-dark me-5" type="submit" routerLink="/signUp">{{"NAV.SIGNUP" | translate}}</button>
+      
+      <button class="btn btn-secundary m-2 text-black" type="submit" routerLink="/login">{{"NAV.LOGIN" | translate}}</button>
+      <button class="btn btn-dark me-5" type="submit" routerLink="/signUp">{{"NAV.SIGNUP" | translate}}</button>
+     
+        
 
     </div>
   </div>
+  
 </nav>
+
+
 
 
 <!-- <img src="../../assets/images/Mujer.jpg" class="img-fluid" width="100%" height="30%" alt="Responsive image">-->

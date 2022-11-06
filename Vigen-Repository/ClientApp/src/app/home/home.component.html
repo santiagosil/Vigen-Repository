@@ -7,8 +7,8 @@
 <section style="position: relative; bottom: 2rem;">
     <div class="container-sm mb-5">
         <div class="row">
-            <div class="col-3">
-                <div class="shadow  bg-white p-3 rounded">
+            <div class="col-sm-3">
+                <div class="col-md-12 shadow p-3 bg-white rounded ">
                     <a (click)="view1()" routerLink="" class="nav-link mt-2">
                         <svg *ngIf="showPanel1" class="active rounded" width="8" height="16">
                             <use xlink:href="#grid" />
@@ -33,8 +33,8 @@
                     </a>
                 </div>
             </div>
-            <div class="col-9">
-                <div *ngIf="showPanel1" class="col-md shadow p-4 bg-white rounded me-5">
+            <div class="col-sm-9">
+                <div *ngIf="showPanel1" class="col-md-12 shadow p-4 bg-white rounded ">
                     <h1>{{"HOME.QUEES" | translate}}</h1>
                     <p class="mt-4">{{"HOME.VIOLENCIAESTODO" | translate}}</p>
                     <p class="mt-4">{{"HOME.ESTASAGRESIONES" | translate}}</p>
@@ -42,7 +42,7 @@
                         <button class="btn btn-dark" routerLink="/faq">{{"HOME.SABERMAS" | translate}}</button>
                     </div>
                 </div>
-                <div *ngIf="showPanel2" class="col-md shadow p-4 bg-white rounded me-5">
+                <div *ngIf="showPanel2" class="col-md-12 shadow p-4 bg-white rounded ">
                     <h1>{{"HOME.TIPOS" | translate}}</h1>
                     <h6 class="mt-4">{{"HOME.TIPOS" | translate}}</h6>
                     <p class="mt4">{{"HOME.LAVIOLENCIA" | translate}}</p>
@@ -50,7 +50,7 @@
                         <button class="btn btn-dark" routerLink="/faq">{{"HOME.SABERMAS" | translate}}</button>
                     </div>
                 </div>
-                <div *ngIf="showPanel3" class="col-md shadow p-4 bg-white rounded me-5">
+                <div *ngIf="showPanel3" class="col-md-12 shadow p-4 bg-white rounded ">
                     <h1>{{"HOME.DONDE" | translate}}</h1>
                     <div class="mt-4">                       
                         <p>{{"HOME.SIERES" | translate}}</p>
@@ -59,7 +59,7 @@
                         <button class="btn btn-dark" routerLink="/faq">{{"HOME.SABERMAS" | translate}}</button>
                     </div>
                 </div>
-                <div *ngIf="showPanel4" class="col-md shadow p-4 bg-white rounded me-5">
+                <div *ngIf="showPanel4" class="col-md-12 shadow p-4 bg-white rounded ">
                     <h1>{{"HOME.PREGUNTASFRECUENTES" | translate}}</h1>
                     <h6 class="mt-4">{{"HOME.QUEESLAVIOLENCIA" | translate}}</h6>
                     <p class="mt-4">{{"HOME.LAVIOLENCIABASADA" | translate}}</p>

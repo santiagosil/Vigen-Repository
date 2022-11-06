@@ -1,48 +1,50 @@
 <section style="margin-top: 7rem;">
     <div class="container mt-5 mb-5">
         <div class="row">
-            <div class="col-1"></div>
-            <div class="col-4 left shadow p-3 bg-white mb-5 rounded mt-5" style="position: relative; left: 2rem;">
-                <form action="" (ngSubmit)="get()">
-                    <div class="text-center mt-3">
-                        <!--<img src="../../assets/images/user.png" alt="usuario" width="48">-->
-                        <h3>{{"LOGIN.TITULO" | translate}}</h3>
-                    </div>
-                    <hr>
-                    <div>
-                        <label>{{"LOGIN.IDENTIFICACION" | translate}}</label>
-                        <input type="text" class="shadow form-control rounded " name="identification"
-                            [(ngModel)]="usuario.identification" [ngModelOptions]="{standalone: true}">
-                    </div>
-
-                    <div class="mt-2">
-                        <label>{{"LOGIN.CONTRASEÑA" | translate}}</label>
-                        <input type="password" class="shadow form-control rounded " name="password"
-                            [(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}">
-                    </div>
-
-                    <div class="container mt-3">
-                        <select class="form-select" #langSelect (change)="typeUser(langSelect.value)">
-                            <option value="None" selected>{{"LOGIN.SELECCIONE" | translate}}</option>
-
-                            <option value="org">{{"LOGIN.ORGANIZACION" | translate}}</option>
-                            <option value="0">{{"LOGIN.USUARIO" | translate}}</option>
-                        </select>
-                    </div>
-                    <div class="mt-2">
-                        <input type="checkbox" name="connected" class="form-check-input">
-                        <label class="ms-1">{{"LOGIN.RECUERDAME" | translate}}</label>
-                    </div>
-                    <div class="d-grid mt-2">
-                        <!--button (click)="showModal()" type="submit" class="btn btn-primary">Iniciar sesión</button-->
-                        <button class="btn btn-primary ">{{"LOGIN.INICIARSESION" | translate}}</button>
-                    </div>
-                    <div class="mt-1"><a routerLink="/signUp">{{"LOGIN.AUNNOTIENES" | translate}}</a></div>
-
-                </form>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4 sobreponer shadow p-3 bg-white mb-5 rounded mt-5">
+                <div class="col-sm">
+                    <form  action="" (ngSubmit)="get()">
+                        <div class="text-center mt-3">
+                            <!--<img src="../../assets/images/user.png" alt="usuario" width="48">-->
+                            <h3>{{"LOGIN.TITULO" | translate}}</h3>
+                        </div>
+                        <hr>
+                        <div>
+                            <label>{{"LOGIN.IDENTIFICACION" | translate}}</label>
+                            <input type="text" class="shadow form-control rounded " name="identification"
+                                [(ngModel)]="usuario.identification" [ngModelOptions]="{standalone: true}">
+                        </div>
+    
+                        <div class="mt-2">
+                            <label>{{"LOGIN.CONTRASEÑA" | translate}}</label>
+                            <input type="password" class="shadow form-control rounded " name="password"
+                                [(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}">
+                        </div>
+    
+                        <div class="container mt-3">
+                            <select class="form-select" #langSelect (change)="typeUser(langSelect.value)">
+                                <option value="None" selected>{{"LOGIN.SELECCIONE" | translate}}</option>
+    
+                                <option value="org">{{"LOGIN.ORGANIZACION" | translate}}</option>
+                                <option value="0">{{"LOGIN.USUARIO" | translate}}</option>
+                            </select>
+                        </div>
+                        <div class="mt-2">
+                            <input type="checkbox" name="connected" class="form-check-input">
+                            <label class="ms-1">{{"LOGIN.RECUERDAME" | translate}}</label>
+                        </div>
+                        <div class="d-grid mt-2">
+                            <!--button (click)="showModal()" type="submit" class="btn btn-primary">Iniciar sesión</button-->
+                            <button class="btn btn-primary ">{{"LOGIN.INICIARSESION" | translate}}</button>
+                        </div>
+                        <div class="mt-1"><a routerLink="/signUp">{{"LOGIN.AUNNOTIENES" | translate}}</a></div>
+    
+                    </form>
+                </div>
 
             </div>
-            <div class="col-6 image rounded">
+            <div class="col-sm-6 image rounded">
                 <h3 class="text-white ">WELCOME!</h3>
                 <p class="text-white mt-1">Enter your details and start journey with us</p>
             </div>
