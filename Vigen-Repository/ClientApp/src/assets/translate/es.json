@@ -202,16 +202,17 @@
         "CONTACTO":"Contacto"
     },
     "ACERCA":{
-        "CONOCEMAS":"Conoce más sobre nosotros",
+        "CONOCEMAS":"Conoce más sobre",
+        "NOSOTROS":"Nosotros",
         "NUESTRAMISION":"Nuestra misión",
         "OBJETIVOSGENERALES":"Objetivo general",
         "OBJETIVOSESPECIFICOS":"Objetivos especificos",
         "MISION":"Vigen aporta a la reducción de diferentes tipos de violencia contra las familias, niños/as, mujeres y adultos mayores en los ámbitos público y privado a través del uso de tecnología de la información, la comunicación y la inteligencia artificial para realizar modelos predictivos que puedan prever cualquier evento violento, agresivo y/o abusivo antes de que ocurra, previniendo parcialmente el daño físico o psicológico en la victima.",
         "VISION":"Vigen contará con posibilidades de crecimiento en cualquier lugar en el que se cuente con un apoyo para la acción, investigación y recolección de datos para su posterior análisis y predicción en pro de la reducción de la violencia intrafamiliar, infantil, de género y de adulto mayor. Teniendo en cuenta que NO sugerimos la creación de nuevas instituciones de atención en ninguna circunstancia, así como tampoco hacemos parte directa de ninguna de ellas.",
-        "OBJETIVOGENERAL":"• Desarrollar un software capacitado en la recolección, estudio, presentación y predicción de riegos relacionados a violencia de género, adulto mayor, intrafamiliar e infantil (desde los 13 años en adelante) para la mitigación de situaciones de peligro o mortalidad en personas expuestas a cualquiera de estos tipos de violencia.",
-        "OBJETIVOESPECIFICOS1":"• Implementar encuestas para el enriquecimiento de conocimiento de la inteligencia artificial.",
-        "OBJETIVOESPECIFICOS2":"• Generar mecanismos de prevención y ayuda a las personas que presentan signos de algún tipo de violencia.",
-        "OBJETIVOESPECIFICOS3":"• Realizar articulaciones estratégicas con instituciones estatales o privadas cuya razón social se oriente a la protección y el acompañamiento de sujetos/as en condición de víctimas de algún tipo de violencia, en aras de dar un seguimiento a las personas más vulnerables o las zonas con más riesgo, en un contexto local.",
+        "OBJETIVOGENERAL":"Desarrollar un software capacitado en la recolección, estudio, presentación y predicción de riegos relacionados a violencia de género, adulto mayor, intrafamiliar e infantil (desde los 13 años en adelante) para la mitigación de situaciones de peligro o mortalidad en personas expuestas a cualquiera de estos tipos de violencia.",
+        "OBJETIVOESPECIFICOS1":"Implementar encuestas para el enriquecimiento de conocimiento de la inteligencia artificial.",
+        "OBJETIVOESPECIFICOS2":"Generar mecanismos de prevención y ayuda a las personas que presentan signos de algún tipo de violencia.",
+        "OBJETIVOESPECIFICOS3":"Realizar articulaciones estratégicas con instituciones estatales o privadas cuya razón social se oriente a la protección y el acompañamiento de sujetos/as en condición de víctimas de algún tipo de violencia, en aras de dar un seguimiento a las personas más vulnerables o las zonas con más riesgo, en un contexto local.",
         "NUESTRAVISION":"Nuestra visión"
     },
     "ENCUESTA":{
