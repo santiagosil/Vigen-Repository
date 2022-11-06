@@ -28,7 +28,6 @@ namespace TestsVigen.TestsControllers
                 .ToString()
                 .Substring(0, 4),
                 Verification = false,
-
                 Name = Guid.NewGuid()
                 .ToString()
                 .Substring(0, 30),

@@ -13,6 +13,8 @@ import { PollService } from '../api/services/poll.service';
 })
 export class EncuestaComponent implements OnInit {
 
+  public nameUser:string='';
+
   public poll:Poll ={
     genero:-1,
     orientacionSexual:-1,
@@ -56,6 +58,7 @@ export class EncuestaComponent implements OnInit {
   constructor(private iaService:IaService, private pollService:PollService) { }
 
   ngOnInit(): void {
+    this.nameUser=String(localStorage.getItem("UserName"));
   }
 
   async sendEncuesta()  {
@@ -81,7 +84,6 @@ export class EncuestaComponent implements OnInit {
       this.poll=Object.values(res)[1];
       this.poll.date=new Date();
       this.poll.userId=localStorage.getItem("UserId");
-      
       this.pollService.postPoll(this.poll).subscribe(res=>{
         Swal.fire({
           icon: 'success',

@@ -14,7 +14,7 @@ import { Notify } from '../api/models';
 })
 export class PanelUserComponent implements OnInit {
 
-  
+  public nameUser='';
 
   public notif: Notify = {
     description: "",
@@ -27,6 +27,7 @@ export class PanelUserComponent implements OnInit {
   constructor(private not: NotifyService, private user: UserService) { }
 
   ngOnInit(){
+    this.nameUser=String(localStorage.getItem("UserName"));
   }
 
   cancel(){

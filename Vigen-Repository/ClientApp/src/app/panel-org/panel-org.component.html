@@ -4,26 +4,26 @@
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark text-white ">
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
                     <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline mt-3">Menu</span>
+                        <span class="fs-5 d-none d-sm-inline mt-3">{{"EDIT-ORG.MENU2"|translate}}</span>
                     </a>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-white"
                         id="menu">
                         <li class="nav-item ms-3">
                             <a routerLink="/pOrg" class="nav-link align-middle px-0">
                                 <fa-icon style="color: white" [icon]="['fas', 'house']"></fa-icon><span
-                                    class="ms-1 d-none d-sm-inline text-white">Home</span>
+                                    class="ms-1 d-none d-sm-inline text-white">{{"PANEL-ORG.HOME"|translate}}</span>
                             </a>
                         </li>
                         <li class="nav-item ms-3">
                             <a routerLink="/edOrg" class="nav-link px-0 align-middle">
                                 <fa-icon style="color: white" [icon]="['fas', 'briefcase']"></fa-icon> <span
-                                    class="ms-1 d-none d-sm-inline text-white">Perfil</span>
+                                    class="ms-1 d-none d-sm-inline text-white">{{"PANEL-ORG.PROFILE"|translate}}</span>
                             </a>
                         </li>
                         <li class="nav-item ms-3">
                             <a routerLink="/statis" class="nav-link px-0 align-middle">
                                 <fa-icon style="color: white" [icon]="['fas', 'chart-line']"></fa-icon> <span
-                                    class="ms-1 d-none d-sm-inline text-white">Estadisticas</span>
+                                    class="ms-1 d-none d-sm-inline text-white">{{"PANEL-ORG.STATISTICS"|translate}}</span>
                             </a>
                         </li>
                         <app-reportes></app-reportes>
@@ -33,16 +33,19 @@
             <div class="col p-4">
                 <h1><b>{{"PANEL-ORG.BIENVENIDO"|translate}}</b></h1>
                 <hr>
+                <div class="mt-4 text-center">
+                    <h5>{{"PANEL-ORG.NOTIFIYACTIVE"|translate}}</h5>
+                </div>
                 <div class="table-responsive">
                     <table class="table align-middle table-primary table-striped">
                         <thead>
                             <tr class="align-middle">
                                 <th scope="col">#</th>
-                                <th scope="col">User ID</th>
-                                <th scope="col">Title</th>
-                                <th scope="col" style="width: 40%;">Description</th>
-                                <th scope="col">Organization Type</th>
-                                <th scope="col" style="width: 10%;">Actions</th>
+                                <th scope="col">{{"PANEL-ORG.USUARIOID"|translate}}</th>
+                                <th scope="col">{{"PANEL-ORG.TITTLE"|translate}}</th>
+                                <th scope="col" style="width: 40%;">{{"PANEL-ORG.DESCRIPTION"|translate}}</th>
+                                <th scope="col">{{"PANEL-ORG.ORGANIZATION"|translate}}</th>
+                                <th scope="col" style="width: 10%;">{{"PANEL-ORG.ACTIONS"|translate}}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -64,19 +67,21 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="mt-4">
-                    <h5>Notificaciones en espera de solución</h5>
+                <div class="mt-4 text-center">
+                    <h5>{{"PANEL-ORG.NOTIFYINPROGRESS"|translate}}</h5>
                 </div>
+                
                 <div class="table-responsive mt-2">
                     <table class="table align-middle table-primary table-striped shadow">
                         <thead>
                             <tr class="align-middle">
                                 <th scope="col">#</th>
-                                <th scope="col">User ID</th>
-                                <th scope="col">Title</th>
-                                <th scope="col" style="width: 40%;">Description</th>
-                                <th scope="col">Organization Type</th>
-                                <th scope="col" style="width: 10%;">Actions</th>
+                                <th scope="col">{{"PANEL-ORG.USUARIOID"|translate}}</th>
+                                <th scope="col">{{"PANEL-ORG.TITTLE"|translate}}</th>
+                                <th scope="col" style="width: 40%;">{{"PANEL-ORG.DESCRIPTION"|translate}}</th>
+                                <th scope="col">{{"PANEL-ORG.ORGANIZATION"|translate}}</th>
+                                <th scope="col" style="width: 10%;">{{"PANEL-ORG.ACTIONS"|translate}}</th>
+
                             </tr>
                         </thead>
                         <tbody>

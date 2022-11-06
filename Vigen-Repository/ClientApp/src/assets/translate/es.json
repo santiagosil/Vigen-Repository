@@ -276,7 +276,8 @@
         "ADULTOMAYOR":"Violencia Adulto Mayor",
         "INFANTIL":"Violencia infantil",
         "NOHESUFRIDO":"No he sufrido ni visto ninguna de las anteriores",
-        "NO":"No"
+        "NO":"No",
+        "FINALIZAR":"Finalizar"
 
     },
     "FAQ":{
@@ -337,10 +338,18 @@
     },
     "PANEL-ORG": {
         "MENU":"Menú",
+        "NOTIFIYACTIVE":"Notificaciones activas",
+        "NOTIFYINPROGRESS":"Notificaciones en progreso",
         "HOME":"Inicio",
-        "ESTADISTICAS":"Estadísticas",
+        "PROFILE":"Perfil",
+        "STATISTICS":"Estadísticas",
         "ALERTAS":"Alertas",
-        "USUARIO":"Usuario",
+        "USUARIOID":"ID de usuario",
+        "TITTLE":"Título",
+        "DESCRIPTION":"Descripción",
+        "STATE":"Estado",
+        "ORGANIZATION":"Organización",
+        "ACTIONS":"Comportamientos",
         "BIENVENIDO":"Bienvenido"
     },
     "SITES":{
@@ -348,6 +357,35 @@
         "PHONE":"Celular",
         "RANGE":"Rango",
         "UBICATION":"Ubicación"
+    },
+    "POLL":{
+        "STATISTICS":"Estadísticas",
+        "GENERO":"Género",
+        "ORIENTACIONSEXUAL":"Orientación sexual",
+        "EDAD":"Edad",
+        "CIUDAD":"Ciudad/Municipio de residencia",
+        "SECTOR":"Sector donde vive",
+        "NIVEL":"Nivel educativo",
+        "ESTADOCIVIL":"Estado civil",
+        "ETNICO":"Autorreconocimiento étnico",
+        "CUENTAINGRESOS":"¿Cuenta con ingresos propios?",
+        "OCUPACIONAL":"Actualmente ¿En qué categoría de posición ocupacional se encuentra?",
+        "SECCIONPREGUNTAS":"Sección de preguntas",
+        "SUPAREJA":"¿Su pareja, familiar u otra persona cercana a usted ha realizado alguna de las siguientes acciones?",
+        "HAOBSERVADO":"¿Ha observado a esa persona golpear o patear la pared o algún otro mueble?",
+        "AMENAZADO":"¿Le han amenazado con golpearle?",
+        "PRESIONADO":"¿Se ha sentido presionado a tener relaciones sexuales?",
+        "DESTRUIDO":"¿Le han destruido algunas de sus pertenencias?",
+        "SACUDIDO":"¿Le han sacudido, zarandeado, jaloneado o empujado?",
+        "AGREDIDO":"¿Se ha sentido agredido física o psicológicamente?",
+        "SUFRIDO":"¿Ha sufrido o sido testigo de algún tipo de violencia? ¿Cuál? ",
+        "RESULTADO":"Resultado predicción (Tipo de Violencia)"
+    },
+    "STATISTICS":{
+        "MENU":"Menú",
+        "HOME":"Inicio",
+        "PROFILE":"Perfil",
+        "STATISTICS":"Estadísticas"
     }
 }
 
