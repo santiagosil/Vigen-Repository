@@ -168,7 +168,14 @@
         "INFORMACION":"Informacion de organización",
         "INFORMACIONCONTACTOS":"Información de contactos",
         "INFORMACIONPERSONAL":"Informacion Personal",
-        "SIGUIENTE":"Siguiente"
+        "SIGUIENTE":"Siguiente",
+        "IDVAL":"Por favor ingrese una ID valida",
+        "NITVAL":"Por favor ingrese un NIT valido",
+        "UBICACIONVAL":"Por favor ingrese una Ubicación valida",
+        "RANGOVAL":"Por favor ingrese un Rango valido",
+        "CODVAL":"Por favor ingrese un Código de país valido",
+        "CELVAL":"Por favor ingrese un número de celular valido",
+        "TELVAL":"Por favor ingrese un teléfono fijo valido"
 
         },
     "REPORTS":{
@@ -322,7 +329,7 @@
         "PROBLEMASFRECUENTES":"Entre los problemas sexuales más frecuentes en las mujeres abusadas sexualmente encontramos: ausencia o bajo deseo sexual, anorgasmia (dificultad para tener orgasmos), trastorno de la excitación y dispareunia (dolor durante la relación sexual)." 
     },
     "AYUDA":{
-        "TITULO":"MANERAS PARA CONTRIBUIR CONTRA LA VIOLENCIA DE GÉNERO",
+        "TITULO":"Maneras para contribuir contra la violencia de género",
         "TITULOCONT":"La lucha contra la violencia de género es algo que nos incumbe a todos, tanto a hombres como a mujeres, estas son algunas recomendaciones para empezar a realizar un cambio y generar un cambio en nuestra sociedad:",
         "SUB1":"1. Escucha y cree a los sobrevivientes.",
         "CONTSUB1":"Cuando una persona comparte su historia de violencia, está dando el primer paso para romper el ciclo de maltrato. Debemos garantizarle el espacio seguro que necesita para hablar y ser escuchada. Conviene recordar que, al tratar casos de violencia sexual, la sobriedad, la vestimenta y la sexualidad de la víctima son irrelevantes. El autor es el único responsable de la agresión y debe asumir la responsabilidad por sí solo. Protesta contra la culpabilización de la víctima y haz frente a la idea de que las personas deben evitar situaciones que se perciban como “peligrosas” según los estándares tradicionales. Las sobrevivientes están alzando la voz más que nunca, y todas y todos podemos hacer algo para asegurar que se les haga justicia. No digas “¿por qué no te fuiste de allí?” Di: “Te escuchamos. Te creemos. Estamos contigo”.",
@@ -353,7 +360,7 @@
         "BIENVENIDO":"Bienvenido"
     },
     "SITES":{
-        "COUNTRY":"codigo de país",
+        "COUNTRY":"Código de país",
         "PHONE":"Celular",
         "RANGE":"Rango",
         "UBICATION":"Ubicación"

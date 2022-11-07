@@ -176,7 +176,15 @@
         "INFORMACION": "Organization information",
         "INFORMACIONCONTACTOS": "Contact information",
         "INFORMACIONPERSONAL": "Personal Information",
-        "SIGUIENTE":"Next"
+        "SIGUIENTE":"Next",
+        "IDVAL":"Please enter a valid ID",
+        "NITVAL":"Please enter a valid NIT",
+        "UBICACIONVAL":"Please enter a valid location",
+        "RANGOVAL":"Please enter a valid Range",
+        "CODVAL":"Please enter a valid Country Code",
+        "CELVAL":"Please enter a valid cell phone number",
+        "TELVAL":"Please enter a valid landline phone number"
+        
     },
     "REPORTS":{
         "IDENTIFICATION": "Identificacion",
@@ -287,7 +295,7 @@
         "FINALIZAR":"Finish"
     },
     "AYUDA":{
-        "TITULO":"WAYS TO CONTRIBUTE AGAINST GENDER VIOLENCE",
+        "TITULO":"Ways to contribute against gender violence",
         "TITULOCONT":"The fight against gender violence is something that concerns us all, both men and women, these are some recommendations to start making a change and generate a change in our society:",
         "SUB1":"1. Listen to and believe survivors.",
         "CONTSUB1":"When a person shares her story of violence, she is taking the first step in breaking the cycle of abuse. We must ensure that she has the safe space she needs to speak and be heard. It is important to remember that when dealing with cases of sexual violence, the victim's sobriety, dress and sexuality are irrelevant. The perpetrator is solely responsible for the assault and must take responsibility alone. Protest against victim-blaming and challenge the idea that people should avoid situations that are perceived as ''dangerous'' by traditional standards. Survivors are speaking out more than ever, and we can all do something to ensure they get justice. Don't say, 'Why didn't you get out of there?' Say, 'We hear you. We believe you. We are with you.'",
