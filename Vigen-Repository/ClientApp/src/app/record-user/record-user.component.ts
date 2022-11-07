@@ -20,54 +20,45 @@ import { LatLng } from 'leaflet';
 })
 export class RecordUserComponent implements OnInit {
 
-
-
-  showEmoji: boolean = false;
-  title = 'test 1';
-  contentEmoji = '';
-  listData: Data[] = [];
-  form: FormGroup = new FormGroup({});
-  isCheck: boolean = false;
-
-  public usuario: User = {
-    identification: "",
-    name: "",
-    password: "",
-    code: "0",
-    email: "",
-    birthdate: "",
-    countryCode: "",
-    phone: "",
-    occupation: "",
-    postalCode: "",
-    maritalStatus: "",
-    ubication: ""
-  };
-
-  
-  contra = {
-    pass: ""
+  formUser!: FormGroup;
+  passwordNoMatch: boolean = false;
+  initForm(): FormGroup {
+    return this.fb.group({
+      identification: ['', Validators.required],
+      name: ['', Validators.required],
+      gender: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      birthdate: ['', Validators.required],
+      countryCode: ['', Validators.required],
+      phone: ['', Validators.required],
+      geoInv: '',
+      occupation: ['', Validators.required],
+      postalCode: ['', Validators.required],
+      maritalStatus: ['', Validators.required],
+      ubication: ['', Validators.required],
+      password: ['', Validators.required],
+      confirmPassword: ['', Validators.required],
+      acuerdo: [false, Validators.requiredTrue]
+    });
   }
 
-  constructor(private api: UserService, private rever: InverseService, private router: Router) {
+  public usuario!: User;
+
+  constructor(private fb: FormBuilder, private api: UserService, private rever: InverseService, private router: Router) {
   }
-
-  /*get ubication() {
-    this.usuario.ubication = this.rever.getSite.geoInv;
-    return this.rever.getSite;
-  }*/
-
 
   ngOnInit() {
+    this.formUser = this.initForm();
     this.rever.geoLocalitation.subscribe(
-      res=>{
-        this.usuario.ubication = res;
+      res => {
+        this.formUser.patchValue({ 'geoInv': res });
       }
     );
   }
 
-  onUbicationChange(event:LatLng):void{
+  onUbicationChange(event: LatLng): void {
     this.rever.calculateGeoLocalitation(event);
+    this.formUser.patchValue({ 'ubication': String(event) });
   }
 
   acuerdo() {
@@ -77,12 +68,12 @@ export class RecordUserComponent implements OnInit {
         cancelButton: 'btn btn-danger'
       },
       buttonsStyling: false
-    })
+    });
 
     swalWithBootstrapButtons.fire({
       title: '¿Acepta los terminos del acuerdo de privacidad?',
-      html: " Los creadores de la página Vigen.com le informan sobre su política de privacidad con respecto al manejo y protección de los datos de carácter personal de los usuarios y clientes que puedan ser recabados por la navegación y obtención de datos a través de nuestro sitio web."+
-      "En este sentido, garantizamos el cumplimiento de la normativa vigente en materia nacional e internacional del manejo de datos personales y privacidad del usuario. Dejando claro que los datos exigidos al momento de unirse a la pagina son meramente de registro, utilizados para personalizar la página acorde a cada usuario, generación de estadisticas y predicciones, en otras palabras, nuestro algoritmo lo necesita para bridar la mejor experiencia posible. Ninguna parte de la información presentada ni compartida será utilizada para beneficio propio ni intercambio con terceros.",
+      html: " Los creadores de la página Vigen.com le informan sobre su política de privacidad con respecto al manejo y protección de los datos de carácter personal de los usuarios y clientes que puedan ser recabados por la navegación y obtención de datos a través de nuestro sitio web." +
+        "En este sentido, garantizamos el cumplimiento de la normativa vigente en materia nacional e internacional del manejo de datos personales y privacidad del usuario. Dejando claro que los datos exigidos al momento de unirse a la pagina son meramente de registro, utilizados para personalizar la página acorde a cada usuario, generación de estadisticas y predicciones, en otras palabras, nuestro algoritmo lo necesita para bridar la mejor experiencia posible. Ninguna parte de la información presentada ni compartida será utilizada para beneficio propio ni intercambio con terceros.",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonText: 'Si, de acuerdo!',
@@ -90,7 +81,7 @@ export class RecordUserComponent implements OnInit {
       reverseButtons: true
     }).then((result) => {
       if (result.isConfirmed) {
-        this.isCheck = true;
+        this.formUser.patchValue({ 'acuerdo': true });
       } else if (
         /* Read more about handling dismissals below */
         result.dismiss === Swal.DismissReason.cancel
@@ -99,9 +90,9 @@ export class RecordUserComponent implements OnInit {
           'Cancelado',
           'NO podra crear un usuario hasta que acepte los terminos del acuerdo de privacidad:',
           'error'
-        )
+        );
       }
-    })
+    });
   }
 
   showbien() {
@@ -111,7 +102,7 @@ export class RecordUserComponent implements OnInit {
       title: 'Se ha enviado un codigo a su correo',
       showConfirmButton: false,
       timer: 2000
-    })
+    });
   }
   showModal() {
     Swal.fire({
@@ -120,7 +111,7 @@ export class RecordUserComponent implements OnInit {
       title: 'Faltan algunos campos obligatorios por llenar',
       showConfirmButton: false,
       timer: 2000
-    })
+    });
   }
   showContra() {
     Swal.fire({
@@ -129,7 +120,7 @@ export class RecordUserComponent implements OnInit {
       title: 'Las contraseñas no coinciden',
       showConfirmButton: false,
       timer: 2000
-    })
+    });
   }
   showPrivacidad() {
     Swal.fire({
@@ -138,34 +129,49 @@ export class RecordUserComponent implements OnInit {
       title: 'Verifique el acuerdo de privacidad',
       showConfirmButton: false,
       timer: 2000
-    })
+    });
   }
   public send() {
-    if (this.usuario.email === "" || this.usuario.name === "" || this.usuario.identification === ""
-      || this.usuario.birthdate === "" || this.usuario.phone === ""
-      || this.usuario.occupation === "" || this.usuario.maritalStatus === "") {
-      this.showModal();
-    } else {
-      if (this.isCheck) {
-        if (this.usuario.password == this.contra.pass) {
-          var random: number;
-          random = Math.round(Math.random() * (9000) + 1000);
-          this.usuario.code = random + "";
-          this.api.apiUserPost$Json({ body: this.usuario })
-            .subscribe(res => {
-              sessionStorage.setItem("UserId", String(this.usuario.identification));
-              sessionStorage.setItem("TypeUser", "0");
-              sessionStorage.setItem("UserName", String(this.usuario.name));
-              this.showbien();
-              this.router.navigate(['/token']);
-            });
-        }
-        else {
-          this.showContra();
-        }
-      } else {
-        this.showPrivacidad();
-      }
+    
+    if (!Boolean(this.formUser.value['acuerdo'])) {
+      this.showPrivacidad();
+      return;
     }
+    if (!this.formUser.valid) {
+      this.showModal();
+      return;
+    }
+    if (this.formUser.value['password'] != this.formUser.value['confirmPassword']) {
+      this.passwordNoMatch = true;
+      this.showContra();
+      return;
+    }
+    let random: number;
+    random = Math.round(Math.random() * (9000) + 1000);
+    this.usuario = {
+      identification: this.formUser.value['identification'],
+      name: this.formUser.value['name'],
+      email: this.formUser.value['email'],
+      birthdate: this.formUser.value['birthdate'],
+      countryCode: this.formUser.value['countryCode'],
+      phone: this.formUser.value['phone'],
+      occupation: this.formUser.value['occupation'],
+      postalCode: this.formUser.value['postalCode'],
+      maritalStatus: this.formUser.value['maritalStatus'],
+      ubication: this.formUser.value['ubication'],
+      password: this.formUser.value['password'],
+      gender: this.formUser.value['gender'],
+      code: String(random),
+      verification: false
+    }
+    
+    this.api.apiUserPost$Json({ body: this.usuario })
+      .subscribe(res => {
+        sessionStorage.setItem("UserId", String(this.usuario.identification));
+        sessionStorage.setItem("TypeUser", "0");
+        sessionStorage.setItem("UserName", String(this.usuario.name));
+        this.showbien();
+        this.router.navigate(['/token']);
+      });
   }
 }
