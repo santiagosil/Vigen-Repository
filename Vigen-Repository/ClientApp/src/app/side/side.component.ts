@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -7,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side.component.css']
 })
 export class SideComponent implements OnInit {
+@ Input() typeUser!:string;
+@ Input() userName!:string;
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  logOut(){
+    sessionStorage.clear();
+    this.router.navigate(["/home"]);
   }
 
 }

@@ -1,5 +1,5 @@
-<div class="color p-5" style="margin-top: 4rem;">
-    <div class="container shadow rounded" style="background-color: #f5f3f7;">
+<div class="color p-2 " style="margin-top: 4rem;">
+    <div class="container shadow rounded mt-5" style="background-color: #f5f3f7;">
         <div class="row">
             <div class="col-sm p-3  mb-5 rounded ">
                 <form [formGroup]="siteForm">
@@ -10,8 +10,8 @@
                         <p class="mt-2" style="color:red;">{{"REC.CAMPOS" | translate}}</p>
                     </div>
 
-                    <div class="form-group row">
-                        <div class="col-sm mt-3 ms-4 me-4">
+                    <div class="form-group row mt-3 ms-3 me-3">
+                        <div class="col-sm ">
                             <label>ID<label style="color:red;">*</label></label>
                             <input type="text" class="form-control rounded"
                                 [ngClass]="{'is-invalid':siteForm.get('id')?.touched && !siteForm.get('id')?.valid}"
@@ -23,10 +23,11 @@
 
                     </div>
 
-                    <div class="form-group row">
-                        <div class="col-sm mt-3 ms-4 me-4">
+                    <div class="form-group row mt-3 ms-3 me-3">
+                        <div class="col-sm ">
                             <label>NIT<span style="color:red;">*</span></label>
                             <input type="text" class="form-control rounded"
+
                                 [ngClass]="{'is-invalid':siteForm.get('nit')?.touched && !siteForm.get('nit')?.valid}"
                                 formControlName="nit" (change)="onChangeForm()" readonly>
                                 <div class="invalid-feedback">
@@ -35,8 +36,8 @@
                         </div>
                     </div>
 
-                    <div class="form-group row">
-                        <div class="col-sm mt-3 ms-4 me-4">
+                    <div class="form-group row mt-3 ms-3 me-3">
+                        <div class="col-sm ">
                             <label>{{"SITES.UBICATION" | translate}}<label style="color:red;">*</label></label>
                             <input type="text" class="form-control rounded"
                                 [ngClass]="{'is-invalid':siteForm.get('ubication')?.touched && !siteForm.get('ubication')?.valid}"
@@ -47,8 +48,8 @@
                         </div>
                     </div>
 
-                    <div class="form-group row mt-3">
-                        <div class="col-sm ms-4 me-4">
+                    <div class="form-group row mt-3 ms-3 me-3">
+                        <div class="col-sm">
                             <label>{{"SITES.RANGE" | translate}}<label style="color:red;">*</label></label>
                             <input type="text" class="form-control rounded"
                                 [ngClass]="{'is-invalid':siteForm.get('range')?.touched && !siteForm.get('range')?.valid}"
@@ -59,8 +60,8 @@
                         </div>
                     </div>
 
-                    <div class="form-group row mt-3">
-                        <div class="col-sm ms-4 me-4">
+                    <div class="form-group row mt-3 ms-3 me-3">
+                        <div class="col-sm">
                             <label>{{"SITES.COUNTRY" | translate}}<label style="color:red;">*</label></label>
                             <input type="text" class="form-control rounded"
                                 [ngClass]="{'is-invalid':siteForm.get('countryCode')?.touched && !siteForm.get('countryCode')?.valid}"
@@ -96,7 +97,7 @@
                     <div class="row text-center mt-4">
                         <div class="form-group row">
                             <div class="col-sm">
-                                <button class="btn btn-success" (click)="addSite()">
+                                <button class="btn btn-success me-3 " (click)="addSite()">
                                     <fa-icon [icon]="['fas','add']"></fa-icon> Agregar
                                 </button>
                                 <button type="submit" (click)="send()"
@@ -113,39 +114,46 @@
                     <div class="row mt-3">
                         <h5>{{"REC.INFORMACION"|translate}}</h5>
 
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>id</th>
-                                    <th>Range</th>
-                                    <th>Phone</th>
-                                    <th>Tel</th>
-                                    <th>Ubication</th>
-                                    <th>Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr *ngFor="let site of sites; index as i">
-                                    <td>{{i}}</td>
-                                    <td>{{site.id}}</td>
-                                    <td>{{site.range}}</td>
-                                    <td>{{site.phone}}</td>
-                                    <td>{{site.tel}}</td>
-                                    <td>{{geoInv[i]}}</td>
-                                    <td>
-                                        <button class="btn btn-info" (click)="onSelectEdit(i)">
-                                            <fa-icon [icon]="['fas','square-pen']"></fa-icon>
-                                        </button>
-                                        <button class="btn btn-danger" (click)="onSelectDelete(i)">
-                                            <fa-icon [icon]="['fas','trash']"></fa-icon>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table align-middle table-primary table-striped">
+                                <thead>
+                                    <tr class="align-middle">
+                                        <th scope="col" style="width: 5%;">#</th>
+                                        <th scope="col" style="width: 10%;">id</th>
+                                        <th scope="col" style="width: 2%;">Range</th>
+                                        <th scope="col" style="width: 15%;">Phone</th>
+                                        <th scope="col" style="width: 15%;">Tel</th>
+                                        <th scope="col" style="width: 10%;">Ubication</th>
+                                        <th scope="col" style="width: 30%;">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let site of sites; index as i" class="align-middle">
+                                        <td scope="row">{{i}}</td>
+                                        <td>{{site.id}}</td>
+                                        <td>{{site.range}}</td>
+                                        <td>{{site.phone}}</td>
+                                        <td>{{site.tel}}</td>
+                                        <td class="text-truncate" style="max-width: 150px;">
+                                            <button type="button" class="btn tablaColor " (click)="showUbication(i)">
+                                                {{geoInv[i]}}
+                                            </button>
+                                        </td>
+                                        <td class="container-fluid">
+                                            <button class="btn btn-info text-center me-1" (click)="onSelectEdit(i)">
+                                                <fa-icon [icon]="['fas','square-pen']"></fa-icon>
+                                            </button>
+                                            <button class="btn btn-danger text-center" (click)="onSelectDelete(i)">
+                                                <fa-icon [icon]="['fas','trash']"></fa-icon>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>

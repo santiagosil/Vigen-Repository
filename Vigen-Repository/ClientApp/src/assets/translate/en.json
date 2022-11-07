@@ -70,7 +70,8 @@
         "POLINF":"Polemic for physical aggression",
         "POLCONTEN":"Controversy over Didi driver who allegedly physically assaulted a female user",
         "NUEINF":"New case of femicide",
-        "NUECONTEN":"Debanhi Escobar: What is the status of her femicide case after six months?"
+        "NUECONTEN":"Debanhi Escobar: What is the status of her femicide case after six months?",
+        "SALIR":"LogOut"
     },
     
     "EDIT-ORG":{
@@ -160,9 +161,12 @@
         "REGISTRO":"Register",
         "CAMPOS":"Required fields *",
         "NAME":"Name",
+        "GENDER":"Gender",
         "EMAIL":"Email",
         "FECHA":"Date of Birth",
-        "TEL":"Phone",
+        "TEL":"Tel",
+        "CCODE":"Country Code",
+        "PHONE":"Phone",
         "OCCUPATION":"Occupation",
         "COD":"Postal Code",
         "CIVIL":"Marital Status",

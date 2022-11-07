@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-sm p-3  mb-5 rounded ">
                 <!--form [formGroup]="form" (submit) ="sendLogin()" class="form"-->
-                <form (ngSubmit)="send()" #f="ngForm">
+                <form (ngSubmit)="send()" [formGroup]="formUser">
                     <div class="ms-4 me-4">
                         <h1><b>{{"REC.REGISTRO" | translate}}</b></h1>
                         <label>{{"REC.RAPIDO" | translate}}</label>
@@ -17,77 +17,80 @@
                         <div class="col-sm">
                             <label>{{"REC.NAME" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="nomUser" type="text" class="form-control" placeholder=""-->
-                            <input type="text" class="form-control rounded" [(ngModel)]="usuario.name"
-                                [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded" formControlName="name">
                         </div>
                     </div>
                     <div class="form-group row mt-3 ms-3 me-3">
                         <div class="col-sm">
                             <label>{{"REC.EMAIL" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="correoUser" type="email" class="form-control"  placeholder=""-->
-                            <input type="email" class="form-control rounded" id="inputEmail3" name="mail"
-                                [(ngModel)]="usuario.email" [ngModelOptions]="{standalone: true}" placeholder=""
-                                required="required">
+                            <input type="email" class="form-control rounded" formControlName="email">
                         </div>
                     </div>
+
+                    <div class="form-group row mt-3 ms-3 me-3">
+                        <label>{{"REC.GENDER" | translate}}<label style="color:red;">*</label></label>
+                        <div class="col-sm">
+                            <input type="text" class="form-control rounded" formControlName="gender">
+                        </div>
+                    </div>
+
                     <div class="form-group row mt-3 ms-3 me-3">
                         <label>{{"REC.ID" | translate}}<label style="color:red;">*</label></label>
                         <div class="col-sm">
                             <!--input formControlName="idUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="usuario.identification" [ngModelOptions]="{standalone: true}"
-                                placeholder="">
+                            <input type="text" class="form-control rounded" formControlName="identification">
                         </div>
                     </div>
+
+                    <div class="form-group row mt-3 ms-3 me-3">
+                        <label>{{"REC.CCODE" | translate}}<label style="color:red;">*</label></label>
+                        <div class="col-sm">
+                            <input type="text" class="form-control rounded" formControlName="countryCode">
+                        </div>
+                    </div>
+
                     <div class="form-group row mt-3 ms-3 me-3">
                         <div class="col-sm-6">
                             <label>{{"REC.FECHA" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="fechaNa" type="text" class="form-control"  placeholder=""-->
-                            <input type="date" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="usuario.birthdate" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="date" class="form-control rounded" formControlName="birthdate">
                         </div>
                         <div class="col-sm-6">
                             <label>{{"REC.TEL" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="telUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="usuario.phone" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded" formControlName="phone">
                         </div>
                     </div>
                     <div class="form-group row mt-3 ms-3 me-3">
                         <div class="col-sm">
                             <label>{{"REC.OCCUPATION" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="ocupaUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="usuario.occupation" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded" formControlName="occupation">
                         </div>
                     </div>
                     <div class="form-group row mt-3 ms-3 me-3">
                         <div class="col-sm">
                             <label>{{"REC.COD" | translate}}</label>
                             <!--input formControlName="postUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="usuario.postalCode" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded" formControlName="postalCode">
                         </div>
                         <div class="col-sm">
                             <label>{{"REC.CIVIL" | translate}}<label style="color:red;">*</label></label>
                             <!--input  formControlName="ecivlUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="usuario.maritalStatus" [ngModelOptions]="{standalone: true}"
-                                placeholder="">
+                            <input type="text" class="form-control rounded" formControlName="maritalStatus">
                         </div>
                     </div>
                     <div class="form-group row mt-3 ms-3 me-3">
                         <div class="col-sm">
                             <label>{{"REC.CONTRASEÑA" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="postUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="password" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="password" class="form-control rounded" formControlName="password">
                         </div>
                         <div class="col-sm">
                             <label>{{"REC.CONFIRMAR" | translate}}<label style="color:red;">*</label></label>
                             <!--input  formControlName="ecivlUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="password" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="contra.pass" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="password" class="form-control rounded" formControlName="confirmPassword">
                         </div>
                     </div>
                     <div class="form-check mt-2 ms-4 ">
@@ -112,27 +115,27 @@
                             <fa-icon [icon]="['fas', 'location-dot']"></fa-icon>
                         </div>
                         <div class="col-11 mt-3">
-                            <label style="font-size: 80%">{{usuario.ubication}}</label>
+                            <label style="font-size: 80%">{{formUser.value['geoInv']}}</label>
                         </div>
                         <div class="col-1 text-center mt-4">
                             <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
                         </div>
                         <div class="col-11 mt-4">
-                            <label style="font-size: 80%">{{usuario.email}}</label>
+                            <label style="font-size: 80%">{{formUser.value['email']}}</label>
                         </div>
                         <div class="col-1 text-center mt-4">
                             <fa-icon [icon]="['fas', 'phone']"></fa-icon>
                         </div>
                         <div class="col-11 mt-4">
-                            <label style="font-size: 80%">{{usuario.phone}}</label>
+                            <label style="font-size: 80%">{{formUser.value['phone']}}</label>
                         </div>
 
                         <div class="mt-4">
                             <h5>{{"REC.INFORMACIONPERSONAL"| translate}}</h5>
-                            <p style="font-size: 80%">{{usuario.name}}</p>
-                            <p style="font-size: 80%">{{usuario.identification}}</p>
-                            <p style="font-size: 80%">{{usuario.occupation}} </p>
-                            <p style="font-size: 80%">{{usuario.maritalStatus}}</p>
+                            <p style="font-size: 80%">{{formUser.value['name']}}</p>
+                            <p style="font-size: 80%">{{formUser.value['identification']}}</p>
+                            <p style="font-size: 80%">{{formUser.value['occupation']}} </p>
+                            <p style="font-size: 80%">{{formUser.value['maritalStatus']}}</p>
                         </div>
                     </div>
                 </div>

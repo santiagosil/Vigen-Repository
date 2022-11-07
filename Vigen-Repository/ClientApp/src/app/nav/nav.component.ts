@@ -12,15 +12,14 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavComponent implements OnInit {
 
-  public user: User;
-//eliminar este llamado de no ser necesario
-  constructor(private api: UserService, private translate: TranslateService) {
-    this.user={};
-    this.api.apiUserIdGet$Json({id:'123456789'}).subscribe(res=>{
-      this.user=res;
-    });
-
+  get typeUser():string{
+    return sessionStorage.getItem('TypeUser')??'';
   }
+  get userName():string{
+    return sessionStorage.getItem('UserName')??'';
+  }
+//eliminar este llamado de no ser necesario
+  constructor(private api: UserService, private translate: TranslateService) {}
   changeLang(lang: string){
     this.translate.use(lang);
   }

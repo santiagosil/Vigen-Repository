@@ -156,6 +156,13 @@ export class SitesComponent implements OnInit {
       timer: 2000
     })
   }
+  showUbication(i:number){
+    Swal.fire({
+      position: 'center',
+      title: 'La ubicación es:',
+      text: String(this.geoInv[i]),
+    })
+  }
 
   public send() {
     if(!this.siteForm.valid){

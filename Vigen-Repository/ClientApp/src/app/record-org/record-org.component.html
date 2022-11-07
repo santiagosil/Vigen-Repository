@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-sm p-3  mb-5 rounded ">
                 <!--form [formGroup]="form" (submit) ="sendLogin()" class="form"-->
-                <form (ngSubmit)="send()">
+                <form [formGroup]="formOrganization">
                     <div class="ms-4 me-4">
                         <h1>{{"REC.REGISTRO" | translate}}</h1>
                         <label>{{"REC.RAPIDO"|translate}}</label>
@@ -14,8 +14,7 @@
                         <div class="col-sm mt-3 ms-4 me-4">
                             <label>NIT<label style="color:red;">*</label></label>
                             <!--input formControlName="nitOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="organization.nit" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded" formControlName="nit">
                         </div>
                     </div>
                     <div class="form-group row mt-3">
@@ -23,26 +22,24 @@
                             <label>{{"REC.NOMBRE DE LA ORGANIZACIÓN" | translate}}<label
                                     style="color:red;">*</label></label>
                             <!--input formControlName="nomOrg" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="organization.name" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded" formControlName="name">
                         </div>
                     </div>
-                    <!--<div class="form-group row">
-                        <div class="col-sm mt-3 ms-4 me-4">
-                            <label>Correo</label>
-                            input formControlName="nitOrg" type="text" class="form-control" placeholder=""
-                            <input type="email" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="organization.nit" [ngModelOptions]="{standalone: true}" placeholder="">
-                        </div>
-                    </div>-->
 
                     <div class="form-group row">
 
                         <div class="col-sm mt-3 ms-4 me-4">
                             <label>{{"REC.TEL" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="text" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="organization.tel" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="text" class="form-control rounded" formControlName="tel">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+
+                        <div class="col-sm mt-3 ms-4 me-4">
+                            <label>{{"REC.PHONE" | translate}}<label style="color:red;">*</label></label>
+                            <input type="text" class="form-control rounded" formControlName="phone">
                         </div>
                     </div>
 
@@ -51,15 +48,12 @@
                         <div class="col-sm ">
                             <label>{{"REC.CONTRASEÑA" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="password" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="organization.password" [ngModelOptions]="{standalone: true}"
-                                placeholder="">
+                            <input type="password" class="form-control rounded" formControlName="password">
                         </div>
                         <div class="col-sm ">
                             <label>{{"REC.CONFIRMAR"|translate}}<label style="color:red;">*</label></label>
                             <!--input  formControlName="ecivlUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="password" class="form-control rounded" id="inlineFormInputGroup"
-                                [(ngModel)]="contra.pass" [ngModelOptions]="{standalone: true}" placeholder="">
+                            <input type="password" class="form-control rounded" formControlName="confirmPassword">
                         </div>
                     </div>
 
@@ -77,8 +71,8 @@
                 <div class="container p-4">
                     <div class="card text-left">
                       <div class="card-body">
-                        <h4 class="card-title">{{organization.nit==''?'NIT':organization.nit}} - {{organization.name==''?'Organization Name':organization.name}}</h4>
-                        <p class="card-text"><fa-icon [icon]="['fas','phone']"></fa-icon> {{organization.tel==''?'Tel':organization.tel}}</p>
+                        <h4 class="card-title">{{formOrganization.value['nit']==''?'NIT':formOrganization.value['nit']}} - {{formOrganization.value['name']==''?'Organization Name':formOrganization.value['name']}}</h4>
+                        <p class="card-text"><fa-icon [icon]="['fas','phone']"></fa-icon> {{formOrganization.value['tel']==''?'Tel':formOrganization.value['tel']}}</p>
                       </div>
                     </div>
                 </div>
