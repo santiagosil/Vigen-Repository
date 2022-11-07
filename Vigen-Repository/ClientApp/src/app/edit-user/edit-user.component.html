@@ -1,58 +1,30 @@
 <div class="container-fluid" style="margin-top: 5rem;">
     <div class="row flex-nowrap">
-        <!--<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark text-white ">
-            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline mt-3">{{"EDIT-USER.MENU2" | translate}}</span>
-                </a>
-                <h4 class="d-none d-sm-inline mx-1 mt-2">{{usuarioForm.name}}</h4>
-                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-white"
-                    id="menu">
-                    <li class="nav-item">
-                        <a routerLink="/pUser" class="nav-link align-middle px-0">
-                            <fa-icon style="color: white" [icon]="['fas', 'house']"></fa-icon> <span
-                                class="ms-2 d-none d-sm-inline text-white">{{"EDIT-USER.HOME" | translate}}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a routerLink="/edUser" class="nav-link px-0 align-middle">
-                            <fa-icon style="color: white" [icon]="['far', 'user']"></fa-icon> <span
-                                class="ms-2 d-none d-sm-inline text-white">{{"EDIT-USER.PERFIL" | translate}}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a routerLink="/encuesta" class="nav-link px-0 align-middle">
-                            <fa-icon style="color: white" [icon]="['fas', 'square-poll-horizontal']"></fa-icon> <span
-                                class="ms-2 d-none d-sm-inline text-white">{{"EDIT-USER.ENCUESTA" | translate}}</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>-->
         <div class="col p-4">
             <app-side class="fixed-bottom"></app-side>
-            <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="was-validated">
+            <form (ngSubmit)="onSubmit()" [formGroup]="formUser">
                 <Section>
                     <div class="container shadow p-4 bg-white mb-2">
                         <h4><b>{{"EDIT-USER.INFBAS" | translate}}</b></h4>
                         <hr>
                         <div class="form">
                             <div class="form-group row">
-                                <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.NOMBRE" | translate}}</label>
-
+                                <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.IDENTIFICATION" | translate}}</label>
                                 <div class="col-sm-9 ms-3">
-
-                                    <input type="text" class="form-control rounded" [(ngModel)]="usuarioForm.name"
-                                        name="name" required>
-
+                                    <input type="text" class="form-control rounded" formControlName="identification" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.NOMBRE" | translate}}</label>
+                                <div class="col-sm-9 ms-3">
+                                    <input type="text" class="form-control rounded" formControlName="name">
                                 </div>
                             </div>
                             <hr>
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.GÉNERO" | translate}}</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" [(ngModel)]="usuarioForm.gender"
-                                        name="gender" required>
+                                    <input type="text" class="form-control rounded" formControlName="gender">
                                 </div>
                             </div>
                             <hr>
@@ -60,8 +32,7 @@
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.FECHANA" |
                                     translate}}</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" [(ngModel)]="usuarioForm.birthdate"
-                                        name="birthdate" required>
+                                    <input type="text" class="form-control rounded" formControlName="birthdate">
                                 </div>
                             </div>
                             <hr>
@@ -69,8 +40,7 @@
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.ESTADOCI" |
                                     translate}}</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded"
-                                        [(ngModel)]="usuarioForm.maritalStatus" name="maritalStatus" required>
+                                    <input type="text" class="form-control rounded" formControlName="maritalStatus" >
                                 </div>
                             </div>
                         </div>
@@ -84,8 +54,7 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.CORREO" | translate}}</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" [(ngModel)]="usuarioForm.email"
-                                        name="email" required>
+                                    <input type="text" class="form-control rounded" formControlName="email">
                                 </div>
                             </div>
                             <hr>
@@ -93,8 +62,23 @@
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.OCUPACIÓN" |
                                     translate}}</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" [(ngModel)]="usuarioForm.occupation"
-                                        name="occupation" required>
+                                    <input type="text" class="form-control rounded" formControlName="occupation">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.COUNTRYCODE" |
+                                    translate}}</label>
+                                <div class="col-sm-9 ms-3">
+                                    <input type="text" class="form-control rounded" formControlName="countryCode">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.POSTALCODE" |
+                                    translate}}</label>
+                                <div class="col-sm-9 ms-3">
+                                    <input type="text" class="form-control rounded" formControlName="postalCode">
                                 </div>
                             </div>
                             <hr>
@@ -102,10 +86,17 @@
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.TELÉFONO" |
                                     translate}}</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" [(ngModel)]="usuarioForm.phone"
-                                        name="phone" required>
+                                    <input type="text" class="form-control rounded" formControlName="phone" >
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.UBICATION" |
+                                    translate}}</label>
+                                <div class="col-sm-9 ms-3">
+                                    <input type="text" class="form-control rounded" formControlName="ubication" >
+                                </div>
+                            </div>
+                            <app-map (latLngEvent)="getUbication($event)" [latLng]="formUser.value['ubication']"></app-map>
                         </div>
                     </div>
                 </Section>
@@ -117,7 +108,7 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.CONTRA" | translate}}</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="password" class="form-control rounded" disabled>
+                                    <input type="password" class="form-control rounded" formControlName="password">
                                 </div>
                             </div>
                             <hr>
@@ -125,8 +116,7 @@
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.NEWCONTRA" |
                                     translate}}</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="password" class="form-control rounded"
-                                        [(ngModel)]="usuarioForm.password" name="password">
+                                    <input type="password" class="form-control rounded" formControlName="newPassword">
                                 </div>
                             </div>
                             <hr>
@@ -134,7 +124,7 @@
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.CONFCONTRA" |
                                     translate}}</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="password" class="form-control rounded">
+                                    <input type="password" class="form-control rounded" formControlName="confirmPassword">
                                 </div>
                             </div>
                         </div>

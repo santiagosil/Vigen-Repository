@@ -33,7 +33,7 @@
             </div>
 
             <div class="col p-4">
-                <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="was-validated">
+                <form (ngSubmit)="onSubmit()" [formGroup]="OrganizationForm">
                     <h1><b>{{"EDIT-ORG.BIENVENIDO" | translate}}</b></h1>
                     <hr>
                     <div class="container shadow p-3 bg-white mb-2">
@@ -41,18 +41,26 @@
                         <hr>
                         <div class="form">
                             <div class="form-group row">
-                                <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.NOMBRE" | translate}}</label>
+                                <label for="" class="col-sm-2 col-form-label">NIT</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" [(ngModel)]="orgForm.name"
-                                        name="name" required>
+                                    <input type="text" class="form-control rounded" formControlName="nit" readonly>
                                 </div>
                             </div>
                             <hr>
                             <div class="form-group row">
-                                <label for="" class="col-sm-2 col-form-label">NIT</label>
+                                <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.NOMBRE" | translate}}</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" [(ngModel)]="orgForm.nit"
-                                        name="nit">
+                                    <input type="text" class="form-control rounded" formControlName="name">
+                                </div>
+                            </div>
+                            <hr>
+                            
+                            
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.PHONE" |
+                                    translate}}</label>
+                                <div class="col-sm-9 ms-3">
+                                    <input type="text" class="form-control rounded" formControlName="phone">
                                 </div>
                             </div>
                             <hr>
@@ -60,10 +68,10 @@
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.TELÉFONO" |
                                     translate}}</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" [(ngModel)]="orgForm.tel" name="tel"
-                                        required>
+                                    <input type="text" class="form-control rounded" formControlName="tel">
                                 </div>
                             </div>
+                            
                         </div>
                         <h4 class="mt-5"><b>{{"EDIT-ORG.CONTRA" | translate}}</b></h4>
                         <hr>
@@ -71,7 +79,7 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.CONTRA" | translate}}</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="password" class="form-control rounded">
+                                    <input type="password" class="form-control rounded" formControlName="password">
                                 </div>
                             </div>
                             <hr>
@@ -79,8 +87,7 @@
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.NEWCONTRA" |
                                     translate}}</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="password" class="form-control rounded" [(ngModel)]="orgForm.password"
-                                        name="password">
+                                    <input type="password" class="form-control rounded" formControlName="newPassword">
                                 </div>
                             </div>
                             <hr>
@@ -88,7 +95,7 @@
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-ORG.CONFCONTRA" |
                                     translate}}</label>
                                 <div class="col-sm-9 ms-3">
-                                    <input type="password" class="form-control rounded">
+                                    <input type="password" class="form-control rounded" formControlName="confirmPassword">
                                 </div>
                             </div>
                         </div>
