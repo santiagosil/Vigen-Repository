@@ -14,8 +14,11 @@
                         <div class="col-sm ">
                             <label>ID<label style="color:red;">*</label></label>
                             <input type="text" class="form-control rounded"
-                                [ngClass]="(siteForm.get('id')?.valid)?'is-valid':'is-invalid'" formControlName="id"
-                                (change)="onChangeForm()">
+                                [ngClass]="{'is-invalid':siteForm.get('id')?.touched && !siteForm.get('id')?.valid}"
+                                formControlName="id" (change)="onChangeForm()">
+                                <div class="invalid-feedback">
+                                    {{"REC.IDVAL"|translate}}
+                                </div>
                         </div>
 
                     </div>
@@ -24,8 +27,12 @@
                         <div class="col-sm ">
                             <label>NIT<span style="color:red;">*</span></label>
                             <input type="text" class="form-control rounded"
-                                [ngClass]="(siteForm.get('nit')?.valid)?'is-valid':'is-invalid'" formControlName="nit"
-                                (change)="onChangeForm()" readonly>
+
+                                [ngClass]="{'is-invalid':siteForm.get('nit')?.touched && !siteForm.get('nit')?.valid}"
+                                formControlName="nit" (change)="onChangeForm()" readonly>
+                                <div class="invalid-feedback">
+                                    {{"REC.NITVAL"|translate}}
+                                </div>
                         </div>
                     </div>
 
@@ -33,8 +40,11 @@
                         <div class="col-sm ">
                             <label>{{"SITES.UBICATION" | translate}}<label style="color:red;">*</label></label>
                             <input type="text" class="form-control rounded"
-                                [ngClass]="(siteForm.get('ubication')?.valid)?'is-valid':'is-invalid'"
+                                [ngClass]="{'is-invalid':siteForm.get('ubication')?.touched && !siteForm.get('ubication')?.valid}"
                                 formControlName="ubication" (change)="onChangeForm()" readonly>
+                                <div class="invalid-feedback">
+                                    {{"REC.UBICACIONVAL"|translate}}
+                                </div>
                         </div>
                     </div>
 
@@ -42,8 +52,11 @@
                         <div class="col-sm">
                             <label>{{"SITES.RANGE" | translate}}<label style="color:red;">*</label></label>
                             <input type="text" class="form-control rounded"
-                                [ngClass]="(siteForm.get('range')?.valid)?'is-valid':'is-invalid'"
+                                [ngClass]="{'is-invalid':siteForm.get('range')?.touched && !siteForm.get('range')?.valid}"
                                 formControlName="range" (change)="onChangeForm()">
+                                <div class="invalid-feedback">
+                                    {{"REC.RANGOVAL"|translate}}
+                                </div>
                         </div>
                     </div>
 
@@ -51,8 +64,11 @@
                         <div class="col-sm">
                             <label>{{"SITES.COUNTRY" | translate}}<label style="color:red;">*</label></label>
                             <input type="text" class="form-control rounded"
-                                [ngClass]="(siteForm.get('countryCode')?.valid)?'is-valid':'is-invalid'"
+                                [ngClass]="{'is-invalid':siteForm.get('countryCode')?.touched && !siteForm.get('countryCode')?.valid}"
                                 formControlName="countryCode" (change)="onChangeForm()">
+                                <div class="invalid-feedback">
+                                    {{"REC.CODVAL"|translate}}
+                                </div>
                         </div>
                     </div>
 
@@ -60,15 +76,21 @@
                         <div class="col-sm ">
                             <label>{{"SITES.PHONE" | translate}}<label style="color:red;">*</label></label>
                             <input type="text" class="form-control rounded"
-                                [ngClass]="(siteForm.get('phone')?.valid)?'is-valid':'is-invalid'"
+                                [ngClass]="{'is-invalid':siteForm.get('phone')?.touched && !siteForm.get('phone')?.valid}"
                                 formControlName="phone" (change)="onChangeForm()">
+                                <div class="invalid-feedback">
+                                    {{"REC.CELVAL"|translate}}
+                                </div>
                         </div>
 
                         <div class="col-sm ">
                             <label>{{"REC.TEL"|translate}}<label style="color:red;">*</label></label>
                             <input type="text" class="form-control rounded"
-                                [ngClass]="(siteForm.get('tel')?.valid)?'is-valid':'is-invalid'" formControlName="tel"
+                                [ngClass]="{'is-invalid':siteForm.get('tel')?.touched && !siteForm.get('tel')?.valid}" formControlName="tel"
                                 (change)="onChangeForm()">
+                                <div class="invalid-feedback">
+                                    {{"REC.TELVAL"|translate}}
+                                </div>
                         </div>
                     </div>
 
