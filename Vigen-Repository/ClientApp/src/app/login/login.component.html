@@ -10,12 +10,22 @@
                     <hr>
                     <div>
                         <label>{{"LOGIN.IDENTIFICACION" | translate}}</label>
-                        <input type="text" class="shadow form-control rounded " formControlName="identification">
+                        <input type="text" class="shadow form-control rounded " 
+                        [ngClass]="{'is-invalid':loginForm.get('identification')?.touched && !loginForm.get('identification')?.valid}"
+                        formControlName="identification">
+                        <div class="invalid-feedback">
+                            {{"REC.IDENVAL"|translate}}
+                        </div>
                     </div>
 
                     <div class="mt-2">
                         <label>{{"LOGIN.CONTRASEÑA" | translate}}</label>
-                        <input type="password" class="shadow form-control rounded " formControlName="password">
+                        <input type="password" class="shadow form-control rounded " 
+                        [ngClass]="{'is-invalid':loginForm.get('password')?.touched && !loginForm.get('password')?.valid}"
+                        formControlName="password">
+                        <div class="invalid-feedback">
+                            {{"REC.PASSVAL"|translate}}
+                        </div>
                     </div>
 
                     <div class="container mt-3">
