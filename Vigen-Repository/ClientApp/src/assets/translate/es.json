@@ -184,7 +184,17 @@
         "RANGOVAL":"Por favor ingrese un Rango valido",
         "CODVAL":"Por favor ingrese un Código de país valido",
         "CELVAL":"Por favor ingrese un número de celular valido",
-        "TELVAL":"Por favor ingrese un teléfono fijo valido"
+        "TELVAL":"Por favor ingrese un teléfono fijo valido",
+        "NAMEVAL":"Por favor ingrese un Nombre valido",
+        "CORVAL":"Por favor ingrese un Correo valido",
+        "GENVAL":"Por favor ingrese un Género valido",
+        "IDENVAL":"Por favor ingrese una Identificación valida",
+        "FECHAVAL":"Por favor ingrese una Fecha de cumpleaños valida",
+        "OCUPVAL":"Por favor ingrese una Ocupación valida",
+        "CODPOSVAL":"Por favor ingrese un Código postal valido",
+        "ESTADOVAL":"Por favor ingrese un Estado civil valido",
+        "PASSVAL":"Por favor ingrese una Contraseña valida",
+        "CONFIRPASSVAL":"Por favor ingrese la Misma contraseña"
 
         },
     "REPORTS":{

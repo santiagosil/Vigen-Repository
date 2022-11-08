@@ -14,7 +14,12 @@
                         <div class="col-sm mt-3 ms-4 me-4">
                             <label>NIT<label style="color:red;">*</label></label>
                             <!--input formControlName="nitOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="text" class="form-control rounded" formControlName="nit">
+                            <input type="text" class="form-control rounded" 
+                                [ngClass]="{'is-invalid':formOrganization.get('nit')?.touched && !formOrganization.get('nit')?.valid}"
+                                formControlName="nit">
+                            <div class="invalid-feedback">
+                                {{"REC.NITVAL"|translate}}
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row mt-3">
@@ -22,7 +27,12 @@
                             <label>{{"REC.NOMBRE DE LA ORGANIZACIÓN" | translate}}<label
                                     style="color:red;">*</label></label>
                             <!--input formControlName="nomOrg" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control rounded" formControlName="name">
+                            <input type="text" class="form-control rounded" 
+                                [ngClass]="{'is-invalid':formOrganization.get('name')?.touched && !formOrganization.get('name')?.valid}"
+                                formControlName="name">
+                            <div class="invalid-feedback">
+                                {{"REC.NAMEVAL"|translate}}
+                            </div>
                         </div>
                     </div>
 
@@ -31,7 +41,12 @@
                         <div class="col-sm mt-3 ms-4 me-4">
                             <label>{{"REC.TEL" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="text" class="form-control rounded" formControlName="tel">
+                            <input type="text" class="form-control rounded" 
+                                [ngClass]="{'is-invalid':formOrganization.get('tel')?.touched && !formOrganization.get('tel')?.valid}"
+                                formControlName="tel">
+                            <div class="invalid-feedback">
+                                {{"REC.TEL"|translate}}
+                            </div>
                         </div>
                     </div>
 
@@ -39,7 +54,12 @@
 
                         <div class="col-sm mt-3 ms-4 me-4">
                             <label>{{"REC.PHONE" | translate}}<label style="color:red;">*</label></label>
-                            <input type="text" class="form-control rounded" formControlName="phone">
+                            <input type="text" class="form-control rounded" 
+                                [ngClass]="{'is-invalid':formOrganization.get('phone')?.touched && !formOrganization.get('phone')?.valid}"
+                                formControlName="phone">
+                            <div class="invalid-feedback">
+                                {{"REC.CELVAL"|translate}}
+                            </div>
                         </div>
                     </div>
 
@@ -48,12 +68,22 @@
                         <div class="col-sm ">
                             <label>{{"REC.CONTRASEÑA" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="telOrg" type="text" class="form-control" placeholder=""-->
-                            <input type="password" class="form-control rounded" formControlName="password">
+                            <input type="password" class="form-control rounded" 
+                            [ngClass]="{'is-invalid':formOrganization.get('password')?.touched && !formOrganization.get('password')?.valid}"
+                            formControlName="password">
+                            <div class="invalid-feedback">
+                                {{"REC.PASSVAL"|translate}}
+                            </div>
                         </div>
                         <div class="col-sm ">
                             <label>{{"REC.CONFIRMAR"|translate}}<label style="color:red;">*</label></label>
                             <!--input  formControlName="ecivlUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="password" class="form-control rounded" formControlName="confirmPassword">
+                            <input type="password" class="form-control rounded" 
+                                [ngClass]="{'is-invalid':formOrganization.get('confirmPassword')?.touched && !formOrganization.get('confirmPassword')?.valid}"
+                                formControlName="confirmPassword">
+                            <div class="invalid-feedback">
+                                {{"REC.CONFIRPASSVAL"|translate}}
+                            </div>
                         </div>
                     </div>
 

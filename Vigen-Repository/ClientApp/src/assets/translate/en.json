@@ -192,8 +192,18 @@
         "RANGOVAL":"Please enter a valid Range",
         "CODVAL":"Please enter a valid Country Code",
         "CELVAL":"Please enter a valid cell phone number",
-        "TELVAL":"Please enter a valid landline phone number"
-        
+        "TELVAL":"Please enter a valid landline phone number",
+        "NAMEVAL":"Please enter a valid Name",
+        "CORVAL":"Please enter a valid Email",
+        "GENVAL":"Please enter a valid Gender",
+        "IDENVAL":"Please enter a valid ID",
+        "FECHAVAL":"Please enter a valid Date of Birthday",
+        "OCUPVAL":"Please enter a valid Occupation",
+        "CODPOSVAL":"Please enter a valid Zip Code",
+        "ESTADOVAL":"Please enter a valid Marital Status",
+        "PASSVAL":"Please enter a valid Password",
+        "CONFIRPASSVAL":"Please enter the same password"
+
     },
     "REPORTS":{
         "IDENTIFICATION": "Identificacion",
