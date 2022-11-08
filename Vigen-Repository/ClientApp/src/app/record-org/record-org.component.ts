@@ -82,7 +82,7 @@ export class RecordOrgComponent implements OnInit {
       tel: this.formOrganization.value['tel'],
       phone: this.formOrganization.value['phone'],
       password: this.formOrganization.value['password'],
-      organizationTypeID: 1
+      organizationTypeId: 1
     }
     this.api.postOrganization(this.organization)
       .subscribe(res => {

@@ -7,6 +7,6 @@ export interface Organization {
   nit?: null | string;
   phone?: null | string;
   tel?: null | string;
-  organizationTypeID?: null | number;
+  organizationTypeId?: null | number;
   sites?: null | string[];
 }
