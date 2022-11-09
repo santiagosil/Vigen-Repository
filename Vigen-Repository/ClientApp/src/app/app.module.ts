@@ -40,6 +40,7 @@ import { PollStadisticsComponent } from './poll-stadistics/poll-stadistics.compo
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NotifyStadisticsComponent } from './notify-stadistics/notify-stadistics.component';
 import { SitesComponent } from './sites/sites.component';
+import { MapStaticComponent } from './map-static/map-static.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/translate/','.json')
@@ -73,7 +74,8 @@ export function HttpLoaderFactory(http: HttpClient){
     EstadisticasComponent,
     PollStadisticsComponent,
     NotifyStadisticsComponent,
-    SitesComponent
+    SitesComponent,
+    MapStaticComponent
   ],
   imports: [
     BrowserModule,

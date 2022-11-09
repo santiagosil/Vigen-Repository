@@ -21,9 +21,11 @@ export class PanelOrgComponent implements OnInit {
     this.apiNotify.getNotifies().subscribe(res=>{
       this.activeNotifies=res.filter(x=>x.stateId==0);
       this.inProgressNotifies=res.filter(x=>x.stateId==1);
-      console.log(this.activeNotifies);
-      console.log(this.inProgressNotifies);
     });
+  }
+
+  toInfoNotify(notify:Notify){
+    
   }
   deleteNotify(notify:Notify){
     this.apiNotify.deleteNotify(Number(notify.id)).subscribe(
