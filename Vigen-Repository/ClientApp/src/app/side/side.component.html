@@ -33,7 +33,7 @@
             class="ms-1 d-none d-sm-inline text-white">{{"PANEL-ORG.STATISTICS"|translate}}</span>
         </a>
       </li>
-      <li  class="nav-item dropdown ">
+      <li *ngIf="typeUser=='org'" class="nav-item dropdown ">
         <app-reportes></app-reportes>
       </li>
       <li>
