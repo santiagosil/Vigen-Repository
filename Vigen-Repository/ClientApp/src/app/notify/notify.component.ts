@@ -37,8 +37,7 @@ export class NotifyComponent extends BaseService implements OnInit {
     });
 
     connection.on("recibeNotify", notify=>{
-      var not:String[]=Object.values(notify);
-      console.log(sessionStorage.getItem("TypeUser") ?? '0');
+      let not:String[]=Object.values(notify);
       if((sessionStorage.getItem("TypeUser")) != '0'){
         this.showAlert(not);
       }

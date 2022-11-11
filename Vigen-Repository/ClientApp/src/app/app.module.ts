@@ -20,7 +20,6 @@ import { StatisticsDashboardComponent } from './statistics-dashboard/statistics-
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { SingUpComponent } from './sign-up/sing-up.component';
-import { MapOrganizacionComponent } from './map-organizacion/map-organizacion.component';
 import { FAQComponent } from './faq/faq.component';
 
 import { TokenComponent } from './token/token.component';
@@ -40,7 +39,6 @@ import { PollStadisticsComponent } from './poll-stadistics/poll-stadistics.compo
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NotifyStadisticsComponent } from './notify-stadistics/notify-stadistics.component';
 import { SitesComponent } from './sites/sites.component';
-import { MapStaticComponent } from './map-static/map-static.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/translate/','.json')
@@ -60,7 +58,6 @@ export function HttpLoaderFactory(http: HttpClient){
     StatisticsDashboardComponent,
     LoginComponent,
     SingUpComponent,
-    MapOrganizacionComponent,
     FAQComponent,
     TokenComponent,
     ReportesComponent,
@@ -74,9 +71,8 @@ export function HttpLoaderFactory(http: HttpClient){
     EstadisticasComponent,
     PollStadisticsComponent,
     NotifyStadisticsComponent,
-    SitesComponent,
-    MapStaticComponent
-  ],
+    SitesComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
