@@ -1,7 +1,11 @@
-.hero {
+.hero{
     height: 100%;
     background-image: url("https://img2.rtve.es/i/?w=1600&i=1552038740881.jpg");
     background-size: cover;
     object-fit: cover;
     object-position: bottom;
+}
+.color{
+    background: rgb(44,3,85);
+    background: linear-gradient(180deg, rgba(44,3,85,1) 0%, rgba(108,8,176,1) 48%, rgba(155,88,182,1) 100%);
 }

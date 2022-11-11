@@ -12,9 +12,15 @@
 .btn-secundary{
     background-color: #e0d5f1 ;
 }
-.offcanvas{
-    width: 30vh;
+
+.redondo{
+    border-radius: 50%;
 }
+.redondo:hover{
+    background-color:#e0d5f1;
+    color: black;
+}
+
 
 
 

@@ -1,4 +1,4 @@
-<div *ngIf="typeUser" class="offcanvas offcanvas-start bg-dark text-white" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1"
+<div *ngIf="typeUser" class="offcanvas offcanvas-start bg-dark text-white p-3" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1"
   id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
     <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
@@ -33,7 +33,7 @@
             class="ms-1 d-none d-sm-inline text-white">{{"PANEL-ORG.STATISTICS"|translate}}</span>
         </a>
       </li>
-      <li *ngIf="typeUser=='org'" class="nav-item dropdown ms-3">
+      <li  class="nav-item dropdown ">
         <app-reportes></app-reportes>
       </li>
       <li>

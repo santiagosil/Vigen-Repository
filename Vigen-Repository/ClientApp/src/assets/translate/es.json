@@ -64,8 +64,11 @@
         "POLCONTEN":"Polémica por conductor de Didi que habría agredido físicamente a una usuaria",
         "NUEINF":"Nuevo caso de feminicidio",
         "NUECONTEN":"Debanhi Escobar: ¿En qué va el caso de su feminicidio luego de seis meses?",
-        "SALIR":"Cerrar Sesión"
-
+        "SALIR":"Cerrar Sesión",
+        "WELCOME":"Vigen te da la bienvenida",
+        "SALVAVIDAS":"Esta es la señal salvavidas",
+        "PARRAFO1":"Un simple gesto como abrir la palma de la mano y ocultar el pulgar bajo los dedos sirve para pedir auxilio ante la violencia de género",
+        "PARRAFO2":"Se trata de una señal que ya se ha vuelto universal gracias a su viralización en las redes sociales, propuesta por"
 
     },
     
@@ -103,7 +106,7 @@
         "GÉNERO":"Género",
         "FECHANA":"Fecha de Nacimiento",
         "ESTADOCI":"Estado Civil",
-        "INFOCON":"información de Contacto",
+        "INFOCON":"Información de Contacto",
         "CORREO":"Correo",
         "OCUPACIÓN":"Ocupación",
         "TELÉFONO":"Teléfono",
