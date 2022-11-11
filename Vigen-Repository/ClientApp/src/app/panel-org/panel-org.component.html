@@ -27,7 +27,7 @@
                                 <td>{{notify.description}}</td>
                                 <td>{{notify.organizationTypeId}}</td>
                                 <td>
-                                    <button class="btn btn-success me-1" (click)="toInProgressNotify(notify)">
+                                    <button class="btn btn-success ms-1 me-1" (click)="toInProgressNotify(notify)">
                                         <fa-icon [icon]="['fas', 'check']"></fa-icon>
                                     </button>
                                     <button class="btn btn-danger ms-1" (click)="deleteNotify(notify)">
@@ -37,11 +37,12 @@
                             </tr>
                         </tbody>
                     </table>
+
                 </div>
                 <div class="mt-4 text-center">
                     <h5>{{"PANEL-ORG.NOTIFYINPROGRESS"|translate}}</h5>
                 </div>
-                
+
                 <div class="table-responsive mt-2">
                     <table class="table align-middle table-primary table-striped shadow">
                         <thead>
@@ -63,7 +64,7 @@
                                 <td>{{notify.description}}</td>
                                 <td>{{notify.organizationTypeId}}</td>
                                 <td>
-                                    <button class="btn btn-success me-1" (click)="toFinishNotify(notify)">
+                                    <button class="btn btn-success ms-1 me-1" (click)="toFinishNotify(notify)">
                                         <fa-icon [icon]="['fas', 'check']"></fa-icon>
                                     </button>
                                     <button class="btn btn-danger ms-1" (click)="deleteNotify(notify)">
@@ -75,6 +76,8 @@
                     </table>
                 </div>
             </div>
+
+           
         </div>
     </div>
 </div>

@@ -54,31 +54,33 @@ export class LoginComponent implements OnInit {
       localStorage.removeItem("TypeUser");
     }
 
-    sessionStorage.setItem("UserId", this.loginForm.get('identification')?.value);
-    sessionStorage.setItem("TypeUser", this.loginForm.get('typeUser')?.value);
-    
-    if(this.loginForm.get('typeUser')?.value==='0'){      
-      this.api.loginUser(this.loginForm.get('identification')?.value,this.loginForm.get('password')?.value).subscribe(
-        res=>{
-          if(!res){
+
+    if (this.loginForm.get('typeUser')?.value === '0') {
+      this.api.loginUser(this.loginForm.get('identification')?.value, this.loginForm.get('password')?.value).subscribe(
+        res => {          
+          if (!res) {
             this.showModal();
             return;
           }
           sessionStorage.setItem("UserName", Object.values(res)[0]);
+          sessionStorage.setItem("UserId", this.loginForm.get('identification')?.value);
+          sessionStorage.setItem("TypeUser", this.loginForm.get('typeUser')?.value);
           this.router.navigate(["/pUser"]);
         });
-    }else if(this.loginForm.get('typeUser')?.value==='org'){
-      this.orga.loginOrg(this.loginForm.get('identification')?.value,this.loginForm.get('password')?.value).subscribe(
-        res=>{
-          if(!res){
+    } else if (this.loginForm.get('typeUser')?.value === 'org') {      
+      this.orga.loginOrg(this.loginForm.get('identification')?.value, this.loginForm.get('password')?.value).subscribe(
+        res => {          
+          if (!res) {
             this.showModal();
             return;
           }
           sessionStorage.setItem("UserName", Object.values(res)[0]);
+          sessionStorage.setItem("UserId", this.loginForm.get('identification')?.value);
+          sessionStorage.setItem("TypeUser", this.loginForm.get('typeUser')?.value);
           this.router.navigate(["/pOrg"]);
         });
     }
-    
+
   }
 }
 

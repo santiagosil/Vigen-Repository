@@ -21,10 +21,9 @@ export class PanelOrgComponent implements OnInit {
     this.apiNotify.getNotifies().subscribe(res=>{
       this.activeNotifies=res.filter(x=>x.stateId==0);
       this.inProgressNotifies=res.filter(x=>x.stateId==1);
-      console.log(this.activeNotifies);
-      console.log(this.inProgressNotifies);
     });
   }
+  
   deleteNotify(notify:Notify){
     this.apiNotify.deleteNotify(Number(notify.id)).subscribe(
       res=>{
@@ -57,17 +56,19 @@ export class PanelOrgComponent implements OnInit {
       Swal.fire({
         icon: 'question',
         title:'¿Que tipo de violencia identificó?',
-        html: '<select class="form-select" aria-label="Default select example">'+
-        '<option value="0" selected>Ninguna</option>'+
-        '<option value="1">Violencia de Género</option>'+
-        '<option value="2">Violencia Intrafamiliar</option>'+
-        '<option value="3">Violencia Adulto Mayor</option>'+
-        '<option value="4">Violencia Infantil</option>'+
-        '<option value="5">Otra</option>'+
-      '</select>',
+        input: 'select',
+        inputOptions:[
+          'Ninguna',
+          'Violencia de Género',
+          'Violencia Intrafamiliar',
+          'Violencia Adulto Mayor',
+          'Violencia Infantil',
+          'Otra'
+        ],
         confirmButtonText: 'Save',
         
       }).then((result)=>{
+        console.log(result.value);
         if(result.isConfirmed){
           this.apiNotify.putNotify(Number(notify.id), notify).subscribe(res=>{
           Swal.fire({
