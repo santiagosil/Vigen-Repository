@@ -8,8 +8,10 @@
     <a class="navbar-brand text-white ms-5" (click)="toHome()" routerLink="/home" routerLinkActivate="activate">
       <img class="vigen" src="../../assets/images/vigenb.png" alt="">
     </a>
-    <button *ngIf="typeUser" class="btn btn-dark order-md-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-        aria-controls="offcanvasScrolling">Menú</button>
+    <button  *ngIf="typeUser" class="btn redondo btn-dark order-md-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+        aria-controls="offcanvasScrolling">
+        <fa-icon  class="userI" [icon]="['far', 'user']"></fa-icon>
+    </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav nav nav-pills me-auto mb-2 mb-lg-0">

@@ -11,8 +11,8 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.IDENTIFICATION" |
                                     translate}}</label>
-                                <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" 
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control rounded"
                                         [ngClass]="{'is-invalid':formUser.get('identification')?.touched && !formUser.get('identification')?.valid}"
                                         formControlName="identification" readonly>
                                     <div class="invalid-feedback">
@@ -20,10 +20,11 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr>
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.NOMBRE" | translate}}</label>
-                                <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" 
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control rounded"
                                         [ngClass]="{'is-invalid':formUser.get('name')?.touched && !formUser.get('name')?.valid}"
                                         formControlName="name">
                                     <div class="invalid-feedback">
@@ -34,8 +35,8 @@
                             <hr>
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.GÉNERO" | translate}}</label>
-                                <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" 
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control rounded"
                                         [ngClass]="{'is-invalid':formUser.get('gender')?.touched && !formUser.get('gender')?.valid}"
                                         formControlName="gender">
                                     <div class="invalid-feedback">
@@ -47,8 +48,8 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.FECHANA" |
                                     translate}}</label>
-                                <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" 
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control rounded"
                                         [ngClass]="{'is-invalid':formUser.get('birthdate')?.touched && !formUser.get('birthdate')?.valid}"
                                         formControlName="birthdate">
                                     <div class="invalid-feedback">
@@ -60,8 +61,8 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.ESTADOCI" |
                                     translate}}</label>
-                                <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" 
+                                <div class="col-sm-9 ">
+                                    <input type="text" class="form-control rounded"
                                         [ngClass]="{'is-invalid':formUser.get('maritalStatus')?.touched && !formUser.get('maritalStatus')?.valid}"
                                         formControlName="maritalStatus">
                                     <div class="invalid-feedback">
@@ -79,8 +80,8 @@
                         <div class="form">
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.CORREO" | translate}}</label>
-                                <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" 
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control rounded"
                                         [ngClass]="{'is-invalid':formUser.get('email')?.touched && !formUser.get('email')?.valid}"
                                         formControlName="email">
                                     <div class="invalid-feedback">
@@ -93,8 +94,8 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.OCUPACIÓN" |
                                     translate}}</label>
-                                <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" 
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control rounded"
                                         [ngClass]="{'is-invalid':formUser.get('occupation')?.touched && !formUser.get('occupation')?.valid}"
                                         formControlName="occupation">
                                     <div class="invalid-feedback">
@@ -106,8 +107,8 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.COUNTRYCODE" |
                                     translate}}</label>
-                                <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" 
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control rounded"
                                         [ngClass]="{'is-invalid':formUser.get('countryCode')?.touched && !formUser.get('countryCode')?.valid}"
                                         formControlName="countryCode">
                                     <div class="invalid-feedback">
@@ -119,8 +120,8 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.POSTALCODE" |
                                     translate}}</label>
-                                <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" 
+                                <div class="col-sm-9 ">
+                                    <input type="text" class="form-control rounded"
                                         [ngClass]="{'is-invalid':formUser.get('postalCode')?.touched && !formUser.get('postalCode')?.valid}"
                                         formControlName="postalCode">
                                     <div class="invalid-feedback">
@@ -132,8 +133,8 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.TELÉFONO" |
                                     translate}}</label>
-                                <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" 
+                                <div class="col-sm-9 ">
+                                    <input type="text" class="form-control rounded"
                                         [ngClass]="{'is-invalid':formUser.get('phone')?.touched && !formUser.get('phone')?.valid}"
                                         formControlName="phone">
                                     <div class="invalid-feedback">
@@ -141,20 +142,23 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr>
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.UBICATION" |
                                     translate}}</label>
-                                <div class="col-sm-9 ms-3">
-                                    <input type="text" class="form-control rounded" 
-                                        [ngClass]="{'is-invalid':formUser.get('ubication')?.touched && !formUser.get('ubication')?.valid}" 
-                                        formControlName="ubication" >
+                                <div class="col-sm-9 ">
+                                    <input type="text" class="form-control rounded"
+                                        [ngClass]="{'is-invalid':formUser.get('ubication')?.touched && !formUser.get('ubication')?.valid}"
+                                        formControlName="ubication">
                                     <div class="invalid-feedback">
                                         {{"REC.UBICACIONVAL"|translate}}
                                     </div>
                                 </div>
                             </div>
-                            <app-map (latLngEvent)="getUbication($event)" [latLng]="formUser.value['ubication']">
-                            </app-map>
+                            <div class="mt-3">
+                                <app-map (latLngEvent)="getUbication($event)" [latLng]="formUser.value['ubication']">
+                                </app-map>
+                            </div>
                         </div>
                     </div>
                 </Section>
@@ -165,7 +169,7 @@
                         <div class="form">
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.CONTRA" | translate}}</label>
-                                <div class="col-sm-9 ms-3">
+                                <div class="col-sm-9 ">
                                     <input type="password" class="form-control rounded" formControlName="password">
                                 </div>
                             </div>
@@ -173,7 +177,7 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.NEWCONTRA" |
                                     translate}}</label>
-                                <div class="col-sm-9 ms-3">
+                                <div class="col-sm-9 ">
                                     <input type="password" class="form-control rounded" formControlName="newPassword">
                                 </div>
                             </div>
@@ -181,7 +185,7 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">{{"EDIT-USER.CONFCONTRA" |
                                     translate}}</label>
-                                <div class="col-sm-9 ms-3">
+                                <div class="col-sm-9 ">
                                     <input type="password" class="form-control rounded"
                                         formControlName="confirmPassword">
                                 </div>

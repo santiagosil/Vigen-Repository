@@ -17,7 +17,12 @@
                         <label>{{"REC.ID" | translate}}<label style="color:red;">*</label></label>
                         <div class="col-sm">
                             <!--input formControlName="idUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control rounded" formControlName="identification">
+                            <input type="text" class="form-control rounded" 
+                                [ngClass]="{'is-invalid':formUser.get('identification')?.touched && !formUser.get('identification')?.valid}"
+                                formControlName="identification">
+                            <div class="invalid-feedback">
+                                {{"REC.IDENVAL"|translate}}
+                            </div>   
                         </div>
                     </div>
                     <div class="form-group row mt-3 ms-3 me-3">
@@ -57,22 +62,12 @@
                     </div>
 
 
-                    <div class="form-group row mt-3 ms-3 me-3">
-                        <label>{{"REC.ID" | translate}}<label style="color:red;">*</label></label>
-                        <div class="col-sm">
-                            <!--input formControlName="idUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control rounded" 
-                                [ngClass]="{'is-invalid':formUser.get('identification')?.touched && !formUser.get('identification')?.valid}"
-                                formControlName="identification">
-                            <div class="invalid-feedback">
-                                {{"REC.IDENVAL"|translate}}
-                            </div>   
-                        </div>
-                    </div>
+                  
 
                     <div class="form-group row mt-3 ms-3 me-3">
-                        <label>{{"REC.CCODE" | translate}}<label style="color:red;">*</label></label>
-                        <div class="col-sm">
+                        
+                        <div class="col-sm-4">
+                            <label>{{"REC.CCODE" | translate}}<label style="color:red;">*</label></label>
                             <input type="text" class="form-control rounded" 
                                 [ngClass]="{'is-invalid':formUser.get('countryCode')?.touched && !formUser.get('countryCode')?.valid}"
                                 formControlName="countryCode">
@@ -84,7 +79,12 @@
                         <div class="col-sm-8">
                             <label>{{"REC.TEL" | translate}}<label style="color:red;">*</label></label>
                             <!--input formControlName="telUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control rounded" formControlName="phone">
+                            <input type="text" class="form-control rounded" 
+                                [ngClass]="{'is-invalid':formUser.get('phone')?.touched && !formUser.get('phone')?.valid}"
+                                formControlName="phone">
+                            <div class="invalid-feedback">
+                                {{"REC.CELVAL"|translate}}
+                            </div>
                         </div>
                     </div>
 
@@ -99,16 +99,7 @@
                                 {{"REC.FECHAVAL"|translate}}
                             </div>  
                         </div>
-                        <div class="col-sm-6">
-                            <label>{{"REC.TEL" | translate}}<label style="color:red;">*</label></label>
-                            <!--input formControlName="telUser" type="text" class="form-control"  placeholder=""-->
-                            <input type="text" class="form-control rounded" 
-                                [ngClass]="{'is-invalid':formUser.get('phone')?.touched && !formUser.get('phone')?.valid}"
-                                formControlName="phone">
-                            <div class="invalid-feedback">
-                                {{"REC.CELVAL"|translate}}
-                            </div>
-                        </div>
+                        
                     </div>
                     <div class="form-group row mt-3 ms-3 me-3">
                         <div class="col-sm">
